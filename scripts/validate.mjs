@@ -5,6 +5,10 @@ const questions=JSON.parse(fs.readFileSync(new URL('../data/questions.json',impo
 const lessons=JSON.parse(fs.readFileSync(new URL('../data/lessons.json',import.meta.url),'utf8'));
 assert.equal(questions.length,206);
 assert.equal(lessons.length,12);
+assert(lessons[0].title.includes('DEMI-FINE'), 'First lesson must introduce demi-fine');
+assert(lessons[0].points.some(x=>x.includes('Fashion')||x.includes('fashion')), 'Demi-fine comparison missing');
+assert(lessons.find(x=>x.id==='07').points.some(x=>x.includes('GENIA276')&&x.includes('930')), 'Ag930 COLORA material fact missing');
+assert(lessons.find(x=>x.id==='10').points.some(x=>x.includes('THU NHẬP TARGET')), 'Income uncertainties missing');
 const chapters=new Set(lessons.map(l=>l.id));
 assert.equal(chapters.size,12);
 for(const l of lessons){assert(l.title&&l.subtitle);assert(l.points.length>=4);assert(l.url.startsWith('https://'))}
@@ -27,4 +31,9 @@ assert.equal(multi,12);
 assert.equal(questions.filter(q=>q.role==='CORE'&&q.id.startsWith('FN-')).length,117);
 for(const [role,n] of [['BASIC',157],['CARE',163],['MKT',164]])assert.equal(questions.filter(q=>q.role==='CORE'||q.role===role).length,n);
 execFileSync('node',['--check',new URL('../app.js',import.meta.url).pathname],{stdio:'inherit'});
-console.log('Validated 206 questions, 12 lessons, role paths, answer keys, JS syntax.');
+const first=questions.find(q=>q.id==='FN-001');
+assert(first.q.toLowerCase().includes('demi-fine'), 'Missing basic demi-fine question');
+const fundamentals=questions.filter(q=>q.id.startsWith('FN-'));
+const longest=fundamentals.filter(q=>q.key.length===1&&q.a[q.key[0]].length===Math.max(...q.a.map(x=>x.length))).length;
+assert(longest/fundamentals.length<=0.4, 'Correct answer length leakage too high');
+console.log('Validated 206 questions, 12 internal-first lessons, brand basics, role paths, answer keys, JS syntax.');

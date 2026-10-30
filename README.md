@@ -1,55 +1,52 @@
-# COLORA Learning Studio - Foundations V7
+# COLORA Learning Studio - Foundations V7.1
 
-Hệ thống đào tạo nhân viên COLORA - COLOR YOUR AURA, thiết kế cho mô hình bán trang sức **online-first**.
+**COLORA - COLOR YOUR AURA**
 
-## Thay đổi trọng tâm
+Hệ thống tự học cho nhân viên COLORA (mô hình bán hàng online-first), được cập nhật sau khi đối chiếu lại **những quyết định nội bộ đã trao đổi với đội ngũ sáng lập**, thay vì chỉ trích câu chuyện từ website hoặc tạo tình huống chung chung.
 
-Không bắt đầu bằng tình huống xử lý khó. Mọi vị trí phải học **12 chương kiến thức căn bản** trước:
+## Điểm thay đổi từ V7
 
-1. COLORA là ai & nguồn gốc
-2. Tên gọi & COLOR YOUR AURA
-3. Facets of Feeling
-4. Định vị, giá trị & tầm nhìn
-5. DNA thiết kế COLORA
-6. Product Functional
-7. Product Technical
-8. Product Emotional
-9. Target Customer
-10. Income, ngân sách & giá trị
-11. Customer Journey Online
-12. Niềm tin & thông tin sản phẩm
+- **Demi-fine 101 là bài đầu tiên**: định nghĩa, phân biệt với fashion/fine jewelry, những gì demi-fine *không* bảo đảm, vị trí của COLORA trong phân khúc.
+- **125 mục kiến thức** trong 12 bài học, không yêu cầu nhân viên tự suy ra kiến thức từ đáp án.
+- **76 câu nền tảng FN được viết lại**, giữ tổng 206 câu để không tăng số lượng chỉ vì thiếu chiều sâu. Đáp án đúng đã được cân bằng độ dài để giảm mẹo làm bài.
+- Đưa vào những nội dung có nguồn gốc **quyết định nội bộ**: mục đích hình thành thương hiệu Việt, sứ mệnh, tầm nhìn, giá trị Design / Wearability / Experience, tên gọi và tagline, ba lớp Product Functional/Technical/Emotional, quyết định vật liệu GENIA276 Ag 930‰, bạc post-consumer recycled có chứng từ, định hướng không dùng nickel.
+- Khách hàng mục tiêu: nhóm nữ 22–38 là **định hướng ưu tiên nghiên cứu**, không phải một khuôn mẫu cứng. Dải giá 2,3–5 triệu là **vùng kế hoạch**, không phải giá mọi SKU. Không bịa dải thu nhập tháng.
+- Hiện trạng: COLORA bán online; không bắt nhân viên giả định có showroom hay các dịch vụ trong roadmap.
+- Lời giải được gắn hướng áp dụng; vẫn có phần bài chuyên môn cho Designer/Editor, Customer Care và Marketing.
+- Mọi người học cùng 12 chương CORE trước khi làm bài chuyên môn; bài tổng kết vẫn gồm 40 câu bao phủ đủ 12 chương nền và 15 câu chuyên môn.
 
-Mỗi chương có phần **đọc kiến thức** và bài trắc nghiệm ngay sau đó. Ngân hàng mới: **206 câu**, bao gồm **139 câu CORE** (117 câu nền mới và 22 câu củng cố V6.1), cùng **67 câu chuyên sâu theo vai trò**:
+## Kiến thức nguồn cho nhân viên
 
-| Vị trí | CORE | Chuyên sâu | Tổng |
-|---|---:|---:|---:|
-| Nhân sự chung, Designer, Editor | 139 | 18 | 157 |
-| Customer Care / Advisor | 139 | 24 | 163 |
-| Marketing / Content | 139 | 25 | 164 |
+**[Đọc COLORA Foundations V7.1 - Tổng hợp kiến thức nội bộ](docs/COLORA_FOUNDATIONS_V7_1.md)**
 
-Bài tổng kết có **40 câu**, lấy **25 câu CORE bao phủ đủ 12 chương** và 15 câu chuyên môn theo vị trí, trong 45 phút. Đạt 80% vẫn chỉ là mức gợi ý tự học chưa được thẩm định.
+Tài liệu bao gồm bảng phân biệt fashion/demi-fine/fine jewelry, sứ mệnh/tầm nhìn, brand philosophy, giá trị sản phẩm theo ba lớp, vật liệu, nhóm khách hàng, thu nhập và journey online, với các cảnh báo mức độ chắc chắn.
 
-## Nguồn và độ chắc chắn
+## Bố cục hệ thống
 
-Bài học nền tảng dựa trên Câu chuyện COLORA công bố trên `colora.vn`, các nguyên tắc Design DNA đã phát triển và tài liệu chiến lược Customer Journey Digital. Một số chi tiết của DNA hiện là định hướng thiết kế, **không phải cam kết mọi SKU đã đạt mọi tính năng**.
+- 12 chương kiến thức và 139 câu CORE (117 câu nền FN, 22 câu củng cố).
+- 18 câu Designer/Editor; 24 câu Customer Care; 25 câu Marketing.
+- 157 câu cho nhân sự chung; 163 câu cho Customer Care; 164 câu cho Marketing (đều đã bao gồm CORE).
+- Tổng 206 câu duy nhất; 12 câu multi-select.
+- Bài kiểm tra 40 câu, 45 phút. Chọn ngẫu nhiên 25 CORE phủ đủ 12 chương, còn lại 15 câu theo vị trí.
 
-**Thu nhập mục tiêu:** chưa có dải thu nhập tháng chính thức, được phê duyệt và kiểm chứng đủ để dùng làm tiêu chuẩn bắt buộc. Vì thế tài liệu phân biệt income, ngân sách khả dụng, khả năng chi trả, willingness to pay và perceived value, không bịa một mức lương.
+## Nguồn, trạng thái và những gì không nên coi là sự thật
 
-**Sản phẩm:** thông số vật liệu, xử lý đá, các loại chứng thư, bảo hành, giá, tồn kho, thời gian giao và khả năng chỉnh size phải dựa vào SKU/chính sách hiệu lực; bài học không thay thế hồ sơ duyệt.
+Bộ kiến thức được tổng hợp từ các trao đổi nội bộ của người sáng lập tháng 9–10/2026, câu chuyện thương hiệu đã chốt và Design DNA, kết hợp kiến thức ngành để giải thích. Một số đề xuất trong lịch sử chỉ là hướng nghiên cứu, **không được biến thành chính sách hoặc đặc tính mọi sản phẩm**.
 
-**Vận hành:** không giả định COLORA có cửa hàng vật lý, trải nghiệm thử trực tiếp, CRM tự động, NFC hay dịch vụ sourcing tự do nếu chưa xác nhận triển khai.
+- **ĐÃ CHỐT NỘI BỘ:** định vị, ngôn ngữ thương hiệu, thiết kế và một số quyết định nguồn vật liệu.
+- **THEO SKU:** mác vật liệu và lớp phủ từng món, thông số đá, xử lý, giấy tờ, cấu trúc và giới hạn sử dụng phải theo hồ sơ sản phẩm/lô được duyệt.
+- **ĐỊNH HƯỚNG/GIẢ ĐỊNH:** persona sâu, income, mức sẵn sàng chi, dải giá kế hoạch, chiến lược ownership, CRM và một số tính năng tương lai cần dữ liệu/triển khai thực tế.
+- **CHÍNH SÁCH LIVE:** giá bán, thời gian giao, đổi trả và bảo hành phải đối chiếu bản có hiệu lực.
 
-## Chạy và triển khai
+**Giới hạn bảo mật:** Repo GitHub và GitHub Pages hiện là công khai. Không đưa giá vốn, thông tin khách hàng, hợp đồng nhà cung cấp, dữ liệu nhân sự hoặc số liệu tài chính chi tiết vào kho này. Quiz không phải bài thi bí mật vì đáp án nằm trong JSON.
+
+## Chạy
 
 ```sh
 python3 -m http.server 8080
 node scripts/validate.mjs
 ```
 
-Truy cập `http://localhost:8080`. Website tĩnh, cần HTTP để tải `data/questions.json` và `data/lessons.json`. Có thể triển khai bằng GitHub Pages từ `main` / `root`.
+Mở `http://localhost:8080/`. Trình duyệt cần HTTP vì app tải `data/questions.json` và `data/lessons.json` bằng fetch. Github Pages triển khai từ `main`.
 
-## Bảo mật và dữ liệu
-
-Repository và GitHub Pages là **công khai**. Ngân hàng và đáp án có thể xem trong JSON/JS; website dùng để **tự học, không thi bảo mật**. Không đưa dữ liệu khách, giá vốn, kế hoạch thu nhập cá nhân bí mật hay tài liệu cung ứng nhạy cảm lên repo.
-
-Tiến độ lưu trong localStorage từng trình duyệt, không đồng bộ thiết bị, không xác thực danh tính. Bài kiểm tra không thay bài thực hành sản phẩm thật.
+Khi thay nội dung câu hỏi, app dùng phiên bản localStorage mới để không cộng dồn kết quả của phiên bản câu hỏi trước. Tiến độ chỉ lưu trên từng trình duyệt, chưa đồng bộ máy và chưa xác thực nhân viên.
