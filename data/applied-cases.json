@@ -1,0 +1,312 @@
+[
+  {
+    "id": "AC-001",
+    "role": "APPLIED",
+    "pillar": "THƯƠNG HIỆU",
+    "topic": "Định vị so với đối thủ",
+    "chapter": "A",
+    "q": "Khách hỏi vì sao COLORA có giá cao hơn một chiếc nhẫn bạc trơn nhìn khá giống. Trang sản phẩm COLORA chưa công bố đủ chi tiết lớp phủ của SKU này. Lời giải thích nào phù hợp nhất?",
+    "a": [
+      "Nêu thiết kế đá màu, cảm giác đeo, dịch vụ; xác minh cấu tạo/lớp phủ của đúng SKU trước khi so chi tiết.",
+      "Nêu chênh lệch giá từ trọng lượng bạc trước, để khách tự suy luận về chất lượng.",
+      "Chỉ kể câu chuyện cảm xúc mà không cần làm rõ thông số còn thiếu.",
+      "Giải thích COLORA SILVER theo thông tin thương hiệu rồi khẳng định lớp phủ của mọi SKU giống nhau."
+    ],
+    "key": [
+      0
+    ],
+    "why": "COLORA kết hợp Functional, Technical và Emotional; so sánh giá trị phải dựa trên dữ kiện đã xác minh, không để câu chuyện thay tài liệu kỹ thuật.",
+    "apply": "Trả lời bằng tiêu chí người mua thật sự quan tâm và đặt trạng thái cần kiểm tra cho lớp phủ.",
+    "source": "INTERNAL_CASE",
+    "status": "TÌNH HUỐNG MÔ PHỎNG - KHÔNG PHẢI CASE KHÁCH THỰC",
+    "stage": 3,
+    "skills": [
+      "BRAND",
+      "PRODUCT"
+    ]
+  },
+  {
+    "id": "AC-002",
+    "role": "APPLIED",
+    "pillar": "THƯƠNG HIỆU",
+    "topic": "Ngôn ngữ thương hiệu",
+    "chapter": "A",
+    "q": "Editor đề xuất caption: “Đá xanh của COLORA dành cho những người luôn bình yên”, kèm một ảnh khách đeo nhẫn. Cách chỉnh phù hợp với Facets of Feeling?",
+    "a": [
+      "Giữ nguyên vì đây là thông điệp ngắn, giúp người xem nhớ màu và cảm xúc.",
+      "Chỉ sửa thành “ai đeo xanh cũng dễ trở nên bình yên” để bớt tuyệt đối.",
+      "Gợi ý các cảm nhận mà màu xanh có thể gợi, để người đeo tự chọn ý nghĩa của mình.",
+      "Chuyển câu này thành mô tả độ bền và thông số Mohs để tránh nói cảm xúc."
+    ],
+    "key": [
+      2
+    ],
+    "why": "Thương hiệu không áp cảm xúc cố định cho mọi người; có thể gợi ý mà không tự quyết định thay trải nghiệm của khách.",
+    "apply": "Viết lại caption với ảnh thật, không hứa hiệu quả tâm lý hay công năng siêu nhiên.",
+    "source": "INTERNAL_CASE",
+    "status": "TÌNH HUỐNG MÔ PHỎNG - KHÔNG PHẢI CASE KHÁCH THỰC",
+    "stage": 3,
+    "skills": [
+      "BRAND",
+      "CUSTOMER"
+    ]
+  },
+  {
+    "id": "AC-003",
+    "role": "APPLIED",
+    "pillar": "THƯƠNG HIỆU",
+    "topic": "Giải thích thương hiệu",
+    "chapter": "A",
+    "q": "Một nhân viên được yêu cầu giới thiệu COLORA trong 45 giây với khách vừa biết tên. Khách thích trang sức màu nhưng chưa biết demi-fine. Trình tự nào giúp khách hiểu nhất?",
+    "a": [
+      "Kể trọn lịch sử ngành bạc rồi mới giới thiệu COLORA để tạo nền tảng.",
+      "Giới thiệu demi-fine dễ hiểu, COLORA lấy đá màu và thiết kế làm trọng tâm, sau đó nêu chất liệu và cách mua online.",
+      "Bắt đầu từ mọi tên gọi kỹ thuật, sau đó chốt khách chọn loại đá.",
+      "Đọc nguyên tagline, sứ mệnh và triết lý trước khi xác định nhu cầu khách."
+    ],
+    "key": [
+      1
+    ],
+    "why": "Giải thích category và giá trị bằng lời tự nhiên trước, rồi mở rộng kỹ thuật theo quan tâm thật của khách.",
+    "apply": "Không bắt khách hiểu thuật ngữ chuyên sâu trước khi biết thương hiệu bán gì.",
+    "source": "INTERNAL_CASE",
+    "status": "TÌNH HUỐNG MÔ PHỎNG - KHÔNG PHẢI CASE KHÁCH THỰC",
+    "stage": 3,
+    "skills": [
+      "BRAND",
+      "JOURNEY"
+    ]
+  },
+  {
+    "id": "AC-004",
+    "role": "APPLIED",
+    "pillar": "SẢN PHẨM",
+    "topic": "Vật liệu theo SKU",
+    "chapter": "A",
+    "q": "Khách đã xem giới thiệu COLORA SILVER nhưng trang chiếc nhẫn chưa nêu rõ lớp hoàn thiện bề mặt. Nhân viên cần phản hồi thế nào?",
+    "a": [
+      "Nói bạc nền GENIA276 Ag 930‰ đã được chốt cho launch; xác minh thông tin hoàn thiện của mẫu trước khi mô tả chi tiết.",
+      "Xem tên COLORA SILVER là bằng chứng công nghệ lớp phủ của mọi SKU không khác nhau.",
+      "Bỏ qua vật liệu và chỉ chia sẻ video của chiếc nhẫn để khách tự đánh giá.",
+      "Giải thích bạc tái chế đồng nghĩa không cần kiểm tra tài liệu kỹ thuật của lớp phủ."
+    ],
+    "key": [
+      0
+    ],
+    "why": "Hồ sơ nội bộ đã xác nhận GENIA276 Ag 930‰ cho toàn bộ launch, nhưng loại lớp phủ/tính năng phải có hồ sơ phù hợp.",
+    "apply": "Phân biệt quyết định vật liệu nền với các thông tin cần đối chiếu của thành phẩm.",
+    "source": "INTERNAL_CASE",
+    "status": "TÌNH HUỐNG MÔ PHỎNG - KHÔNG PHẢI CASE KHÁCH THỰC",
+    "stage": 3,
+    "skills": [
+      "PRODUCT",
+      "BRAND"
+    ]
+  },
+  {
+    "id": "AC-005",
+    "role": "APPLIED",
+    "pillar": "SẢN PHẨM",
+    "topic": "Giác cắt & cách đeo",
+    "chapter": "A",
+    "q": "Designer muốn dùng viên pear có màu đẹp cho nhẫn low-profile, nhưng viên thực tế sâu hơn bản CAD và có chip gần đầu nhọn. Bước nào hợp lý?",
+    "a": [
+      "Chốt viên vì màu đạt, rồi điều chỉnh hình ảnh để nhẫn trông thấp hơn.",
+      "Giữ CAD cũ và yêu cầu xưởng tự tăng chấu khi lắp.",
+      "Kiểm tra lại L×W×D, điểm mẻ, setting; đề nghị thay viên hoặc chỉnh thiết kế có phê duyệt.",
+      "Hạ mục tiêu độ bền vì viên đẹp hơn các lựa chọn khác."
+    ],
+    "key": [
+      2
+    ],
+    "why": "Gemstone-first không có nghĩa chấp nhận khuyết tật và mất khả năng đeo; viên pear có đầu nhọn cần bảo vệ.",
+    "apply": "Kết hợp đá thật, mặt cắt CAD và kết quả QC trước khi duyệt.",
+    "source": "INTERNAL_CASE",
+    "status": "TÌNH HUỐNG MÔ PHỎNG - KHÔNG PHẢI CASE KHÁCH THỰC",
+    "stage": 3,
+    "skills": [
+      "PRODUCT"
+    ]
+  },
+  {
+    "id": "AC-006",
+    "role": "APPLIED",
+    "pillar": "SẢN PHẨM",
+    "topic": "Chăm sóc sau mua",
+    "chapter": "A",
+    "q": "Khách nhận nhẫn COLORA SILVER gắn đá chưa có care guide riêng, hỏi có dùng dung dịch làm sạch bạc và máy siêu âm tại nhà không. Phản hồi tốt nhất?",
+    "a": [
+      "Khuyên dùng siêu âm vài phút nếu đá được giới thiệu là tự nhiên.",
+      "Khuyên lau nhẹ bằng khăn sạch khô, rồi kiểm tra đá, xử lý và lớp phủ trước khi hướng dẫn sâu hơn.",
+      "Khuyên dùng dung dịch bạc thông thường nhưng tránh ngâm quá lâu.",
+      "Chỉ trả lời về bảo hành và không nói gì về chăm sóc tại nhà."
+    ],
+    "key": [
+      1
+    ],
+    "why": "Với vật liệu phủ và đá màu chưa rõ treatment, biện pháp an toàn mặc định là lau nhẹ, không suy rộng phương pháp xử lý bạc trần.",
+    "apply": "Tra Product Passport và hướng dẫn kỹ thuật được duyệt.",
+    "source": "INTERNAL_CASE",
+    "status": "TÌNH HUỐNG MÔ PHỎNG - KHÔNG PHẢI CASE KHÁCH THỰC",
+    "stage": 3,
+    "skills": [
+      "PRODUCT",
+      "CARE"
+    ]
+  },
+  {
+    "id": "AC-007",
+    "role": "APPLIED",
+    "pillar": "KHÁCH HÀNG",
+    "topic": "Mua quà online",
+    "chapter": "A",
+    "q": "Một người mua dây chuyền COLORA làm quà cho mẹ, ngân sách khoảng 4 triệu, không biết người nhận thích đá gì. Nên hỏi thêm điều nào trước khi gợi ý?",
+    "a": [
+      "Mốc nhận, phong cách người đeo, chiều dài dây thường dùng và khả năng đổi lựa chọn.",
+      "Chỉ tuổi của người mẹ để suy luận màu đá và sở thích.",
+      "Chỉ số thu nhập gia đình vì sẽ quyết định loại đá.",
+      "Mức độ hiểu về gemology của người mua để chuyển bài tư vấn sâu."
+    ],
+    "key": [
+      0
+    ],
+    "why": "Người mua và người đeo khác nhau, cần tránh rủi ro sai gu/size/mốc giao hơn là suy từ nhân khẩu học.",
+    "apply": "Đưa lựa chọn có ảnh thật, thông số và điều kiện đổi trả hiện hành.",
+    "source": "INTERNAL_CASE",
+    "status": "TÌNH HUỐNG MÔ PHỎNG - KHÔNG PHẢI CASE KHÁCH THỰC",
+    "stage": 3,
+    "skills": [
+      "CUSTOMER",
+      "JOURNEY"
+    ]
+  },
+  {
+    "id": "AC-008",
+    "role": "APPLIED",
+    "pillar": "KHÁCH HÀNG",
+    "topic": "Khác biệt cảm nhận giá trị",
+    "chapter": "A",
+    "q": "Hai khách cùng ngân sách 5 triệu xem một chiếc nhẫn COLORA giá 3,8 triệu: A muốn đeo hằng ngày, B mua kỷ niệm. Cách hỗ trợ khác nhau?",
+    "a": [
+      "Cùng gửi một thông điệp về thiết kế để giữ nhất quán tuyệt đối.",
+      "Tư vấn A về độ vừa/độ vướng/care, B về ý nghĩa, phong cách người nhận và hậu mãi, đều kèm thông số chính xác.",
+      "Tư vấn B về cảm xúc nhưng không cần ảnh hay thông số.",
+      "Tư vấn A kỹ thuật, B chỉ cần kể câu chuyện màu đá mà không hỏi thêm."
+    ],
+    "key": [
+      1
+    ],
+    "why": "Động cơ sở hữu tạo rủi ro và thông tin cần thiết khác nhau; brand nhất quán không đồng nghĩa thoại tư vấn đồng nhất.",
+    "apply": "Hỏi mục tiêu sử dụng trước khi giải thích giá trị.",
+    "source": "INTERNAL_CASE",
+    "status": "TÌNH HUỐNG MÔ PHỎNG - KHÔNG PHẢI CASE KHÁCH THỰC",
+    "stage": 3,
+    "skills": [
+      "CUSTOMER",
+      "PRODUCT"
+    ]
+  },
+  {
+    "id": "AC-009",
+    "role": "APPLIED",
+    "pillar": "KHÁCH HÀNG",
+    "topic": "Phản đối về giá",
+    "chapter": "A",
+    "q": "Khách nói “đẹp nhưng hơi đắt” và im lặng. Điều nào là bước kế tiếp hợp lý nhất khi bán online?",
+    "a": [
+      "Gửi ngay mức giá thấp nhất trong danh mục mà không hỏi thêm.",
+      "Gửi nhiều đánh giá 5 sao rồi kết luận khách đã đồng ý.",
+      "Hỏi lịch sự điều khách đang cân nhắc: ngân sách, độ phù hợp thiết kế hay thông tin cần xác minh.",
+      "Suy rằng người mua chưa đúng nhóm thu nhập mục tiêu và dừng hỗ trợ."
+    ],
+    "key": [
+      2
+    ],
+    "why": "Phản đối giá có thể từ perceived value, affordability hoặc niềm tin, không thể suy ra từ một câu ngắn.",
+    "apply": "Tìm khoảng trống thông tin để giải đáp, không gây áp lực chốt.",
+    "source": "INTERNAL_CASE",
+    "status": "TÌNH HUỐNG MÔ PHỎNG - KHÔNG PHẢI CASE KHÁCH THỰC",
+    "stage": 3,
+    "skills": [
+      "CUSTOMER"
+    ]
+  },
+  {
+    "id": "AC-010",
+    "role": "APPLIED",
+    "pillar": "HÀNH TRÌNH",
+    "topic": "Liên kênh",
+    "chapter": "A",
+    "q": "Khách xem video TikTok, mở trang sản phẩm, nhắn Zalo hỏi size rồi thanh toán trên website. Điểm cần bảo đảm trong toàn hành trình là gì?",
+    "a": [
+      "Cập nhật thông số, giá, hình ảnh, lời tư vấn và điều kiện giao/đổi trả thống nhất theo SKU.",
+      "Mỗi kênh nên dùng một tên đá riêng để phù hợp nội dung.",
+      "Social chỉ cần cảm xúc, thông số sản phẩm khác có thể để khách tự tìm.",
+      "Zalo chỉ cần lấy tên và số điện thoại mà không giải thích mục đích."
+    ],
+    "key": [
+      0
+    ],
+    "why": "Khách đi nhiều điểm chạm, thiếu nhất quán gây mất tin tưởng và rủi ro sai thông tin.",
+    "apply": "Dùng cùng Product Master/phiên bản chính sách ở mọi kênh.",
+    "source": "INTERNAL_CASE",
+    "status": "TÌNH HUỐNG MÔ PHỎNG - KHÔNG PHẢI CASE KHÁCH THỰC",
+    "stage": 3,
+    "skills": [
+      "JOURNEY",
+      "PRODUCT"
+    ]
+  },
+  {
+    "id": "AC-011",
+    "role": "APPLIED",
+    "pillar": "HÀNH TRÌNH",
+    "topic": "Bỏ giỏ hàng",
+    "chapter": "A",
+    "q": "Một sản phẩm có nhiều lượt xem nhưng khách thường rời trang sau khi mở Size Guide. Việc nào hợp lý nhất để hiểu nguyên nhân?",
+    "a": [
+      "Tăng quảng cáo để kéo thêm lượt xem trước khi đo tiếp.",
+      "Kiểm tra dữ liệu hành vi, nội dung size, tỷ lệ ảnh thật và hỏi phản hồi; chưa kết luận chỉ do giá.",
+      "Giảm giá ngay vì khách chắc chắn thấy đắt.",
+      "Ẩn Size Guide để khách khỏi phân tâm."
+    ],
+    "key": [
+      1
+    ],
+    "why": "Một tín hiệu rời trang chưa đủ xác định nguyên nhân; cần kết hợp dữ liệu và thử nghiệm.",
+    "apply": "Phân tích nhu cầu xác định size, độ rõ hướng dẫn và điểm khách cần hỗ trợ.",
+    "source": "INTERNAL_CASE",
+    "status": "TÌNH HUỐNG MÔ PHỎNG - KHÔNG PHẢI CASE KHÁCH THỰC",
+    "stage": 3,
+    "skills": [
+      "JOURNEY",
+      "CUSTOMER"
+    ]
+  },
+  {
+    "id": "AC-012",
+    "role": "APPLIED",
+    "pillar": "HÀNH TRÌNH",
+    "topic": "Chăm sóc sau mua",
+    "chapter": "A",
+    "q": "Khách nhận đơn sau khi mua online và phản hồi “đẹp nhưng tôi lo viên đá dễ mẻ”. Hướng hỗ trợ nào xây niềm tin bền hơn?",
+    "a": [
+      "Chỉ đề nghị mua thêm sản phẩm chăm sóc để bảo đảm an toàn.",
+      "Cam kết đá tự nhiên sẽ không bị mẻ để khách yên tâm.",
+      "Gửi ngay mẫu khác có đá Mohs cao mà không kiểm tra SKU hiện tại.",
+      "Giải thích độ bền và cách chăm đúng đá/SKU, cung cấp kênh kiểm tra khi chấu hoặc đá bất thường."
+    ],
+    "key": [
+      3
+    ],
+    "why": "Customer Journey tiếp tục sau giao hàng; hướng dẫn đúng làm giảm lo lắng mà không tạo lời hứa sai.",
+    "apply": "Chuyển từ bán hàng sang hỗ trợ ownership và nhận diện rủi ro.",
+    "source": "INTERNAL_CASE",
+    "status": "TÌNH HUỐNG MÔ PHỎNG - KHÔNG PHẢI CASE KHÁCH THỰC",
+    "stage": 3,
+    "skills": [
+      "JOURNEY",
+      "PRODUCT"
+    ]
+  }
+]

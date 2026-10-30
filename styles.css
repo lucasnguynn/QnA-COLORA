@@ -40,3 +40,18 @@
 .gem-cut-cell svg{width:100%;height:100px;max-width:126px;object-fit:contain}
 .gem-cut-cell span{font-family:'Open Sans',sans-serif;font-size:11px;letter-spacing:.02em;color:#002451;font-weight:600;text-align:center}
 @media(max-width:680px){.gem-cut-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.gem-cut-cell svg{height:80px}}
+
+/* V9: progressive disclosure, not a 40-card directory */
+.track-panel{border:1px solid var(--stroke);border-radius:14px;background:var(--white);margin:18px 0;overflow:hidden}
+.track-panel>summary{cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:20px 24px;color:var(--navy);list-style:none}
+.track-panel>summary::-webkit-details-marker{display:none}
+.track-panel>summary strong{display:block;font-family:var(--heading);font-size:26px;line-height:1.12;font-weight:600}
+.track-panel>summary small{display:block;font-size:12px;color:#67788c;margin-top:5px;line-height:1.6}
+.track-panel[open]>summary{border-bottom:1px solid var(--stroke);background:#faf6ef}
+.track-panel>.grid2{padding:20px;gap:14px}
+.teachback-work{margin-top:22px;border:1px solid #d8c9b5;padding:18px;border-radius:12px;background:#faf5ed}
+.teachback-work label{display:block;font-size:13px;font-weight:600;color:var(--navy);margin:10px 0}
+.teachback-work textarea{width:100%;min-height:110px;display:block;border:1px solid #b6b8b6;background:#fffdf9;border-radius:8px;resize:vertical;padding:12px 14px;font:inherit;line-height:1.65;color:var(--ink)}
+.teachback-work textarea:focus-visible{outline:3px solid #b08a5b;outline-offset:2px}
+.teachback-work .actions{flex-wrap:wrap;align-items:center}
+@media(max-width:680px){.track-panel>summary{padding:15px}.track-panel>.grid2{padding:12px}.track-panel>summary strong{font-size:21px}}

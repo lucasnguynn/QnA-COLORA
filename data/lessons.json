@@ -149,9 +149,9 @@
     "title": "SỨ MỆNH, TẦM NHÌN, GIÁ TRỊ & ĐỊNH VỊ",
     "subtitle": "Định vị được chuyển thành lựa chọn thiết kế và cách phục vụ.",
     "points": [
-      "SỨ MỆNH | “Đưa sắc màu của cảm xúc vào đời sống mỗi ngày.” Nội dung triển khai: trang sức demi-fine khởi đầu từ đá màu, có bản sắc thiết kế, hoàn thiện chỉn chu và sử dụng thoải mái.",
-      "TẦM NHÌN | “Từ Việt Nam, đủ riêng để được nhận ra và đủ tốt để đi xa.” Đây là tham vọng về thương hiệu Việt Nam được ghi nhớ bởi thiết kế, chất lượng và bản sắc, không phải thành tựu quốc tế đã được chứng nhận.",
-      "GIÁ TRỊ CỐT LÕI TRONG QUYẾT ĐỊNH | Design, Wearability, Experience: thiết kế có nhận diện; thật sự đeo được; khách được cung cấp thông tin và hỗ trợ phù hợp. Các giá trị này phải xuất hiện trong sản phẩm lẫn trải nghiệm.",
+      "DIỄN GIẢI SỨ MỆNH (CHỜ DUYỆT NGUYÊN VĂN) | “Đưa sắc màu của cảm xúc vào đời sống mỗi ngày” là câu tóm tắt đang dùng trong tài liệu đào tạo. Cần founder phê duyệt riêng nếu sử dụng như sứ mệnh chính thức nguyên văn trong brand manual.",
+      "DIỄN GIẢI TẦM NHÌN (CHỜ DUYỆT NGUYÊN VĂN) | “Từ Việt Nam, đủ riêng để được nhận ra và đủ tốt để đi xa” tóm tắt tham vọng thương hiệu Việt mang bản sắc thiết kế ra quốc tế; không phải bằng chứng thương hiệu đã có hiện diện quốc tế.",
+      "BA TRỤ CỘT ĐÁNH GIÁ NỘI BỘ | Design, Wearability, Experience là khung thực hành phục vụ thiết kế và dịch vụ. Không tự khẳng định đây là câu chữ nguyên văn của bộ giá trị thương hiệu chính thức nếu chưa có phê duyệt.",
       "ĐỊNH VỊ | Trang sức demi-fine có đá quý màu và câu chuyện riêng; theo đuổi hiện đại, nữ tính, modern-heritage và quiet luxury, không dùng “bạc cao cấp” làm nhãn định vị chính.",
       "VỊ TRÍ GIÁ | Khoảng 2,3–8 triệu đồng/món là định hướng giá mới nhất do người sáng lập cập nhật. Đây là dải kế hoạch, KHÔNG phải giá live của mọi SKU hoặc phép suy ra thu nhập mục tiêu.",
       "ĐIỀU KHÁCH NHỚ | Không chỉ chất liệu, mà tổ hợp màu đá, dáng trang sức, giác cắt, cảm giác đeo và cách thương hiệu tôn trọng câu chuyện riêng của họ.",
@@ -161,7 +161,7 @@
       "CÂU HỎI CỐT LÕI | Nếu bỏ tên và logo, khách còn nhận ra tính COLORA nhờ đặc điểm thiết kế và trải nghiệm nào?"
     ],
     "url": "https://colora.vn/pages/cau-chuyen-colora",
-    "origin": "Tổng hợp từ các định hướng/khẳng định nội bộ của COLORA và kiến thức ngành phù hợp; link chỉ là tài liệu tham khảo bổ sung, không thay thế hồ sơ nội bộ.",
+    "origin": "Brand philosophy, định vị và các quyết định được chia sẻ nội bộ; câu tóm tắt mission/vision/values đang ở trạng thái bản diễn giải huấn luyện, cần founder phê duyệt bản chữ chính thức.",
     "teachback": {
       "prompt": "Tự phân biệt một câu sứ mệnh, một câu tầm nhìn và ba giá trị cần giữ khi thiết kế sản phẩm.",
       "sample": "Sứ mệnh: đưa sắc màu cảm xúc vào đời sống mỗi ngày. Tầm nhìn: từ Việt Nam, đủ riêng được nhận ra và đủ tốt đi xa. Giá trị: Design, Wearability, Experience. Đó là định hướng, không phải thành tựu đã hoàn thành."
@@ -296,9 +296,9 @@
     "points": [
       "TECHNICAL LÀ GÌ | Bản chất vật liệu, tỷ lệ hợp kim, lớp hoàn thiện, loại đá và xử lý, giác cắt, chấu/setting, kết cấu, sản xuất, QC và chứng từ.",
       "SILVER 925 VÀ Ag 930‰ | 925 nghĩa là 92,5% bạc theo khối lượng; 930 nghĩa là 93,0%. Đây là hai mác hợp kim khác nhau, không thể nói chúng là cùng một thông số.",
-      "QUYẾT ĐỊNH VẬT LIỆU CỦA COLORA | COLORA SILVER là tên hệ kim loại COLORA: sử dụng bạc tái chế GENIA276 Ag 930‰, kết hợp công nghệ mạ phủ độc quyền. Đây là quyết định nội bộ được người sáng lập xác nhận, không phải tên một chứng nhận vật liệu hay bằng sáng chế tự động được xác lập.",
+      "VẬT LIỆU LAUNCH ĐÃ CHỐT | Đợt ra mắt COLORA: 100% các sản phẩm launch dùng hợp kim GENIA276 Ag 930‰ do COLORA nhập và cấp cho xưởng (quyết định P0.7 ngày 19/09/2026). Tên hệ kim loại thương hiệu là COLORA SILVER, với công nghệ mạ phủ độc quyền theo thông tin người sáng lập cập nhật. Thông số finish và hồ sơ QC thành phẩm vẫn cần kiểm tra theo SKU.",
       "NGUỒN TÁI CHẾ VÀ RJC | Theo xác nhận nội bộ của COLORA, bạc tái chế GENIA276 Ag 930‰ có chứng nhận liên quan RJC ở nguồn nguyên liệu. Progold công bố RJC Chain of Custody cho bạc. RJC CoC nói về truy xuất và nguồn cung kim loại quý; nội dung '100% recycled' phải đối chiếu loại giấy, phạm vi nguyên liệu, chứng từ lô. Không khẳng định RJC đã chứng nhận toàn bộ sản phẩm COLORA.",
-      "CÁCH GIẢI THÍCH COLORA SILVER | COLORA SILVER = tên hệ kim loại/hoàn thiện của thương hiệu; GENIA276 Ag 930‰ = vật liệu bạc tái chế sử dụng; công nghệ mạ phủ độc quyền = phần hoàn thiện phát triển cho COLORA; RJC = thông tin chứng nhận/chuỗi cung ứng nguồn nguyên liệu cần chứng từ phù hợp.",
+      "HỆ THỐNG TÊN GỌI | Homepage/campaign/cart giới thiệu COLORA SILVER. PDP/Certificate/QC launch phải phản ánh đúng GENIA276 Ag 930‰. Công nghệ mạ phủ độc quyền là lớp hoàn thiện, không tự là tên chứng nhận hay bằng sáng chế. Chứng từ RJC của nguồn kim loại phải nêu đúng phạm vi.",
       "NICKEL | Định hướng và thông tin vật liệu đã xác nhận: không dùng nickel trong lựa chọn hợp kim và quá trình chế tác COLORA. Điều đó KHÔNG cho phép tự ghi “hypoallergenic”, “100% không dị ứng” hoặc an toàn tuyệt đối khi chưa có thử nghiệm và phạm vi chứng cứ phù hợp.",
       "VẬT LIỆU NỀN VÀ CÔNG NGHỆ PHỦ | Bạc tái chế GENIA276 Ag 930‰ là hợp kim nền; công nghệ mạ phủ độc quyền của COLORA là giải pháp hoàn thiện bề mặt. Mỗi lớp phủ, chỉ tiêu kỹ thuật, khả năng chống xỉn và giới hạn bảo hành phải theo hồ sơ đã phê duyệt; không mặc định công thức Rh/Pd/nano nào cho mọi SKU.",
       "ĐÁ TỰ NHIÊN | Đá tự nhiên hình thành tự nhiên; đá tổng hợp được con người tạo ra với tính chất có thể tương tự; đá mô phỏng chỉ có vẻ ngoài giống. Tự nhiên không đồng nghĩa không xử lý, không bao thể hoặc có chứng thư lab độc lập.",
