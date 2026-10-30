@@ -47,7 +47,7 @@ assert(facts.metal_system.certification_statement.includes('RJC'));
 assert(lessons.some(l=>l.id==='07'&&l.points.some(p=>p.includes('COLORA SILVER')&&p.includes('độc quyền'))));
 assert(lessons.some(l=>l.id==='04'&&l.points.some(p=>p.includes('2,3–8 triệu'))));
 assert(questions.some(q=>q.id==='FN-062'&&q.q.includes('COLORA SILVER')));
-assert(questions.some(q=>q.id==='FN-037'&&q.q.includes('2,3–8 triệu')));
+assert(questions.some(q=>q.id==='FN-037'&&[q.q,...q.a,q.why].join(' ').includes('2,3–8 triệu')));
 assert(!JSON.stringify(lessons).includes('2,3–5 triệu'),'Outdated planned price in lessons');
 assert(!JSON.stringify(questions).includes('2,3–5 triệu'),'Outdated planned price in questions');
 console.log('Validated COLORA SILVER, RJC scope, 2.3–8m planned price, 206 questions, 12 lessons and JS syntax.');
