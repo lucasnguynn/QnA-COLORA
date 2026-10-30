@@ -1,50 +1,55 @@
-# COLORA Learning Studio - V6.1 Online First
+# COLORA Learning Studio - Foundations V7
 
-Website đào tạo nội bộ COLORA - COLOR YOUR AURA. Bộ câu hỏi đã được thay bằng phiên bản **V6.1 Online First** để phù hợp mô hình bán hàng qua website, social và tư vấn từ xa.
+Hệ thống đào tạo nhân viên COLORA - COLOR YOUR AURA, thiết kế cho mô hình bán trang sức **online-first**.
 
-## Ngân hàng câu hỏi
+## Thay đổi trọng tâm
 
-- **22 câu CORE**: nền tảng thương hiệu, sản phẩm, khách hàng và hành trình.
-- **18 câu chuyên môn Nhân sự chung / Designer / Editor**: tổng **40 câu** cho vị trí này.
-- **24 câu chuyên môn Customer Care / Advisor**: tổng **46 câu** cho vị trí này.
-- **25 câu chuyên môn Marketing / Content**: tổng **47 câu** cho vị trí này.
+Không bắt đầu bằng tình huống xử lý khó. Mọi vị trí phải học **12 chương kiến thức căn bản** trước:
 
-**89 câu duy nhất**, trong đó **12 câu chọn nhiều đáp án**. Phần luyện tập cung cấp đáp án, giải thích và hành động áp dụng. Bài tổng kết lấy ngẫu nhiên **12 CORE + 18 câu chuyên môn**, thời gian 35 phút và hiển thị giải thích sau khi nộp.
+1. COLORA là ai & nguồn gốc
+2. Tên gọi & COLOR YOUR AURA
+3. Facets of Feeling
+4. Định vị, giá trị & tầm nhìn
+5. DNA thiết kế COLORA
+6. Product Functional
+7. Product Technical
+8. Product Emotional
+9. Target Customer
+10. Income, ngân sách & giá trị
+11. Customer Journey Online
+12. Niềm tin & thông tin sản phẩm
+
+Mỗi chương có phần **đọc kiến thức** và bài trắc nghiệm ngay sau đó. Ngân hàng mới: **206 câu**, bao gồm **139 câu CORE** (117 câu nền mới và 22 câu củng cố V6.1), cùng **67 câu chuyên sâu theo vai trò**:
+
+| Vị trí | CORE | Chuyên sâu | Tổng |
+|---|---:|---:|---:|
+| Nhân sự chung, Designer, Editor | 139 | 18 | 157 |
+| Customer Care / Advisor | 139 | 24 | 163 |
+| Marketing / Content | 139 | 25 | 164 |
+
+Bài tổng kết có **40 câu**, lấy **25 câu CORE bao phủ đủ 12 chương** và 15 câu chuyên môn theo vị trí, trong 45 phút. Đạt 80% vẫn chỉ là mức gợi ý tự học chưa được thẩm định.
+
+## Nguồn và độ chắc chắn
+
+Bài học nền tảng dựa trên Câu chuyện COLORA công bố trên `colora.vn`, các nguyên tắc Design DNA đã phát triển và tài liệu chiến lược Customer Journey Digital. Một số chi tiết của DNA hiện là định hướng thiết kế, **không phải cam kết mọi SKU đã đạt mọi tính năng**.
+
+**Thu nhập mục tiêu:** chưa có dải thu nhập tháng chính thức, được phê duyệt và kiểm chứng đủ để dùng làm tiêu chuẩn bắt buộc. Vì thế tài liệu phân biệt income, ngân sách khả dụng, khả năng chi trả, willingness to pay và perceived value, không bịa một mức lương.
+
+**Sản phẩm:** thông số vật liệu, xử lý đá, các loại chứng thư, bảo hành, giá, tồn kho, thời gian giao và khả năng chỉnh size phải dựa vào SKU/chính sách hiệu lực; bài học không thay thế hồ sơ duyệt.
+
+**Vận hành:** không giả định COLORA có cửa hàng vật lý, trải nghiệm thử trực tiếp, CRM tự động, NFC hay dịch vụ sourcing tự do nếu chưa xác nhận triển khai.
 
 ## Chạy và triển khai
 
 ```sh
 python3 -m http.server 8080
-```
-
-Mở `http://localhost:8080/`. Trang tĩnh không cần backend hoặc build; phải mở qua HTTP vì ứng dụng dùng `fetch('./data/questions.json')`.
-
-GitHub Pages: Repository **Settings > Pages > Deploy from a branch** > `main` > `/ (root)`. Sau khi Pages xuất bản, đường dẫn thường là `https://lucasnguynn.github.io/QnA-COLORA/`; xác nhận lại trong GitHub Pages trước khi sử dụng.
-
-Kiểm tra dữ liệu và JavaScript:
-
-```sh
 node scripts/validate.mjs
 ```
 
-## Phạm vi và mức độ chính thức
+Truy cập `http://localhost:8080`. Website tĩnh, cần HTTP để tải `data/questions.json` và `data/lessons.json`. Có thể triển khai bằng GitHub Pages từ `main` / `root`.
 
-Bộ V6.1 hướng đến thực tế **online-first**: nhận biết thương hiệu, hiểu thông số và ảnh sản phẩm, chọn size từ xa, đánh giá niềm tin, so sánh giá trị, trải nghiệm website và hỗ trợ khách qua các kênh trực tuyến.
+## Bảo mật và dữ liệu
 
-- Nội dung về **SKU, đá, vật liệu, xử lý đá, chi phí và thời gian giao** phải dựa trên hồ sơ sản phẩm được phê duyệt trước khi nói với khách.
-- Các chính sách bảo hành/đổi trả/giao hàng trên web có thể thay đổi; cần kiểm tra bản hiệu lực, không tự biến đáp án đào tạo thành SOP cố định.
-- Các nội dung ghi **GIẢ THUYẾT** hoặc **ĐỊNH HƯỚNG** không được xem là insight đã nghiên cứu đại diện hoặc cam kết dịch vụ.
-- Việc mua hàng hiện tại được đào tạo theo bối cảnh online, không mặc định COLORA có showroom, dịch vụ đặt thử tại cửa hàng hoặc hệ thống CRM riêng.
-- Nếu có thay đổi sau này, cập nhật đồng bộ `data/questions.json`, tài liệu này và trình kiểm tra.
+Repository và GitHub Pages là **công khai**. Ngân hàng và đáp án có thể xem trong JSON/JS; website dùng để **tự học, không thi bảo mật**. Không đưa dữ liệu khách, giá vốn, kế hoạch thu nhập cá nhân bí mật hay tài liệu cung ứng nhạy cảm lên repo.
 
-## Kết quả và bảo mật
-
-Đây là **website công khai**. JSON chứa toàn bộ câu hỏi, đáp án và lời giải; vì vậy đây là công cụ **tự học**, không phải đề thi bảo mật/chống gian lận. Không đưa dữ liệu khách hàng, tài liệu sourcing bí mật hoặc thông tin nhân sự nhạy cảm lên repository.
-
-Tiến độ học và tên hiển thị chỉ lưu trong `localStorage` của trình duyệt đang sử dụng, không đồng bộ thiết bị. Lịch sử V6 được tách khỏi V6.1 để không nhầm câu hỏi và kết quả. Có thể tải kết quả thi dạng CSV, nhưng CSV không phải chứng nhận nhân sự chính thức.
-
-Ngưỡng 80% chỉ là mức tham khảo chưa được thẩm định. Để đánh giá hiểu biết thực tế, kết hợp phần trắc nghiệm với đối chiếu Product Passport/SKU chính thức và bài thực hành theo vai trò.
-
-## Nhận diện
-
-Nền ivory `#F4EDE1`, navy `#002451`, bronze `#B08A5B`. Cormorant Garamond cho heading và Open Sans cho body. Font tải từ Google Fonts, không lưu font vào repository.
+Tiến độ lưu trong localStorage từng trình duyệt, không đồng bộ thiết bị, không xác thực danh tính. Bài kiểm tra không thay bài thực hành sản phẩm thật.
