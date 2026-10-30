@@ -43,6 +43,15 @@ Bộ kiến thức được tổng hợp từ các trao đổi nội bộ của 
 
 **Giới hạn bảo mật:** Repo GitHub và GitHub Pages hiện là công khai. Không đưa giá vốn, thông tin khách hàng, hợp đồng nhà cung cấp, dữ liệu nhân sự hoặc số liệu tài chính chi tiết vào kho này. Quiz không phải bài thi bí mật vì đáp án nằm trong JSON.
 
+## Hình minh họa V7.3
+
+Website đã bổ sung **minh họa trực quan cho cả 12 chương CORE**: năm chương có ảnh tư liệu thật, các chương còn lại có sơ đồ kiến thức như phân biệt fashion/demi-fine/fine, Product Functional, Target Customer, giá dự kiến và Customer Journey online.
+
+- Ảnh đá màu lấy từ thư viện khảo sát nguồn đá COLORA, **không phải sản phẩm đã mở bán**. Không nhận diện loại đá, nguồn gốc hoặc chứng nhận qua ảnh.
+- Ảnh được tối ưu WebP, không giữ EXIF gốc, tải lazy; bấm ảnh để xem lớn hơn.
+- Khi có ảnh sản phẩm COLORA đã được duyệt, ưu tiên thay tư liệu khay đá bằng ảnh macro thật, ảnh đeo thật và ảnh góc nghiêng/mặt sau.
+- Nguồn ảnh và danh sách cần bổ sung: [Visual Asset Register](docs/VISUAL_ASSET_REGISTER.md).
+
 ## Chạy
 
 ```sh

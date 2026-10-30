@@ -5,6 +5,22 @@ const questions=JSON.parse(fs.readFileSync(new URL('../data/questions.json',impo
 const lessons=JSON.parse(fs.readFileSync(new URL('../data/lessons.json',import.meta.url),'utf8'));
 assert.equal(questions.length,206);
 assert.equal(lessons.length,12);
+const photoFiles=new Set();
+for(const l of lessons){
+ const visual=l.visual;
+ assert(visual&&visual.title&&visual.kicker&&visual.note,'Missing illustrated section for chapter '+l.id);
+ assert(Array.isArray(visual.cards)&&visual.cards.length>=3,'Missing learning diagram for '+l.id);
+ for(const c of visual.cards)assert(c.title?.length>2&&c.detail?.length>12);
+ for(const p of visual.photos||[]){
+  assert(p.src.startsWith('assets/')&&!p.src.includes('..'),'Untrusted visual path');
+  assert(p.alt?.length>12&&p.label?.length>2&&p.credit?.length>3);
+  assert(fs.existsSync(new URL('../'+p.src,import.meta.url)),'Missing real photo '+p.src);
+  photoFiles.add(p.src);
+ }
+}
+assert.equal(lessons.length,12);
+assert(photoFiles.size>=4,'Expected three real gemstone photos and brand reference');
+assert(lessons.filter(l=>(l.visual.photos||[]).length).length>=5,'Not enough chapters have real images');
 assert(lessons[0].title.includes('DEMI-FINE'), 'First lesson must introduce demi-fine');
 assert(lessons[0].points.some(x=>x.includes('Fashion')||x.includes('fashion')), 'Demi-fine comparison missing');
 assert(lessons.find(x=>x.id==='07').points.some(x=>x.includes('GENIA276')&&x.includes('930')), 'Ag930 COLORA material fact missing');
@@ -50,4 +66,4 @@ assert(questions.some(q=>q.id==='FN-062'&&q.q.includes('COLORA SILVER')));
 assert(questions.some(q=>q.id==='FN-037'&&[q.q,...q.a,q.why].join(' ').includes('2,3–8 triệu')));
 assert(!JSON.stringify(lessons).includes('2,3–5 triệu'),'Outdated planned price in lessons');
 assert(!JSON.stringify(questions).includes('2,3–5 triệu'),'Outdated planned price in questions');
-console.log('Validated COLORA SILVER, RJC scope, 2.3–8m planned price, 206 questions, 12 lessons and JS syntax.');
+console.log('Validated 206 questions, 12 illustrated lessons, real photo assets, COLORA SILVER and JS syntax.');
