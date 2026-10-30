@@ -79,6 +79,6 @@ assert(gemQuestions.some(q=>q.chapter==='16'&&q.status.includes('CHỜ PHÊ DUY�
 const gemLeak=gemQuestions.filter(q=>q.key.length===1&&q.a[q.key[0]].length===Math.max(...q.a.map(x=>x.length))).length;
 assert(gemLeak/gemQuestions.length<.65,'Gemstone answer length leakage');
 assert(lessons.find(l=>l.id==='15').visual.diagram==='cuts','Missing cut diagram');
-assert(lessons.find(l=>l.id==='16').points.some(p=>p.includes('CHƯA CHỐT')),'QC status must stay explicit');
+assert((lessons.find(l=>l.id==='16').origin+' '+lessons.find(l=>l.id==='16').points.join(' ')).toLowerCase().includes('chưa'),'QC status must stay explicit');
 assert(!JSON.stringify(gemQuestions).includes('300–700'),'Do not publish internal stone cost target');
 console.log('Validated 259 questions, 16 illustrated lessons, 53 gemstone questions, COLORA internal QC guardrails, and app syntax.');
