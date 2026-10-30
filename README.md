@@ -1,4 +1,4 @@
-# COLORA Learning Studio - Foundations V7.1
+# COLORA Learning Studio - Foundations V7.2
 
 **COLORA - COLOR YOUR AURA**
 
@@ -9,15 +9,17 @@ Hệ thống tự học cho nhân viên COLORA (mô hình bán hàng online-firs
 - **Demi-fine 101 là bài đầu tiên**: định nghĩa, phân biệt với fashion/fine jewelry, những gì demi-fine *không* bảo đảm, vị trí của COLORA trong phân khúc.
 - **125 mục kiến thức** trong 12 bài học, không yêu cầu nhân viên tự suy ra kiến thức từ đáp án.
 - **76 câu nền tảng FN được viết lại**, giữ tổng 206 câu để không tăng số lượng chỉ vì thiếu chiều sâu. Đáp án đúng đã được cân bằng độ dài để giảm mẹo làm bài.
-- Đưa vào những nội dung có nguồn gốc **quyết định nội bộ**: mục đích hình thành thương hiệu Việt, sứ mệnh, tầm nhìn, giá trị Design / Wearability / Experience, tên gọi và tagline, ba lớp Product Functional/Technical/Emotional, quyết định vật liệu GENIA276 Ag 930‰, bạc post-consumer recycled có chứng từ, định hướng không dùng nickel.
-- Khách hàng mục tiêu: nhóm nữ 22–38 là **định hướng ưu tiên nghiên cứu**, không phải một khuôn mẫu cứng. Dải giá 2,3–5 triệu là **vùng kế hoạch**, không phải giá mọi SKU. Không bịa dải thu nhập tháng.
+- Đưa vào những nội dung có nguồn gốc **quyết định nội bộ**: mục đích hình thành thương hiệu Việt, sứ mệnh, tầm nhìn, giá trị Design / Wearability / Experience, tên gọi và tagline, ba lớp Product Functional/Technical/Emotional, **COLORA SILVER - Bạc COLORA**, công nghệ mạ phủ độc quyền, bạc tái chế GENIA276 Ag 930‰, chứng nhận liên quan RJC ở phạm vi nguồn nguyên liệu, và định hướng không dùng nickel.
+- **Khoảng giá dự kiến mới nhất:** 2,3–8 triệu đồng/sản phẩm. Đây là khung kế hoạch, không phải giá niêm yết của mọi SKU.
+- **Kim loại thương hiệu:** COLORA SILVER sử dụng bạc tái chế GENIA276 Ag 930‰ và công nghệ mạ phủ độc quyền; không suy rộng chứng nhận RJC của nguồn nguyên liệu thành chứng nhận toàn bộ thành phẩm. Kiểm tra hồ sơ SKU và chứng từ lô trước khi công bố chi tiết.
+- Khách hàng mục tiêu: nhóm nữ 22–38 là **định hướng ưu tiên nghiên cứu**, không phải một khuôn mẫu cứng. Không bịa dải thu nhập tháng.
 - Hiện trạng: COLORA bán online; không bắt nhân viên giả định có showroom hay các dịch vụ trong roadmap.
 - Lời giải được gắn hướng áp dụng; vẫn có phần bài chuyên môn cho Designer/Editor, Customer Care và Marketing.
 - Mọi người học cùng 12 chương CORE trước khi làm bài chuyên môn; bài tổng kết vẫn gồm 40 câu bao phủ đủ 12 chương nền và 15 câu chuyên môn.
 
 ## Kiến thức nguồn cho nhân viên
 
-**[Đọc COLORA Foundations V7.1 - Tổng hợp kiến thức nội bộ](docs/COLORA_FOUNDATIONS_V7_1.md)**
+**[Đọc COLORA Foundations V7.2 - Tổng hợp kiến thức nội bộ](docs/COLORA_FOUNDATIONS_V7_1.md)**
 
 Tài liệu bao gồm bảng phân biệt fashion/demi-fine/fine jewelry, sứ mệnh/tầm nhìn, brand philosophy, giá trị sản phẩm theo ba lớp, vật liệu, nhóm khách hàng, thu nhập và journey online, với các cảnh báo mức độ chắc chắn.
 
@@ -34,6 +36,7 @@ Tài liệu bao gồm bảng phân biệt fashion/demi-fine/fine jewelry, sứ m
 Bộ kiến thức được tổng hợp từ các trao đổi nội bộ của người sáng lập tháng 9–10/2026, câu chuyện thương hiệu đã chốt và Design DNA, kết hợp kiến thức ngành để giải thích. Một số đề xuất trong lịch sử chỉ là hướng nghiên cứu, **không được biến thành chính sách hoặc đặc tính mọi sản phẩm**.
 
 - **ĐÃ CHỐT NỘI BỘ:** định vị, ngôn ngữ thương hiệu, thiết kế và một số quyết định nguồn vật liệu.
+- **NGUỒN THÔNG TIN CHUẨN:** [Brand facts](data/brand-facts.json) - thông số được người sáng lập cập nhật ngày 30/10/2026. Khi giá hoặc kim loại thay đổi, phải cập nhật đồng thời registry, giáo trình, câu hỏi và thông điệp thương mại.
 - **THEO SKU:** mác vật liệu và lớp phủ từng món, thông số đá, xử lý, giấy tờ, cấu trúc và giới hạn sử dụng phải theo hồ sơ sản phẩm/lô được duyệt.
 - **ĐỊNH HƯỚNG/GIẢ ĐỊNH:** persona sâu, income, mức sẵn sàng chi, dải giá kế hoạch, chiến lược ownership, CRM và một số tính năng tương lai cần dữ liệu/triển khai thực tế.
 - **CHÍNH SÁCH LIVE:** giá bán, thời gian giao, đổi trả và bảo hành phải đối chiếu bản có hiệu lực.

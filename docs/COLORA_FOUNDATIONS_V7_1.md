@@ -1,4 +1,4 @@
-# COLORA Foundations V7.1
+# COLORA Foundations V7.2 - Nội dung vật liệu và khoảng giá mới
 
 *Tài liệu học tập cho nhân viên. Nguồn chính: các quyết định, trao đổi nội bộ của đội ngũ sáng lập và những nội dung thương hiệu đã xác lập; kiến thức ngành chỉ để giải thích khái niệm. Đây không phải Product Passport, báo giá hay quy trình dịch vụ đang có hiệu lực.*
 
@@ -56,8 +56,11 @@ Không dùng storytelling để bù cho thiết kế vướng, thông số sai h
 
 ## 6. Những quyết định vật liệu phải ghi nhớ, nhưng áp dụng theo từng SKU
 
-- **Vật liệu định hướng được người sáng lập xác nhận:** GENIA276 **Ag 930‰**, từ Progold. Bạc 930 và bạc 925 là hai mác hợp kim khác nhau; không ghi mặc định bạc 925 cho toàn COLORA.
-- **Nguồn bạc:** nguyên liệu post-consumer recycled 100% theo phạm vi chứng nhận của TÜV Italia đối với nguồn bạc liên quan. Chứng nhận nguồn bạc không có nghĩa toàn bộ viên đá, lớp phủ, hộp hay chuỗi cung ứng đều tái chế.
+- **Hệ kim loại thương hiệu:** **COLORA SILVER - Bạc COLORA**. Là hệ kim loại và hoàn thiện bề mặt do COLORA xác lập, kết hợp vật liệu nền bạc tái chế **GENIA276 Ag 930‰** với **công nghệ mạ phủ độc quyền của COLORA**.
+- **Vật liệu nền:** GENIA276 **Ag 930‰** từ Progold, trong đó Ag 930‰ nghĩa là 93,0% bạc theo khối lượng. Ag 930‰ và Ag 925‰ là hai mác hợp kim khác nhau; không giới thiệu COLORA SILVER như bạc 925 mặc định.
+- **Công nghệ hoàn thiện:** công nghệ mạ phủ độc quyền là điểm khác biệt thương hiệu đã được người sáng lập xác nhận. Không tự đồng nhất với một công thức Rh/Pd/nano cụ thể, không khẳng định đã được cấp bằng sáng chế và không hứa chống xước/chống xỉn vĩnh viễn khi chưa có hồ sơ thử nghiệm.
+- **Nguồn bạc và RJC:** theo thông tin mới nhất của người sáng lập, vật liệu nền GENIA276 Ag 930‰ là **bạc tái chế** có chứng nhận liên quan **Responsible Jewellery Council (RJC)** ở phạm vi nguồn nguyên liệu. Progold công bố chứng nhận **RJC Chain of Custody cho bạc**; tiêu chuẩn này đề cập tính truy xuất và nguồn cung của kim loại quý. Khi sử dụng cụm từ *chứng nhận tái chế*, cần kiểm tra chứng từ cụ thể của Progold và lô hàng để xác định chính xác tiêu chuẩn/phạm vi, không tự khẳng định RJC cấp chứng nhận trực tiếp cho mọi thành phẩm COLORA. Chứng nhận nguyên liệu không đồng nghĩa toàn bộ đá, lớp phủ hay bao bì đều tái chế.
+- **Nguồn đối chiếu RJC:** https://www.responsiblejewellery.com/standards/chain-of-custody/ và https://progold.com/sustainability .
 - **Nickel:** COLORA xác nhận không sử dụng nickel trong lựa chọn hợp kim và quy trình chế tác. Không tự tuyên bố “hypoallergenic”, “không bao giờ kích ứng” hoặc hiệu quả an toàn tuyệt đối.
 - **Lớp phủ:** rhodium, palladium hoặc lớp hoàn thiện khác nếu được áp dụng phải xác minh từng cấu trúc/lô/SKU; không tự mặc định.
 - **Đá:** đá tự nhiên và đá tổng hợp khác nguồn gốc; đá tự nhiên vẫn có thể xử lý. Độ cứng chống trầy không bằng độ dai chống mẻ. Chứng thư COLORA và chứng thư lab độc lập có vai trò khác nhau.
@@ -72,7 +75,7 @@ Không dùng storytelling để bù cho thiết kế vướng, thông số sai h
 - Willingness to pay: mức sẵn sàng trả cho một món cụ thể.
 - Perceived value: cảm giác món hàng có đáng mức giá không.
 
-**Khoảng giá 2,3–5,0 triệu VND/món** là dải kế hoạch đã trao đổi, *không* phải giá bán hiện hành cho mọi SKU hoặc bằng chứng dải income mục tiêu. Không suy lương tháng bằng cách lấy giá nhân 10.
+**Khoảng giá dự kiến 2,3–8 triệu VND/món** là dải kế hoạch mới nhất đã được người sáng lập cập nhật, *không* phải giá bán hiện hành cho mọi SKU hoặc bằng chứng dải income mục tiêu. Không suy lương tháng bằng cách lấy giá nhân 10.
 
 **Nhóm tình huống nên nghiên cứu:** mua cho bản thân vì thiết kế, self-reward milestone, mua quà cho người khác, người ưu tiên dễ đeo/care, người quan tâm chứng cứ đá/mạ/kim loại. Đây là nhóm nhu cầu, không phải năm nhân cách cố định.
 
@@ -101,4 +104,4 @@ Roadmap như CRM tự động, NFC Product Passport hay hạn chế số món m�
 - **Chính sách live:** giao hàng, đổi trả, bảo hành, sửa chữa. Luôn xem phiên bản hiện hành.
 - **Nội bộ riêng tư:** dữ liệu khách, thương lượng xưởng, giá vốn và dữ liệu tài chính chi tiết không được đưa vào repository công khai.
 
-*Tài liệu là bản học tập sau khi tổng hợp các quyết định nội bộ đã chia sẻ đến tháng 10/2026. Nếu thay đổi vật liệu, phân khúc, chính sách hoặc cấu trúc sản phẩm, người phụ trách phải cập nhật chương trình trước khi dùng làm tài liệu chính thức.*
+*Tài liệu đã cập nhật thông tin kim loại và giá theo quyết định người sáng lập ngày 30/10/2026. Nếu thay đổi vật liệu, phân khúc, chính sách hoặc cấu trúc sản phẩm, người phụ trách phải cập nhật chương trình trước khi dùng làm tài liệu chính thức.*

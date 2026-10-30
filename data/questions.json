@@ -797,20 +797,20 @@
     "pillar": "THƯƠNG HIỆU",
     "topic": "Định vị, giá trị & tầm nhìn",
     "chapter": "04",
-    "q": "Định hướng mức giá 2,3–5 triệu đồng từng thảo luận cho COLORA có nghĩa gì?",
+    "q": "Khoảng giá dự kiến mới nhất của COLORA là bao nhiêu, và cần hiểu thế nào?",
     "a": [
-      "Giá tối thiểu và tối đa bắt buộc của mọi sản phẩm theo quy định demi-fine",
-      "Đây là dải kế hoạch giá, không phải giá niêm yết tất cả SKU",
-      "Độ tuổi và lương tháng chính thức của khách hàng mục tiêu",
-      "Bằng chứng người mua sẵn trả mức đó dù chưa nghiên cứu hoặc chạy bán"
+      "Đây là mức giá chuẩn do phân khúc demi-fine quy định cho mọi thương hiệu",
+      "Khoảng 2,3–8 triệu đồng/món là dải dự kiến, không phải giá niêm yết mọi SKU",
+      "Đây là mức thu nhập hằng tháng bắt buộc của khách hàng mục tiêu",
+      "Tất cả khách trong nhóm tuổi mục tiêu đã được khảo sát và đồng ý mức giá đó"
     ],
     "key": [
       1
     ],
-    "why": "Khoảng giá là giả định/định hướng kinh doanh cần đối chiếu cấu tạo, giá vốn, nhu cầu và thị trường.",
-    "apply": "Không dùng con số trong bài học làm giá hiện hành của mẫu chưa duyệt.",
+    "why": "Định hướng giá được người sáng lập cập nhật thành 2,3–8 triệu đồng mỗi sản phẩm. Đây là vùng giá kế hoạch, còn giá bán chính thức xác định theo từng SKU.",
+    "apply": "Khi viết nội dung về giá, luôn đối chiếu giá SKU đang bán; đừng dùng dải dự kiến thay giá niêm yết.",
     "source": "PRICE",
-    "status": "GIẢ ĐỊNH GIÁ NỘI BỘ",
+    "status": "ĐÃ CẬP NHẬT NỘI BỘ",
     "stage": 1
   },
   {
@@ -1347,18 +1347,18 @@
     "pillar": "SẢN PHẨM",
     "topic": "Product Technical",
     "chapter": "07",
-    "q": "Lựa chọn vật liệu GENIA276 của COLORA đã được xác nhận nội bộ có mác nào?",
+    "q": "COLORA SILVER được COLORA xác định là gì?",
     "a": [
-      "GENIA276 Ag 930‰, còn phạm vi SKU phải được đối chiếu",
-      "Bạc 999 nguyên chất, không cần thêm thành phần hợp kim khác",
-      "Bạc 925 thông thường, mặc định mọi mẫu đều sử dụng cùng cấu trúc",
-      "Vàng nguyên khối 18K, chỉ cần ghi là “demi-fine” trên nhãn"
+      "Hệ kim loại riêng của COLORA sử dụng bạc tái chế GENIA276 Ag 930‰, kết hợp công nghệ mạ phủ độc quyền của thương hiệu",
+      "Một tên khác của bạc 925 thông thường, không có khác biệt ở vật liệu hoặc lớp phủ",
+      "Tên một chứng nhận RJC được cấp trực tiếp cho toàn bộ trang sức COLORA",
+      "Tên gọi cho mọi loại đá màu tự nhiên mà COLORA lựa chọn để chế tác"
     ],
     "key": [
       0
     ],
-    "why": "Đã có quyết định nguồn vật liệu Ag930; không dùng mặc định 925 từ mô tả cũ như sự thật chung.",
-    "apply": "Đối chiếu Product Passport và chứng từ lô trước khi viết claim vật liệu cho một món.",
+    "why": "COLORA SILVER là tên hệ kim loại/hoàn thiện được thương hiệu xác lập: nền bạc tái chế GENIA276 Ag 930‰ và công nghệ mạ phủ độc quyền. Không đồng nhất thương hiệu kim loại với tên nhà cung cấp hoặc giấy chứng nhận.",
+    "apply": "Giới thiệu đúng cấu trúc COLORA SILVER; mọi claim về tuổi thọ lớp phủ và thông số SKU phải đối chiếu hồ sơ kỹ thuật.",
     "source": "MATERIAL",
     "status": "ĐÃ CHỐT NỘI BỘ",
     "stage": 1
@@ -1369,20 +1369,20 @@
     "pillar": "SẢN PHẨM",
     "topic": "Product Technical",
     "chapter": "07",
-    "q": "Một SKU có bạc nền Ag930 và lớp phủ rhodium. Cách hiểu kỹ thuật nào đúng?",
+    "q": "Trong COLORA SILVER, công nghệ mạ phủ độc quyền khác vật liệu GENIA276 Ag 930‰ ở điểm nào?",
     "a": [
-      "Rhodium là tên thương mại cho 7% nguyên tố còn lại trong bạc 930",
-      "Ag930 là nền hợp kim; rhodium nếu có là lớp phủ bề mặt",
-      "Bạc 930 có nghĩa bề mặt phải được phủ một lớp rhodium với mọi sản phẩm",
-      "Lớp rhodium đồng nghĩa viên đá tự nhiên chưa xử lý"
+      "Công nghệ mạ phủ làm bạc 930 có hàm lượng bạc 100% theo khối lượng",
+      "GENIA276 Ag 930‰ là hợp kim nền; công nghệ mạ phủ là giải pháp hoàn thiện bề mặt COLORA phát triển và áp dụng theo quy cách kỹ thuật",
+      "RJC là tên thương mại của lớp mạ; Ag 930‰ là màu mạ bên ngoài",
+      "Một khi có lớp phủ độc quyền, mọi món trang sức sẽ không bị xước hoặc xỉn trong mọi điều kiện"
     ],
     "key": [
       1
     ],
-    "why": "Cần phân biệt hợp kim, công nghệ hoàn thiện và lớp phủ theo từng SKU.",
-    "apply": "Giải thích sự khác nhau giữa nền và phủ trước khi nói độ bền/xỉn màu.",
+    "why": "Cấu trúc kim loại nền và công nghệ hoàn thiện bề mặt là hai lớp khái niệm khác nhau. 'Độc quyền' là mô tả định vị kỹ thuật do thương hiệu xác nhận, không tự chứng minh bằng sáng chế hay bảo đảm độ bền tuyệt đối.",
+    "apply": "Khi tư vấn, dùng tên COLORA SILVER và thông số đã duyệt; không hứa lớp phủ không xỉn hoặc không trầy mãi mãi.",
     "source": "MATERIAL",
-    "status": "NỀN TẢNG",
+    "status": "ĐÃ CHỐT NỘI BỘ / CẦN HỒ SƠ QUY TRÌNH",
     "stage": 1
   },
   {
@@ -1391,20 +1391,20 @@
     "pillar": "SẢN PHẨM",
     "topic": "Product Technical",
     "chapter": "07",
-    "q": "Tuyên bố “100% post-consumer recycled silver” đã trao đổi cho COLORA nói đúng điều gì?",
+    "q": "COLORA nói bạc tái chế GENIA276 Ag 930‰ có chứng nhận RJC. Nhân viên cần hiểu phạm vi tuyên bố thế nào?",
     "a": [
-      "Viên đá và toàn bộ bao bì của mỗi món bắt buộc đều được tái chế 100%",
-      "Bạc 930 phải có hàm lượng bạc tinh khiết bằng 100% theo khối lượng",
-      "Nguồn bạc tái chế sau tiêu dùng, phải có chứng từ và phạm vi",
-      "Không cần theo dõi lô vì tên nhà cung cấp đủ chứng minh mọi sản phẩm"
+      "Chứng nhận đó tự động chứng minh mọi viên đá, hộp và công đoạn sản xuất của COLORA đều tái chế",
+      "Chứng nhận RJC đồng nghĩa hàm lượng bạc trong hợp kim phải đạt 100%",
+      "Chứng từ RJC liên quan chuỗi cung ứng/nguồn kim loại và phải kiểm tra loại chứng nhận, phạm vi lô vật liệu; không suy rộng toàn sản phẩm",
+      "Có tên Progold là đủ để bảo đảm mọi SKU của COLORA đều được chứng nhận RJC trực tiếp"
     ],
     "key": [
       2
     ],
-    "why": "Chứng nhận nguồn bạc tái chế của vật liệu không tự chứng minh tác động môi trường của đá, gia công, bao bì.",
-    "apply": "Chỉ truyền thông các phần đã có chứng từ phù hợp, tránh nói “sản phẩm hoàn toàn xanh”.",
+    "why": "RJC Chain-of-Custody xác minh truy xuất và nguồn cung kim loại quý theo phạm vi chứng nhận; nội dung tái chế cần chứng từ tương ứng. Không đánh đồng chứng nhận của nhà cung cấp/nguyên liệu với chứng nhận toàn bộ sản phẩm COLORA.",
+    "apply": "Khi truyền thông, nói bạc tái chế GENIA276 Ag 930‰ với chứng nhận RJC thuộc nguồn nguyên liệu theo hồ sơ; xác minh chứng từ trước khi công bố chi tiết.",
     "source": "MATERIAL",
-    "status": "ĐÃ CHỐT NỘI BỘ",
+    "status": "ĐÃ XÁC NHẬN NỘI BỘ / KIỂM CHỨNG TỪ RJC",
     "stage": 1
   },
   {
@@ -2051,20 +2051,20 @@
     "pillar": "KHÁCH HÀNG",
     "topic": "Income, ngân sách & giá trị",
     "chapter": "10",
-    "q": "Khoảng giá 2,3–5 triệu đồng đã thảo luận cho COLORA được dùng thế nào trong nghiên cứu khách?",
+    "q": "Trong nghiên cứu khách hàng COLORA, dải giá dự kiến 2,3–8 triệu đồng/món được dùng như thế nào?",
     "a": [
-      "Như tiêu chuẩn thương mại cố định mà mọi trang sức demi-fine phải tuân thủ",
-      "Như mức chi tiêu bình quân hàng tháng của người đã sở hữu COLORA",
-      "Như bằng chứng phần lớn nữ 22–38 đều chấp nhận trả trong khoảng ấy",
-      "Dải giá kế hoạch, không phải giá SKU live hoặc mức lương khách"
+      "Như mức lương tháng tối thiểu mà mọi khách COLORA bắt buộc phải có",
+      "Như mức chi tiêu bình quân đã được xác nhận của tất cả khách hàng",
+      "Như bằng chứng mọi phụ nữ 22–38 tuổi đều sẵn lòng thanh toán mức đó",
+      "Như dải kế hoạch để nghiên cứu khả năng chi trả và giá trị cảm nhận, không phải dữ liệu income"
     ],
     "key": [
       3
     ],
-    "why": "Dải kế hoạch giúp xây giả thuyết khách phù hợp, không thay khảo sát hay dữ liệu giao dịch.",
-    "apply": "Tách bảng giá dự kiến, giá SKU thực và mức ngân sách khách chia sẻ.",
+    "why": "Khung giá dự kiến 2,3–8 triệu đồng dùng để xây giả thuyết phân khúc, không thay dữ liệu thu nhập, willingness to pay hoặc giá của từng SKU.",
+    "apply": "Khi phân tích target customer, tách giá dự kiến, ngân sách khách tự cho biết và thu nhập đã được khảo sát.",
     "source": "PRICE",
-    "status": "GIẢ ĐỊNH GIÁ NỘI BỘ",
+    "status": "ĐÃ CẬP NHẬT NỘI BỘ",
     "stage": 1
   },
   {
@@ -2469,20 +2469,20 @@
     "pillar": "HÀNH TRÌNH",
     "topic": "Niềm tin & thông tin sản phẩm",
     "chapter": "12",
-    "q": "Vì sao GENIA276 Ag930 hoặc một lớp phủ được xác nhận ở một mẫu không được mặc nhiên ghi cho mọi SKU?",
+    "q": "Vì sao COLORA SILVER vẫn cần hồ sơ kỹ thuật từng SKU, dù thương hiệu đã chốt GENIA276 Ag 930‰ và công nghệ mạ phủ độc quyền?",
     "a": [
-      "Mỗi SKU/lô cần thông số vật liệu và cấu trúc đã được duyệt",
-      "Vì chỉ mẫu giá cao mới được phép có thông tin vật liệu",
-      "Vì nhà cung cấp không bao giờ có thể sản xuất nhiều lô giống nhau",
-      "Vì sản phẩm cùng bộ sưu tập không thể chia sẻ bất kỳ thành phần nào"
+      "Vì từng SKU/lô cần xác nhận vật liệu thực tế, quy cách lớp phủ và hồ sơ chứng từ tương ứng",
+      "Vì chỉ những sản phẩm trên 8 triệu mới có thể sử dụng COLORA SILVER",
+      "Vì mỗi thiết kế bắt buộc phải dùng một nhà cung cấp bạc khác nhau",
+      "Vì công nghệ mạ phủ không thể áp dụng lên hợp kim bạc tái chế"
     ],
     "key": [
       0
     ],
-    "why": "Quyết định vật liệu cấp thương hiệu khác thông số thành phẩm cụ thể; thông tin phải có phạm vi.",
-    "apply": "Dùng mẫu Product Passport/lô được chốt thay vì sao chép mô tả.",
+    "why": "Tên hệ kim loại là tiêu chuẩn thương hiệu; hồ sơ vật liệu, lớp phủ và kiểm tra chất lượng từng mẫu/lô vẫn cần đầy đủ để công bố chính xác.",
+    "apply": "Từ tài liệu COLORA SILVER cấp thương hiệu, đối chiếu Product Passport trước khi xuất mô tả sản phẩm.",
     "source": "MATERIAL",
-    "status": "THEO SKU",
+    "status": "ĐÃ CHỐT NỘI BỘ / THEO SKU",
     "stage": 1
   },
   {
@@ -3979,20 +3979,20 @@
     "role": "CARE",
     "pillar": "SẢN PHẨM",
     "topic": "Sản phẩm không rõ cấu hình",
-    "q": "Khách hỏi “Có phải tất cả mẫu đều dùng GENIA276 - 930?” trong khi website có một trang mẫu thử. Cách xử lý đúng?",
+    "q": "Khách online hỏi: “COLORA SILVER khác gì bạc 925 thông thường và có phải mọi mẫu đều dùng giống nhau không?”. Cách tư vấn phù hợp?",
     "a": [
-      "Không suy từ trang demo; cần hồ sơ từng SKU",
-      "Trả lời tất cả sản phẩm là bạc 925 vì đó là chất liệu phổ biến.",
-      "Bỏ qua câu hỏi về vật liệu và chỉ giới thiệu màu đá.",
-      "Xác nhận có vì thông số ghi trên trang sản phẩm đã công khai."
+      "Giải thích COLORA SILVER dùng nền bạc tái chế GENIA276 Ag 930‰ và công nghệ mạ phủ độc quyền, rồi xác minh vật liệu/lớp phủ của SKU đang hỏi",
+      "Khẳng định mọi sản phẩm bạc trên thị trường đều có cùng công nghệ mạ phủ này",
+      "Chỉ nói COLORA SILVER được RJC chứng nhận toàn sản phẩm mà không cần chứng từ",
+      "Bỏ qua câu hỏi vật liệu vì demi-fine chỉ liên quan cảm xúc và thiết kế"
     ],
     "key": [
       0
     ],
-    "why": "Thông số trang demo chưa chắc là cấu hình hàng hóa bán thật.",
-    "apply": "Cập nhật lỗi nội dung nếu website còn dùng mẫu thử công khai.",
+    "why": "Giải thích đúng ba lớp: tên hệ kim loại COLORA SILVER, vật liệu nền GENIA276 Ag 930‰ và công nghệ hoàn thiện bề mặt; tránh biến định hướng chung thành thông số mọi SKU.",
+    "apply": "Gửi thông tin đúng mẫu và nguồn xác thực, không dựa vào trang thử nghiệm hoặc mô tả chưa duyệt.",
     "source": "SKU",
-    "status": "CHỜ HỒ SƠ SKU",
+    "status": "ĐÃ CHỐT NỘI BỘ / THEO SKU",
     "stage": 3,
     "chapter": "07"
   },
