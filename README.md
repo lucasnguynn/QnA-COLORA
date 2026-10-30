@@ -1,42 +1,50 @@
-# COLORA Learning Studio
+# COLORA Learning Studio - V6.1 Online First
 
-Internal training website for **COLORA - COLOR YOUR AURA**. The app supports practice and a final assessment for three employee paths:
+Website đào tạo nội bộ COLORA - COLOR YOUR AURA. Bộ câu hỏi đã được thay bằng phiên bản **V6.1 Online First** để phù hợp mô hình bán hàng qua website, social và tư vấn từ xa.
 
-- General / Designer / Editor: **79 questions** (39 core + 40 specialized)
-- Customer Care / Advisor: **86 questions** (39 core + 47 specialized)
-- Marketing / Content: **89 questions** (39 core + 50 specialized)
+## Ngân hàng câu hỏi
 
-The shared bank has 176 questions, including multiple-select questions. The final assessment randomly selects 12 core + 18 role-specific questions, gives 35 minutes, and shows an explanation-based review only after submission.
+- **22 câu CORE**: nền tảng thương hiệu, sản phẩm, khách hàng và hành trình.
+- **18 câu chuyên môn Nhân sự chung / Designer / Editor**: tổng **40 câu** cho vị trí này.
+- **24 câu chuyên môn Customer Care / Advisor**: tổng **46 câu** cho vị trí này.
+- **25 câu chuyên môn Marketing / Content**: tổng **47 câu** cho vị trí này.
 
-## Run locally
+**89 câu duy nhất**, trong đó **12 câu chọn nhiều đáp án**. Phần luyện tập cung cấp đáp án, giải thích và hành động áp dụng. Bài tổng kết lấy ngẫu nhiên **12 CORE + 18 câu chuyên môn**, thời gian 35 phút và hiển thị giải thích sau khi nộp.
+
+## Chạy và triển khai
 
 ```sh
 python3 -m http.server 8080
 ```
 
-Then open `http://localhost:8080/`. This is a static site and requires no build or backend. Open the site through HTTP, not `file://`, because it loads `data/questions.json` using `fetch()`.
+Mở `http://localhost:8080/`. Trang tĩnh không cần backend hoặc build; phải mở qua HTTP vì ứng dụng dùng `fetch('./data/questions.json')`.
 
-## GitHub Pages
+GitHub Pages: Repository **Settings > Pages > Deploy from a branch** > `main` > `/ (root)`. Sau khi Pages xuất bản, đường dẫn thường là `https://lucasnguynn.github.io/QnA-COLORA/`; xác nhận lại trong GitHub Pages trước khi sử dụng.
 
-In repository Settings > Pages, choose **Deploy from a branch**, select `main` and `/ (root)`, then save. If deploying from a pull request, merge it first. Site URL is generally `https://lucasnguynn.github.io/QnA-COLORA/`, but only treat it as live after Pages reports successful publication.
+Kiểm tra dữ liệu và JavaScript:
 
-## Learning and assessments
+```sh
+node scripts/validate.mjs
+```
 
-- Practice: answer one question, receive feedback, see the reason and an application note. Wrong answers go into the review list.
-- Final test: 30 questions, 35 minutes, no answer feedback until the end, export results as CSV.
-- Progress: saved in this browser's localStorage only. Different browsers/devices do **not** share progress.
-- Pass level: 80% is a **provisional training suggestion**, not a validated staff certification threshold.
+## Phạm vi và mức độ chính thức
 
-## Privacy & security
+Bộ V6.1 hướng đến thực tế **online-first**: nhận biết thương hiệu, hiểu thông số và ảnh sản phẩm, chọn size từ xa, đánh giá niềm tin, so sánh giá trị, trải nghiệm website và hỗ trợ khách qua các kênh trực tuyến.
 
-This repository and GitHub Pages website are public. **Questions, answer keys, and explanations can be inspected in the JSON file and JavaScript**. The exam is therefore a learning assessment, **not a secure/proctored certification**. Do not publish customer data, staff sensitive information, internal confidential sourcing documents, or account credentials here.
+- Nội dung về **SKU, đá, vật liệu, xử lý đá, chi phí và thời gian giao** phải dựa trên hồ sơ sản phẩm được phê duyệt trước khi nói với khách.
+- Các chính sách bảo hành/đổi trả/giao hàng trên web có thể thay đổi; cần kiểm tra bản hiệu lực, không tự biến đáp án đào tạo thành SOP cố định.
+- Các nội dung ghi **GIẢ THUYẾT** hoặc **ĐỊNH HƯỚNG** không được xem là insight đã nghiên cứu đại diện hoặc cam kết dịch vụ.
+- Việc mua hàng hiện tại được đào tạo theo bối cảnh online, không mặc định COLORA có showroom, dịch vụ đặt thử tại cửa hàng hoặc hệ thống CRM riêng.
+- Nếu có thay đổi sau này, cập nhật đồng bộ `data/questions.json`, tài liệu này và trình kiểm tra.
 
-There is no employee login, server-side storage, or centralized management dashboard. Name fields and quiz results remain on the user's own browser. CSV result exports can be shared manually with a manager, but they are not tamper-proof.
+## Kết quả và bảo mật
 
-For a secure official exam with verified identities and central reporting, use a protected backend with authentication, server-side question selection/grading, role-based access, audit logs, rate limiting and consent/retention controls. GitHub Pages alone cannot provide that architecture.
+Đây là **website công khai**. JSON chứa toàn bộ câu hỏi, đáp án và lời giải; vì vậy đây là công cụ **tự học**, không phải đề thi bảo mật/chống gian lận. Không đưa dữ liệu khách hàng, tài liệu sourcing bí mật hoặc thông tin nhân sự nhạy cảm lên repository.
 
-## Content governance
+Tiến độ học và tên hiển thị chỉ lưu trong `localStorage` của trình duyệt đang sử dụng, không đồng bộ thiết bị. Lịch sử V6 được tách khỏi V6.1 để không nhầm câu hỏi và kết quả. Có thể tải kết quả thi dạng CSV, nhưng CSV không phải chứng nhận nhân sự chính thức.
 
-Training question sources were adapted from the COLORA V6 workbook and company positioning. Some product specifications, sourcing claims and policies are pending SKU-level approval. Verify all live claims and policies against COLORA's current approved records before customer-facing use.
+Ngưỡng 80% chỉ là mức tham khảo chưa được thẩm định. Để đánh giá hiểu biết thực tế, kết hợp phần trắc nghiệm với đối chiếu Product Passport/SKU chính thức và bài thực hành theo vai trò.
 
-Brand presentation: ivory `#F4EDE1`, navy `#002451`, accent bronze `#B08A5B`; heading Cormorant Garamond and body Open Sans. Web fonts are linked via Google Fonts and are not distributed in the repository.
+## Nhận diện
+
+Nền ivory `#F4EDE1`, navy `#002451`, bronze `#B08A5B`. Cormorant Garamond cho heading và Open Sans cho body. Font tải từ Google Fonts, không lưu font vào repository.
