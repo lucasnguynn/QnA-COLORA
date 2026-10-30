@@ -31,6 +31,21 @@ Tài liệu học về đá màu, không phải danh mục SKU đang bán hoặc
 
 Dải Mohs không đủ để quyết định một viên đá phù hợp cho nhẫn. Quan sát tình trạng thực tế và cấu trúc ổ đá vẫn cần thiết.
 
+
+### Thông số RI & SG tham chiếu (không thay kết quả giám định viên đá)
+
+| Nhóm đá | RI (tham khảo GIA) | SG (tham khảo GIA) | Lưu ý |
+|---|---:|---:|---|
+| Sapphire (corundum) | 1,762–1,770 | 4,00 | Mohs 9, độ cứng không thay kiểm tra treatment |
+| Spinel | ~1,718 | 3,60 | Hệ khúc xạ đơn, không cùng loài với ruby |
+| Topaz | 1,619–1,627 | 3,53 | Có cát khai dù Mohs 8 |
+| Tourmaline | 1,624–1,644 | ~3,06 | RI thay đổi theo nhóm và thành phần |
+| Aquamarine (beryl) | 1,577–1,583 | ~2,72 | Khác màu và tính chất với emerald dù cùng họ |
+| Amethyst / Citrine (quartz) | 1,544–1,553 | ~2,66 | Cùng quartz, Mohs 7 |
+| Peridot (olivine) | 1,65–1,69 | ~3,34 | Có birefringence khá cao |
+
+*RI là chỉ số khúc xạ; SG là tỷ trọng tương đối. Đây là các giá trị tham khảo cho nhận diện khoáng vật, không phải tiêu chuẩn chọn đá cao cấp của COLORA. Đặc tính viên cụ thể, nguồn gốc natural/synthetic và treatment vẫn cần kiểm định/hồ sơ phù hợp.*
+
 ## 3. Hình dạng và kiểu giác cắt
 
 | Hình dạng / cut style | Ưu điểm có thể khai thác | Rủi ro hoặc đánh đổi |
