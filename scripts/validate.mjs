@@ -24,7 +24,7 @@ for(const l of lessons){
   photoFiles.add(p.src);
  }
 }
-assert.equal(lessons.length,16);
+assert.equal(lessons.length,17);
 assert(photoFiles.size>=4,'Expected three real gemstone photos and brand reference');
 assert(lessons.filter(l=>(l.visual.photos||[]).length).length>=5,'Not enough chapters have real images');
 assert(lessons[0].title.includes('DEMI-FINE'), 'First lesson must introduce demi-fine');
