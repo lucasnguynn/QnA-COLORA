@@ -4,11 +4,13 @@ import {execFileSync} from 'node:child_process';
 const baseQuestions=JSON.parse(fs.readFileSync(new URL('../data/questions.json',import.meta.url),'utf8'));
 const gemParts=['13','14','15','16'].map(id=>JSON.parse(fs.readFileSync(new URL('../data/gem-'+id+'.json',import.meta.url),'utf8')));
 assert.deepEqual(gemParts.map(p=>p.length),[12,13,14,14]);
-const questions=[...baseQuestions,...gemParts.flat()];
+const careQuestions=JSON.parse(fs.readFileSync(new URL('../data/care-17.json',import.meta.url),'utf8'));
+assert.equal(careQuestions.length,32);
+const questions=[...baseQuestions,...gemParts.flat(),...careQuestions];
 const lessons=JSON.parse(fs.readFileSync(new URL('../data/lessons.json',import.meta.url),'utf8'));
 assert.equal(baseQuestions.length,206);
-assert.equal(questions.length,259);
-assert.equal(lessons.length,16);
+assert.equal(questions.length,291);
+assert.equal(lessons.length,17);
 const photoFiles=new Set();
 for(const l of lessons){
  const visual=l.visual;
@@ -30,7 +32,7 @@ assert(lessons[0].points.some(x=>x.includes('Fashion')||x.includes('fashion')), 
 assert(lessons.find(x=>x.id==='07').points.some(x=>x.includes('GENIA276')&&x.includes('930')), 'Ag930 COLORA material fact missing');
 assert(lessons.find(x=>x.id==='10').points.some(x=>x.includes('THU NHẬP TARGET')), 'Income uncertainties missing');
 const chapters=new Set(lessons.map(l=>l.id));
-assert.equal(chapters.size,16);
+assert.equal(chapters.size,17);
 for(const l of lessons){assert(l.title&&l.subtitle);assert(l.points.length>=8);assert(l.url.startsWith('https://'));assert(l.teachback?.prompt?.length>30&&l.teachback?.sample?.length>30,'Missing teach-back exercise '+l.id)}
 const counts={CORE:0,BASIC:0,CARE:0,MKT:0};const ids=new Set();const pillars=new Set(['THƯƠNG HIỆU','SẢN PHẨM','KHÁCH HÀNG','HÀNH TRÌNH']);
 let multi=0;
@@ -46,10 +48,10 @@ for(const q of questions){
  assert(!JSON.stringify(q).includes('https://'),'Do not publish source URLs inside question data');
  if(q.key.length>1)multi++;
 }
-assert.deepEqual(counts,{CORE:192,BASIC:18,CARE:24,MKT:25});
+assert.deepEqual(counts,{CORE:216,BASIC:18,CARE:32,MKT:25});
 assert.equal(multi,12);
 assert.equal(questions.filter(q=>q.role==='CORE'&&q.id.startsWith('FN-')).length,117);
-for(const [role,n] of [['BASIC',210],['CARE',216],['MKT',217]])assert.equal(questions.filter(q=>q.role==='CORE'||q.role===role).length,n);
+for(const [role,n] of [['BASIC',234],['CARE',248],['MKT',241]])assert.equal(questions.filter(q=>q.role==='CORE'||q.role===role).length,n);
 execFileSync('node',['--check',new URL('../app.js',import.meta.url).pathname],{stdio:'inherit'});
 const first=questions.find(q=>q.id==='FN-001');
 assert(first.q.toLowerCase().includes('demi-fine'), 'Missing basic demi-fine question');
@@ -81,4 +83,14 @@ assert(gemLeak/gemQuestions.length<.65,'Gemstone answer length leakage');
 assert(lessons.find(l=>l.id==='15').visual.diagram==='cuts','Missing cut diagram');
 assert((lessons.find(l=>l.id==='16').origin+' '+lessons.find(l=>l.id==='16').points.join(' ')).toLowerCase().includes('chưa'),'QC status must stay explicit');
 assert(!JSON.stringify(gemQuestions).includes('300–700'),'Do not publish internal stone cost target');
-console.log('Validated 259 questions, 16 illustrated lessons, 53 gemstone questions, COLORA internal QC guardrails, and app syntax.');
+assert.equal(careQuestions.filter(q=>q.role==='CORE').length,24);
+assert.equal(careQuestions.filter(q=>q.role==='CARE').length,8);
+assert(careQuestions.every(q=>q.chapter==='17'));
+assert(lessons.find(l=>l.id==='17').points.some(p=>p.includes('COLORA SILVER')));
+assert(lessons.find(l=>l.id==='17').points.some(p=>p.includes('siêu âm')));
+assert(lessons.find(l=>l.id==='17').visual.photos?.length>=1);
+const careLongest=careQuestions.filter(q=>q.key.length===1&&q.a[q.key[0]].length===Math.max(...q.a.map(x=>x.length))).length;
+assert(careLongest/careQuestions.length<.4,'Care question key-length leakage');
+const careChar=JSON.stringify(careQuestions);
+assert(!careChar.includes('300–700'),'Do not leak internal sourcing prices');
+console.log('Validated 291 questions, 17 illustrated lessons, 53 gemstone and 32 product-care questions, COLORA SILVER, and app syntax.');
