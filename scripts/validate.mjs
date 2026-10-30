@@ -11,7 +11,7 @@ assert(lessons.find(x=>x.id==='07').points.some(x=>x.includes('GENIA276')&&x.inc
 assert(lessons.find(x=>x.id==='10').points.some(x=>x.includes('THU NHẬP TARGET')), 'Income uncertainties missing');
 const chapters=new Set(lessons.map(l=>l.id));
 assert.equal(chapters.size,12);
-for(const l of lessons){assert(l.title&&l.subtitle);assert(l.points.length>=4);assert(l.url.startsWith('https://'))}
+for(const l of lessons){assert(l.title&&l.subtitle);assert(l.points.length>=8);assert(l.url.startsWith('https://'));assert(l.teachback?.prompt?.length>30&&l.teachback?.sample?.length>30,'Missing teach-back exercise '+l.id)}
 const counts={CORE:0,BASIC:0,CARE:0,MKT:0};const ids=new Set();const pillars=new Set(['THƯƠNG HIỆU','SẢN PHẨM','KHÁCH HÀNG','HÀNH TRÌNH']);
 let multi=0;
 for(const q of questions){

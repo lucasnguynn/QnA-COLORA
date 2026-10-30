@@ -16,7 +16,11 @@
       "TỰ KIỂM TRA | Nếu một người hỏi “demi-fine có phải chỉ là trang sức bạc mạ không?”, nhân viên phải có thể giải thích: không; đây là cách định vị sản phẩm, còn vật liệu/độ bền phải xem từng món."
     ],
     "url": "https://colora.vn/pages/cau-chuyen-colora",
-    "origin": "Tổng hợp từ các định hướng/khẳng định nội bộ của COLORA và kiến thức ngành phù hợp; link chỉ là tài liệu tham khảo bổ sung, không thay thế hồ sơ nội bộ."
+    "origin": "Tổng hợp từ các định hướng/khẳng định nội bộ của COLORA và kiến thức ngành phù hợp; link chỉ là tài liệu tham khảo bổ sung, không thay thế hồ sơ nội bộ.",
+    "teachback": {
+      "prompt": "Giải thích bằng lời của bạn: demi-fine là gì, khác fashion/fine jewelry ở điểm nào và COLORA bán giá trị gì?",
+      "sample": "Demi-fine là cách định vị thương mại, không là chuẩn hợp kim. COLORA làm trang sức demi-fine Việt Nam, đá màu là tâm điểm, kết hợp thiết kế có bản sắc, chất lượng được chứng minh, dễ đeo và ý nghĩa do người đeo chọn. Không bán đá rời."
+    }
   },
   {
     "id": "02",
@@ -35,7 +39,11 @@
       "NÓI 30 GIÂY | Nhân viên phải nối được “COLORA là ai” với “vì sao thương hiệu tồn tại” và “món trang sức đem lại điều gì”, không chỉ đọc khẩu hiệu."
     ],
     "url": "https://colora.vn/pages/cau-chuyen-colora",
-    "origin": "Tổng hợp từ các định hướng/khẳng định nội bộ của COLORA và kiến thức ngành phù hợp; link chỉ là tài liệu tham khảo bổ sung, không thay thế hồ sơ nội bộ."
+    "origin": "Tổng hợp từ các định hướng/khẳng định nội bộ của COLORA và kiến thức ngành phù hợp; link chỉ là tài liệu tham khảo bổ sung, không thay thế hồ sơ nội bộ.",
+    "teachback": {
+      "prompt": "Nói trong 30 giây: COLORA vì sao được tạo ra và COLOR YOUR AURA nghĩa là gì?",
+      "sample": "COLORA bắt đầu từ khát vọng tạo một thương hiệu Việt Nam có thiết kế riêng, chất lượng và trải nghiệm tốt. COLOR YOUR AURA mời mỗi người thể hiện khí chất/sắc thái cá nhân bằng màu sắc, không phải viên đá thay đổi vận mệnh."
+    }
   },
   {
     "id": "03",
@@ -54,7 +62,11 @@
       "KIỂM TRA | Một khách chỉ chọn đá vì màu hợp tủ đồ vẫn hoàn toàn phù hợp với triết lý COLORA."
     ],
     "url": "https://colora.vn/pages/cau-chuyen-colora",
-    "origin": "Tổng hợp từ các định hướng/khẳng định nội bộ của COLORA và kiến thức ngành phù hợp; link chỉ là tài liệu tham khảo bổ sung, không thay thế hồ sơ nội bộ."
+    "origin": "Tổng hợp từ các định hướng/khẳng định nội bộ của COLORA và kiến thức ngành phù hợp; link chỉ là tài liệu tham khảo bổ sung, không thay thế hồ sơ nội bộ.",
+    "teachback": {
+      "prompt": "Nhìn một chiếc nhẫn COLORA: hãy giải thích gemstone, facet, light và cảm xúc mà không ép người đeo kể chuyện.",
+      "sample": "Gemstone là tâm điểm màu sắc; facet là những mặt hình học bắt sáng và gợi lát cắt trải nghiệm; light tạo thay đổi theo góc nhìn; ý nghĩa cuối cùng tùy người đeo, kể cả khi họ chỉ thích màu."
+    }
   },
   {
     "id": "04",
@@ -73,7 +85,11 @@
       "CÂU HỎI CỐT LÕI | Nếu bỏ tên và logo, khách còn nhận ra tính COLORA nhờ đặc điểm thiết kế và trải nghiệm nào?"
     ],
     "url": "https://colora.vn/pages/cau-chuyen-colora",
-    "origin": "Tổng hợp từ các định hướng/khẳng định nội bộ của COLORA và kiến thức ngành phù hợp; link chỉ là tài liệu tham khảo bổ sung, không thay thế hồ sơ nội bộ."
+    "origin": "Tổng hợp từ các định hướng/khẳng định nội bộ của COLORA và kiến thức ngành phù hợp; link chỉ là tài liệu tham khảo bổ sung, không thay thế hồ sơ nội bộ.",
+    "teachback": {
+      "prompt": "Tự phân biệt một câu sứ mệnh, một câu tầm nhìn và ba giá trị cần giữ khi thiết kế sản phẩm.",
+      "sample": "Sứ mệnh: đưa sắc màu cảm xúc vào đời sống mỗi ngày. Tầm nhìn: từ Việt Nam, đủ riêng được nhận ra và đủ tốt đi xa. Giá trị: Design, Wearability, Experience. Đó là định hướng, không phải thành tựu đã hoàn thành."
+    }
   },
   {
     "id": "05",
@@ -92,7 +108,11 @@
       "KHI ĐÁNH GIÁ NỘI DUNG | Chọn ảnh tổng thể, góc nghiêng và macro để chứng minh sản phẩm đúng DNA, không chỉ moodboard hoặc ảnh render đẹp."
     ],
     "url": "https://colora.vn/pages/colora-house",
-    "origin": "Tổng hợp từ các định hướng/khẳng định nội bộ của COLORA và kiến thức ngành phù hợp; link chỉ là tài liệu tham khảo bổ sung, không thay thế hồ sơ nội bộ."
+    "origin": "Tổng hợp từ các định hướng/khẳng định nội bộ của COLORA và kiến thức ngành phù hợp; link chỉ là tài liệu tham khảo bổ sung, không thay thế hồ sơ nội bộ.",
+    "teachback": {
+      "prompt": "Tại sao một mẫu nhẫn nhiều đá nhỏ, sắc cạnh, cồng kềnh dù đẹp vẫn có thể không đúng COLORA?",
+      "sample": "Vì DNA cần đá màu có thứ bậc, phom mềm, facet rộng có chủ đích, pavé tiết chế, cấu trúc dùng được hằng ngày. Đẹp trên ảnh chưa chứng minh vừa, không vướng hay chế tác khả thi."
+    }
   },
   {
     "id": "06",
@@ -111,7 +131,11 @@
       "VÍ DỤ | Nhẫn có đá màu vừa tầm và setting hợp lý: functional là cảm giác đeo và phối đồ, không phải “đá giúp bạn hạnh phúc”."
     ],
     "url": "https://colora.vn/pages/size-resizing",
-    "origin": "Tổng hợp từ các định hướng/khẳng định nội bộ của COLORA và kiến thức ngành phù hợp; link chỉ là tài liệu tham khảo bổ sung, không thay thế hồ sơ nội bộ."
+    "origin": "Tổng hợp từ các định hướng/khẳng định nội bộ của COLORA và kiến thức ngành phù hợp; link chỉ là tài liệu tham khảo bổ sung, không thay thế hồ sơ nội bộ.",
+    "teachback": {
+      "prompt": "Nêu ba chi tiết chức năng cần kiểm tra cho một nhẫn, một hoa tai và một dây chuyền bán online.",
+      "sample": "Nhẫn: ni, bề rộng, chiều cao setting/cạnh. Hoa tai: trọng lượng, chốt, cân bằng. Dây chuyền: độ dài, độ rủ và khóa. Cần on-body + macro + mm đã xác nhận để khách hiểu khi chưa được cầm thử."
+    }
   },
   {
     "id": "07",
@@ -131,7 +155,11 @@
       "CÁCH GIẢI THÍCH GIÁ | Nhân viên nên hiểu vì sao viên đá màu và kết cấu, vật liệu, finishing, thiết kế và chăm sóc cùng làm nên giá trị; không xem trọng lượng bạc là thước đo duy nhất."
     ],
     "url": "https://colora.vn/",
-    "origin": "Nội dung có thông tin nội bộ, giả định kinh doanh và các khái niệm ngành; chỉ áp dụng claim theo hồ sơ SKU/giá live đã duyệt."
+    "origin": "Nội dung có thông tin nội bộ, giả định kinh doanh và các khái niệm ngành; chỉ áp dụng claim theo hồ sơ SKU/giá live đã duyệt.",
+    "teachback": {
+      "prompt": "Giải thích cho đồng nghiệp sự khác nhau giữa Ag930 và Ag925, cùng những gì được phép/không được phép nói về GENIA276, recycled silver và nickel-free.",
+      "sample": "Ag930 chứa 93,0% bạc và Ag925 là 92,5%. COLORA đã chọn GENIA276 Ag930; nguồn bạc post-consumer recycled và không dùng nickel có phạm vi chứng từ. Không hứa mọi SKU giống nhau, không tự ghi hypoallergenic hoặc không xỉn tuyệt đối."
+    }
   },
   {
     "id": "08",
@@ -150,7 +178,11 @@
       "GẮN BÓ | Mối quan hệ với COLORA nên đến từ việc sản phẩm được sử dụng và được hỗ trợ tốt, không phải thúc ép khách mua thêm theo lịch."
     ],
     "url": "https://colora.vn/pages/cau-chuyen-colora",
-    "origin": "Tổng hợp từ các định hướng/khẳng định nội bộ của COLORA và kiến thức ngành phù hợp; link chỉ là tài liệu tham khảo bổ sung, không thay thế hồ sơ nội bộ."
+    "origin": "Tổng hợp từ các định hướng/khẳng định nội bộ của COLORA và kiến thức ngành phù hợp; link chỉ là tài liệu tham khảo bổ sung, không thay thế hồ sơ nội bộ.",
+    "teachback": {
+      "prompt": "Chọn một chiếc nhẫn đá màu và trình bày đủ ba lớp Functional, Technical, Emotional cho người chưa biết COLORA.",
+      "sample": "Functional là vừa/thoải mái/phối đồ; Technical là loại đá, vật liệu, chấu, hoàn thiện và hồ sơ; Emotional là sở thích, bản sắc, tự thưởng hoặc ký ức riêng nếu người đeo muốn. Câu chuyện không thay bằng chứng."
+    }
   },
   {
     "id": "09",
@@ -170,7 +202,11 @@
       "ĐẠO ĐỨC THƯƠNG HIỆU | Tìm Gap Nhận Thức nhằm giúp khách hiểu sản phẩm chính xác hơn, không khai thác điều họ không biết để bán đắt hoặc gây áp lực."
     ],
     "url": "https://colora.vn/pages/gift-guide",
-    "origin": "Tổng hợp từ các định hướng/khẳng định nội bộ của COLORA và kiến thức ngành phù hợp; link chỉ là tài liệu tham khảo bổ sung, không thay thế hồ sơ nội bộ."
+    "origin": "Tổng hợp từ các định hướng/khẳng định nội bộ của COLORA và kiến thức ngành phù hợp; link chỉ là tài liệu tham khảo bổ sung, không thay thế hồ sơ nội bộ.",
+    "teachback": {
+      "prompt": "Mô tả hai người mua COLORA cùng tuổi nhưng nhu cầu khác hẳn. Vì sao không thể dùng một persona?",
+      "sample": "Một người chọn nhẫn tự mua để đeo hằng ngày, quan tâm size/độ vướng; người khác mua quà, quan tâm gu người nhận và hạn giao. Tuổi không cho biết ngân sách, động cơ hoặc rủi ro quan trọng nhất."
+    }
   },
   {
     "id": "10",
@@ -190,7 +226,11 @@
       "GIẢI THÍCH GIÁ | Nói về giá trị thật của từng SKU, không hạ thấp đối thủ, không tuyên bố trang sức mua để đầu tư có thể tăng giá chắc chắn."
     ],
     "url": "https://colora.vn/pages/cau-chuyen-colora",
-    "origin": "Nội dung có thông tin nội bộ, giả định kinh doanh và các khái niệm ngành; chỉ áp dụng claim theo hồ sơ SKU/giá live đã duyệt."
+    "origin": "Nội dung có thông tin nội bộ, giả định kinh doanh và các khái niệm ngành; chỉ áp dụng claim theo hồ sơ SKU/giá live đã duyệt.",
+    "teachback": {
+      "prompt": "Một người thu nhập 30 triệu nói chiếc nhẫn 3 triệu quá đắt; giải thích vì sao không thể kết luận họ không đủ tiền.",
+      "sample": "Income khác discretionary budget và willingness to pay. Họ có thể ưu tiên chi tiêu khác, chưa thấy giá trị, chưa tin chứng cứ hoặc mẫu chưa hợp. Dải giá kế hoạch của COLORA cũng không chứng minh mức lương target."
+    }
   },
   {
     "id": "11",
@@ -210,7 +250,11 @@
       "PHÂN BIỆT ROADMAP | CRM tự động, product passport dạng NFC, hệ thống cá nhân hóa sâu và các touchpoint offline có thể nằm trong chiến lược nhưng không dạy như tính năng đã triển khai nếu chưa xác minh."
     ],
     "url": "https://colora.vn/",
-    "origin": "Tổng hợp từ các định hướng/khẳng định nội bộ của COLORA và kiến thức ngành phù hợp; link chỉ là tài liệu tham khảo bổ sung, không thay thế hồ sơ nội bộ."
+    "origin": "Tổng hợp từ các định hướng/khẳng định nội bộ của COLORA và kiến thức ngành phù hợp; link chỉ là tài liệu tham khảo bổ sung, không thay thế hồ sơ nội bộ.",
+    "teachback": {
+      "prompt": "Khách xem video TikTok, lưu Instagram, vào PDP, hỏi Zalo rồi quay lại checkout: ở mỗi bước họ cần loại thông tin gì?",
+      "sample": "Social khơi gợi thẩm mỹ và nhu cầu; PDP cho thông số và ảnh tỷ lệ; tư vấn giải đáp điều còn thiếu; checkout phải rõ giá/giao/đổi trả; sau mua hỗ trợ sử dụng/care. Tất cả kênh phải nói nhất quán về cùng SKU."
+    }
   },
   {
     "id": "12",
@@ -230,6 +274,10 @@
       "KIỂM TRA TRƯỚC KHI CÔNG BỐ | Nhân viên cần đọc đúng Product Passport, phiên bản hình ảnh SKU, giá và chính sách hiệu lực, thay vì nhớ số liệu từ một câu trắc nghiệm."
     ],
     "url": "https://colora.vn/pages/colora-house",
-    "origin": "Tổng hợp từ các định hướng/khẳng định nội bộ của COLORA và kiến thức ngành phù hợp; link chỉ là tài liệu tham khảo bổ sung, không thay thế hồ sơ nội bộ."
+    "origin": "Tổng hợp từ các định hướng/khẳng định nội bộ của COLORA và kiến thức ngành phù hợp; link chỉ là tài liệu tham khảo bổ sung, không thay thế hồ sơ nội bộ.",
+    "teachback": {
+      "prompt": "Khách hỏi “Viên đá này untreated và có giấy GIA không?” nhưng hồ sơ SKU chưa rõ: bạn làm gì và cần nguồn nào?",
+      "sample": "Không tự hứa. Kiểm tra hồ sơ loại đá và xử lý, chứng thư độc lập nếu có, Product Passport đã duyệt; nếu chưa có, nói rõ điểm đang xác minh. COA thương hiệu không mặc nhiên tương đương giấy lab."
+    }
   }
 ]
