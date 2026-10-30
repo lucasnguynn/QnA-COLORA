@@ -1,10 +1,14 @@
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {execFileSync} from 'node:child_process';
-const questions=JSON.parse(fs.readFileSync(new URL('../data/questions.json',import.meta.url),'utf8'));
+const baseQuestions=JSON.parse(fs.readFileSync(new URL('../data/questions.json',import.meta.url),'utf8'));
+const gemParts=['13','14','15','16'].map(id=>JSON.parse(fs.readFileSync(new URL('../data/gem-'+id+'.json',import.meta.url),'utf8')));
+assert.deepEqual(gemParts.map(p=>p.length),[12,13,14,14]);
+const questions=[...baseQuestions,...gemParts.flat()];
 const lessons=JSON.parse(fs.readFileSync(new URL('../data/lessons.json',import.meta.url),'utf8'));
-assert.equal(questions.length,206);
-assert.equal(lessons.length,12);
+assert.equal(baseQuestions.length,206);
+assert.equal(questions.length,259);
+assert.equal(lessons.length,16);
 const photoFiles=new Set();
 for(const l of lessons){
  const visual=l.visual;
@@ -18,7 +22,7 @@ for(const l of lessons){
   photoFiles.add(p.src);
  }
 }
-assert.equal(lessons.length,12);
+assert.equal(lessons.length,16);
 assert(photoFiles.size>=4,'Expected three real gemstone photos and brand reference');
 assert(lessons.filter(l=>(l.visual.photos||[]).length).length>=5,'Not enough chapters have real images');
 assert(lessons[0].title.includes('DEMI-FINE'), 'First lesson must introduce demi-fine');
@@ -26,7 +30,7 @@ assert(lessons[0].points.some(x=>x.includes('Fashion')||x.includes('fashion')), 
 assert(lessons.find(x=>x.id==='07').points.some(x=>x.includes('GENIA276')&&x.includes('930')), 'Ag930 COLORA material fact missing');
 assert(lessons.find(x=>x.id==='10').points.some(x=>x.includes('THU NHẬP TARGET')), 'Income uncertainties missing');
 const chapters=new Set(lessons.map(l=>l.id));
-assert.equal(chapters.size,12);
+assert.equal(chapters.size,16);
 for(const l of lessons){assert(l.title&&l.subtitle);assert(l.points.length>=8);assert(l.url.startsWith('https://'));assert(l.teachback?.prompt?.length>30&&l.teachback?.sample?.length>30,'Missing teach-back exercise '+l.id)}
 const counts={CORE:0,BASIC:0,CARE:0,MKT:0};const ids=new Set();const pillars=new Set(['THƯƠNG HIỆU','SẢN PHẨM','KHÁCH HÀNG','HÀNH TRÌNH']);
 let multi=0;
@@ -42,10 +46,10 @@ for(const q of questions){
  assert(!JSON.stringify(q).includes('https://'),'Do not publish source URLs inside question data');
  if(q.key.length>1)multi++;
 }
-assert.deepEqual(counts,{CORE:139,BASIC:18,CARE:24,MKT:25});
+assert.deepEqual(counts,{CORE:192,BASIC:18,CARE:24,MKT:25});
 assert.equal(multi,12);
 assert.equal(questions.filter(q=>q.role==='CORE'&&q.id.startsWith('FN-')).length,117);
-for(const [role,n] of [['BASIC',157],['CARE',163],['MKT',164]])assert.equal(questions.filter(q=>q.role==='CORE'||q.role===role).length,n);
+for(const [role,n] of [['BASIC',210],['CARE',216],['MKT',217]])assert.equal(questions.filter(q=>q.role==='CORE'||q.role===role).length,n);
 execFileSync('node',['--check',new URL('../app.js',import.meta.url).pathname],{stdio:'inherit'});
 const first=questions.find(q=>q.id==='FN-001');
 assert(first.q.toLowerCase().includes('demi-fine'), 'Missing basic demi-fine question');
@@ -66,4 +70,15 @@ assert(questions.some(q=>q.id==='FN-062'&&q.q.includes('COLORA SILVER')));
 assert(questions.some(q=>q.id==='FN-037'&&[q.q,...q.a,q.why].join(' ').includes('2,3–8 triệu')));
 assert(!JSON.stringify(lessons).includes('2,3–5 triệu'),'Outdated planned price in lessons');
 assert(!JSON.stringify(questions).includes('2,3–5 triệu'),'Outdated planned price in questions');
-console.log('Validated 206 questions, 12 illustrated lessons, real photo assets, COLORA SILVER and JS syntax.');
+const gemQuestions=questions.filter(q=>q.id.startsWith('GM-'));
+assert.equal(gemQuestions.length,53);
+assert.deepEqual(['13','14','15','16'].map(c=>gemQuestions.filter(q=>q.chapter===c).length),[12,13,14,14]);
+assert(gemQuestions.some(q=>q.q.includes('Mohs')&&q.why.includes('toughness')));
+assert(gemQuestions.some(q=>q.q.toLowerCase().includes('oval')&&q.why.includes('Shape')));
+assert(gemQuestions.some(q=>q.chapter==='16'&&q.status.includes('CHỜ PHÊ DUYỆT')));
+const gemLeak=gemQuestions.filter(q=>q.key.length===1&&q.a[q.key[0]].length===Math.max(...q.a.map(x=>x.length))).length;
+assert(gemLeak/gemQuestions.length<.65,'Gemstone answer length leakage');
+assert(lessons.find(l=>l.id==='15').visual.diagram==='cuts','Missing cut diagram');
+assert(lessons.find(l=>l.id==='16').points.some(p=>p.includes('CHƯA CHỐT')),'QC status must stay explicit');
+assert(!JSON.stringify(gemQuestions).includes('300–700'),'Do not publish internal stone cost target');
+console.log('Validated 259 questions, 16 illustrated lessons, 53 gemstone questions, COLORA internal QC guardrails, and app syntax.');

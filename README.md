@@ -1,4 +1,4 @@
-# COLORA Learning Studio - Foundations V7.2
+# COLORA Learning Studio - Gemstone Mastery V8
 
 **COLORA - COLOR YOUR AURA**
 
@@ -7,15 +7,15 @@ Hệ thống tự học cho nhân viên COLORA (mô hình bán hàng online-firs
 ## Điểm thay đổi từ V7
 
 - **Demi-fine 101 là bài đầu tiên**: định nghĩa, phân biệt với fashion/fine jewelry, những gì demi-fine *không* bảo đảm, vị trí của COLORA trong phân khúc.
-- **125 mục kiến thức** trong 12 bài học, không yêu cầu nhân viên tự suy ra kiến thức từ đáp án.
-- **76 câu nền tảng FN được viết lại**, giữ tổng 206 câu để không tăng số lượng chỉ vì thiếu chiều sâu. Đáp án đúng đã được cân bằng độ dài để giảm mẹo làm bài.
+- **178 mục kiến thức** trong 16 bài học, không yêu cầu nhân viên tự suy ra kiến thức từ đáp án.
+- **76 câu nền tảng FN được viết lại**, giữ nguyên 206 câu V7.2 và bổ sung 53 câu về đá màu. Đáp án đúng đã được cân bằng độ dài để giảm mẹo làm bài.
 - Đưa vào những nội dung có nguồn gốc **quyết định nội bộ**: mục đích hình thành thương hiệu Việt, sứ mệnh, tầm nhìn, giá trị Design / Wearability / Experience, tên gọi và tagline, ba lớp Product Functional/Technical/Emotional, **COLORA SILVER - Bạc COLORA**, công nghệ mạ phủ độc quyền, bạc tái chế GENIA276 Ag 930‰, chứng nhận liên quan RJC ở phạm vi nguồn nguyên liệu, và định hướng không dùng nickel.
 - **Khoảng giá dự kiến mới nhất:** 2,3–8 triệu đồng/sản phẩm. Đây là khung kế hoạch, không phải giá niêm yết của mọi SKU.
 - **Kim loại thương hiệu:** COLORA SILVER sử dụng bạc tái chế GENIA276 Ag 930‰ và công nghệ mạ phủ độc quyền; không suy rộng chứng nhận RJC của nguồn nguyên liệu thành chứng nhận toàn bộ thành phẩm. Kiểm tra hồ sơ SKU và chứng từ lô trước khi công bố chi tiết.
 - Khách hàng mục tiêu: nhóm nữ 22–38 là **định hướng ưu tiên nghiên cứu**, không phải một khuôn mẫu cứng. Không bịa dải thu nhập tháng.
 - Hiện trạng: COLORA bán online; không bắt nhân viên giả định có showroom hay các dịch vụ trong roadmap.
 - Lời giải được gắn hướng áp dụng; vẫn có phần bài chuyên môn cho Designer/Editor, Customer Care và Marketing.
-- Mọi người học cùng 12 chương CORE trước khi làm bài chuyên môn; bài tổng kết vẫn gồm 40 câu bao phủ đủ 12 chương nền và 15 câu chuyên môn.
+- Mọi người học cùng 16 chương CORE, gồm bốn chương Gemstone Mastery. Bài tổng kết 48 câu (33 CORE phủ đủ 16 chương và 15 câu chuyên môn).
 
 ## Kiến thức nguồn cho nhân viên
 
@@ -25,11 +25,11 @@ Tài liệu bao gồm bảng phân biệt fashion/demi-fine/fine jewelry, sứ m
 
 ## Bố cục hệ thống
 
-- 12 chương kiến thức và 139 câu CORE (117 câu nền FN, 22 câu củng cố).
+- 16 chương kiến thức và 192 câu CORE (117 câu nền FN, 22 câu củng cố V6.1 và 53 câu Gemstone Mastery).
 - 18 câu Designer/Editor; 24 câu Customer Care; 25 câu Marketing.
-- 157 câu cho nhân sự chung; 163 câu cho Customer Care; 164 câu cho Marketing (đều đã bao gồm CORE).
-- Tổng 206 câu duy nhất; 12 câu multi-select.
-- Bài kiểm tra 40 câu, 45 phút. Chọn ngẫu nhiên 25 CORE phủ đủ 12 chương, còn lại 15 câu theo vị trí.
+- 210 câu cho nhân sự chung; 216 câu cho Customer Care; 217 câu cho Marketing (đều đã bao gồm CORE).
+- Tổng 259 câu duy nhất; 12 câu multi-select trong ngân hàng trước, 53 câu gemstone single-select chuyên sâu.
+- Bài kiểm tra 48 câu, 55 phút. Chọn 33 CORE phủ đủ 16 chương (trong đó tối thiểu 8 câu từ 4 chương gemstone) và 15 câu theo vị trí.
 
 ## Nguồn, trạng thái và những gì không nên coi là sự thật
 
@@ -45,12 +45,28 @@ Bộ kiến thức được tổng hợp từ các trao đổi nội bộ của 
 
 ## Hình minh họa V7.3
 
-Website đã bổ sung **minh họa trực quan cho cả 12 chương CORE**: năm chương có ảnh tư liệu thật, các chương còn lại có sơ đồ kiến thức như phân biệt fashion/demi-fine/fine, Product Functional, Target Customer, giá dự kiến và Customer Journey online.
+Website đã bổ sung **minh họa trực quan cho cả 16 chương CORE**: chín chương có ảnh tư liệu thật, các chương còn lại có sơ đồ kiến thức như phân biệt fashion/demi-fine/fine, Product Functional, Target Customer, giá dự kiến và Customer Journey online.
 
 - Ảnh đá màu lấy từ thư viện khảo sát nguồn đá COLORA, **không phải sản phẩm đã mở bán**. Không nhận diện loại đá, nguồn gốc hoặc chứng nhận qua ảnh.
 - Ảnh được tối ưu WebP, không giữ EXIF gốc, tải lazy; bấm ảnh để xem lớn hơn.
 - Khi có ảnh sản phẩm COLORA đã được duyệt, ưu tiên thay tư liệu khay đá bằng ảnh macro thật, ảnh đeo thật và ảnh góc nghiêng/mặt sau.
 - Nguồn ảnh và danh sách cần bổ sung: [Visual Asset Register](docs/VISUAL_ASSET_REGISTER.md).
+
+
+## Gemstone Mastery V8 - Đá quý / bán quý và tiêu chuẩn chọn đá
+
+Bốn chương mới:
+
+- **13 | Gemstone 101:** precious/semi-precious, natural/synthetic/simulant, treatment, hue/tone/saturation, Mohs, toughness, stability, L×W×D và carat (12 câu).
+- **14 | Gemstone Types:** sapphire, ruby, spinel, topaz, tourmaline, emerald, aquamarine, amethyst, citrine, garnet, peridot, opal (13 câu).
+- **15 | Shape & Cut:** round, oval, pear, cushion, marquise, emerald outline; brilliant, step, mixed, rose, cabochon; ưu nhược và lỗi window/bow-tie (14 câu).
+- **16 | COLORA Gem Selection:** gemstone-first, CAD calibration, master color range, xử lý, chips, inclusions, traceability, cut/setting và phê duyệt mẫu (14 câu).
+
+Ưu tiên ảnh khảo sát đá thật từ thư viện COLORA đã có trong thư mục `assets/`, kết hợp hình biên dạng SVG do dự án tự vẽ để so các kiểu shape. Ảnh đá trong khay **không phải SKU đang mở bán**, không chứng minh tên loài, nguồn gốc hoặc giấy chứng nhận.
+
+**Quyết định thương hiệu và checklist QC phải được phân biệt:** kiểm soát màu, dung sai đá, chất lượng giác cắt, đánh giá khuyết tật và hồ sơ lô là khung đề xuất cần phê duyệt SOP trước khi bắt buộc áp dụng. Không đưa ngân sách mua đá nội bộ vào repository công khai.
+
+[Đọc giáo trình Gemstone Mastery và bảng so sánh đá/giác cắt](docs/GEMSTONE_MASTERY.md).
 
 ## Chạy
 

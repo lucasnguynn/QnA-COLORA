@@ -612,5 +612,254 @@
       ],
       "note": "Không dùng ảnh tư liệu đá rời để thay cho ảnh sản phẩm bán thật. Trước khi công bố COLORA SILVER hoặc RJC, đối chiếu đúng chứng từ."
     }
+  },
+  {
+    "id": "13",
+    "title": "GEMSTONE 101 | ĐÁ QUÝ, BÁN QUÝ & THÔNG SỐ",
+    "subtitle": "Tìm hiểu đá màu một cách chính xác: tên đá, nguồn gốc, độ cứng, độ dai, độ ổn định, màu, kích thước và xử lý.",
+    "origin": "Kiến thức ngành tham chiếu GIA; không tự suy ra tiêu chuẩn kiểm định hay giấy tờ của mọi SKU COLORA.",
+    "url": "https://4cs.gia.edu/en-us/blog/more-than-mohs-scale-gem-durability/",
+    "points": [
+      "ĐÁ QUÝ / BÁN QUÝ LÀ GÌ? | 'Precious' và 'semi-precious' là cách gọi lịch sử/thương mại, không phải bảng xếp hạng chất lượng hay độ bền theo một chuẩn khoa học thống nhất. COLORA nên nêu tên khoáng vật/đá cụ thể và đặc tính của viên thay vì để hai nhãn này quyết định giá trị.",
+      "NATURAL VS SYNTHETIC VS SIMULANT | Đá tự nhiên hình thành trong tự nhiên; đá tổng hợp do con người tạo nhưng có thể cùng thành phần/cấu trúc với đá tự nhiên; đá mô phỏng chỉ giống vẻ ngoài. Không đồng nhất synthetic với 'nhựa' và không gọi simulant là đá tự nhiên.",
+      "NATURAL KHÔNG ĐỒNG NGHĨA UNTREATED | Đá tự nhiên có thể qua gia nhiệt, chiếu xạ, phủ màu, nhuộm, tẩm dầu hoặc lấp khe nứt. Mỗi xử lý có ảnh hưởng riêng đến giá trị, cách chăm sóc và lời công bố.",
+      "THANG ĐỘ CỨNG MOHS | Xếp hạng tương đối khả năng chống trầy: không tuyến tính. Mohs 9 không có nghĩa 'bền gấp 9 lần Mohs 1'. Diamond 10 vẫn có thể mẻ/vỡ khi va đập.",
+      "3 THÀNH TỐ ĐỘ BỀN | Hardness = chống trầy, toughness = chống mẻ/vỡ, stability = chịu tác động nhiệt, ánh sáng, hóa chất. Khi chọn nhẫn đeo thường xuyên phải xét cả 3 cùng setting và thói quen sử dụng.",
+      "MÀU - HUE / TONE / SATURATION | Hue là gam màu, tone là độ sáng/tối, saturation là mức đậm/thuần màu. Đá cùng tên, cùng kích thước vẫn có thể khác giá nhiều vì màu và độ cắt.",
+      "CLARITY / INCLUSIONS | Bao thể có thể là đặc điểm hình thành tự nhiên, nhưng bao thể sát chấu, khe nứt chạy tới bề mặt hay điểm mẻ có thể ảnh hưởng an toàn. 'Eye-clean' phụ thuộc tiêu chí quan sát; không thể dùng như cam kết mọi loài đá đều không có bao thể.",
+      "CUT, SHAPE, CARAT, MILLIMET | Shape là biên dạng (oval, pear, cushion); cut style là tổ chức mặt giác (brilliant, step, mixed, cabochon); carat là khối lượng 0,2 g/ct, còn mm là kích thước vật lý. Đá 1 ct các loại có thể kích thước không giống nhau.",
+      "WINDOWING / EXTINCTION | Đá cắt quá nông có thể tạo vùng xuyên thấu ở giữa (window); cắt quá sâu hoặc bố trí mặt không hợp lý có thể tạo vùng tối (extinction). Đánh giá khi nhìn trực diện và khi nghiêng dưới ánh sáng phù hợp.",
+      "TREATMENT & CARE | Không kết luận 'mọi đá tự nhiên đều rửa siêu âm được'. Cách chăm sóc phụ thuộc loài đá, khe nứt, chất lấp, lớp phủ và cấu trúc món trang sức.",
+      "PRODUCT CONTEXT | COLORA bán trang sức hoàn chỉnh có đá màu, không bán đá rời. Giá trị phải gắn đúng với khả năng sử dụng, thiết kế, vật liệu và câu chuyện người đeo.",
+      "PHẠM VI CÔNG BỐ | Tên đá, natural/synthetic, xử lý, màu, số lượng, kích thước và tài liệu xác thực phải thống nhất trong hồ sơ từng SKU; không chứng minh nguồn gốc chỉ bằng ảnh."
+    ],
+    "visual": {
+      "kicker": "GEMOLOGY • ẢNH THẬT",
+      "title": "Một khay đá thật có thể chứa nhiều loại, nhiều chất lượng và cách cắt",
+      "photos": [
+        {
+          "src": "assets/gemstones-spectrum-real.webp",
+          "alt": "Ảnh thật nhiều viên đá màu trong khay phục vụ khảo sát nguồn đá",
+          "label": "Quan sát gam màu thực tế",
+          "credit": "Ảnh khảo sát nguồn đá COLORA, 10/2026"
+        },
+        {
+          "src": "assets/gemstones-selection-real.webp",
+          "alt": "Khay đá thật cho thấy độ biến thiên màu và kích thước giữa các viên",
+          "label": "Đá cùng dáng vẫn khác chất lượng",
+          "credit": "Ảnh khảo sát nguồn đá COLORA, 10/2026"
+        }
+      ],
+      "cards": [
+        {
+          "title": "Tên & nguồn gốc",
+          "detail": "Loài đá, natural / synthetic / simulant"
+        },
+        {
+          "title": "Màu & cắt",
+          "detail": "Hue, tone, saturation, clarity, cut"
+        },
+        {
+          "title": "Độ bền",
+          "detail": "Mohs, toughness, stability, treatment"
+        },
+        {
+          "title": "Thông số",
+          "detail": "L × W × D, ct, tỷ lệ, hồ sơ SKU"
+        }
+      ],
+      "note": "Tư liệu đá thật trong thư viện khảo sát COLORA (10/2026). Chỉ minh họa đặc điểm đá trong giai đoạn tìm hiểu; không xác nhận đá trong ảnh là SKU được bán."
+    },
+    "teachback": {
+      "prompt": "Giải thích cho một nhân viên mới vì sao đá tự nhiên chưa chắc là đá không xử lý, Mohs cao chưa chắc chống va đập tốt và carat không đồng nghĩa với kích thước mm.",
+      "sample": "Natural là nguồn gốc hình thành; treatment là can thiệp sau hình thành. Mohs chủ yếu đo chống trầy, không bao trọn khả năng mẻ/vỡ hoặc độ ổn định. Carat đo khối lượng, còn kích thước để lắp CAD phải đo L × W × D bằng mm."
+    }
+  },
+  {
+    "id": "14",
+    "title": "BẢNG ĐÁ MÀU | CÁC LOẠI ĐÁ QUÝ VÀ BÁN QUÝ",
+    "subtitle": "Nhận diện các nhóm khoáng vật và đặc tính quan trọng khi chọn đá cho trang sức màu COLORA.",
+    "origin": "Thông số Mohs và lưu ý sử dụng được tổng hợp từ GIA. Đây là danh mục để học và sàng lọc, KHÔNG phải tuyên bố tất cả loại đá đang được COLORA bán.",
+    "url": "https://4cs.gia.edu/en-us/blog/colored-gemstone-engagement-rings-buying-guide/",
+    "points": [
+      "CORUNDUM - RUBY / SAPPHIRE | Cùng họ corundum, Mohs 9. Ruby thuộc dải đỏ; sapphire có xanh và nhiều màu khác. Nhìn chung phù hợp sử dụng thường xuyên nếu chất lượng, xử lý và setting phù hợp. Gia nhiệt và các dạng xử lý khác phải phân biệt, đặc biệt ruby lấp thủy tinh.",
+      "SPINEL | Mohs 8, độ dai nhìn chung tốt, màu đỏ/hồng/tím/xanh. Không được gọi spinel đỏ là ruby chỉ vì sắc đỏ tương tự; spinel là loài đá riêng. Nhiệt và các xử lý có thể tồn tại.",
+      "TOPAZ | Mohs 8 nhưng có tính cát khai rõ, có thể tách/mẻ khi va đập mạnh. Một số topaz xanh được chiếu xạ/gia nhiệt, một số topaz màu phủ bề mặt. Không thể chỉ nhìn số Mohs 8 mà nói đeo nhẫn va chạm thoải mái.",
+      "TOURMALINE | Mohs 7–7,5, nhiều màu kể cả xanh, hồng và đa sắc. Độ dai vừa phải; tránh sốc nhiệt và không mặc định phù hợp máy siêu âm. Một số viên có gia nhiệt hoặc chiếu xạ.",
+      "BERYL - EMERALD | Emerald là beryl xanh lục, Mohs 7,5–8, nhưng thường có khe nứt và có thể được tẩm dầu/chất lấp. Đá đẹp nhưng nhiều mẫu cần bảo vệ góc và chăm sóc cẩn thận.",
+      "BERYL - AQUAMARINE / MORGANITE | Aquamarine xanh lam nhạt/xanh lục lam và morganite hồng thuộc beryl, Mohs thường 7,5–8. Cần xét độ sạch, màu, setting; không đánh đồng độ bền emerald với mọi viên beryl.",
+      "QUARTZ - AMETHYST / CITRINE | Cùng nhóm quartz, Mohs 7. Amethyst tím, citrine vàng/cam. Có nguy cơ trầy do bụi/cát chứa quartz và một số màu có thể nhạy với nhiệt/ánh sáng; citrine trên thị trường thường liên quan gia nhiệt amethyst.",
+      "GARNET | Là nhóm khoáng vật, không chỉ có màu đỏ; Mohs khoảng 6,5–7,5 tùy loại. Có garnet đỏ/cam/xanh; độ dai và giá trị thay đổi theo loài/giống, không áp chung.",
+      "PERIDOT | Mohs 6,5–7, xanh lục đặc trưng, cần tránh va đập và sốc nhiệt; lựa chọn sản phẩm phải xét mức độ đeo và bảo vệ đá.",
+      "OPAL | Mohs khoảng 5–6,5, độ dai thấp đến vừa, nhạy với nhiệt/thay đổi môi trường ở một số dạng. Có thể phù hợp hoa tai/mặt dây hoặc đeo thận trọng, không tự hứa mọi nhẫn opal lý tưởng cho đeo liên tục.",
+      "MÀU KHÔNG QUY ĐỊNH LOÀI | Sapphire có thể nhiều màu; spinel, garnet và tourmaline cũng có phổ màu rộng. Không xác định tên đá dựa trên một ảnh hoặc tên màu marketing.",
+      "ƯU TIÊN THEO SỬ DỤNG | Đối với nhẫn đeo thường xuyên: ưu tiên đá có khả năng chịu trầy, chống mẻ và ổn định phù hợp; với hoa tai/mặt dây: có thể cân nhắc đa dạng hơn nếu thông tin chăm sóc rõ ràng.",
+      "KHOẢNG GIÁ KHÔNG QUY ĐỊNH LOÀI | Dải giá dự kiến COLORA 2,3–8 triệu đồng cho sản phẩm hoàn thiện; chi phí viên đá chỉ là một phần, không tự xác định loại đá 'mặc định' cho mọi mẫu."
+    ],
+    "visual": {
+      "kicker": "GEMSTONE PROFILES • ẢNH THẬT",
+      "title": "So màu, kích thước và hình dáng trước khi nói về tên đá",
+      "photos": [
+        {
+          "src": "assets/gemstones-blue-real.webp",
+          "alt": "Ảnh thật các viên đá xanh có độ đậm và sáng khác nhau",
+          "label": "Nhóm đá xanh trong khảo sát",
+          "credit": "Ảnh khảo sát nguồn đá COLORA, 10/2026"
+        },
+        {
+          "src": "assets/gemstones-spectrum-real.webp",
+          "alt": "Ảnh thật khay nhiều viên đá màu phục vụ so sánh màu sắc",
+          "label": "Đá màu đa sắc",
+          "credit": "Ảnh khảo sát nguồn đá COLORA, 10/2026"
+        }
+      ],
+      "cards": [
+        {
+          "title": "Mohs 9",
+          "detail": "Ruby / Sapphire (corundum)"
+        },
+        {
+          "title": "Mohs 8",
+          "detail": "Spinel; Topaz (lưu ý cát khai)"
+        },
+        {
+          "title": "Mohs 7–8",
+          "detail": "Tourmaline, Beryl, Quartz (theo loại)"
+        },
+        {
+          "title": "Mohs 5–7,5",
+          "detail": "Opal, Peridot, Garnet (theo loại)"
+        }
+      ],
+      "note": "Các nhóm Mohs dùng để học, không phải phân hạng thương mại. Ảnh thật không chứng minh tên khoáng vật của từng viên khi chưa có hồ sơ nhận dạng."
+    },
+    "teachback": {
+      "prompt": "So sánh sapphire, spinel, topaz, emerald và opal để tư vấn sử dụng trong nhẫn hoặc mặt dây. Vì sao không thể chỉ xếp theo Mohs?",
+      "sample": "Sapphire 9 có độ dai tốt và phù hợp nhiều kiểu nhẫn; spinel 8 có độ dai tốt; topaz 8 nhưng có cát khai nên va đập vẫn rủi ro; emerald 7,5–8 thường có khe nứt và xử lý; opal 5–6,5 cần bảo vệ hơn. Cần xét setting, treatment và hành vi đeo."
+    }
+  },
+  {
+    "id": "15",
+    "title": "HÌNH DÁNG & GIÁC CẮT | ƯU, NHƯỢC ĐIỂM",
+    "subtitle": "Phân biệt shape và faceting style; biết tại sao oval, pear, cushion, marquise và step / brilliant / mixed cho cảm giác khác nhau.",
+    "origin": "Kiến thức hình học và ánh sáng dựa trên GIA Gem Cutting Styles. Ví dụ CAD COLORA là concept đã thảo luận, không phải kích thước chuẩn mọi SKU.",
+    "url": "https://www.gia.edu/gia-news-research-value-factors-gem-cutting-styles-definitions",
+    "points": [
+      "SHAPE ≠ CUT STYLE | Oval, round, pear, cushion, emerald outline, marquise, princess, radiant là hình dạng/kiểu thương mại; brilliant, step, mixed, rose, cabochon mô tả cách tổ chức mặt. Một oval có thể được cắt brilliant, step hoặc mixed.",
+      "ROUND / BRILLIANT | Dáng tròn dễ đối xứng, cho hiệu ứng sáng mạnh khi tỷ lệ chuẩn; thường lãng phí nhiều vật liệu thô hơn một số dáng khác, và không nhất thiết tạo cảm giác thon dài như oval.",
+      "OVAL | Mềm, kéo dài thị giác, linh hoạt với ngôn ngữ nữ tính. Có thể xuất hiện vùng tối hình 'bow-tie' ở giữa hoặc độ méo/asymmetry; cần kiểm tra ánh sáng khi xoay đá.",
+      "PEAR / TEARDROP | Tạo hướng chuyển động và điểm nhấn bất đối xứng; đầu nhọn dễ mẻ hơn nếu chấu không bảo vệ, cân đối hai vai khó hơn dáng tròn/oval.",
+      "CUSHION | Góc bo và dáng vuông/chữ nhật mềm, có thể tập trung màu tốt. Độ phản quang thay đổi mạnh theo tỷ lệ và brilliant/mixed faceting; cần tránh mặt đá quá sâu làm ổ đá cao.",
+      "MARQUISE | Dáng thon dài, tạo hiệu ứng kéo dài mạnh; hai đầu nhọn cần bảo vệ, có thể gặp bow-tie và lệch đối xứng. Trong nhiều thiết kế đá tấm nhỏ, thao tác đặt chấu phức tạp hơn oval.",
+      "EMERALD / STEP CUT | Các mặt hình bậc chạy song song làm nổi màu, độ trong và hiệu ứng 'hall of mirrors'. Ít nhấp nháy hơn brilliant; khe nứt/bao thể dễ thấy hơn, yêu cầu vật liệu phù hợp và hoàn thiện chính xác.",
+      "BRILLIANT CUT | Nhiều mặt nhỏ phối hợp để tạo phản chiếu và độ lấp lánh cao. Có thể hỗ trợ che một số bao thể khi nhìn; không có nghĩa mọi brilliant tốt hơn step cho mọi loài đá màu.",
+      "MIXED CUT | Kết hợp cấu trúc brilliant và step (ví dụ crown brilliant, pavilion step) nhằm cân bằng sáng và màu, phổ biến ở oval/cushion; vẫn phải kiểm tra window và tỷ lệ.",
+      "ROSE CUT | Đáy tương đối phẳng, mặt trên vòm gồm các facet, cho cảm giác cổ điển mềm; thường không tạo brilliance và chiều sâu phản xạ như full brilliant, nhưng có thể hữu dụng cho thiết kế thấp.",
+      "CABOCHON | Bề mặt vòm trơn không có facet truyền thống, hợp đá đục/bán trong hoặc hiệu ứng sao/mắt mèo. Độ lấp lánh mặt giác ít hơn; vẫn phải kiểm tra chiều cao vòm, bề mặt và độ bền.",
+      "WINDOW / EXTINCTION | Không chọn đá chỉ vì tên cut. Nhìn trực diện và nghiêng: vùng giữa nhìn xuyên mất màu là window; vùng tối lớn không đổi theo ánh sáng là dấu hiệu cần xem xét tỷ lệ, chất lượng.",
+      "ĐỘ SÂU TÁC ĐỘNG CAD | Hai viên cùng L×W có thể khác D (depth), girdle, pavilion. Nếu viên sâu hơn setting dự kiến, đá có thể bị đội cao, vướng hoặc làm yếu kết cấu.",
+      "COLORA DESIGN FIT | Ưu tiên silhouette mềm, broad facets trên kim loại, đá là hero, low-profile hợp lý. Dáng oval 8,1×5,4 mm hay pear 7×5 mm từng được thảo luận chỉ là ví dụ concept; phải duyệt riêng từng mẫu."
+    ],
+    "visual": {
+      "kicker": "CUTS & SHAPES • SƠ ĐỒ HÌNH HỌC",
+      "title": "Hình dạng không đồng nghĩa kiểu giác cắt",
+      "diagram": "cuts",
+      "photos": [
+        {
+          "src": "assets/gemstones-selection-real.webp",
+          "alt": "Ảnh thật nhiều viên đá có hình dạng và tỷ lệ khác nhau ở khay khảo sát",
+          "label": "Đối chiếu các dáng đá thật",
+          "credit": "Ảnh khảo sát nguồn đá COLORA, 10/2026"
+        }
+      ],
+      "cards": [
+        {
+          "title": "Shape",
+          "detail": "Round • Oval • Pear • Cushion • Marquise"
+        },
+        {
+          "title": "Faceting",
+          "detail": "Brilliant • Step • Mixed • Rose • Cabochon"
+        },
+        {
+          "title": "Lợi ích",
+          "detail": "Ánh sáng, màu, phong cách, độ sâu"
+        },
+        {
+          "title": "Trade-off",
+          "detail": "Góc dễ mẻ, window, bow-tie, setting"
+        }
+      ],
+      "note": "Sơ đồ dạng đá là minh họa khái niệm, không phải bản vẽ kỹ thuật để gia công hoặc ảnh của SKU. Đối chiếu mẫu thật về đối xứng, độ sâu và girdle."
+    },
+    "teachback": {
+      "prompt": "Giải thích sự khác nhau giữa viên pear có mặt brilliant, viên emerald step-cut và viên oval mixed-cut; mỗi dạng mang đến ưu điểm và giới hạn nào cho thiết kế COLORA?",
+      "sample": "Pear là dáng giọt nước, đầu nhọn cần bảo vệ; brilliant là sắp xếp mặt tạo độ lấp lánh. Emerald step thường làm nổi độ trong và màu nhưng cũng dễ lộ bao thể. Oval mixed kết hợp phản chiếu và biểu hiện màu, vẫn phải kiểm tra bow-tie/window, độ sâu và khả năng đặt đá theo CAD."
+    }
+  },
+  {
+    "id": "16",
+    "title": "COLORA GEM SELECTION | TIÊU CHÍ CHỌN & QC ĐÁ",
+    "subtitle": "Từ design brief đến kiểm tra nguồn đá, thông số CAD và quyền phê duyệt; phân biệt nguyên tắc đã xác lập với các ngưỡng QC còn đề xuất.",
+    "origin": "Nguyên tắc nội bộ: gemstone-first, đá tự nhiên là ưu tiên trong thiết kế đang phát triển, kích thước CAD cố định và sourcing theo yêu cầu được thảo luận. Các ngưỡng kiểm định cụ thể/chứng thư/lô vẫn là ĐỀ XUẤT, CHƯA CHỐT thành SOP chính thức.",
+    "url": "https://www.gia.edu/gem-treatment",
+    "points": [
+      "NGUYÊN TẮC ĐÃ XÁC LẬP | COLORA là thương hiệu trang sức demi-fine gemstone-first; màu đá là nhân vật chính, kết cấu low-profile và sự thoải mái quan trọng. COLORA không bán đá rời.",
+      "ƯU TIÊN VẬT LIỆU ĐÁ | Những thiết kế người sáng lập đang phát triển ưu tiên đá tự nhiên. Tuy nhiên, phải chứng minh tính tự nhiên của từng loại/lô và công bố xử lý; không tự biến 'ưu tiên' thành khẳng định 'mọi SKU, mọi viên đá đều untreated'.",
+      "COLORA KHÔNG CHỌN THEO LOÀI ĐÁ MỘT CÁCH MÁY MÓC | Chọn dựa trên màu, độ bền tương thích tình huống đeo, sự phù hợp với ngôn ngữ hình khối, khả năng tìm nguồn, chi phí và kỹ thuật gia công.",
+      "DESIGN-LED SOURCING | Từng thảo luận cách khách chọn loại đá và tông màu trong biên dạng, kích thước CAD đã khóa; không hứa thiết kế bespoke hoàn toàn hoặc mọi màu đá đều có sẵn. Trạng thái vận hành thực tế cần được xác nhận trước khi quảng bá.",
+      "KÍCH THƯỚC CALIBRATED | Không đủ ghi 'oval 5 mm': cần chiều dài, rộng, sâu, độ dày girdle và dung sai được kỹ thuật/nhà cung cấp thỏa thuận. Không tự lấy mẫu 8,1×5,4 mm hoặc pear 7×5 mm làm chuẩn mọi mẫu.",
+      "MÀU - MASTER RANGE (ĐỀ XUẤT QC) | Tạo mẫu màu chấp nhận cho từng SKU hoặc khoảng màu: sáng nhất, mục tiêu, tối nhất trong ánh sáng được quy định. Đây là phương pháp kiểm soát biến thiên, chưa có bằng chứng COLORA đã phê duyệt dải thông số chính thức.",
+      "LOẠI ĐÁ / NATURAL / TREATMENT (ĐỀ XUẤT QC) | Hợp đồng/phiếu nhận nên yêu cầu tên đá, natural/synthetic, dạng xử lý, màu, kích thước, số lượng và hồ sơ nguồn. Không đánh đồng lời nhà cung cấp với giám định độc lập.",
+      "CUT QUALITY (ĐỀ XUẤT QC) | Quan sát chính diện, góc nghiêng, đối xứng, polish, window/extinction, bow-tie, tỷ lệ depth. Không có một kiểu giác cắt tối ưu cho tất cả loài đá.",
+      "DEFECT GATE (ĐỀ XUẤT QC) | Đánh giá chips, vết nứt tới bề mặt, bao thể sát vùng chấu, vết trầy, girdle quá mỏng. Khuyết tật khác nhau về mức nguy hiểm; cần tiêu chí chấp nhận theo SKU, không từ chối mọi bao thể tự nhiên.",
+      "WEARABILITY & SETTING | Mẫu nhẫn đeo nhiều cần chịu va đập tốt hơn mặt dây ít tiếp xúc; pear/marquise cần bảo vệ đầu nhọn; viên sâu có thể mâu thuẫn thiết kế low-profile. Quyết định trên cả viên và ổ đá.",
+      "SUPPLIER TRACEABILITY (ĐỀ XUẤT QC) | Mã lô, ảnh viên thực tế, thông số, đơn giá, chứng từ và quyền kiểm tra/đổi trả là các cơ chế hữu ích để tránh mua sai; mức áp dụng còn cần chủ sở hữu quy trình phê duyệt.",
+      "GIÁ & KHẢ NĂNG NGUỒN CUNG | Dải giá thành phẩm dự kiến COLORA là 2,3–8 triệu đồng, không phải ngân sách cho đá. Mỗi concept có dự toán viên đá riêng trong brief nội bộ, cần so với nguồn hàng, chất lượng, thời gian và khả năng hoàn thiện. Không công khai chi phí đầu vào hoặc điều khoản nhà cung cấp trên website học công khai.",
+      "CHỨNG THƯ & QUYỀN CÔNG BỐ | Product COA và gem lab report có phạm vi khác nhau. Yêu cầu chứng thư, testing/lấy mẫu, phân loại xử lý theo giá trị và rủi ro cần được duyệt. Không hứa mọi viên nhỏ đều có chứng thư GIA.",
+      "THANG QUYẾT ĐỊNH ĐỀ XUẤT | 1) Đúng loài đá và chứng từ; 2) đúng màu/thẩm mỹ; 3) đúng L×W×D và cấu trúc giữ đá; 4) không có lỗi nghiêm trọng; 5) nguồn cung/giá/lead time phù hợp; 6) được duyệt và lưu phiên bản. Đây là checklist đề nghị để nhân viên học, chưa là tiêu chuẩn mua hàng chính thức."
+    ],
+    "visual": {
+      "kicker": "COLORA QC • PHƯƠNG PHÁP ĐỀ XUẤT",
+      "title": "Một viên đá đẹp chưa chắc là viên đá phù hợp với thiết kế",
+      "diagram": "qc",
+      "photos": [
+        {
+          "src": "assets/gemstones-blue-real.webp",
+          "alt": "Ảnh thật khay đá xanh với những sắc độ khác nhau",
+          "label": "Dải sắc của đá tự nhiên",
+          "credit": "Ảnh khảo sát nguồn đá COLORA, 10/2026"
+        },
+        {
+          "src": "assets/gemstones-selection-real.webp",
+          "alt": "Ảnh thật nhiều đá màu để nghiên cứu mẫu sourcing",
+          "label": "Cần kiểm từng viên trước khi chọn",
+          "credit": "Ảnh khảo sát nguồn đá COLORA, 10/2026"
+        }
+      ],
+      "cards": [
+        {
+          "title": "01 • Identity",
+          "detail": "Tên đá, natural/synthetic, treatment"
+        },
+        {
+          "title": "02 • Appearance",
+          "detail": "Màu, face-up, symmetry, cut/polish"
+        },
+        {
+          "title": "03 • Fit",
+          "detail": "L×W×D, girdle, depth, setting"
+        },
+        {
+          "title": "04 • Proof",
+          "detail": "Mã lô, hồ sơ, QC, người duyệt"
+        }
+      ],
+      "note": "Các bước QC nêu là khung đề xuất từ những lần thảo luận nguồn đá. Không coi đây là SOP/tiêu chuẩn nghiệm thu đã được COLORA ban hành."
+    },
+    "teachback": {
+      "prompt": "Bạn nhận được 20 viên pear 7×5 mm cùng màu từ một nhà cung cấp cho thiết kế nhẫn COLORA. Hãy trình bày 6 bước kiểm tra trước khi đề xuất chọn viên và nêu điều gì cần người có thẩm quyền duyệt.",
+      "sample": "Đối chiếu tên đá, natural/synthetic, xử lý; so dải màu dưới ánh sáng chuẩn; đo L×W×D, girdle và depth so CAD; kiểm window, đối xứng, chips, bao thể sát chấu; đánh giá độ bền và đầu pear; cuối cùng kiểm giá, lead time, chứng từ/lô và trình người phụ trách duyệt theo tiêu chuẩn SKU chính thức."
+    }
   }
 ]
