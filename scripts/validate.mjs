@@ -66,7 +66,7 @@ for(const l of lessons){
 }
 assert(photos.size>=4);
 assert(lessons.find(l=>l.id==='01').title.includes('DEMI-FINE'));
-assert(lessons.find(l=>l.id==='07').points.some(p=>p.includes('toàn bộ')&&p.includes('launch')));
+assert(lessons.find(l=>l.id==='07').points.some(p=>p.includes('100%')&&p.includes('launch')));
 assert(lessons.find(l=>l.id==='04').points[0].includes('CHỜ DUYỆT'));
 assert(lessons.find(l=>l.id==='17').points.some(p=>p.includes('COLORA SILVER')));
 assert(!JSON.stringify(questions).includes('2,3–5 triệu'));
