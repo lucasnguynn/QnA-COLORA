@@ -9,7 +9,7 @@
     "a": [
       "Có, mọi đá bán quý đều có Mohs dưới 7.",
       "Có, vì GIA đã cấp bảng xếp hạng quý/bán quý.",
-      "Không; tên gọi truyền thống không đo độ bền hay chất lượng riêng từng viên.",
+      "Không; đó không phải thang đánh giá độ bền.",
       "Có, vì đá quý luôn là loại không qua xử lý."
     ],
     "key": [
@@ -74,7 +74,7 @@
     "q": "Thang Mohs thể hiện đúng nhất đặc tính nào của đá?",
     "a": [
       "Khả năng chống mẻ và chống nứt do lực va đập.",
-      "Khả năng chống trầy tương đối, không phản ánh toàn bộ độ bền.",
+      "Mức chống trầy tương đối.",
       "Khả năng giữ màu trước nhiệt và tia UV.",
       "Mức giá trị quy đổi theo carat của đá màu."
     ],
@@ -97,7 +97,7 @@
     "a": [
       "Mức độ đậm của màu xanh hoặc đỏ.",
       "Số mặt giác phản chiếu trên crown.",
-      "Khả năng chịu va đập, chống mẻ và tách vỡ.",
+      "Khả năng chống mẻ, nứt và vỡ.",
       "Độ tinh khiết của bạc dùng trong ổ đá."
     ],
     "key": [
@@ -162,7 +162,7 @@
     "q": "Hai viên khác loài đá cùng trọng lượng 0,5 ct có nhất thiết cùng kích thước không?",
     "a": [
       "Có, 0,5 ct quy định cùng thể tích và chiều dài.",
-      "Không; carat là khối lượng, kích thước còn tùy vật liệu và kiểu cắt.",
+      "Không; carat là khối lượng.",
       "Có, nếu cả hai cắt dáng oval.",
       "Không, vì carat đo độ đậm màu chứ không đo khối lượng."
     ],
@@ -208,7 +208,7 @@
       "Bắt buộc loại mọi viên có bất kỳ bao thể nào.",
       "Chấp nhận vô điều kiện vì bao thể chứng minh đá thật.",
       "Gọi đó là chứng cứ đá chưa xử lý.",
-      "Kiểm tra nguy cơ nứt và giữ đá, không chỉ nhìn đẹp xấu."
+      "Kiểm tra nguy cơ nứt và giữ đá."
     ],
     "key": [
       3
@@ -250,7 +250,7 @@
     "q": "GIA có một hệ grading chuẩn chung cho mọi đá màu giống 4Cs kim cương không?",
     "a": [
       "Có; mọi viên đá màu được xếp D–Z và FL–I3.",
-      "Không; chưa có hệ thống grading đá màu được chấp nhận rộng rãi như kim cương.",
+      "Không; đá màu chưa có chuẩn grading chung.",
       "Có; mọi sapphire có cut grade Excellent đến Poor.",
       "Không; do đá màu không thể cân trọng lượng carat."
     ],

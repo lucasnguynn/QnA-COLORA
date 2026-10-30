@@ -54,7 +54,7 @@
       "Ruby vì màu đỏ đủ để định danh.",
       "Sapphire đỏ vì thuộc nhóm corundum.",
       "Garnet vì mọi spinel đều màu xanh.",
-      "Spinel đỏ, một khoáng vật riêng với Mohs khoảng 8."
+      "Spinel đỏ, Mohs 8."
     ],
     "key": [
       3
@@ -75,7 +75,7 @@
     "a": [
       "Topaz chỉ có Mohs 8 khi được mạ rhodium.",
       "Topaz không thể dùng trong trang sức đính chấu.",
-      "Topaz có cát khai, lực va chạm có thể làm mẻ/tách.",
+      "Vì topaz có cát khai rõ.",
       "Topaz chỉ chịu mẻ nếu có màu xanh."
     ],
     "key": [
@@ -117,7 +117,7 @@
     "chapter": "14",
     "q": "Điểm kỹ thuật nào cần chú ý nhất khi chọn emerald cho nhẫn?",
     "a": [
-      "Khe nứt và các xử lý làm đầy có thể ảnh hưởng độ dai và chăm sóc.",
+      "Khe nứt và các chất lấp.",
       "Emerald có độ cứng Mohs luôn dưới 5.",
       "Emerald không bao giờ có bao thể tự nhiên.",
       "Emerald chỉ có thể cắt dạng cabochon."
@@ -142,7 +142,7 @@
       "Quartz, như amethyst/citrine.",
       "Corundum, như ruby/sapphire.",
       "Spinel, như spinel đỏ.",
-      "Beryl, nhưng tính chất thực tế từng loại và viên khác nhau."
+      "Beryl."
     ],
     "key": [
       3
@@ -184,7 +184,7 @@
     "q": "Garnet có nhất thiết chỉ có màu đỏ không?",
     "a": [
       "Có; garnet xanh luôn là đá tổng hợp.",
-      "Không; gồm nhiều khoáng vật và màu, Mohs khoảng 6,5–7,5.",
+      "Không; garnet có nhiều loài và màu.",
       "Có; mọi garnet có thành phần giống ruby.",
       "Không; vì garnet là tên nhóm thủy tinh màu."
     ],
@@ -205,7 +205,7 @@
     "chapter": "14",
     "q": "Điểm cần lưu ý khi dùng opal trong trang sức là gì?",
     "a": [
-      "Mohs khoảng 5–6,5 và độ dai tương đối hạn chế.",
+      "Mohs 5–6,5; độ dai hạn chế.",
       "Opal Mohs 9 nên chịu va chạm như sapphire.",
       "Opal không bị ảnh hưởng bởi sốc nhiệt.",
       "Opal luôn có độ dai tốt hơn spinel."
@@ -251,7 +251,7 @@
     "a": [
       "Mọi citrine tự nhiên đều là đá không xử lý.",
       "Citrine là tên thương mại cho mọi topaz vàng.",
-      "Nhiều citrine liên quan xử lý nhiệt quartz; phải công bố chính xác.",
+      "Xử lý nhiệt quartz khá phổ biến.",
       "Citrine không thể xuất hiện bao thể."
     ],
     "key": [

@@ -9,7 +9,7 @@
     "a": [
       "Chỉ dùng sapphire xanh trên mọi danh mục.",
       "Chỉ mua đá có kích thước lớn hơn 1 carat.",
-      "Đá màu làm điểm nhấn và hài hòa với thiết kế dễ đeo.",
+      "Đá màu chủ đạo, thiết kế dễ đeo.",
       "Mọi loại đá bắt buộc chưa qua xử lý."
     ],
     "key": [
@@ -30,7 +30,7 @@
     "q": "Trong những thiết kế đang phát triển ưu tiên đá tự nhiên, nhà cung cấp cần xác nhận những gì?",
     "a": [
       "Chỉ tên màu và hình chụp dưới đèn vàng.",
-      "Tên đá, natural status và treatment theo hồ sơ viên/lô.",
+      "Tên đá, nguồn gốc và xử lý.",
       "Chỉ cam kết 'đá quý' không kèm loài đá.",
       "Mọi viên đều untreated dù thiếu chứng thư."
     ],
@@ -76,7 +76,7 @@
       "Bảo đảm mọi đá tự nhiên giống hệt một ảnh chỉnh màu.",
       "Buộc toàn bộ bộ sưu tập sử dụng một sắc xanh duy nhất.",
       "Thay việc kiểm tra từng viên khi nhận hàng.",
-      "Thiết lập biên độ màu chấp nhận dưới điều kiện sáng được quy định."
+      "Dải màu chấp nhận theo ánh sáng quy định."
     ],
     "key": [
       3
@@ -118,7 +118,7 @@
     "q": "Một viên pear có chip sát đầu nhọn. Cách đánh giá tốt nhất?",
     "a": [
       "Chấp nhận ngay nếu chip được che khi chụp ảnh.",
-      "Đưa vào kiểm tra kỹ thuật/loại sơ bộ vì nguy cơ chịu lực.",
+      "Chuyển kiểm tra kỹ thuật vì điểm yếu.",
       "Gọi chip là bao thể tự nhiên có giá trị cao.",
       "Tăng chấu tùy ý mà không cần đối chiếu đá."
     ],
@@ -139,7 +139,7 @@
     "chapter": "16",
     "q": "Viên đá có bao thể nhỏ không lộ trên mặt nhìn, xa vị trí chấu. Nên làm gì?",
     "a": [
-      "Đánh giá theo loại đá và tiêu chí SKU, không mặc định loại.",
+      "Đánh giá theo loại đá và chuẩn SKU.",
       "Loại ngay vì mọi viên tự nhiên phải hoàn toàn sạch.",
       "Chấp nhận tuyệt đối vì bao thể luôn làm đá tăng giá.",
       "Tự ghi untreated vì có bao thể."
@@ -164,7 +164,7 @@
       "Bỏ qua độ dai để ưu tiên câu chuyện cảm xúc.",
       "Dựa màu sáng để bảo đảm khả năng chống trầy.",
       "Cam kết mọi nhẫn opal đều phù hợp đeo liên tục.",
-      "Đánh giá lại loài đá, setting và điều kiện dùng trước khi chốt."
+      "Kiểm lại độ bền và setting."
     ],
     "key": [
       3
@@ -206,7 +206,7 @@
     "q": "Một thiết kế COLORA có ngân sách mua đá riêng trong brief nội bộ. Nhân viên cần hiểu điều gì?",
     "a": [
       "Mọi viên đá đều phải dưới 700 nghìn.",
-      "Đó là mục tiêu một concept, không phải chuẩn giá mọi đá COLORA.",
+      "Là ngân sách riêng của concept.",
       "Đó là mức giá bán lẻ đá rời của COLORA.",
       "Đây là chuẩn giá GIA theo kích thước pear."
     ],
@@ -252,7 +252,7 @@
       "Áp ngay ngưỡng ±0,1 mm cho mọi loài và size.",
       "Công bố trên website như cam kết sẵn có.",
       "Bỏ mọi bước QC vì chưa có tiêu chuẩn chính thức.",
-      "Dùng để học quy trình; phải có phê duyệt trước khi coi là SOP."
+      "Chỉ là đề xuất cho tới khi được duyệt."
     ],
     "key": [
       3
@@ -294,7 +294,7 @@
     "q": "Khi lọc đá cho một thiết kế COLORA, bộ tiêu chí tích hợp nào sát mục tiêu nhất?",
     "a": [
       "Chỉ tên đá, carat và giá thấp.",
-      "Đúng loài/nguồn, màu, L×W×D, cut, defect, durability, nguồn cung và hồ sơ.",
+      "Loài đá, màu, kích thước, cut, lỗi và hồ sơ.",
       "Chỉ màu đẹp và số lượng ảnh studio.",
       "Chỉ câu chuyện cảm xúc rồi kiểm chứng sau khi bán."
     ],
