@@ -5,25 +5,26 @@
     "pillar": "THƯƠNG HIỆU",
     "topic": "Định vị so với đối thủ",
     "chapter": "A",
-    "q": "Khách hỏi vì sao COLORA có giá cao hơn một chiếc nhẫn bạc trơn nhìn khá giống. Trang sản phẩm COLORA chưa công bố đủ chi tiết lớp phủ của SKU này. Lời giải thích nào phù hợp nhất?",
+    "q": "Khách hỏi giá trị hơn một chiếc nhẫn bạc trơn và muốn nghe những điểm COLORA đã xác minh ngay hôm nay. Riêng lớp phủ của SKU chưa có hồ sơ công bố. Câu trả lời nào vừa giúp khách so sánh, vừa không tự suy diễn tính năng lớp phủ?",
     "a": [
       "Giải thích thiết kế, đá và độ phù hợp khi đeo; chỉ so lớp phủ sau khi xác minh đúng SKU.",
       "Giải thích chênh lệch thông qua đá và công chế tác; dùng mô tả lớp phủ từ brochure thương hiệu trước.",
-      "Dẫn khách xem ảnh và bảng vật liệu; hoãn phần so sánh giá trị cho tới khi có bằng chứng hoàn thiện.",
+      "Chỉ gửi bảng vật liệu và đề nghị đợi hồ sơ lớp phủ mới giải thích bất kỳ giá trị nào của nhẫn.",
       "Giải thích giá bằng bạc tái chế và dịch vụ; nêu lớp phủ COLORA SILVER theo chuẩn chung của dòng."
     ],
     "key": [
       0
     ],
-    "why": "COLORA kết hợp Functional, Technical và Emotional; so sánh giá trị phải dựa trên dữ kiện đã xác minh, không để câu chuyện thay tài liệu kỹ thuật.",
-    "apply": "Trả lời bằng tiêu chí người mua thật sự quan tâm và đặt trạng thái cần kiểm tra cho lớp phủ.",
+    "why": "Tiêu chí quyết định: giải thích ngay được giá trị từ đá màu, thiết kế và cách đeo đã có bằng chứng; đồng thời để trạng thái chưa xác nhận cho lớp phủ. Hoãn mọi giải thích dù đã có dữ kiện làm khách thiếu thông tin, còn dùng brochure dòng thay SKU là suy diễn.",
+    "apply": "Tách phần đã chứng minh (stone, thiết kế, fit, dịch vụ) khỏi claim lớp phủ cần duyệt; không so với đối thủ bằng tiêu chí chưa có dữ liệu.",
     "source": "INTERNAL_CASE",
     "status": "TÌNH HUỐNG MÔ PHỎNG - KHÔNG PHẢI CASE KHÁCH THỰC",
     "stage": 3,
     "skills": [
       "BRAND",
       "PRODUCT"
-    ]
+    ],
+    "rubric_status": "PHẢN BIỆN NỘI BỘ - CẦN THỬ NGHIỆM VỚI NHÂN VIÊN"
   },
   {
     "id": "AC-002",
@@ -49,7 +50,8 @@
     "skills": [
       "BRAND",
       "CUSTOMER"
-    ]
+    ],
+    "rubric_status": "CHƯA ĐƯỢC HIỆU CHỈNH KHẢO THÍ"
   },
   {
     "id": "AC-003",
@@ -57,25 +59,26 @@
     "pillar": "THƯƠNG HIỆU",
     "topic": "Giải thích thương hiệu",
     "chapter": "A",
-    "q": "Một nhân viên được yêu cầu giới thiệu COLORA trong 45 giây với khách vừa biết tên. Khách thích trang sức màu nhưng chưa biết demi-fine. Trình tự nào giúp khách hiểu nhất?",
+    "q": "Khách lần đầu nhắn đúng hai câu: 'Demi-fine là gì? COLORA khác chỗ chỉ bán bạc ở điểm nào?' Bạn chỉ có 45 giây trả lời trước khi khách rời chat. Trình tự nào trực tiếp giải đáp cả hai câu hỏi trước khi giới thiệu thêm?",
     "a": [
-      "Bắt đầu từ cảm hứng sáng lập và triết lý rồi đưa khách sang catalogue; định nghĩa demi-fine nếu khách hỏi.",
+      "Giới thiệu lịch sử người sáng lập và Facets of Feeling để tạo cảm hứng; đợi khách hỏi lại mới giải thích demi-fine.",
       "Nói rõ demi-fine là gì, COLORA lấy đá màu làm trọng tâm, rồi giới thiệu vật liệu và cách mua online.",
-      "Khởi đầu bằng đá tự nhiên, công nghệ phủ và thông số; sau đó liên hệ tới nhu cầu thể hiện bản thân.",
+      "Mở đầu bằng chứng về chất liệu và xử lý đá; để khách tự suy ra demi-fine và bản sắc COLORA.",
       "Dẫn khách xem ba kiểu phối đồ và khoảng giá; chỉ nói về nền thương hiệu sau khi chọn sản phẩm."
     ],
     "key": [
       1
     ],
-    "why": "Giải thích category và giá trị bằng lời tự nhiên trước, rồi mở rộng kỹ thuật theo quan tâm thật của khách.",
-    "apply": "Không bắt khách hiểu thuật ngữ chuyên sâu trước khi biết thương hiệu bán gì.",
+    "why": "Khách đặt hai câu hỏi trực tiếp. Bắt đầu bằng định nghĩa ngắn của category và điểm khác biệt gemstone-first/thiết kế của COLORA; thông tin chuyên sâu và lịch sử thương hiệu đến sau khi khách đã có nền tảng.",
+    "apply": "Hướng dẫn 45 giây trả lời đúng câu hỏi khách trước, không đọc thuộc brand story dài.",
     "source": "INTERNAL_CASE",
     "status": "TÌNH HUỐNG MÔ PHỎNG - KHÔNG PHẢI CASE KHÁCH THỰC",
     "stage": 3,
     "skills": [
       "BRAND",
       "JOURNEY"
-    ]
+    ],
+    "rubric_status": "PHẢN BIỆN NỘI BỘ - CẦN THỬ NGHIỆM VỚI NHÂN VIÊN"
   },
   {
     "id": "AC-004",
@@ -101,7 +104,8 @@
     "skills": [
       "PRODUCT",
       "BRAND"
-    ]
+    ],
+    "rubric_status": "CHƯA ĐƯỢC HIỆU CHỈNH KHẢO THÍ"
   },
   {
     "id": "AC-005",
@@ -126,7 +130,8 @@
     "stage": 3,
     "skills": [
       "PRODUCT"
-    ]
+    ],
+    "rubric_status": "CHƯA ĐƯỢC HIỆU CHỈNH KHẢO THÍ"
   },
   {
     "id": "AC-006",
@@ -152,7 +157,8 @@
     "skills": [
       "PRODUCT",
       "CARE"
-    ]
+    ],
+    "rubric_status": "CHƯA ĐƯỢC HIỆU CHỈNH KHẢO THÍ"
   },
   {
     "id": "AC-007",
@@ -160,25 +166,26 @@
     "pillar": "KHÁCH HÀNG",
     "topic": "Mua quà online",
     "chapter": "A",
-    "q": "Người mua dây chuyền tặng mẹ chưa biết gu màu, lo dây không vừa và cần nhận trước ngày sinh nhật. Câu hỏi nào giải quyết đồng thời các rủi ro trước khi gợi ý?",
+    "q": "Khách mua dây chuyền tặng mẹ, chưa rõ màu đá và kích thước, sợ không hợp gu; cần quà giao trước 18h thứ Sáu. Khách muốn bạn hỏi thông tin cần thiết trước khi đề xuất sản phẩm. Nhóm câu hỏi nào xác minh đủ gu, độ vừa, hạn giao và phương án khi quà không phù hợp?",
     "a": [
       "Hỏi phong cách, chiều dài dây người nhận hay đeo, ngày cần hàng và cách xử lý nếu quà chưa phù hợp.",
-      "Ưu tiên hỏi tông màu đá người mẹ thường đeo, mốc giao và khả năng đổi sau nhận quà.",
-      "Chọn mẫu dễ phối nhất trong ngân sách, rồi hỏi người mua có muốn ghi thiệp hay gói quà không.",
-      "Hỏi dịp tặng, độ tuổi người nhận và loại trang sức thường dùng; gửi hai phương án để chọn."
+      "Hỏi tông màu đá đã thấy mẹ dùng, ngày nhận mong muốn và khả năng đổi mẫu sau khi tặng.",
+      "Đề nghị mẫu dây dễ phối trong ngân sách, rồi hỏi thêm về thiệp và cách gói quà.",
+      "Hỏi dịp tặng, thói quen đeo vòng cổ và độ tuổi người nhận; gửi ảnh hai phương án."
     ],
     "key": [
       0
     ],
-    "why": "Người mua và người đeo khác nhau, cần tránh rủi ro sai gu/size/mốc giao hơn là suy từ nhân khẩu học.",
-    "apply": "Đưa lựa chọn có ảnh thật, thông số và điều kiện đổi trả hiện hành.",
+    "why": "Đáp án phải xét đồng thời bốn rủi ro đã nêu: gu, chiều dài khi đeo, hạn nhận trước thứ Sáu và quy trình đổi/hỗ trợ theo chính sách hiện hành. Các lựa chọn khác thiếu ít nhất một điều kiện quan trọng.",
+    "apply": "Không hứa chắc giao trước 18h cho tới khi xác minh khu vực, vận chuyển và tồn kho.",
     "source": "INTERNAL_CASE",
     "status": "TÌNH HUỐNG MÔ PHỎNG - KHÔNG PHẢI CASE KHÁCH THỰC",
     "stage": 3,
     "skills": [
       "CUSTOMER",
       "JOURNEY"
-    ]
+    ],
+    "rubric_status": "PHẢN BIỆN NỘI BỘ - CẦN THỬ NGHIỆM VỚI NHÂN VIÊN"
   },
   {
     "id": "AC-008",
@@ -186,25 +193,26 @@
     "pillar": "KHÁCH HÀNG",
     "topic": "Khác biệt cảm nhận giá trị",
     "chapter": "A",
-    "q": "Hai khách cùng ngân sách xem một chiếc nhẫn COLORA: A muốn đeo hằng ngày, B mua kỷ niệm. Cách hỗ trợ nào vừa đủ chứng cứ sản phẩm vừa phù hợp với hai động cơ khác nhau?",
+    "q": "Hai khách có cùng ngân sách xem cùng SKU nhẫn: A đeo mỗi ngày và lo vướng khi làm việc; B mua kỷ niệm nhưng chưa chắc ý nghĩa/mẫu phù hợp. Cả hai đều yêu cầu xem dữ liệu đã xác minh về chiếc nhẫn. Phản hồi nào đáp ứng đủ hai động cơ và yêu cầu thông tin?",
     "a": [
-      "Tư vấn cả hai về chất liệu và sắc đá; A xem ảnh trên tay, B nhận gợi ý thông điệp quà kỷ niệm.",
+      "Giới thiệu chất liệu và màu đá cho cả hai, A xem ảnh trên tay, B được gợi ý một thông điệp kỷ niệm.",
       "Với A ưu tiên size/độ vướng/care; với B hỏi ý nghĩa, gu và hậu mãi, cả hai được xem thông số thật.",
-      "Dùng cùng Product Passport; để A và B tự chọn xem phần kỹ thuật hay cảm xúc theo sở thích.",
-      "Với A nhấn độ bền và giá; với B tập trung thiệp/túi quà, chỉ kiểm tra size khi quyết định đặt."
+      "Gửi một Product Passport chung và để từng khách tự tìm phần công năng hoặc cảm xúc mình quan tâm.",
+      "Với A nhấn độ bền và ngân sách; với B tập trung thiệp, túi quà; xác minh size sau khi chọn mẫu."
     ],
     "key": [
       1
     ],
-    "why": "Động cơ sở hữu tạo rủi ro và thông tin cần thiết khác nhau; brand nhất quán không đồng nghĩa thoại tư vấn đồng nhất.",
-    "apply": "Hỏi mục tiêu sử dụng trước khi giải thích giá trị.",
+    "why": "Phải có thông tin đúng SKU cho cả hai, cộng tư vấn khác biệt: A cần size/độ nhô/care; B cần hỏi ý nghĩa/phong cách và chính sách phù hợp. Chỉ đưa Passport để khách tự lọc không đáp ứng trách nhiệm tư vấn trước những băn khoăn đã nói.",
+    "apply": "Đối chiếu Product Passport trước, rồi cá nhân hóa theo việc tự đeo hằng ngày hay mua cho dấu mốc.",
     "source": "INTERNAL_CASE",
     "status": "TÌNH HUỐNG MÔ PHỎNG - KHÔNG PHẢI CASE KHÁCH THỰC",
     "stage": 3,
     "skills": [
       "CUSTOMER",
       "PRODUCT"
-    ]
+    ],
+    "rubric_status": "PHẢN BIỆN NỘI BỘ - CẦN THỬ NGHIỆM VỚI NHÂN VIÊN"
   },
   {
     "id": "AC-009",
@@ -229,7 +237,8 @@
     "stage": 3,
     "skills": [
       "CUSTOMER"
-    ]
+    ],
+    "rubric_status": "CHƯA ĐƯỢC HIỆU CHỈNH KHẢO THÍ"
   },
   {
     "id": "AC-010",
@@ -255,7 +264,8 @@
     "skills": [
       "JOURNEY",
       "PRODUCT"
-    ]
+    ],
+    "rubric_status": "CHƯA ĐƯỢC HIỆU CHỈNH KHẢO THÍ"
   },
   {
     "id": "AC-011",
@@ -263,25 +273,26 @@
     "pillar": "HÀNH TRÌNH",
     "topic": "Bỏ giỏ hàng",
     "chapter": "A",
-    "q": "Một sản phẩm có nhiều lượt xem, nhưng khách thường rời trang sau khi mở Size Guide. Trước khi kết luận nguyên nhân và thử nghiệm, hướng chẩn đoán nào toàn diện nhất?",
+    "q": "Trong tuần qua, người dùng rời trang nhiều sau khi mở Size Guide. Bạn chưa biết có lỗi tốc độ, khó hiểu về size hay lo độ vừa; không có dữ liệu nguyên nhân trực tiếp. Trước khi chạy A/B test, cách nào tạo bộ giả thuyết không thiên kiến và đủ chứng cứ nhất?",
     "a": [
-      "Xem heatmap và số lượt xem size trước, rồi hỏi khách đã mua về mức độ hữu ích của bảng size.",
+      "Xem heatmap, số lần mở Size Guide, rồi hỏi khách đã mua xem bảng hướng dẫn có hữu ích không.",
       "Kiểm tra dữ liệu hành vi, hướng dẫn size, ảnh tỷ lệ và phản hồi; chưa kết luận nguyên nhân từ giá.",
-      "Thử thay đổi CTA tư vấn size, so tỷ lệ thoát; giữ nội dung sản phẩm và ảnh hiện tại để cô lập biến.",
-      "Kiểm tra tốc độ tải trang, độ rõ bảng size và tỷ lệ click vào tư vấn; chưa cần xem video sản phẩm."
+      "Thử đổi CTA tư vấn size ngay, giữ các yếu tố khác, so tỷ lệ thoát giữa hai phiên bản.",
+      "Kiểm tốc độ tải, nội dung bảng size và số click tư vấn; dùng các chỉ số này để chọn ngay CTA mới."
     ],
     "key": [
       1
     ],
-    "why": "Một tín hiệu rời trang chưa đủ xác định nguyên nhân; cần kết hợp dữ liệu và thử nghiệm.",
-    "apply": "Phân tích nhu cầu xác định size, độ rõ hướng dẫn và điểm khách cần hỗ trợ.",
+    "why": "Ở giai đoạn phát triển giả thuyết cần phối hợp chỉ số hành vi, chất lượng hướng dẫn, ảnh tỷ lệ và phản hồi định tính. Chỉ dùng một nhánh dữ liệu hay nhảy thẳng sang một CTA là chưa đủ để xác định nguyên nhân.",
+    "apply": "Phân biệt chẩn đoán trước thử nghiệm với thiết kế một thử nghiệm cụ thể; không suy từ page exit rằng giá là nguyên nhân.",
     "source": "INTERNAL_CASE",
     "status": "TÌNH HUỐNG MÔ PHỎNG - KHÔNG PHẢI CASE KHÁCH THỰC",
     "stage": 3,
     "skills": [
       "JOURNEY",
       "CUSTOMER"
-    ]
+    ],
+    "rubric_status": "PHẢN BIỆN NỘI BỘ - CẦN THỬ NGHIỆM VỚI NHÂN VIÊN"
   },
   {
     "id": "AC-012",
@@ -307,6 +318,7 @@
     "skills": [
       "JOURNEY",
       "PRODUCT"
-    ]
+    ],
+    "rubric_status": "CHƯA ĐƯỢC HIỆU CHỈNH KHẢO THÍ"
   }
 ]

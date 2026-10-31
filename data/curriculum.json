@@ -140,5 +140,20 @@
       "12"
     ]
   },
-  "description": "CORE Essentials có 86 câu được chọn có chủ đích, còn CORE Advanced vẫn được giữ để đào sâu tùy vai trò. Tài liệu public nên đây là công cụ tự học, không phải chứng nhận năng lực bảo mật."
+  "description": "CORE Essentials có 86 câu được chọn có chủ đích, còn CORE Advanced vẫn được giữ để đào sâu tùy vai trò. Tài liệu public nên đây là công cụ tự học, không phải chứng nhận năng lực bảo mật.",
+  "assessment_excluded_ids": [
+    "FN-033",
+    "FN-034",
+    "FN-035",
+    "GM-048",
+    "GM-053"
+  ],
+  "assessment_excluded_reasons": {
+    "FN-033": "Diễn giải sứ mệnh chưa duyệt nguyên văn",
+    "FN-034": "Diễn giải tầm nhìn chưa duyệt nguyên văn",
+    "FN-035": "Bộ ba tiêu chí nội bộ chưa duyệt là core values chính thức",
+    "GM-048": "Tiêu chí chứng từ/duyệt xử lý đá đang chờ phê duyệt SOP",
+    "GM-053": "Checklist QC lựa chọn đá đang chờ phê duyệt SOP"
+  },
+  "assessment_policy": "Tạm loại nội dung đang chờ founder phê duyệt câu chữ hoặc SOP QC khỏi bài thi chấm điểm. Vẫn có thể đọc và luyện tập nhưng không dùng làm chứng nhận năng lực. Mỗi thay đổi trạng thái cần code review."
 }

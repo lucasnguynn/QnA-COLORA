@@ -9,6 +9,7 @@ const care=read('care-17.json');
 const applied=read('applied-cases.json');
 const lessons=read('lessons.json');
 const config=read('curriculum.json');
+const reviewManifest=read('essentials-review.json');
 const facts=read('brand-facts.json');
 const questions=[...base,...gem,...care,...applied];
 assert.equal(base.length,206);
@@ -40,6 +41,16 @@ assert.equal(config.essential_ids.length,86);
 assert.equal(new Set(config.essential_ids).size,86);
 const core=questions.filter(q=>q.role==='CORE'),essential=core.filter(q=>config.essential_ids.includes(q.id));
 assert.equal(essential.length,86);
+assert.equal(reviewManifest.items.length,86);
+assert.equal(new Set(reviewManifest.items.map(x=>x.id)).size,86);
+assert(reviewManifest.items.every(x=>x.review_status==='PENDING_HUMAN_REVIEW'),'No question is officially signed off without reviewer');
+for(const x of reviewManifest.items)assert(config.essential_ids.includes(x.id),'Review item not Essential '+x.id);
+const exclusions=config.assessment_excluded_ids||[];
+assert.deepEqual(exclusions.slice().sort(),['FN-033','FN-034','FN-035','GM-048','GM-053'].sort());
+assert(exclusions.every(id=>reviewManifest.items.some(x=>x.id===id&&!x.assessment_eligible)),'Unapproved claims cannot enter exams');
+const eligible=essential.filter(q=>!exclusions.includes(q.id));
+assert.equal(eligible.length,81);
+for(const chapter of chapters)assert(eligible.some(q=>q.chapter===chapter),'Exam lost chapter due to approval gate '+chapter);
 for(const ch of chapters)assert(essential.some(q=>q.chapter===ch),'Essential coverage '+ch);
 assert.deepEqual(config.critical_ids,['FN-062','FN-067','PC-022']);
 for(const id of config.critical_ids)assert(config.essential_ids.includes(id),'Critical absent from Essentials');
@@ -96,10 +107,11 @@ const notAbsolute=/mọi|luôn|chắc chắn|tuyệt đối|vĩnh viễn|không 
 const eWrong=essential.flatMap(q=>q.a.filter((_,i)=>!q.key.includes(i)));
 assert(eWrong.filter(s=>notAbsolute.test(s)).length/eWrong.length<.25,'Essentials contain too many implausible absolute distractors');
 // Behavioral test: generate 40 complete exams for each role and validate quotas, chapter spread and critical inclusion.
-const suffix=`\nglobalThis.__audit={state,examBase,essentials,choiceHtml,modules};`;
-const ctx={console,Math,Date,setInterval:()=>{},clearInterval:()=>{},localStorage:{getItem:()=>null,setItem:()=>{}},document:{},window:{}};
+const suffix=`\nglobalThis.__audit={state,examBase,essentials,choiceHtml,modules,examRole,submitExam,practiceUpdate,reviewDue,markAssessmentVersion,saveObj};`;
+const ctx={console,Math,Date,setInterval:()=>{},clearInterval:()=>{},scrollTo:()=>{},localStorage:{getItem:()=>null,setItem:()=>{}},document:{},window:{}};
 vm.createContext(ctx);
 vm.runInContext(app.replace(/boot\(\);\s*$/,'')+suffix,ctx,{timeout:5000});
+vm.runInContext('render=function(){}',ctx);
 const audit=ctx.__audit;
 audit.state.bank=questions; audit.state.lessons=lessons;audit.state.curriculum=config;
 for(const role of ['BASIC','CARE','MKT']){
@@ -110,6 +122,7 @@ for(const role of ['BASIC','CARE','MKT']){
   assert.equal(new Set(selection.map(q=>q.id)).size,48,'Duplicate in exam');
   for(const chapter of chapters)assert(selection.some(q=>q.chapter===chapter),'Exam missed chapter '+chapter);
   for(const id of config.critical_ids)assert(selection.some(q=>q.id===id),'Exam missed safety gate '+id);
+  for(const id of exclusions)assert(!selection.some(q=>q.id===id),'Unapproved question in exam '+id);
   assert.equal(selection.filter(q=>q.role==='CORE').length,32);
   assert.equal(selection.filter(q=>q.role==='APPLIED').length,8);
   assert.equal(selection.filter(q=>q.role===role).length,8);
@@ -128,4 +141,32 @@ for(const role of ['BASIC','CARE','MKT']){
  const recommended=new Set(config.role_advanced_chapters[role]);
  assert(advanced.some(m=>recommended.has(m.chapter)),'No role advanced recommendations '+role);
 }
-console.log('V10 QA pass: 303 questions, 86 Essentials, 114 essential learning points, 12 rebalanced applied cases, role paths, shuffled options, 120 exams.');
+// Behavioral regression: the exam records the role frozen at creation, not the profile role after navigation.
+audit.state.role='BASIC';
+const sample=audit.examBase();
+audit.state.exam={role:'BASIC',contentVersion:'10.1',ids:sample.map(q=>q.id),answers:Object.fromEntries(sample.map(q=>[q.id,q.key])),started:Date.now(),deadline:Date.now()+55000,optionOrders:{}};
+audit.state.role='MKT';
+audit.submitExam(false);
+assert.equal(audit.state.attempt.role,'BASIC','Exam must not be recorded for a switched profile');
+assert.equal(audit.state.attempt.score,100,'Fully correct exam scoring');
+assert.equal(audit.state.attempt.passed,true,'Fully correct exam passes');
+assert.equal(audit.examRole({role:'CARE'}),'CARE');
+assert.equal(audit.examRole({role:'INVALID'}),null);
+// Behavioral regression: preserve the first attempt and schedule 7-day and 30-day retrieval.
+const day=86400000,epoch=1800000000000;
+let row=audit.practiceUpdate(null,false,epoch);
+assert.equal(row.firstCorrect,false);
+row=audit.practiceUpdate(row,true,epoch+day);
+assert.equal(row.firstCorrect,false,'Retried answer is not correct on first attempt');
+assert.equal(audit.reviewDue(row,epoch+6*day),false);
+assert.equal(audit.reviewDue(row,epoch+8*day),true);
+row=audit.practiceUpdate(row,true,epoch+8*day);
+assert.equal(row.reviewStage,1,'7-day review stage');
+assert.equal(audit.reviewDue(row,epoch+37*day),false);
+assert.equal(audit.reviewDue(row,epoch+38*day),true);
+row=audit.practiceUpdate(row,true,epoch+38*day);
+assert.equal(row.reviewStage,2,'30-day review stage');
+assert.equal(audit.reviewDue(row,epoch+150*day),false,'Completed schedule stays complete');
+const migrated=audit.practiceUpdate({correct:true,at:epoch,firstCorrect:null,attempts:2},true,epoch+8*day);
+assert.equal(migrated.firstCorrect,null,'Do not claim first attempt for legacy data');
+console.log('V10.1 QA pass: 303 questions; 86-item review manifest; 5 approval holds; 120 randomized exams; frozen exam role, score & 7/30-day review behavior.');

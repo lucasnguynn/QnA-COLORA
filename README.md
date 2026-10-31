@@ -1,4 +1,4 @@
-# COLORA Learning Studio V10
+# COLORA Learning Studio V10.1
 
 **COLORA - COLOR YOUR AURA**
 
@@ -22,12 +22,12 @@ Website học và luyện tập nội bộ bằng tiếng Việt dành cho nhân
 
 Để **đạt mức tự học đề xuất**, người học phải đồng thời đúng >=80% tổng đề, >=70% ở từng trụ cột và không sai ba câu quan trọng: GENIA276 Ag 930‰, natural khác untreated, và khi đá/chấu lỏng phải ngừng đeo, chuyển kiểm tra. Đáp án A/B/C/D được xáo trộn theo lượt thi, không xáo trộn ý nghĩa/key chấm điểm.
 
-Bài thi không đủ điều kiện để cấp chứng nhận nhân sự: repo công khai, JSON gồm đáp án và dữ liệu học lưu tại trình duyệt. Ngưỡng đang là đề xuất nội bộ, cần thử với nhân viên thật.
+Có 5 câu Essentials đang chờ phê duyệt nguyên văn/SOP chỉ được luyện tập, tạm không đưa vào đề chấm điểm. 86 câu đều chưa có người ký duyệt độc lập trong manifest. Bài thi không đủ điều kiện để cấp chứng nhận nhân sự: repo công khai, JSON gồm đáp án và dữ liệu học lưu tại trình duyệt. Ngưỡng đang là đề xuất nội bộ, cần thử với nhân viên thật.
 
 ## Tiến độ và lưu dữ liệu
 
-- Tách **đã trả lời**, **hiện đúng**, **cần ôn**. Sau 7 ngày, câu đúng có thể xuất hiện để làm lại, phục vụ spaced retrieval.
-- V10 tạo khóa dữ liệu riêng và di chuyển tên, vị trí, câu luyện tập CORE/Role đã làm và teach-back từ V9 trên cùng trình duyệt (nếu còn). Lượt thi V9 chỉ giữ metadata lịch sử, không tính là đạt V10. Các tình huống AC viết lại không dùng đáp án luyện tập V9.
+- Tách **đã trả lời**, **đúng lần đầu (khi có dữ liệu)**, **hiện đúng**, **cần ôn**. Có mốc tự kiểm tra lại sau 7 ngày rồi 30 ngày; không xem đây là retention đã được chứng minh.
+- V10.1 sử dụng dữ liệu V10 trên cùng trình duyệt, giữ câu học CORE/Role và teach-back; không kế thừa đáp án 12 Applied Cases sau khi sửa nội dung. Bài thi V10 đang làm dở được đóng để tránh chấm dưới ngân hàng câu hỏi khác. Các lượt thi cũ chỉ là lịch sử tự học.
 - Không đồng bộ giữa thiết bị và không thu thập điểm danh tính thực.
 
 ## Nguồn và quyền công bố
@@ -43,6 +43,8 @@ Các URL trên colora.vn có thể dẫn về giao diện password/Coming Soon t
 
 ## Tài liệu
 
+- [V10.1 kiểm toán nội dung, bảo mật & hành vi học/thi](docs/V10_1_QUALITY_AUDIT.md)
+- [Bảng 86 câu Essentials chờ duyệt](data/essentials-review.json)
 - [V10 release QA & approval gates](docs/V10_RELEASE_QA.md)
 - [V9 competency rubric (áp dụng cho V10)](docs/V9_ASSESSMENT_RUBRIC.md)
 - [Product Passport template](docs/PRODUCT_PASSPORT_TEMPLATE.md)
@@ -59,3 +61,14 @@ node scripts/validate.mjs
 ```
 
 Mở `http://localhost:8080`. GitHub Actions chạy kiểm tra dữ liệu và JavaScript, gồm 120 đề thi được tạo ngẫu nhiên cho ba nhóm nhân sự. CI không thay thế kiểm duyệt chất lượng câu hỏi hoặc thử nghiệm nhân viên.
+
+## Những thay đổi trọng tâm V10.1
+
+- **Cố định exam role khi tạo đề**: đổi vị trí lúc đang làm bài không làm kết quả được gán sang vai trò khác.
+- **Không chấm những claim chưa được duyệt**: FN-033/034/035, GM-048/053 tạm nằm ngoài đề thi; vẫn có thể luyện tập.
+- **5 Applied Cases** được bổ sung tiêu chí chọn phương án tốt nhất, giữ 303 câu tổng ngân hàng.
+- **FN-032** phân biệt thiết kế có bản sắc riêng với dịch vụ bespoke.
+- **QA hành vi** cho vai trò bài thi, bảo toàn kết quả đúng lần đầu và ôn sau 7/30 ngày.
+- **Công khai ≠ bảo mật**: nội dung public GitHub không thể ẩn chỉ bằng script hoặc CSS; tài liệu nhạy cảm cần hệ thống xác thực riêng và phê duyệt owner.
+
+**Quan trọng:** Tất cả 86 câu Essentials còn ở trạng thái chờ duyệt chất lượng bởi người phụ trách; kiểm tra tự động không có quyền cấp phê duyệt đó.
