@@ -1,7 +1,7 @@
 {
-  "version": "11.0",
+  "version": "11.1",
   "status": "PILOT_PENDING_HUMAN_REVIEW",
-  "note": "Every role question is assigned to one competency. This does not certify employees.",
+  "note": "Each role competency has an explicit minimum score. All gates apply only to self-study level, not official staff certification.",
   "roles": {
     "BASIC": {
       "must_pass_ids": [
@@ -19,7 +19,8 @@
             "ON-032",
             "ON-033",
             "ON-034"
-          ]
+          ],
+          "min_correct": 3
         },
         {
           "id": "BASIC-2",
@@ -31,7 +32,8 @@
             "ON-030",
             "ON-031",
             "ON-035"
-          ]
+          ],
+          "min_correct": 3
         },
         {
           "id": "BASIC-3",
@@ -41,7 +43,8 @@
             "ON-026",
             "ON-027",
             "ON-028"
-          ]
+          ],
+          "min_correct": 2
         },
         {
           "id": "BASIC-4",
@@ -51,7 +54,8 @@
             "ON-036",
             "ON-037",
             "ON-039"
-          ]
+          ],
+          "min_correct": 2
         },
         {
           "id": "BASIC-5",
@@ -60,7 +64,8 @@
           "question_ids": [
             "ON-038",
             "ON-040"
-          ]
+          ],
+          "min_correct": 1
         }
       ]
     },
@@ -82,7 +87,8 @@
             "ON-049",
             "ON-050",
             "ON-064"
-          ]
+          ],
+          "min_correct": 3
         },
         {
           "id": "CARE-2",
@@ -95,7 +101,8 @@
             "ON-046",
             "ON-060",
             "ON-063"
-          ]
+          ],
+          "min_correct": 2
         },
         {
           "id": "CARE-3",
@@ -112,7 +119,8 @@
             "ON-058",
             "ON-061",
             "ON-062"
-          ]
+          ],
+          "min_correct": 3
         },
         {
           "id": "CARE-4",
@@ -128,7 +136,8 @@
             "PC-030",
             "PC-031",
             "PC-032"
-          ]
+          ],
+          "min_correct": 3
         }
       ]
     },
@@ -149,7 +158,8 @@
             "ON-068",
             "ON-083",
             "ON-085"
-          ]
+          ],
+          "min_correct": 3
         },
         {
           "id": "MKT-2",
@@ -160,7 +170,8 @@
             "ON-070",
             "ON-086",
             "ON-089"
-          ]
+          ],
+          "min_correct": 2
         },
         {
           "id": "MKT-3",
@@ -174,7 +185,8 @@
             "ON-076",
             "ON-078",
             "ON-084"
-          ]
+          ],
+          "min_correct": 3
         },
         {
           "id": "MKT-4",
@@ -189,9 +201,11 @@
             "ON-082",
             "ON-087",
             "ON-088"
-          ]
+          ],
+          "min_correct": 3
         }
       ]
     }
-  }
+  },
+  "threshold_status": "PILOT_ONLY_NOT_PSYCHOMETRICALLY_VALIDATED"
 }
