@@ -1,4 +1,4 @@
-# V11.0 competency pilot | Release gates
+# V11.1 competency pilot | Release gates
 
 **Status: Technical candidate, not an approved employee certification.**
 
@@ -22,3 +22,12 @@
 - Passing this pilot measures only self-study performance.
 - GitHub Actions passing proves structural/test invariants, not claim truth or valid psychometrics.
 - Work samples are not marked as manager-approved until a separate authorized process exists.
+
+
+## V11.1 technical validation & unresolved limits
+- Skill-specific minimum correct counts are defined per role in `data/competency-matrix.json`. A single-role competency cannot be compensated by other topics in the 48-item exam.
+- High-total negative cases, changed-answer practice entries and content review status changes are tested in CI.
+- All 86 Essentials remain **PENDING_HUMAN_REVIEW**. Five disallowed questions remain excluded; the other 81 are used only in self-study pilot exams, not approved staff certification.
+- Legacy rows without item revisions can be carried over only from recognized 10.1, 10.2 or 11.0 versions after established V10.1 exceptions are archived. Unrecognized and changed rows remain as local historical data, not current mastery.
+- Browser E2E, independent subject-matter review, item difficulty/pilot results and employee identity proof are not delivered by this update.
+- Release gates stay pending: founder, technical, policies/privacy, independent item review, and a real employee usability/assessment pilot.
