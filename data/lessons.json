@@ -40,7 +40,16 @@
         }
       ],
       "note": "Sơ đồ khái niệm để nhân viên hiểu phân khúc, không phải tiêu chuẩn kỹ thuật hay phân hạng chất lượng tuyệt đối."
-    }
+    },
+    "essential_point_indices": [
+      0,
+      1,
+      3,
+      5,
+      6,
+      8
+    ],
+    "learning_objective": "Giải thích được kiến thức cốt lõi bằng lời của mình và biết điều cần xác minh khi áp dụng tại COLORA."
   },
   {
     "id": "02",
@@ -91,7 +100,16 @@
         }
       ],
       "note": "Tư liệu nhận diện không thay thế logo master hoặc brand guideline mới nhất."
-    }
+    },
+    "essential_point_indices": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      8
+    ],
+    "learning_objective": "Giải thích được kiến thức cốt lõi bằng lời của mình và biết điều cần xác minh khi áp dụng tại COLORA."
   },
   {
     "id": "03",
@@ -142,7 +160,16 @@
         }
       ],
       "note": "Ảnh chụp thật từ thư viện tư liệu khảo sát đá COLORA (10/2026). Đây là đá rời dùng để nghiên cứu, không phải SKU hoặc mẫu trang sức đã mở bán."
-    }
+    },
+    "essential_point_indices": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      8
+    ],
+    "learning_objective": "Giải thích được kiến thức cốt lõi bằng lời của mình và biết điều cần xác minh khi áp dụng tại COLORA."
   },
   {
     "id": "04",
@@ -185,7 +212,16 @@
         }
       ],
       "note": "Ba lớp là khung kiểm tra nội bộ: một bài quảng cáo đẹp không thể thay thế cấu trúc sản phẩm đúng."
-    }
+    },
+    "essential_point_indices": [
+      0,
+      1,
+      3,
+      4,
+      6,
+      7
+    ],
+    "learning_objective": "Nhận diện định vị và định hướng; phân biệt diễn giải đang chờ duyệt với câu chữ chính thức."
   },
   {
     "id": "05",
@@ -240,7 +276,16 @@
         }
       ],
       "note": "Ảnh thể hiện các viên đá được khảo sát, không thể thay thế ảnh thiết kế hoàn chỉnh, CAD hoặc chứng từ từng SKU."
-    }
+    },
+    "essential_point_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      7
+    ],
+    "learning_objective": "Giải thích được kiến thức cốt lõi bằng lời của mình và biết điều cần xác minh khi áp dụng tại COLORA."
   },
   {
     "id": "06",
@@ -287,7 +332,16 @@
         }
       ],
       "note": "Chưa dùng ảnh render làm bằng chứng về độ thoải mái. Phần này nên bổ sung ảnh đeo thật đã chốt khi COLORA có bộ ảnh sản phẩm chính thức."
-    }
+    },
+    "essential_point_indices": [
+      0,
+      1,
+      2,
+      3,
+      7,
+      8
+    ],
+    "learning_objective": "Giải thích được kiến thức cốt lõi bằng lời của mình và biết điều cần xác minh khi áp dụng tại COLORA."
   },
   {
     "id": "07",
@@ -351,7 +405,17 @@
         }
       ],
       "note": "Ảnh chụp thật từ thư viện tư liệu khảo sát đá COLORA (10/2026). Đây là đá rời dùng để nghiên cứu, không phải SKU hoặc mẫu trang sức đã mở bán. Ảnh không thể chứng minh lớp mạ độc quyền hoặc chứng nhận RJC."
-    }
+    },
+    "essential_point_indices": [
+      0,
+      2,
+      3,
+      5,
+      6,
+      7,
+      11
+    ],
+    "learning_objective": "Giải thích được kiến thức cốt lõi bằng lời của mình và biết điều cần xác minh khi áp dụng tại COLORA."
   },
   {
     "id": "08",
@@ -402,7 +466,16 @@
         }
       ],
       "note": "Không gán sẵn 'màu đỏ = yêu' hoặc 'màu xanh = bình yên' cho tất cả mọi người."
-    }
+    },
+    "essential_point_indices": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      7
+    ],
+    "learning_objective": "Giải thích được kiến thức cốt lõi bằng lời của mình và biết điều cần xác minh khi áp dụng tại COLORA."
   },
   {
     "id": "09",
@@ -450,7 +523,17 @@
         }
       ],
       "note": "Đây là nhóm động cơ để nghiên cứu, không phải bốn persona được khảo sát đại diện; không dùng ảnh mẫu để khẳng định nghề nghiệp hay mức thu nhập."
-    }
+    },
+    "essential_point_indices": [
+      0,
+      2,
+      3,
+      5,
+      6,
+      8,
+      10
+    ],
+    "learning_objective": "Giải thích được kiến thức cốt lõi bằng lời của mình và biết điều cần xác minh khi áp dụng tại COLORA."
   },
   {
     "id": "10",
@@ -499,7 +582,17 @@
         }
       ],
       "note": "Không suy ra mức thu nhập khách mục tiêu từ khoảng giá 2,3–8 triệu. Giá chính thức cần xem theo từng SKU."
-    }
+    },
+    "essential_point_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      8
+    ],
+    "learning_objective": "Giải thích được kiến thức cốt lõi bằng lời của mình và biết điều cần xác minh khi áp dụng tại COLORA."
   },
   {
     "id": "11",
@@ -563,7 +656,17 @@
         }
       ],
       "note": "Đây là mô hình hành trình học tập, không phải mọi khách đều đi đủ hoặc đúng thứ tự tám bước."
-    }
+    },
+    "essential_point_indices": [
+      0,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8
+    ],
+    "learning_objective": "Giải thích được kiến thức cốt lõi bằng lời của mình và biết điều cần xác minh khi áp dụng tại COLORA."
   },
   {
     "id": "12",
@@ -611,7 +714,17 @@
         }
       ],
       "note": "Không dùng ảnh tư liệu đá rời để thay cho ảnh sản phẩm bán thật. Trước khi công bố COLORA SILVER hoặc RJC, đối chiếu đúng chứng từ."
-    }
+    },
+    "essential_point_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      6,
+      10
+    ],
+    "learning_objective": "Giải thích được kiến thức cốt lõi bằng lời của mình và biết điều cần xác minh khi áp dụng tại COLORA."
   },
   {
     "id": "13",
@@ -673,7 +786,17 @@
     "teachback": {
       "prompt": "Giải thích cho một nhân viên mới vì sao đá tự nhiên chưa chắc là đá không xử lý, Mohs cao chưa chắc chống va đập tốt và carat không đồng nghĩa với kích thước mm.",
       "sample": "Natural là nguồn gốc hình thành; treatment là can thiệp sau hình thành. Mohs chủ yếu đo chống trầy, không bao trọn khả năng mẻ/vỡ hoặc độ ổn định. Carat đo khối lượng, còn kích thước để lắp CAD phải đo L × W × D bằng mm."
-    }
+    },
+    "essential_point_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      7,
+      10
+    ],
+    "learning_objective": "Giải thích được kiến thức cốt lõi bằng lời của mình và biết điều cần xác minh khi áp dụng tại COLORA."
   },
   {
     "id": "14",
@@ -740,7 +863,16 @@
     "teachback": {
       "prompt": "So sánh sapphire, spinel, topaz, emerald và opal để tư vấn sử dụng trong nhẫn hoặc mặt dây. Vì sao không thể chỉ xếp theo Mohs?",
       "sample": "Sapphire 9 có độ dai tốt và phù hợp nhiều kiểu nhẫn; spinel 8 có độ dai tốt; topaz 8 nhưng có cát khai nên va đập vẫn rủi ro; emerald 7,5–8 thường có khe nứt và xử lý; opal 5–6,5 cần bảo vệ hơn. Cần xét setting, treatment và hành vi đeo."
-    }
+    },
+    "essential_point_indices": [
+      0,
+      1,
+      2,
+      4,
+      9,
+      11
+    ],
+    "learning_objective": "Giải thích được kiến thức cốt lõi bằng lời của mình và biết điều cần xác minh khi áp dụng tại COLORA."
   },
   {
     "id": "15",
@@ -799,7 +931,17 @@
     "teachback": {
       "prompt": "Giải thích sự khác nhau giữa viên pear có mặt brilliant, viên emerald step-cut và viên oval mixed-cut; mỗi dạng mang đến ưu điểm và giới hạn nào cho thiết kế COLORA?",
       "sample": "Pear là dáng giọt nước, đầu nhọn cần bảo vệ; brilliant là sắp xếp mặt tạo độ lấp lánh. Emerald step thường làm nổi độ trong và màu nhưng cũng dễ lộ bao thể. Oval mixed kết hợp phản chiếu và biểu hiện màu, vẫn phải kiểm tra bow-tie/window, độ sâu và khả năng đặt đá theo CAD."
-    }
+    },
+    "essential_point_indices": [
+      0,
+      2,
+      3,
+      4,
+      5,
+      6,
+      12
+    ],
+    "learning_objective": "Phân biệt shape và cut; giải thích lợi ích, hạn chế khi chọn đá cho thiết kế COLORA."
   },
   {
     "id": "16",
@@ -864,7 +1006,17 @@
     "teachback": {
       "prompt": "Bạn nhận được 20 viên pear 7×5 mm cùng màu từ một nhà cung cấp cho thiết kế nhẫn COLORA. Hãy trình bày 6 bước kiểm tra trước khi đề xuất chọn viên và nêu điều gì cần người có thẩm quyền duyệt.",
       "sample": "Đối chiếu tên đá, natural/synthetic, xử lý; so dải màu dưới ánh sáng chuẩn; đo L×W×D, girdle và depth so CAD; kiểm window, đối xứng, chips, bao thể sát chấu; đánh giá độ bền và đầu pear; cuối cùng kiểm giá, lead time, chứng từ/lô và trình người phụ trách duyệt theo tiêu chuẩn SKU chính thức."
-    }
+    },
+    "essential_point_indices": [
+      0,
+      2,
+      4,
+      6,
+      8,
+      9,
+      12
+    ],
+    "learning_objective": "Giải thích được kiến thức cốt lõi bằng lời của mình và biết điều cần xác minh khi áp dụng tại COLORA."
   },
   {
     "id": "17",
@@ -932,6 +1084,19 @@
     "teachback": {
       "prompt": "Hãy hướng dẫn một khách mới mua nhẫn COLORA SILVER đính đá màu cách chăm trong 60 giây: đeo, lau, cất, tránh gì và khi nào cần nhắn Client Care. Bạn sẽ xử lý thế nào nếu khách chưa rõ loại đá hay lớp phủ?",
       "sample": "Em khuyên mình đeo sau khi dùng nước hoa/kem dưỡng, tháo trước bơi, hóa chất hoặc vận động dễ va chạm. Sau khi đeo lau bằng khăn mềm sạch, khô và cất riêng. Không dùng kem đánh răng, chất đánh bạc mạnh, siêu âm/hơi nóng khi chưa rõ đá và xử lý/lớp phủ. Nếu đá lỏng, chấu vướng, khóa bất thường, mình ngừng đeo, gửi ảnh và mã sản phẩm cho COLORA kiểm tra. Khi chưa rõ SKU, chỉ hướng dẫn lau khô nhẹ và xác minh trước các bước khác."
-    }
+    },
+    "essential_point_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      7,
+      9,
+      15,
+      16
+    ],
+    "learning_objective": "Giải thích được kiến thức cốt lõi bằng lời của mình và biết điều cần xác minh khi áp dụng tại COLORA."
   }
 ]

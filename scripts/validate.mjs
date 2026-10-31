@@ -57,6 +57,10 @@ assert(facts.metal_system.launch_all_products_use_genia276_ag930);
 const photos=new Set();
 for(const l of lessons){
  assert(l.title&&l.points.length>=8&&l.visual?.cards?.length>=3,'Lesson incomplete '+l.id);
+ assert(Array.isArray(l.essential_point_indices)&&l.essential_point_indices.length>=4&&l.essential_point_indices.length<l.points.length,'Essential/Advanced content needs distinct scope '+l.id);
+ assert(new Set(l.essential_point_indices).size===l.essential_point_indices.length,'Duplicate essential point '+l.id);
+ assert(l.essential_point_indices.every(i=>Number.isInteger(i)&&i>=0&&i<l.points.length),'Out-of-range lesson index '+l.id);
+ assert(l.learning_objective?.length>25,'Missing learning objective '+l.id);
  assert(l.teachback?.prompt?.length>25&&l.teachback?.sample?.length>25,'Teachback incomplete '+l.id);
  for(const p of l.visual.photos||[]){
   assert(p.src.startsWith('assets/')&&!p.src.includes('..'),'Unsafe image path');
@@ -75,11 +79,24 @@ const longest=originalFN.filter(q=>q.key.length===1&&q.a[q.key[0]].length===Math
 assert(longest/originalFN.length<=0.42,'Answer-length cues');
 const app=fs.readFileSync(new URL('../app.js',import.meta.url),'utf8');
 execFileSync('node',['--check',new URL('../app.js',import.meta.url).pathname],{stdio:'inherit'});
-assert(app.includes('track-panel')&&app.includes('save-teachback'),'V9 learning UI missing');
+assert(app.includes('track-panel')&&app.includes('save-teachback'),'Learning UI missing');
+assert(app.includes('essential_point_indices')&&app.includes('learningPoints.map'),'V10 Essentials must not display all advanced points');
+assert(app.includes('role_advanced_chapters')&&app.includes('GỢI Ý CHO VỊ TRÍ'),'Role-focused advanced path not active');
+assert(app.includes('optionOrders')&&app.includes('order.map((i,shown)'),'Exam option randomization missing');
+assert(app.includes('LEGACY_KEY')&&app.includes('legacyAttempts'),'V9 migration missing');
+assert(app.includes('countRecheck')&&app.includes('reviewedAfterWeek'),'7-day review not implemented');
+assert(app.includes('countNeedReview')&&app.includes('firstCorrect'),'Progress states missing');
 assert(app.includes('criticalMiss')&&app.includes('weakPillars'),'Mastery gates missing');
 assert(app.includes('applied-cases.json'),'Applied cases not loaded');
+const appliedLong=applied.filter(q=>q.a[q.key[0]].length===Math.max(...q.a.map(x=>x.length)));
+const appliedShort=applied.filter(q=>q.a[q.key[0]].length===Math.min(...q.a.map(x=>x.length)));
+assert(appliedLong.length<=3,'Applied cases leak the correct answer through length');
+assert(appliedShort.length<=4,'Applied cases leak shortest-answer rule');
+const notAbsolute=/mọi|luôn|chắc chắn|tuyệt đối|vĩnh viễn|không bao giờ|không thể/i;
+const eWrong=essential.flatMap(q=>q.a.filter((_,i)=>!q.key.includes(i)));
+assert(eWrong.filter(s=>notAbsolute.test(s)).length/eWrong.length<.25,'Essentials contain too many implausible absolute distractors');
 // Behavioral test: generate 40 complete exams for each role and validate quotas, chapter spread and critical inclusion.
-const suffix=`\nglobalThis.__audit={state,examBase,essentials};`;
+const suffix=`\nglobalThis.__audit={state,examBase,essentials,choiceHtml,modules};`;
 const ctx={console,Math,Date,setInterval:()=>{},clearInterval:()=>{},localStorage:{getItem:()=>null,setItem:()=>{}},document:{},window:{}};
 vm.createContext(ctx);
 vm.runInContext(app.replace(/boot\(\);\s*$/,'')+suffix,ctx,{timeout:5000});
@@ -99,4 +116,16 @@ for(const role of ['BASIC','CARE','MKT']){
   for(const p of pillars)assert.equal(selection.filter(q=>q.role==='APPLIED'&&q.pillar===p).length,2);
  }
 }
-console.log('V9 QA pass: 303 questions, 86 Essentials, 17 chapters, 12 applied cases, 3 mastery gates; 120 randomized exam simulations passed.');
+for(const q of applied){const order=[2,0,3,1];const html=audit.choiceHtml(q,[],false,false,order);
+ const opts=[...html.matchAll(/data-opt="(\\d+)"/g)].map(x=>Number(x[1]));
+ assert.deepEqual(opts,order,'Shuffled answer mapping mismatch '+q.id);
+ const correctDisplayIndex=order.indexOf(q.key[0]);
+ assert(correctDisplayIndex>=0&&opts[correctDisplayIndex]===q.key[0],'Wrong answer mapping '+q.id);
+}
+for(const role of ['BASIC','CARE','MKT']){
+ audit.state.role=role;
+ const advanced=audit.modules().filter(m=>m.role==='ADVANCED');
+ const recommended=new Set(config.role_advanced_chapters[role]);
+ assert(advanced.some(m=>recommended.has(m.chapter)),'No role advanced recommendations '+role);
+}
+console.log('V10 QA pass: 303 questions, 86 Essentials, 114 essential learning points, 12 rebalanced applied cases, role paths, shuffled options, 120 exams.');
