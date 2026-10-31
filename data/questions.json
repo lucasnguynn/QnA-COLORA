@@ -3556,18 +3556,18 @@
     "role": "CARE",
     "pillar": "KHÁCH HÀNG",
     "topic": "Cảm xúc khi tặng",
-    "q": "Người mua nói “Tôi chọn đá đỏ vì bạn ấy mạnh mẽ”. Nhân viên nên làm gì?",
+    "q": "Khách mua quà nói: 'Tôi chọn đá đỏ vì bạn ấy mạnh mẽ', nhưng chưa biết người nhận có thích màu đỏ. Cách tư vấn nào tôn trọng cả ý nghĩa của người tặng và sở thích người đeo?",
     "a": [
-      "Khẳng định đá đỏ đại diện tính cách mạnh mẽ trong hệ màu COLORA.",
-      "Hỏi sở thích màu đỏ của người nhận, không tự gán tính cách",
-      "Đổi sang màu khác vì màu đỏ có thể không phù hợp mọi dịp.",
-      "Chỉ tư vấn màu đá đỏ cho khách mua trong dịp tình yêu."
+      "Khẳng định đá đỏ đại diện cho sự mạnh mẽ của bất cứ ai đeo nó.",
+      "Trân trọng lý do chọn màu đỏ của người mua, rồi hỏi thêm gu màu và kiểu đeo thường ngày của người nhận.",
+      "Đề nghị bỏ ý nghĩa người mua đã chọn vì COLORA không ấn định ý nghĩa màu.",
+      "Chỉ hỏi thời điểm giao quà, bỏ qua sở thích của người nhận để giữ bất ngờ."
     ],
     "key": [
       1
     ],
-    "why": "Người mua có câu chuyện riêng nhưng gu người nhận vẫn quan trọng.",
-    "apply": "Có thể gợi vài sắc đỏ, không tuyên bố nghĩa màu cố định.",
+    "why": "Ý nghĩa thuộc về mỗi người. Cần tôn trọng câu chuyện người mua chủ động chia sẻ và đồng thời xác minh màu sắc, form, độ vừa có phù hợp người nhận hay không; không áp đặt hoặc phủ định cảm xúc.",
+    "apply": "Gợi mở: 'Màu đỏ gắn với một câu chuyện rất riêng của bạn. Người nhận thường thích tông màu nào để món quà cũng hợp gu họ?'",
     "source": "GIFT",
     "status": "CHUẨN THƯƠNG HIỆU",
     "stage": 3,
@@ -4200,18 +4200,18 @@
     "role": "MKT",
     "pillar": "KHÁCH HÀNG",
     "topic": "Cognitive Gap",
-    "q": "Nhiều người hỏi “Sao nhẫn bạc lại có giá vài triệu?”. Nội dung nào thiết thực hơn?",
+    "q": "Một khách bình luận 'Sao nhẫn bạc lại vài triệu?' và chưa biết bên trong gồm đá màu tự nhiên, thiết kế, chế tác cùng dịch vụ. Marketing cần tạo nội dung gì để làm rõ khoảng thiếu thông tin mà không khẳng định mọi nhẫn COLORA đều giống nhau?",
     "a": [
-      "Giải thích giá trị đá, chế tác và dịch vụ đúng SKU",
-      "Khẳng định các sản phẩm giá thấp khác chắc chắn sử dụng vật liệu kém.",
-      "Nói sản phẩm cao cấp nên khách phải hiểu giá trị thương hiệu.",
-      "Tránh nhắc giá để người xem chỉ cảm nhận cảm xúc khi nhìn ảnh."
+      "Công khai bảng so sánh giá bạc 925 với vàng 18K và suy ra giá thành phẩm chỉ từ bạc.",
+      "Chỉ kể câu chuyện cảm xúc và khuyến khích khách xem thêm khi muốn hiểu kỹ thuật.",
+      "Giải thích theo một SKU đã duyệt về đá màu, thiết kế, hoàn thiện, sử dụng và hậu mãi, kèm chứng cứ và phạm vi.",
+      "Trả lời rằng đây là phân khúc demi-fine nên giá cao, không cần giải thích từng sản phẩm."
     ],
     "key": [
-      0
+      2
     ],
-    "why": "Gap nhận thức về giá được giải quyết bằng thông tin và bằng chứng, không phải tự tôn.",
-    "apply": "Tạo trang hướng dẫn giá trị sản phẩm, dẫn về SKU phù hợp.",
+    "why": "Đây có thể là khoảng thiếu nhận thức về sự khác nhau giữa giá bạc nguyên liệu và tổng giá trị thành phẩm. Nội dung nên dùng SKU/ảnh thật/thông số/giải thích dễ hiểu, không lấy category hoặc story thay bằng chứng.",
+    "apply": "Tạo 'What makes this piece?' theo một SKU có Product Passport được duyệt, không đăng giá vốn hoặc tài liệu nguồn cung chưa được phép công bố.",
     "source": "CUSTOMER",
     "status": "GIẢ THUYẾT MỤC TIÊU",
     "stage": 3,

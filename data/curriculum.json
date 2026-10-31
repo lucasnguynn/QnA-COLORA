@@ -1,5 +1,5 @@
 {
-  "version": "V9",
+  "version": "V10.2",
   "framework": "Essentials > role-focused mastery > advanced reference > applied assessment",
   "essential_ids": [
     "FN-092",
@@ -140,7 +140,7 @@
       "12"
     ]
   },
-  "description": "CORE Essentials có 86 câu được chọn có chủ đích, còn CORE Advanced vẫn được giữ để đào sâu tùy vai trò. Tài liệu public nên đây là công cụ tự học, không phải chứng nhận năng lực bảo mật.",
+  "description": "CORE Essentials có 86 câu được chọn có chủ đích, còn CORE Advanced vẫn được giữ để đào sâu tùy vai trò. Tài liệu public nên đây là công cụ tự học, không phải chứng nhận năng lực bảo mật. V10.2: phiên bản bài thi, tiến độ CORE chung theo học viên, 17 mục tiêu riêng và tình huống CUG mô phỏng. Quyết định nguồn và QC vẫn cần người duyệt.",
   "assessment_excluded_ids": [
     "FN-033",
     "FN-034",

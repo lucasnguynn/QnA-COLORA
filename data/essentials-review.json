@@ -1,6 +1,6 @@
 {
   "schema": "colora-question-review-v1",
-  "version": "10.1",
+  "version": "10.2",
   "scope": "86 Essentials",
   "public_repo_disclaimer": "Dữ liệu trên GitHub public không thể bảo mật chỉ bằng giao diện. Manifest này chỉ quản trị nội dung; không tạo bảo vệ truy cập.",
   "items": [

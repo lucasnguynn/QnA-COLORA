@@ -49,7 +49,7 @@
       6,
       8
     ],
-    "learning_objective": "Giải thích được kiến thức cốt lõi bằng lời của mình và biết điều cần xác minh khi áp dụng tại COLORA."
+    "learning_objective": "Giải thích demi-fine trong 45 giây, phân biệt với fashion/fine mà không hứa độ bền hoặc vật liệu theo một chuẩn không tồn tại."
   },
   {
     "id": "02",
@@ -109,7 +109,7 @@
       5,
       8
     ],
-    "learning_objective": "Giải thích được kiến thức cốt lõi bằng lời của mình và biết điều cần xác minh khi áp dụng tại COLORA."
+    "learning_objective": "Giới thiệu COLORA và tagline đúng nguyên văn; diễn đạt Aura như bản sắc cá nhân, không như hiệu quả trị liệu hay phong thủy."
   },
   {
     "id": "03",
@@ -169,7 +169,7 @@
       5,
       8
     ],
-    "learning_objective": "Giải thích được kiến thức cốt lõi bằng lời của mình và biết điều cần xác minh khi áp dụng tại COLORA."
+    "learning_objective": "Giải thích vai trò gemstone, facet và cảm xúc; thể hiện quyền tự chọn ý nghĩa màu sắc của người đeo."
   },
   {
     "id": "04",
@@ -221,7 +221,7 @@
       6,
       7
     ],
-    "learning_objective": "Nhận diện định vị và định hướng; phân biệt diễn giải đang chờ duyệt với câu chữ chính thức."
+    "learning_objective": "Phân biệt định vị đã chốt, dải giá dự kiến và sứ mệnh/tầm nhìn đang chờ duyệt; không biến diễn giải thành công bố chính thức."
   },
   {
     "id": "05",
@@ -285,7 +285,7 @@
       4,
       7
     ],
-    "learning_objective": "Giải thích được kiến thức cốt lõi bằng lời của mình và biết điều cần xác minh khi áp dụng tại COLORA."
+    "learning_objective": "Nhận diện thiết kế đúng hoặc lệch Design DNA từ thông số và góc nhìn; giải thích điểm khác nhau giữa phom mềm và mặt giác chính xác."
   },
   {
     "id": "06",
@@ -341,7 +341,7 @@
       7,
       8
     ],
-    "learning_objective": "Giải thích được kiến thức cốt lõi bằng lời của mình và biết điều cần xác minh khi áp dụng tại COLORA."
+    "learning_objective": "Chỉ ra các yếu tố fit, comfort và usability của nhẫn, hoa tai, vòng tay, dây chuyền trước khi tư vấn sử dụng."
   },
   {
     "id": "07",
@@ -415,7 +415,7 @@
       7,
       11
     ],
-    "learning_objective": "Giải thích được kiến thức cốt lõi bằng lời của mình và biết điều cần xác minh khi áp dụng tại COLORA."
+    "learning_objective": "Phân biệt hợp kim GENIA276 Ag 930‰, lớp phủ COLORA SILVER, chứng nhận nguồn bạc và bằng chứng riêng SKU."
   },
   {
     "id": "08",
@@ -475,7 +475,7 @@
       5,
       7
     ],
-    "learning_objective": "Giải thích được kiến thức cốt lõi bằng lời của mình và biết điều cần xác minh khi áp dụng tại COLORA."
+    "learning_objective": "Giới thiệu một sản phẩm bằng ba lớp Functional, Technical và Emotional mà không lấy câu chuyện thay chứng cứ."
   },
   {
     "id": "09",
@@ -497,8 +497,8 @@
     "url": "https://colora.vn/pages/gift-guide",
     "origin": "Tổng hợp từ các định hướng/khẳng định nội bộ của COLORA và kiến thức ngành phù hợp; link chỉ là tài liệu tham khảo bổ sung, không thay thế hồ sơ nội bộ.",
     "teachback": {
-      "prompt": "Mô tả hai người mua COLORA cùng tuổi nhưng nhu cầu khác hẳn. Vì sao không thể dùng một persona?",
-      "sample": "Một người chọn nhẫn tự mua để đeo hằng ngày, quan tâm size/độ vướng; người khác mua quà, quan tâm gu người nhận và hạn giao. Tuổi không cho biết ngân sách, động cơ hoặc rủi ro quan trọng nhất."
+      "prompt": "Cùng ngân sách, một khách mua trang sức để tự thưởng sau chuyển việc và một khách mua quà sinh nhật. Hãy nêu nhu cầu khác nhau, hai câu hỏi không dẫn dắt và bằng chứng cần dùng ở từng trường hợp.",
+      "sample": "Khách tự thưởng có thể ưu tiên thẩm mỹ, khả năng đeo và cảm giác cá nhân; khách mua quà cần gu người nhận, độ vừa và hạn giao. Không suy đoán khả năng chi tiêu từ tuổi. Hỏi ngữ cảnh thực và kiểm chứng bằng ảnh trên người, thông số SKU và chính sách hiện hành."
     },
     "visual": {
       "kicker": "TARGET CUSTOMER",
@@ -528,12 +528,27 @@
       0,
       2,
       3,
+      4,
       5,
       6,
       8,
       10
     ],
-    "learning_objective": "Giải thích được kiến thức cốt lõi bằng lời của mình và biết điều cần xác minh khi áp dụng tại COLORA."
+    "learning_objective": "Xác định người mua, người đeo, nhu cầu, bối cảnh và điều chưa rõ; hỏi thêm mà không suy đoán thu nhập hoặc áp đặt ý nghĩa.",
+    "practice_lab": [
+      {
+        "title": "Khách chưa hiểu kim loại, không phải đang phản đối giá",
+        "scenario": "Tình huống giả định: khách hỏi 'Bạc COLORA 930 khác bạc 925 thế nào, có phải cứ 930 là không xỉn?'",
+        "task": "Xác định điều khách đang suy diễn, một câu hỏi làm rõ và bằng chứng cần kiểm tra trước khi trả lời.",
+        "guide": "Khoảng thiếu: nhầm hàm lượng bạc nền với khả năng chống xỉn của thành phẩm. Giải thích Ag 930‰ là mác hợp kim, lớp phủ là lớp khác; độ bền phụ thuộc sản phẩm và sử dụng. Tra hồ sơ hoàn thiện SKU và care guide, không hứa chống xỉn tuyệt đối."
+      },
+      {
+        "title": "Màu sắc do khách tự quyết định",
+        "scenario": "Tình huống giả định: người mua muốn tặng đá đỏ vì 'bạn ấy rất mạnh mẽ' nhưng chưa biết người nhận có thích màu đỏ.",
+        "task": "Hãy tôn trọng câu chuyện của người tặng và xác minh gu người nhận mà không áp một ý nghĩa màu cố định.",
+        "guide": "Đón nhận cách người mua diễn giải màu đỏ; hỏi người nhận thường đeo màu sắc, kiểu dáng nào. Nếu chưa rõ, ưu tiên ảnh thật, khả năng đổi theo chính sách và nhóm sản phẩm ít phụ thuộc size. Không phủ nhận cảm xúc khách."
+      }
+    ]
   },
   {
     "id": "10",
@@ -592,7 +607,15 @@
       5,
       8
     ],
-    "learning_objective": "Giải thích được kiến thức cốt lõi bằng lời của mình và biết điều cần xác minh khi áp dụng tại COLORA."
+    "learning_objective": "Phân biệt income, ngân sách, willingness to pay và perceived value; chẩn đoán phản đối giá bằng câu hỏi không dẫn dắt.",
+    "practice_lab": [
+      {
+        "title": "'Đẹp nhưng đắt' là khoảng thiếu nào?",
+        "scenario": "Tình huống giả định: khách xem nhẫn giá 3,8 triệu đồng, nói 'đẹp nhưng mình chưa thấy đáng'. Giá chỉ dùng để mô phỏng, không phải giá bán SKU thật.",
+        "task": "Đưa ra tối thiểu ba giả thuyết khác nhau và một câu hỏi không dẫn dắt để tìm điều khách đang cân nhắc.",
+        "guide": "Có thể là chưa hiểu chất liệu/đá/hoàn thiện, không thích cách đeo, thiếu niềm tin thương hiệu hoặc có lựa chọn thay thế. Hỏi 'Điều gì khiến bạn còn cân nhắc nhất về mẫu này?' rồi cung cấp bằng chứng đúng SKU khi có. Không suy ra thu nhập hoặc đẩy voucher ngay."
+      }
+    ]
   },
   {
     "id": "11",
@@ -614,7 +637,7 @@
     "url": "https://colora.vn/",
     "origin": "Tổng hợp từ các định hướng/khẳng định nội bộ của COLORA và kiến thức ngành phù hợp; link chỉ là tài liệu tham khảo bổ sung, không thay thế hồ sơ nội bộ.",
     "teachback": {
-      "prompt": "Khách xem video TikTok, lưu Instagram, vào PDP, hỏi Zalo rồi quay lại checkout: ở mỗi bước họ cần loại thông tin gì?",
+      "prompt": "Một khách lưu video vì thích màu đá, sau đó hỏi vì sao nhẫn đáng giá vài triệu và rồi quay lại vào dịp kỷ niệm. Phân loại Desire, Trust và Relationship; chọn bằng chứng phù hợp, không ép chốt.",
       "sample": "Social khơi gợi thẩm mỹ và nhu cầu; PDP cho thông số và ảnh tỷ lệ; tư vấn giải đáp điều còn thiếu; checkout phải rõ giá/giao/đổi trả; sau mua hỗ trợ sử dụng/care. Tất cả kênh phải nói nhất quán về cùng SKU."
     },
     "visual": {
@@ -659,14 +682,24 @@
     },
     "essential_point_indices": [
       0,
+      1,
       2,
       3,
       4,
       5,
       6,
+      7,
       8
     ],
-    "learning_objective": "Giải thích được kiến thức cốt lõi bằng lời của mình và biết điều cần xác minh khi áp dụng tại COLORA."
+    "learning_objective": "Xác định nhu cầu theo Discovery, Desire, Trust, Purchase, Ownership và Relationship; chọn đúng bằng chứng tại điểm chạm.",
+    "practice_lab": [
+      {
+        "title": "Không biến lượt xem thành kết luận",
+        "scenario": "Tình huống giả định: Reels được lưu nhiều, khách vào PDP rồi thoát sau khi xem Size Guide. Chưa có phỏng vấn khách hoặc log lỗi.",
+        "task": "Nêu các giả thuyết về Desire, Trust và Functional; loại dữ liệu nào cần thu thập trước khi đề xuất thử nghiệm?",
+        "guide": "Desire: khách thích nhưng chưa có dịp sở hữu. Trust: thiếu ảnh thật/nguồn đá. Functional: lo size/độ cao; cũng có thể lỗi tải hoặc UX. Đối chiếu funnel, mobile performance, thông tin PDP, phản hồi hỗ trợ. Không gán nguyên nhân cho giá khi chưa có chứng cứ."
+      }
+    ]
   },
   {
     "id": "12",
@@ -676,7 +709,7 @@
       "5 CÂU HỎI CỦA KHÁCH | Trông ra sao ngoài đời? Mình mua gì? Vì sao mức giá phù hợp? Có hợp người đeo? Nếu mua sai hoặc sản phẩm có vấn đề thì sao?",
       "VISUAL PROOF | Ảnh thật, macro, video đeo, ảnh tỷ lệ, góc bên, ánh sáng có kiểm soát; đừng để render hoặc AI làm khách tin màu đá/độ lớn không đúng.",
       "PRODUCT PROOF | Tên loại đá, màu, kích thước, xử lý, mác hợp kim, lớp phủ, trọng lượng, chấu và đặc tính sử dụng phải theo thông số được phê duyệt cho SKU.",
-      "MATERIAL PROOF | Nguyên tắc nội bộ về GENIA276 Ag 930‰, bạc 100% post-consumer recycled theo chứng nhận vật liệu và không nickel phải được áp dụng đúng phạm vi chứng từ, không tự mở rộng thành claim cho toàn danh mục nếu có ngoại lệ.",
+      "MATERIAL PROOF | Nền bạc tái chế GENIA276 Ag 930‰ được COLORA xác nhận cho đợt ra mắt. Khẳng định recycled, loại nguồn tái chế (post-consumer hay pre-consumer), tỷ lệ và phạm vi RJC phải đối chiếu đúng chứng từ hợp kim/lô trước khi công bố. Không mặc nhiên suy ra toàn bộ thành phẩm được RJC chứng nhận hoặc chống dị ứng tuyệt đối.",
       "SERVICE PROOF | Thời gian làm/giao, đổi trả, chăm sóc và bảo hành phải đối chiếu chính sách live cùng đơn hàng cụ thể, không thuộc lòng con số cũ rồi hứa ngoài quy trình.",
       "EMOTIONAL PROOF | Câu chuyện thương hiệu, ảnh trên người đeo và trải nghiệm thật giúp khách hình dung việc sở hữu, nhưng không thay thế bằng chứng kỹ thuật.",
       "PHÂN LOẠI THÔNG TIN | “ĐÃ XÁC LẬP” là quyết định nội bộ/brand; “THEO SKU” cần hồ sơ mẫu/lô; “GIẢ THUYẾT” cần nghiên cứu; “ROADMAP” chưa phải dịch vụ đang chạy; “LIVE POLICY” cần kiểm tra lại.",
@@ -724,7 +757,7 @@
       6,
       10
     ],
-    "learning_objective": "Giải thích được kiến thức cốt lõi bằng lời của mình và biết điều cần xác minh khi áp dụng tại COLORA."
+    "learning_objective": "Tra dữ liệu và nguồn được duyệt trước khi công bố chất liệu, xử lý đá, ảnh thật, chính sách và quyền lợi từng SKU."
   },
   {
     "id": "13",
@@ -796,7 +829,7 @@
       7,
       10
     ],
-    "learning_objective": "Giải thích được kiến thức cốt lõi bằng lời của mình và biết điều cần xác minh khi áp dụng tại COLORA."
+    "learning_objective": "Phân biệt natural, synthetic, simulant và treatment; chỉ dùng các claim về đá khi có bằng chứng phù hợp."
   },
   {
     "id": "14",
@@ -872,7 +905,7 @@
       9,
       11
     ],
-    "learning_objective": "Giải thích được kiến thức cốt lõi bằng lời của mình và biết điều cần xác minh khi áp dụng tại COLORA."
+    "learning_objective": "Giải thích độ cứng, độ dai và độ ổn định; không suy diễn sự an toàn của trang sức từ riêng Mohs."
   },
   {
     "id": "15",
@@ -941,7 +974,7 @@
       6,
       12
     ],
-    "learning_objective": "Phân biệt shape và cut; giải thích lợi ích, hạn chế khi chọn đá cho thiết kế COLORA."
+    "learning_objective": "Phân biệt outline shape và cutting style; nêu một lợi thế và rủi ro khi dùng oval, pear, marquise hoặc step-cut."
   },
   {
     "id": "16",
@@ -1016,7 +1049,7 @@
       9,
       12
     ],
-    "learning_objective": "Giải thích được kiến thức cốt lõi bằng lời của mình và biết điều cần xác minh khi áp dụng tại COLORA."
+    "learning_objective": "So sánh lựa chọn đá dựa vào màu, kích thước thật, khuyết tật, setting và chứng từ; phân biệt chuẩn đã duyệt với QC đề xuất."
   },
   {
     "id": "17",
@@ -1097,6 +1130,6 @@
       15,
       16
     ],
-    "learning_objective": "Giải thích được kiến thức cốt lõi bằng lời của mình và biết điều cần xác minh khi áp dụng tại COLORA."
+    "learning_objective": "Hướng dẫn chăm tại nhà ở mức an toàn, biết khi nào ngừng đeo/chuyển kiểm tra và không tự suy đoán phương pháp vệ sinh."
   }
 ]

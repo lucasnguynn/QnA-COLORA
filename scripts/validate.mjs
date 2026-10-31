@@ -80,6 +80,14 @@ for(const l of lessons){
  }
 }
 assert(photos.size>=4);
+assert.equal(new Set(lessons.map(l=>l.learning_objective)).size,17,'All 17 chapters need distinct observable objectives');
+assert.equal(lessons.reduce((n,l)=>n+l.essential_point_indices.length,0),117,'V10.2 Essentials lesson scope');
+assert(lessons.find(l=>l.id==='09').essential_point_indices.includes(4),'Self-reward in Essentials');
+assert(lessons.find(l=>l.id==='11').essential_point_indices.includes(1),'Desire in Essentials');
+assert(lessons.find(l=>l.id==='11').essential_point_indices.includes(7),'Relationship in Essentials');
+assert.equal(lessons.reduce((n,l)=>n+(l.practice_lab?.length||0),0),4,'Four CUG simulations required');
+for(const l of lessons)for(const x of (l.practice_lab||[]))assert(x.scenario?.length>80&&x.task?.length>50&&x.guide?.length>90,'Weak learning simulation '+l.id);
+assert(!lessons.find(l=>l.id==='12').points.some(p=>p.includes('100% post-consumer recycled')),'Unverified post-consumer claim');
 assert(lessons.find(l=>l.id==='01').title.includes('DEMI-FINE'));
 assert(lessons.find(l=>l.id==='07').points.some(p=>p.includes('100%')&&p.includes('launch')));
 assert(lessons.find(l=>l.id==='04').points[0].includes('CHỜ DUYỆT'));
@@ -97,6 +105,10 @@ assert(app.includes('optionOrders')&&app.includes('order.map((i,shown)'),'Exam o
 assert(app.includes('LEGACY_KEY')&&app.includes('legacyAttempts'),'V9 migration missing');
 assert(app.includes('countRecheck')&&app.includes('reviewedAfterWeek'),'7-day review not implemented');
 assert(app.includes('countNeedReview')&&app.includes('firstCorrect'),'Progress states missing');
+assert(app.includes("ASSESSMENT_VERSION='10.2'")&&app.includes('ASSESSMENT_BANK_ID'),'Version-aware assessments missing');
+assert(app.includes('latestCurrentAttempt')&&app.includes('latestHistoricalAttempt'),'Historical/current results mixed');
+assert(app.includes('practiceKey(q.id)')&&app.includes("CORE_PROGRESS_PREFIX='CORE:'"),'CORE progress not shared');
+assert(app.includes('TÌNH HUỐNG CUG MÔ PHỎNG'),'Simulated customer learning cases not visible');
 assert(app.includes('criticalMiss')&&app.includes('weakPillars'),'Mastery gates missing');
 assert(app.includes('applied-cases.json'),'Applied cases not loaded');
 const appliedLong=applied.filter(q=>q.a[q.key[0]].length===Math.max(...q.a.map(x=>x.length)));
@@ -107,7 +119,7 @@ const notAbsolute=/mọi|luôn|chắc chắn|tuyệt đối|vĩnh viễn|không 
 const eWrong=essential.flatMap(q=>q.a.filter((_,i)=>!q.key.includes(i)));
 assert(eWrong.filter(s=>notAbsolute.test(s)).length/eWrong.length<.25,'Essentials contain too many implausible absolute distractors');
 // Behavioral test: generate 40 complete exams for each role and validate quotas, chapter spread and critical inclusion.
-const suffix=`\nglobalThis.__audit={state,examBase,essentials,choiceHtml,modules,examRole,submitExam,practiceUpdate,reviewDue,markAssessmentVersion,saveObj};`;
+const suffix=`\nglobalThis.__audit={state,examBase,essentials,choiceHtml,modules,examRole,submitExam,practiceUpdate,reviewDue,markAssessmentVersion,saveObj,answered,practiceKey,latestCurrentAttempt,latestHistoricalAttempt,isCurrentAttempt};`;
 const ctx={console,Math,Date,setInterval:()=>{},clearInterval:()=>{},scrollTo:()=>{},localStorage:{getItem:()=>null,setItem:()=>{}},document:{},window:{}};
 vm.createContext(ctx);
 vm.runInContext(app.replace(/boot\(\);\s*$/,'')+suffix,ctx,{timeout:5000});
@@ -141,15 +153,41 @@ for(const role of ['BASIC','CARE','MKT']){
  const recommended=new Set(config.role_advanced_chapters[role]);
  assert(advanced.some(m=>recommended.has(m.chapter)),'No role advanced recommendations '+role);
 }
+// Behavioral regression: V10.1 results are history only; CORE progress follows the learner across roles.
+const epochMigration=1800000000000;
+audit.saveObj.attempts=[{role:'BASIC',score:92,passed:true,date:new Date(epochMigration).toISOString()}];
+audit.saveObj.practice={
+ 'BASIC:FN-001':{correct:false,at:epochMigration,firstCorrect:false,attempts:1},
+ 'CARE:FN-001':{correct:true,at:epochMigration+86400000,firstCorrect:true,attempts:1},
+ 'CARE:ON-041':{correct:true,at:epochMigration,firstCorrect:true,attempts:1},
+ 'BASIC:AC-001':{correct:true,at:epochMigration,firstCorrect:true,attempts:1}
+};
+audit.saveObj.contentVersion='10.1';
+audit.markAssessmentVersion();
+assert.equal(audit.saveObj.contentVersion,'10.2');
+assert.equal(audit.saveObj.practice['CORE:FN-001'].correct,true,'Shared CORE result should come from latest prior response');
+assert.equal(audit.saveObj.practice['CORE:FN-001'].firstCorrect,false,'Known prior incorrect first attempt must remain');
+assert(!audit.saveObj.practice['BASIC:AC-001'],'Revised Applied Cases must not inherit old responses');
+assert(audit.saveObj.practice['CARE:ON-041'],'Role-specific results must remain');
+audit.state.role='BASIC';assert.equal(audit.answered('FN-001').correct,true);
+audit.state.role='CARE';assert.equal(audit.answered('FN-001').correct,true);
+assert.equal(audit.answered('ON-041').correct,true);
+assert.equal(audit.latestCurrentAttempt('BASIC'),undefined,'Old attempts cannot pass V10.2');
+assert.equal(audit.latestHistoricalAttempt('BASIC').score,92,'Historical attempts preserved');
 // Behavioral regression: the exam records the role frozen at creation, not the profile role after navigation.
 audit.state.role='BASIC';
 const sample=audit.examBase();
-audit.state.exam={role:'BASIC',contentVersion:'10.1',ids:sample.map(q=>q.id),answers:Object.fromEntries(sample.map(q=>[q.id,q.key])),started:Date.now(),deadline:Date.now()+55000,optionOrders:{}};
+audit.state.exam={role:'BASIC',contentVersion:'10.2',bankId:'colora-v10.2-20261031',ids:sample.map(q=>q.id),answers:Object.fromEntries(sample.map(q=>[q.id,q.key])),started:Date.now(),deadline:Date.now()+55000,optionOrders:{}};
 audit.state.role='MKT';
 audit.submitExam(false);
 assert.equal(audit.state.attempt.role,'BASIC','Exam must not be recorded for a switched profile');
 assert.equal(audit.state.attempt.score,100,'Fully correct exam scoring');
 assert.equal(audit.state.attempt.passed,true,'Fully correct exam passes');
+assert.equal(audit.state.attempt.assessmentVersion,'10.2');
+assert.equal(audit.state.attempt.bankId,'colora-v10.2-20261031');
+assert.equal(audit.latestCurrentAttempt('BASIC').assessmentVersion,'10.2');
+assert.equal(audit.latestHistoricalAttempt('BASIC').score,92);
+assert.equal(audit.isCurrentAttempt({role:'BASIC',assessmentVersion:'10.2',bankId:'invalid'}),false);
 assert.equal(audit.examRole({role:'CARE'}),'CARE');
 assert.equal(audit.examRole({role:'INVALID'}),null);
 // Behavioral regression: preserve the first attempt and schedule 7-day and 30-day retrieval.
@@ -169,4 +207,4 @@ assert.equal(row.reviewStage,2,'30-day review stage');
 assert.equal(audit.reviewDue(row,epoch+150*day),false,'Completed schedule stays complete');
 const migrated=audit.practiceUpdate({correct:true,at:epoch,firstCorrect:null,attempts:2},true,epoch+8*day);
 assert.equal(migrated.firstCorrect,null,'Do not claim first attempt for legacy data');
-console.log('V10.1 QA pass: 303 questions; 86-item review manifest; 5 approval holds; 120 randomized exams; frozen exam role, score & 7/30-day review behavior.');
+console.log('V10.2 QA pass: 303 questions, 86 Essentials, 117 core learning points, 4 CUG labs, 17 objectives, 120 exams, shared CORE migration and versioned results.');

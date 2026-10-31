@@ -1,4 +1,4 @@
-# COLORA Learning Studio V10.1
+# COLORA Learning Studio V10.2
 
 **COLORA - COLOR YOUR AURA**
 
@@ -8,13 +8,13 @@ Website học và luyện tập nội bộ bằng tiếng Việt dành cho nhân
 
 ## Lộ trình đào tạo
 
-- **Essentials:** 86 câu bắt buộc, kiến thức cơ bản thuộc 17 chương. Bài học chỉ hiển thị **114 mục cốt lõi**, không bắt người mới đọc tất cả nội dung chuyên sâu cùng lúc.
+- **Essentials:** 86 câu bắt buộc, kiến thức cơ bản thuộc 17 chương. Bài học chỉ hiển thị **117 mục cốt lõi**, không bắt người mới đọc tất cả nội dung chuyên sâu cùng lúc.
 - **Role Mastery:** 18 câu Designer/Editor, 32 Customer Care và 25 Marketing.
 - **Applied Cases:** 12 tình huống tích hợp (3 tình huống theo mỗi trụ cột). Các lựa chọn được viết lại ở V10 để hạn chế đoán đúng bằng độ dài; tình huống mô phỏng không phải dữ liệu khách hàng có thật.
-- **Advanced Library:** 130 câu CORE nâng cao; **89 mục kiến thức chuyên sâu bổ sung** so với Essentials; ưu tiên chương khuyến nghị riêng cho từng vị trí.
+- **Advanced Library:** 130 câu CORE nâng cao; **86 mục kiến thức chuyên sâu bổ sung** so với Essentials; ưu tiên chương khuyến nghị riêng cho từng vị trí.
 - **Teach-back:** người học tự viết lời giải thích và lưu tại trình duyệt. Kết quả này chưa được tự động chấm và không phải đánh giá năng lực của quản lý.
 
-**Tổng ngân hàng 303 câu**, gồm 216 CORE (86 Essentials + 130 Advanced), 75 câu Role và 12 Applied. Toàn bộ nội dung 203 mục kiến thức được giữ; 114 mục là nội dung bắt buộc (cùng xuất hiện trong bản nâng cao), 89 mục mở rộng.
+**Tổng ngân hàng 303 câu**, gồm 216 CORE (86 Essentials + 130 Advanced), 75 câu Role và 12 Applied. Toàn bộ nội dung 203 mục kiến thức được giữ; 117 mục là nội dung bắt buộc (cùng xuất hiện trong bản nâng cao), 86 mục mở rộng.
 
 ## Bài thi tổng kết
 
@@ -72,3 +72,15 @@ Mở `http://localhost:8080`. GitHub Actions chạy kiểm tra dữ liệu và J
 - **Công khai ≠ bảo mật**: nội dung public GitHub không thể ẩn chỉ bằng script hoặc CSS; tài liệu nhạy cảm cần hệ thống xác thực riêng và phê duyệt owner.
 
 **Quan trọng:** Tất cả 86 câu Essentials còn ở trạng thái chờ duyệt chất lượng bởi người phụ trách; kiểm tra tự động không có quyền cấp phê duyệt đó.
+
+
+## Bản V10.2 (31/10/2026)
+
+- **Kết quả thi theo phiên bản:** điểm V10/V10.1 không còn hiện là đạt V10.2; lưu lịch sử trong trình duyệt. Mỗi bài thi mới ghi assessmentVersion và bankId.
+- **CORE dùng chung tiến độ** khi nhân viên đổi vai trò, di chuyển kết quả cũ có kiểm tra thứ tự thời gian; Role Mastery vẫn riêng.
+- **17 mục tiêu học tập riêng biệt**, 117 mục Essentials và bốn tình huống Gap Nhận Thức (CUG) mô phỏng trong ba chương Customer / Value / Journey.
+- Điều chỉnh cách trả lời câu ON-045 để tôn trọng cảm xúc của người tặng, và ON-074 để giải thích giá trị thực theo SKU.
+- **Kiểm soát claim:** chưa dùng '100% post-consumer recycled' khi không có chứng từ phân loại nguồn tái chế; chỉ nêu đúng thông tin bạc tái chế GENIA276 Ag 930‰ và phạm vi xác minh.
+- [Báo cáo V10.2 Verified Knowledge & Applied Competency](docs/V10_2_IMPLEMENTATION.md).
+
+**Bản public vẫn là môi trường tự học, không xác nhận năng lực nhân sự chính thức.**
