@@ -248,3 +248,18 @@ assert.notEqual(audit.assessmentBankId(),priorFingerprint,'Changed question shou
 audit.state.bank=before;audit.initializeAssessmentBank();
 assert.equal(audit.assessmentBankId(),priorFingerprint,'Fingerprint must be deterministic');
 console.log('V11 additional checks: role competencies, 9 rubrics, migration and bank fingerprint passed.');
+
+for(const role of ['BASIC','CARE','MKT']){
+ audit.state.role=role;
+ const set=audit.examBase();
+ const fail=matrix.roles[role].must_pass_ids[0],target=set.find(q=>q.id===fail);
+ assert(target,'Missing mandatory test item '+fail);
+ const answers=Object.fromEntries(set.map(q=>[q.id,[...q.key]]));
+ answers[fail]=[([0,1,2,3].find(i=>!target.key.includes(i)))];
+ audit.state.exam={role,contentVersion:'11.0',bankId:audit.assessmentBankId(),ids:set.map(q=>q.id),answers,optionOrders:{},started:Date.now(),deadline:Date.now()+60000};
+ audit.submitExam(false);
+ assert(audit.state.attempt.score>=80,'High-scoring negative safety scenario');
+ assert.equal(audit.state.attempt.passed,false,'Critical role miss must block pass '+role);
+ assert(audit.state.attempt.roleCriticalMiss.includes(fail),'Expected mandatory miss '+fail);
+}
+console.log('V11 negative tests: wrong critical role response blocks passing for all 3 roles.');
