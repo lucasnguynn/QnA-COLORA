@@ -312,6 +312,10 @@ for(const role of ['BASIC','CARE','MKT']){
 }
 ctx.document.querySelector=()=>({});
 vm.runInContext('chrome=function(html){globalThis.__v111Markup=html}',ctx);
+audit.state.role='CARE';
+const resultQuestions=audit.examBase();
+audit.state.exam={role:'CARE',contentVersion:'11.1',bankId:audit.assessmentBankId(),ids:resultQuestions.map(q=>q.id),answers:Object.fromEntries(resultQuestions.map(q=>[q.id,[...q.key]])),optionOrders:{},started:Date.now(),deadline:Date.now()+60000};
+audit.submitExam(false);
 audit.result();
 assert(ctx.__v111Markup.includes('KẾT QUẢ TỪNG NĂNG LỰC'),'Competency panel failed to render');
 assert(ctx.__v111Markup.includes('Cần ôn'),'Skill panel failed to show status');
