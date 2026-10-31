@@ -296,10 +296,11 @@ assert(!audit.saveObj.practice[rowKey],'Outdated row must be removed from curren
 assert(Object.values(audit.saveObj.legacyPractice).includes(oldRow),'Old practice must be archived');
 audit.state.bank[itemIndex]=orig;
 const beforeReview=audit.assessmentBankId();
-audit.state.reviewManifest.items[0]={...audit.state.reviewManifest.items[0],review_status:'APPROVED'};
+const savedReviewItem=audit.state.reviewManifest.items[0];
+audit.state.reviewManifest.items[0]={...savedReviewItem,review_status:'APPROVED'};
 audit.initializeAssessmentBank();
 assert.notEqual(audit.assessmentBankId(),beforeReview,'Review status change must invalidate stale exam result');
-audit.state.reviewManifest=reviewManifest;audit.initializeAssessmentBank();
+audit.state.reviewManifest.items[0]=savedReviewItem;audit.initializeAssessmentBank();
 console.log('V11.1 negative cases: weak role skills blocked, practice revisions archived, and review-state changes invalidate results.');
 
 for(const role of ['BASIC','CARE','MKT']){
