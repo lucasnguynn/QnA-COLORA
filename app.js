@@ -35,7 +35,9 @@ function migrateCoreProgress(){
 }
 function markAssessmentVersion(){
  if(saveObj.contentVersion===ASSESSMENT_VERSION)return;
- saveObj.practice=Object.fromEntries(Object.entries(saveObj.practice||{}).filter(([key])=>!key.includes(':AC-')));
+ const stale=Object.entries(saveObj.practice||{}).filter(([key])=>key.includes(':AC-')||key.endsWith(':ON-045')||key.endsWith(':ON-074'));
+ saveObj.legacyPractice={...(saveObj.legacyPractice||{}),...Object.fromEntries(stale)};
+ saveObj.practice=Object.fromEntries(Object.entries(saveObj.practice||{}).filter(([key])=>!key.includes(':AC-')&&!key.endsWith(':ON-045')&&!key.endsWith(':ON-074')));
  migrateCoreProgress();
  if(saveObj.exam){saveObj.discardedExamAt=Date.now();saveObj.exam=null}
  saveObj.contentVersion=ASSESSMENT_VERSION;store();

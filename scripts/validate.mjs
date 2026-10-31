@@ -160,6 +160,8 @@ audit.saveObj.practice={
  'BASIC:FN-001':{correct:false,at:epochMigration,firstCorrect:false,attempts:1},
  'CARE:FN-001':{correct:true,at:epochMigration+86400000,firstCorrect:true,attempts:1},
  'CARE:ON-041':{correct:true,at:epochMigration,firstCorrect:true,attempts:1},
+ 'CARE:ON-045':{correct:true,at:epochMigration,firstCorrect:true,attempts:1},
+ 'MKT:ON-074':{correct:true,at:epochMigration,firstCorrect:true,attempts:1},
  'BASIC:AC-001':{correct:true,at:epochMigration,firstCorrect:true,attempts:1}
 };
 audit.saveObj.contentVersion='10.1';
@@ -168,6 +170,8 @@ assert.equal(audit.saveObj.contentVersion,'10.2');
 assert.equal(audit.saveObj.practice['CORE:FN-001'].correct,true,'Shared CORE result should come from latest prior response');
 assert.equal(audit.saveObj.practice['CORE:FN-001'].firstCorrect,false,'Known prior incorrect first attempt must remain');
 assert(!audit.saveObj.practice['BASIC:AC-001'],'Revised Applied Cases must not inherit old responses');
+assert(!audit.saveObj.practice['CARE:ON-045']&&!audit.saveObj.practice['MKT:ON-074'],'Reworded role questions must not inherit stale scores');
+assert(audit.saveObj.legacyPractice['CARE:ON-045']&&audit.saveObj.legacyPractice['MKT:ON-074'],'Preserve prior answers for historical review');
 assert(audit.saveObj.practice['CARE:ON-041'],'Role-specific results must remain');
 audit.state.role='BASIC';assert.equal(audit.answered('FN-001').correct,true);
 audit.state.role='CARE';assert.equal(audit.answered('FN-001').correct,true);

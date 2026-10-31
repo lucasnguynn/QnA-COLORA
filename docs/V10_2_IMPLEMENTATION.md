@@ -13,7 +13,8 @@
 ### Share CORE learning progress across roles
 - V10.1 stored practice answers under `BASIC:<id>`, `CARE:<id>`, `MKT:<id>` regardless of question role.
 - V10.2 stores every **CORE** question answer under `CORE:<id>`. Role Mastery remains role-scoped and Applied Cases remain practice items for the selected role.
-- Migration reads earlier role-scoped CORE answers, selects the latest timestamped record as current and preserves the earliest **known** first-attempt indicator. Original role-scoped records are retained as legacy local data, not erased; a migrated first-attempt result that cannot be established is treated as unknown.
+- Migration reads earlier role-scoped CORE answers, selects the latest timestamped record as current and preserves the earliest **known** first-attempt indicator.
+- Because questions ON-045 and ON-074 were materially rewritten (including ON-074's correct key), their **old practice outcomes are archived** under `legacyPractice` and no longer counted as current. The same applies to previously revised Applied Cases. Original role-scoped records are retained as legacy local data, not erased; a migrated first-attempt result that cannot be established is treated as unknown.
 - Migration runs only **after the current question bank is loaded**, so the role of each question can be determined safely. Progress only persists in the same browser.
 
 ### Course learning objectives and customer understanding
