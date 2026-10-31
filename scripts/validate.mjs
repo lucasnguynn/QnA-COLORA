@@ -46,7 +46,12 @@ const core=questions.filter(q=>q.role==='CORE'),essential=core.filter(q=>config.
 assert.equal(essential.length,86);
 assert.equal(reviewManifest.items.length,86);
 assert.equal(new Set(reviewManifest.items.map(x=>x.id)).size,86);
-assert(reviewManifest.items.every(x=>x.review_status==='PENDING_HUMAN_REVIEW'),'No question is officially signed off without reviewer');
+const legalReviewStates=new Set(['PENDING_HUMAN_REVIEW','APPROVED','REJECTED','NEEDS_REVISION']);
+assert(reviewManifest.items.every(x=>legalReviewStates.has(x.review_status)),'Unknown review status');
+for(const x of reviewManifest.items){
+ if(x.review_status==='APPROVED')assert(x.reviewed_by&&x.reviewed_at&&x.source_document_id&&x.source_version,'Approval requires reviewer and evidence '+x.id);
+ if(['REJECTED','NEEDS_REVISION'].includes(x.review_status))assert.equal(x.assessment_eligible,false,'Rejected item must not be exam eligible '+x.id);
+}
 for(const x of reviewManifest.items)assert(config.essential_ids.includes(x.id),'Review item not Essential '+x.id);
 const exclusions=config.assessment_excluded_ids||[];
 assert.deepEqual(exclusions.slice().sort(),['FN-033','FN-034','FN-035','GM-048','GM-053'].sort());
@@ -138,7 +143,7 @@ const notAbsolute=/mọi|luôn|chắc chắn|tuyệt đối|vĩnh viễn|không 
 const eWrong=essential.flatMap(q=>q.a.filter((_,i)=>!q.key.includes(i)));
 assert(eWrong.filter(s=>notAbsolute.test(s)).length/eWrong.length<.25,'Essentials contain too many implausible absolute distractors');
 // Behavioral test: generate 40 complete exams for each role and validate quotas, chapter spread and critical inclusion.
-const suffix=`\nglobalThis.__audit={state,examBase,essentials,choiceHtml,modules,examRole,submitExam,practiceUpdate,reviewDue,markAssessmentVersion,initializeAssessmentBank,assessmentBankId,questionRevision,reconcilePracticeRevisions,saveObj,answered,practiceKey,latestCurrentAttempt,latestHistoricalAttempt,isCurrentAttempt};`;
+const suffix=`\nglobalThis.__audit={state,examBase,essentials,choiceHtml,modules,examRole,submitExam,practiceUpdate,reviewDue,markAssessmentVersion,initializeAssessmentBank,assessmentBankId,result,questionRevision,reconcilePracticeRevisions,saveObj,answered,practiceKey,latestCurrentAttempt,latestHistoricalAttempt,isCurrentAttempt};`;
 const ctx={console,Math,Date,setInterval:()=>{},clearInterval:()=>{},scrollTo:()=>{},localStorage:{getItem:()=>null,setItem:()=>{}},document:{},window:{}};
 vm.createContext(ctx);
 vm.runInContext(app.replace(/boot\(\);\s*$/,'')+suffix,ctx,{timeout:5000});
@@ -296,3 +301,17 @@ audit.initializeAssessmentBank();
 assert.notEqual(audit.assessmentBankId(),beforeReview,'Review status change must invalidate stale exam result');
 audit.state.reviewManifest=reviewManifest;audit.initializeAssessmentBank();
 console.log('V11.1 negative cases: weak role skills blocked, practice revisions archived, and review-state changes invalidate results.');
+
+for(const role of ['BASIC','CARE','MKT']){
+ audit.state.role=role;
+ const held=audit.state.reviewManifest;
+ audit.state.reviewManifest={...held,items:held.items.map(x=>x.id==='FN-001'?{...x,review_status:'REJECTED',assessment_eligible:false}:x)};
+ for(let i=0;i<8;i++)assert(!audit.examBase().some(q=>q.id==='FN-001'),'Rejected question leaked into exam '+role);
+ audit.state.reviewManifest=held;
+}
+ctx.document.querySelector=()=>({});
+vm.runInContext('chrome=function(html){globalThis.__v111Markup=html}',ctx);
+audit.result();
+assert(ctx.__v111Markup.includes('KẾT QUẢ TỪNG NĂNG LỰC'),'Competency panel failed to render');
+assert(ctx.__v111Markup.includes('Cần ôn'),'Skill panel failed to show status');
+console.log('V11.1 render smoke and rejected-item sampling passed.');
