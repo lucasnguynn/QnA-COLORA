@@ -318,5 +318,5 @@ audit.state.exam={role:'CARE',contentVersion:'11.1',bankId:audit.assessmentBankI
 audit.submitExam(false);
 audit.result();
 assert(ctx.__v111Markup.includes('KẾT QUẢ TỪNG NĂNG LỰC'),'Competency panel failed to render');
-assert(ctx.__v111Markup.includes('Cần ôn'),'Skill panel failed to show status');
+assert(ctx.__v111Markup.includes('Đủ ngưỡng'),'Skill panel failed to show passing status');
 console.log('V11.1 render smoke and rejected-item sampling passed.');
