@@ -1,4 +1,4 @@
-# COLORA Learning Studio V10.2
+# COLORA Learning Studio V11.1 (competency pilot)
 
 **COLORA - COLOR YOUR AURA**
 
@@ -18,7 +18,7 @@ Website học và luyện tập nội bộ bằng tiếng Việt dành cho nhân
 
 ## Bài thi tổng kết
 
-48 câu trong 55 phút: 32 Essentials phủ đủ 17 chương, 8 Applied Cases và 8 câu theo vai trò.
+48 câu trong 55 phút: **24 Essentials** phủ đủ 17 chương, **8 Applied Cases**, và **16 câu theo ma trận năng lực của vai trò**. Các câu an toàn bắt buộc theo vị trí được đưa vào bài thi.
 
 Để **đạt mức tự học đề xuất**, người học phải đồng thời đúng >=80% tổng đề, >=70% ở từng trụ cột và không sai ba câu quan trọng: GENIA276 Ag 930‰, natural khác untreated, và khi đá/chấu lỏng phải ngừng đeo, chuyển kiểm tra. Đáp án A/B/C/D được xáo trộn theo lượt thi, không xáo trộn ý nghĩa/key chấm điểm.
 
@@ -27,7 +27,7 @@ Có 5 câu Essentials đang chờ phê duyệt nguyên văn/SOP chỉ được l
 ## Tiến độ và lưu dữ liệu
 
 - Tách **đã trả lời**, **đúng lần đầu (khi có dữ liệu)**, **hiện đúng**, **cần ôn**. Có mốc tự kiểm tra lại sau 7 ngày rồi 30 ngày; không xem đây là retention đã được chứng minh.
-- V10.1 sử dụng dữ liệu V10 trên cùng trình duyệt, giữ câu học CORE/Role và teach-back; không kế thừa đáp án 12 Applied Cases sau khi sửa nội dung. Bài thi V10 đang làm dở được đóng để tránh chấm dưới ngân hàng câu hỏi khác. Các lượt thi cũ chỉ là lịch sử tự học.
+- V10.1 sử dụng dữ liệu V10 trên cùng trình duyệt, giữ câu học CORE/Role và teach-back; không kế thừa đáp án 12 Applied Cases sau khi sửa nội dung. Bài thi V10/V10.2 đang làm dở được đóng để tránh chấm dưới ngân hàng câu hỏi khác. Các lượt thi cũ chỉ là lịch sử tự học.
 - Không đồng bộ giữa thiết bị và không thu thập điểm danh tính thực.
 
 ## Nguồn và quyền công bố
@@ -84,3 +84,23 @@ Mở `http://localhost:8080`. GitHub Actions chạy kiểm tra dữ liệu và J
 - [Báo cáo V10.2 Verified Knowledge & Applied Competency](docs/V10_2_IMPLEMENTATION.md).
 
 **Bản public vẫn là môi trường tự học, không xác nhận năng lực nhân sự chính thức.**
+
+
+## V11.1 | Technical pilot (31/10/2026)
+
+- [Ma trận năng lực theo vị trí](data/competency-matrix.json): toàn bộ 75 câu Role Mastery được phân vào nhóm năng lực, 16 câu được lấy theo hạn mức cố định.
+- [Chín bài thực hành theo vai trò](data/performance-tasks.json): nhân viên viết phương án và tự đối chiếu rubric, chưa có người chấm hoặc chứng nhận.
+- [Danh sách kiểm tra chứng cứ](data/evidence-gates.json): tất cả mục đang pending; không chứa chứng từ nhạy cảm.
+- [Điều kiện phát hành và trách nhiệm phê duyệt](docs/V11_RELEASE_GATES.md).
+- Kết quả V10.2 trở thành lịch sử; phiên bản V11 nhận biết thay đổi dữ liệu để tránh giữ dấu đạt cũ. Điểm và bài thực hành vẫn chỉ ở localStorage, không có xác thực hoặc sổ điểm máy chủ.
+- Không thay đổi 303 câu hỏi gốc; 86 Essentials vẫn chờ kiểm duyệt độc lập. V11 không phải là hệ thống cấp chứng chỉ nhân sự.
+
+
+### V11.1: Rào chắn năng lực và tính đúng hạn của kiến thức
+
+- Các mức tối thiểu riêng ở `data/competency-matrix.json` là **ngưỡng thực nghiệm dành cho tự học**, không phải chứng nhận và chưa được hiệu chỉnh bằng dữ liệu nhân viên. Ví dụ: BASIC Design DNA cần 2/3, CARE Product facts 3/4, MKT Customer Research 3/4.
+- Muốn được đánh dấu **đạt mức tự học** phải đồng thời qua mức tổng ≥80%, từng trụ cột ≥70%, từng nhóm năng lực đủ số câu đúng tối thiểu, và tất cả các câu an toàn bắt buộc theo CORE/vị trí.
+- Màn hình kết quả và CSV hiển thị số đúng, ngưỡng và những competency cần ôn.
+- Tiến độ theo từng câu gắn với dấu vân tay nội dung. Dữ liệu luyện tập V10.2/V11.0 được chuyển tiếp cho những câu được biết là không thay đổi; câu có nội dung/đáp án đổi hoặc không thể xác minh được được đưa vào lịch sử và không tính là đã nắm vững.
+- Vòng kiểm toán độc lập vẫn **0/86 câu Essentials được phê duyệt**. 81 câu đang được phép tham gia **bài thi thử tự học** về mặt kỹ thuật, không phải đã đủ chứng cứ để công bố như thông tin chính thức.
+- Fingerprint FNV-1a nhằm hạn chế điểm hết hạn, **không phải cơ chế chống sửa dữ liệu, bảo mật hay chống gian lận**.

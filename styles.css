@@ -55,3 +55,8 @@
 .teachback-work textarea:focus-visible{outline:3px solid #b08a5b;outline-offset:2px}
 .teachback-work .actions{flex-wrap:wrap;align-items:center}
 @media(max-width:680px){.track-panel>summary{padding:15px}.track-panel>.grid2{padding:12px}.track-panel>summary strong{font-size:21px}}
+
+/* V11: six-item mobile navigation and textarea keyboard focus. */
+@media(max-width:800px){.mobile-nav{gap:0;justify-content:space-between}.mobile-nav button{flex:1 1 0;min-width:0;font-size:9px;padding:5px 2px;overflow-wrap:anywhere}}
+@media(max-width:360px){.mobile-nav button{font-size:8px}.mobile-nav b{font-size:15px}}
+textarea:focus-visible{outline:3px solid #b08a5b;outline-offset:3px}

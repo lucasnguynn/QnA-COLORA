@@ -1,6 +1,6 @@
 {
-  "version": "V10.2",
-  "framework": "Essentials > role-focused mastery > advanced reference > applied assessment",
+  "version": "V11.1",
+  "framework": "Essentials > role competency assessment > applied practice > manager-reviewed work samples",
   "essential_ids": [
     "FN-092",
     "FN-094",
@@ -96,19 +96,23 @@
   ],
   "exam": {
     "total": 48,
-    "essential": 32,
+    "essential": 24,
     "applied": 8,
-    "role": 8,
+    "role": 16,
     "pillar_quota": {
-      "THƯƠNG HIỆU": 7,
-      "SẢN PHẨM": 13,
-      "KHÁCH HÀNG": 7,
-      "HÀNH TRÌNH": 5
+      "THƯƠNG HIỆU": 5,
+      "SẢN PHẨM": 11,
+      "KHÁCH HÀNG": 4,
+      "HÀNH TRÌNH": 4
     },
     "applied_per_pillar": 2,
     "minimum_total": 80,
     "minimum_pillar": 70,
-    "must_pass_critical": true
+    "must_pass_critical": true,
+    "role_competency_matrix": "data/competency-matrix.json",
+    "role_critical_gate": true,
+    "assessment_status": "SELF_STUDY_PILOT_PENDING_HUMAN_REVIEW",
+    "competency_gate": true
   },
   "role_advanced_chapters": {
     "BASIC": [
@@ -140,7 +144,7 @@
       "12"
     ]
   },
-  "description": "CORE Essentials có 86 câu được chọn có chủ đích, còn CORE Advanced vẫn được giữ để đào sâu tùy vai trò. Tài liệu public nên đây là công cụ tự học, không phải chứng nhận năng lực bảo mật. V10.2: phiên bản bài thi, tiến độ CORE chung theo học viên, 17 mục tiêu riêng và tình huống CUG mô phỏng. Quyết định nguồn và QC vẫn cần người duyệt.",
+  "description": "V11.1 draft: 303 questions unchanged. Four pillar and role competency thresholds plus mandatory safety gates; all are proposed self-study metrics only. 86 Essentials still pending independent approval.",
   "assessment_excluded_ids": [
     "FN-033",
     "FN-034",

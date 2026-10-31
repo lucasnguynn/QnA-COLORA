@@ -1,0 +1,232 @@
+{
+  "version": "11.0",
+  "status": "SELF_PRACTICE_ONLY",
+  "notice": "Fictional situations; do not enter real customer or confidential SKU information.",
+  "tasks": [
+    {
+      "id": "WS-01",
+      "role": "BASIC",
+      "title": "So sánh mockup và CAD",
+      "scenario": "Mockup nhẫn đá có dáng mềm; bản CAD thể hiện đầu đá cao hơn và phần hồi dày. Chưa có mẫu vật lý.",
+      "deliverable": "Viết feedback cần góc nhìn trên, ngang, mặt sau và các kích thước phải kiểm tra.",
+      "time_minutes": 20,
+      "rubric": [
+        {
+          "criterion": "Quan sát không suy đoán",
+          "weight": 35
+        },
+        {
+          "criterion": "Đối chiếu nhiều góc và số đo",
+          "weight": 35
+        },
+        {
+          "criterion": "Cân bằng DNA và khả năng đeo",
+          "weight": 30
+        }
+      ],
+      "critical_failures": [
+        "Khẳng định hình CAD là thành phẩm thật"
+      ]
+    },
+    {
+      "id": "WS-02",
+      "role": "BASIC",
+      "title": "Kiểm soát màu đá trong video",
+      "scenario": "Video dùng ánh sáng xanh làm đá trông rực hơn; chưa có ảnh sáng trung tính và ảnh đeo.",
+      "deliverable": "Soạn checklist hình ảnh trước đăng, phân biệt ảnh cảm hứng và ảnh xác minh sản phẩm.",
+      "time_minutes": 20,
+      "rubric": [
+        {
+          "criterion": "Trung thực màu sắc",
+          "weight": 40
+        },
+        {
+          "criterion": "Ảnh tỷ lệ và chi tiết",
+          "weight": 35
+        },
+        {
+          "criterion": "Ngôn ngữ COLORA",
+          "weight": 25
+        }
+      ],
+      "critical_failures": [
+        "Khẳng định màu từ bộ lọc là màu đá thật"
+      ]
+    },
+    {
+      "id": "WS-03",
+      "role": "BASIC",
+      "title": "Bản quyền và dữ liệu hình ảnh",
+      "scenario": "Editor nhận ảnh từ thương hiệu khác để thay logo, chưa có chứng từ quyền sử dụng và tên đá.",
+      "deliverable": "Viết phản hồi và kế hoạch thay bằng hình có quyền sử dụng, thông tin đã được xác nhận.",
+      "time_minutes": 20,
+      "rubric": [
+        {
+          "criterion": "Quyền hình ảnh",
+          "weight": 40
+        },
+        {
+          "criterion": "Không tự đoán thông số",
+          "weight": 35
+        },
+        {
+          "criterion": "Hướng thay thế khả thi",
+          "weight": 25
+        }
+      ],
+      "critical_failures": [
+        "Dùng ảnh không được cấp quyền như ảnh thương hiệu"
+      ]
+    },
+    {
+      "id": "WS-04",
+      "role": "CARE",
+      "title": "Món quà chưa xác định gu và ngày giao",
+      "scenario": "Người mua muốn tặng mẹ dây chuyền tuần này nhưng chưa biết độ dài phù hợp và hạn giao chưa được xác nhận.",
+      "deliverable": "Viết hai tin nhắn hỏi thông tin và đề xuất bước xác minh trước khi cam kết.",
+      "time_minutes": 20,
+      "rubric": [
+        {
+          "criterion": "Tôn trọng người mua/người đeo",
+          "weight": 30
+        },
+        {
+          "criterion": "Xác minh gu, kích thước và vận chuyển",
+          "weight": 35
+        },
+        {
+          "criterion": "Không hứa vượt dữ kiện",
+          "weight": 35
+        }
+      ],
+      "critical_failures": [
+        "Cam kết giao khi chưa kiểm tra"
+      ]
+    },
+    {
+      "id": "WS-05",
+      "role": "CARE",
+      "title": "Đá có dấu hiệu lỏng",
+      "scenario": "Khách nhận thấy viên đá trong nhẫn chuyển động, vẫn muốn đeo đi dự tiệc.",
+      "deliverable": "Viết câu trả lời an toàn và quy trình tiếp nhận chuyển kiểm tra.",
+      "time_minutes": 20,
+      "rubric": [
+        {
+          "criterion": "Ngừng đeo và cất an toàn",
+          "weight": 45
+        },
+        {
+          "criterion": "Giao tiếp bình tĩnh",
+          "weight": 20
+        },
+        {
+          "criterion": "Chuyển người có chuyên môn",
+          "weight": 35
+        }
+      ],
+      "critical_failures": [
+        "Hướng dẫn tiếp tục đeo hoặc tự sửa chấu"
+      ]
+    },
+    {
+      "id": "WS-06",
+      "role": "CARE",
+      "title": "Quyền truy cập thông tin đơn hàng",
+      "scenario": "Người liên hệ từ tài khoản khác hỏi địa chỉ giao của một đơn; chưa xác minh được quyền truy cập.",
+      "deliverable": "Soạn quy trình xác minh qua kênh được phép, giảm dữ liệu thu thập và xử lý trường hợp không đủ căn cứ.",
+      "time_minutes": 20,
+      "rubric": [
+        {
+          "criterion": "Bảo vệ thông tin",
+          "weight": 45
+        },
+        {
+          "criterion": "Quy trình xác minh",
+          "weight": 35
+        },
+        {
+          "criterion": "Giao tiếp đúng mực",
+          "weight": 20
+        }
+      ],
+      "critical_failures": [
+        "Cung cấp địa chỉ trước khi xác minh"
+      ]
+    },
+    {
+      "id": "WS-07",
+      "role": "MKT",
+      "title": "Khoảng trống nhận thức về giá",
+      "scenario": "Một vài bình luận giả định cho rằng nhẫn bạc giá vài triệu là đắt; chưa có phỏng vấn hoặc dữ liệu SKU cụ thể.",
+      "deliverable": "Nêu ba giả thuyết khác nhau, bằng chứng cần thu thập và brief nội dung phản hồi.",
+      "time_minutes": 20,
+      "rubric": [
+        {
+          "criterion": "Không suy rộng bình luận",
+          "weight": 30
+        },
+        {
+          "criterion": "Giả thuyết cạnh tranh",
+          "weight": 35
+        },
+        {
+          "criterion": "Bằng chứng theo SKU",
+          "weight": 35
+        }
+      ],
+      "critical_failures": [
+        "Tự tạo số liệu hoặc thông số SKU"
+      ]
+    },
+    {
+      "id": "WS-08",
+      "role": "MKT",
+      "title": "Kiểm duyệt lời hứa sản phẩm",
+      "scenario": "Bản nháp viết 'không bao giờ xỉn', 'không dị ứng với mọi người', 'mọi viên đá đều untreated' mà không có hồ sơ phù hợp.",
+      "deliverable": "Viết lại nội dung chỉ dùng thông tin được phép và danh sách chứng cứ cần xác minh.",
+      "time_minutes": 20,
+      "rubric": [
+        {
+          "criterion": "Nhận diện claim thiếu chứng cứ",
+          "weight": 45
+        },
+        {
+          "criterion": "Phân biệt nguồn và phạm vi",
+          "weight": 35
+        },
+        {
+          "criterion": "Giọng thương hiệu",
+          "weight": 20
+        }
+      ],
+      "critical_failures": [
+        "Giữ lời hứa tuyệt đối không có bằng chứng"
+      ]
+    },
+    {
+      "id": "WS-09",
+      "role": "MKT",
+      "title": "Khách thoát sau Size Guide",
+      "scenario": "Số lượt mở Size Guide cao nhưng trang có tỷ lệ thoát lớn; nguyên nhân chưa được xác minh.",
+      "deliverable": "Lập kế hoạch kiểm tra UX, dữ liệu và thử nghiệm với KPI rõ.",
+      "time_minutes": 20,
+      "rubric": [
+        {
+          "criterion": "Không vội kết luận",
+          "weight": 30
+        },
+        {
+          "criterion": "Thu thập nhiều nguồn",
+          "weight": 40
+        },
+        {
+          "criterion": "Thí nghiệm có thể đo",
+          "weight": 30
+        }
+      ],
+      "critical_failures": [
+        "Quy kết nguyên nhân duy nhất từ tương quan"
+      ]
+    }
+  ]
+}
