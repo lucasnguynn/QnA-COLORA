@@ -1,0 +1,197 @@
+{
+  "version": "11.0",
+  "status": "PILOT_PENDING_HUMAN_REVIEW",
+  "note": "Every role question is assigned to one competency. This does not certify employees.",
+  "roles": {
+    "BASIC": {
+      "must_pass_ids": [
+        "ON-031",
+        "ON-040"
+      ],
+      "competencies": [
+        {
+          "id": "BASIC-1",
+          "title": "Identity",
+          "quota": 4,
+          "question_ids": [
+            "ON-024",
+            "ON-025",
+            "ON-032",
+            "ON-033",
+            "ON-034"
+          ]
+        },
+        {
+          "id": "BASIC-2",
+          "title": "Product visuals",
+          "quota": 4,
+          "question_ids": [
+            "ON-023",
+            "ON-029",
+            "ON-030",
+            "ON-031",
+            "ON-035"
+          ]
+        },
+        {
+          "id": "BASIC-3",
+          "title": "Design DNA",
+          "quota": 3,
+          "question_ids": [
+            "ON-026",
+            "ON-027",
+            "ON-028"
+          ]
+        },
+        {
+          "id": "BASIC-4",
+          "title": "Customer-oriented content",
+          "quota": 3,
+          "question_ids": [
+            "ON-036",
+            "ON-037",
+            "ON-039"
+          ]
+        },
+        {
+          "id": "BASIC-5",
+          "title": "Rights and source accuracy",
+          "quota": 2,
+          "question_ids": [
+            "ON-038",
+            "ON-040"
+          ]
+        }
+      ]
+    },
+    "CARE": {
+      "must_pass_ids": [
+        "ON-062",
+        "PC-032"
+      ],
+      "competencies": [
+        {
+          "id": "CARE-1",
+          "title": "Product facts",
+          "quota": 4,
+          "question_ids": [
+            "ON-042",
+            "ON-043",
+            "ON-047",
+            "ON-048",
+            "ON-049",
+            "ON-050",
+            "ON-064"
+          ]
+        },
+        {
+          "id": "CARE-2",
+          "title": "Customer consultation",
+          "quota": 3,
+          "question_ids": [
+            "ON-041",
+            "ON-044",
+            "ON-045",
+            "ON-046",
+            "ON-060",
+            "ON-063"
+          ]
+        },
+        {
+          "id": "CARE-3",
+          "title": "Service and privacy",
+          "quota": 4,
+          "question_ids": [
+            "ON-051",
+            "ON-052",
+            "ON-053",
+            "ON-054",
+            "ON-055",
+            "ON-056",
+            "ON-057",
+            "ON-058",
+            "ON-061",
+            "ON-062"
+          ]
+        },
+        {
+          "id": "CARE-4",
+          "title": "Aftercare and incident response",
+          "quota": 5,
+          "question_ids": [
+            "ON-059",
+            "PC-025",
+            "PC-026",
+            "PC-027",
+            "PC-028",
+            "PC-029",
+            "PC-030",
+            "PC-031",
+            "PC-032"
+          ]
+        }
+      ]
+    },
+    "MKT": {
+      "must_pass_ids": [
+        "ON-069",
+        "ON-089"
+      ],
+      "competencies": [
+        {
+          "id": "MKT-1",
+          "title": "Brand language",
+          "quota": 4,
+          "question_ids": [
+            "ON-065",
+            "ON-066",
+            "ON-067",
+            "ON-068",
+            "ON-083",
+            "ON-085"
+          ]
+        },
+        {
+          "id": "MKT-2",
+          "title": "Claims and consent",
+          "quota": 3,
+          "question_ids": [
+            "ON-069",
+            "ON-070",
+            "ON-086",
+            "ON-089"
+          ]
+        },
+        {
+          "id": "MKT-3",
+          "title": "CUG and customer research",
+          "quota": 4,
+          "question_ids": [
+            "ON-072",
+            "ON-073",
+            "ON-074",
+            "ON-075",
+            "ON-076",
+            "ON-078",
+            "ON-084"
+          ]
+        },
+        {
+          "id": "MKT-4",
+          "title": "Journey and UX",
+          "quota": 5,
+          "question_ids": [
+            "ON-071",
+            "ON-077",
+            "ON-079",
+            "ON-080",
+            "ON-081",
+            "ON-082",
+            "ON-087",
+            "ON-088"
+          ]
+        }
+      ]
+    }
+  }
+}
