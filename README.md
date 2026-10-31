@@ -1,4 +1,4 @@
-# COLORA Learning Studio V11.0 (competency pilot)
+# COLORA Learning Studio V11.1 (competency pilot)
 
 **COLORA - COLOR YOUR AURA**
 
@@ -86,7 +86,7 @@ Mở `http://localhost:8080`. GitHub Actions chạy kiểm tra dữ liệu và J
 **Bản public vẫn là môi trường tự học, không xác nhận năng lực nhân sự chính thức.**
 
 
-## V11 | Technical pilot (31/10/2026)
+## V11.1 | Technical pilot (31/10/2026)
 
 - [Ma trận năng lực theo vị trí](data/competency-matrix.json): toàn bộ 75 câu Role Mastery được phân vào nhóm năng lực, 16 câu được lấy theo hạn mức cố định.
 - [Chín bài thực hành theo vai trò](data/performance-tasks.json): nhân viên viết phương án và tự đối chiếu rubric, chưa có người chấm hoặc chứng nhận.
@@ -94,3 +94,13 @@ Mở `http://localhost:8080`. GitHub Actions chạy kiểm tra dữ liệu và J
 - [Điều kiện phát hành và trách nhiệm phê duyệt](docs/V11_RELEASE_GATES.md).
 - Kết quả V10.2 trở thành lịch sử; phiên bản V11 nhận biết thay đổi dữ liệu để tránh giữ dấu đạt cũ. Điểm và bài thực hành vẫn chỉ ở localStorage, không có xác thực hoặc sổ điểm máy chủ.
 - Không thay đổi 303 câu hỏi gốc; 86 Essentials vẫn chờ kiểm duyệt độc lập. V11 không phải là hệ thống cấp chứng chỉ nhân sự.
+
+
+### V11.1: Rào chắn năng lực và tính đúng hạn của kiến thức
+
+- Các mức tối thiểu riêng ở `data/competency-matrix.json` là **ngưỡng thực nghiệm dành cho tự học**, không phải chứng nhận và chưa được hiệu chỉnh bằng dữ liệu nhân viên. Ví dụ: BASIC Design DNA cần 2/3, CARE Product facts 3/4, MKT Customer Research 3/4.
+- Muốn được đánh dấu **đạt mức tự học** phải đồng thời qua mức tổng ≥80%, từng trụ cột ≥70%, từng nhóm năng lực đủ số câu đúng tối thiểu, và tất cả các câu an toàn bắt buộc theo CORE/vị trí.
+- Màn hình kết quả và CSV hiển thị số đúng, ngưỡng và những competency cần ôn.
+- Tiến độ theo từng câu gắn với dấu vân tay nội dung. Dữ liệu luyện tập V10.2/V11.0 được chuyển tiếp cho những câu được biết là không thay đổi; câu có nội dung/đáp án đổi hoặc không thể xác minh được được đưa vào lịch sử và không tính là đã nắm vững.
+- Vòng kiểm toán độc lập vẫn **0/86 câu Essentials được phê duyệt**. 81 câu đang được phép tham gia **bài thi thử tự học** về mặt kỹ thuật, không phải đã đủ chứng cứ để công bố như thông tin chính thức.
+- Fingerprint FNV-1a nhằm hạn chế điểm hết hạn, **không phải cơ chế chống sửa dữ liệu, bảo mật hay chống gian lận**.
