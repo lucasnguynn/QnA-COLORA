@@ -1,5 +1,5 @@
 {
-  "version": "V11.0",
+  "version": "V11.1",
   "framework": "Essentials > role competency assessment > applied practice > manager-reviewed work samples",
   "essential_ids": [
     "FN-092",
@@ -111,7 +111,8 @@
     "must_pass_critical": true,
     "role_competency_matrix": "data/competency-matrix.json",
     "role_critical_gate": true,
-    "assessment_status": "SELF_STUDY_NOT_CERTIFICATION"
+    "assessment_status": "SELF_STUDY_PILOT_PENDING_HUMAN_REVIEW",
+    "competency_gate": true
   },
   "role_advanced_chapters": {
     "BASIC": [
@@ -143,7 +144,7 @@
       "12"
     ]
   },
-  "description": "V11 pilot keeps all 303 questions unchanged; 48-item exam uses 24 Essentials covering all 17 chapters, 8 Applied cases, and 16 role questions with fixed competency quotas. 9 manager-rubric work samples are not auto graded. All human-review gates remain pending.",
+  "description": "V11.1 draft: 303 questions unchanged. Four pillar and role competency thresholds plus mandatory safety gates; all are proposed self-study metrics only. 86 Essentials still pending independent approval.",
   "assessment_excluded_ids": [
     "FN-033",
     "FN-034",
