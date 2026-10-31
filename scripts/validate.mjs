@@ -117,7 +117,7 @@ for(const role of ['BASIC','CARE','MKT']){
  }
 }
 for(const q of applied){const order=[2,0,3,1];const html=audit.choiceHtml(q,[],false,false,order);
- const opts=[...html.matchAll(/data-opt="(\\d+)"/g)].map(x=>Number(x[1]));
+ const opts=[...html.matchAll(/data-opt="(\d+)"/g)].map(x=>Number(x[1]));
  assert.deepEqual(opts,order,'Shuffled answer mapping mismatch '+q.id);
  const correctDisplayIndex=order.indexOf(q.key[0]);
  assert(correctDisplayIndex>=0&&opts[correctDisplayIndex]===q.key[0],'Wrong answer mapping '+q.id);
