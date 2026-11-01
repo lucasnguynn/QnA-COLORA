@@ -1,4 +1,4 @@
-# COLORA Learning Studio V11.4 (competency pilot)
+# COLORA Learning Studio V11.5 (competency pilot)
 
 **COLORA - COLOR YOUR AURA**
 
@@ -134,3 +134,12 @@ Mở `http://localhost:8080`. GitHub Actions chạy kiểm tra dữ liệu và J
 - Khi kết thúc thi, người học có thể chủ động xuất bản ghi **pilot không tên** từ Kết quả hoặc Cá nhân. JSON chỉ có phiên bản đề, vai trò, 48 mã câu, phương án đã chọn và trạng thái đúng/sai. Không có tự động upload, không lưu họ tên, email, thời điểm thi hoặc bài viết tự do. Bản ghi vẫn có nguy cơ bị suy ra danh tính trong nhóm nhỏ.
 - Script `node scripts/analyze-pilot.mjs export1.json export2.json` tổng hợp kết quả mô tả theo vai trò, sàng lọc câu dễ/khó và báo thiếu mẫu; bắt buộc cùng dấu vân tay ngân hàng, loại file chứa dữ liệu vượt schema.
 - Pilot chưa được tiến hành với nhân viên thật. [Xem hướng dẫn tổ chức pilot](docs/V11_4_PILOT_RUNBOOK.md). Dữ liệu tự báo từ GitHub Pages không được sử dụng làm chứng nhận hoặc đánh giá nhân sự chính thức.
+
+
+## V11.5: Browser QA thật và quy trình review theo người phụ trách
+
+- Thêm job `browser-smoke` chạy **Chromium thật** trong GitHub Actions trên viewport desktop 1365×860 và mobile 375×812. Kiểm hành trình học, bài thực hành, chấm rubric, bảng Bằng chứng, thi 48 câu, xuất pilot và khôi phục sau reload. Test Chromium không tương đương thiết bị thực iOS/Android.
+- Sửa thanh điều hướng 7 mục trên mobile để tránh tràn ngang, và sửa nhãn trang **Bằng chứng** trước đây bị hiển thị nhầm thành **Luyện tập**.
+- Thêm script **xuất gói duyệt 98 câu P0** theo ưu tiên hoặc owner: `node scripts/review-packet.mjs --priority=P0 --format=csv`. Script chỉ đọc dữ liệu, không cập nhật trạng thái duyệt.
+- Rà soát phương án nhiễu P0: sửa 9 câu, đưa số câu có ít nhất 2 đáp án sai chứa từ tuyệt đối từ 16 xuống 7. Xem [báo cáo audit](docs/V11_5_P0_DISTRACTOR_AUDIT.md). Đây chỉ là heuristic, không chứng minh độ khó hay sự thật của câu hỏi.
+- Xem [quy trình review & browser QA](docs/V11_5_REVIEW_AND_BROWSER_GATE.md). Review độc lập toàn bộ 86 Essentials, kiểm quyền ảnh SKU, xác minh chứng cứ Product/SOP và pilot với nhân viên thật vẫn chưa hoàn tất.
