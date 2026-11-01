@@ -1,10 +1,10 @@
 {
   "schema": "colora-pilot-v1",
-  "version": "11.4",
+  "version": "11.5",
   "collection": "MANUAL_LOCAL_EXPORT_ONLY",
   "fields": {
     "schema": "colora-pilot-v1",
-    "assessment_version": "11.4",
+    "assessment_version": "11.5",
     "bank_id": "fnv1a32-...",
     "role": "BASIC|CARE|MKT",
     "assessment_type": "SELF_STUDY_PILOT_NOT_CERTIFICATION",
