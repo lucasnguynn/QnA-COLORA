@@ -82,3 +82,19 @@ textarea:focus-visible{outline:3px solid #b08a5b;outline-offset:3px}
 .lab-choice:focus-visible{outline:3px solid #b08a5b;outline-offset:3px}
 .lab-feedback:empty{display:none}
 @media(max-width:480px){.image-balance-pair{gap:6px}.image-balance-pair img{height:110px}.image-balance-pair figcaption{font-size:9px}.training-visual-head{letter-spacing:.02em}.lab-card{padding:16px}}
+
+/* V11.3: reviewer rubric pilot. All evaluations are local and unauthenticated. */
+.review-sheet{margin-top:18px;padding:16px;border:1px solid #d4c4ac;background:#fdfbf7;border-radius:9px}
+.review-sheet summary{color:var(--navy);font-weight:700;cursor:pointer;padding:4px 0;line-height:1.6}
+.review-sheet summary:focus-visible,.review-sheet button:focus-visible{outline:3px solid #aa7d47;outline-offset:3px}
+.review-criterion{border-top:1px solid #e4dacb;padding:13px 0}
+.review-criterion label{font-size:12px;display:block;margin-bottom:7px;line-height:1.55;color:#1b3e60}
+.review-criterion select{display:block;max-width:100%;width:min(100%,560px);min-height:42px;background-color:#fff}
+.review-criterion p{margin:5px 0;line-height:1.65}
+.review-critical{border:1px solid #cfbdad;border-radius:5px;padding:12px;margin:8px 0 16px}
+.review-critical legend{font-weight:700;color:var(--navy);font-size:12px;padding:0 5px}
+.review-critical label{font-size:12px;display:block;line-height:1.7;padding:5px 0}
+.review-critical input{accent-color:#17365b;margin-right:7px;vertical-align:middle}
+.review-sheet textarea{display:block;width:100%;min-height:96px;line-height:1.65}
+.review-status{font:600 11px/1.6 "Open Sans",sans-serif;color:#284760;margin:11px 0 0}
+@media(max-width:560px){.review-sheet{padding:12px}.review-sheet .actions{display:flex;flex-wrap:wrap}.review-sheet button{max-width:100%}}
