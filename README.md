@@ -1,4 +1,4 @@
-# COLORA Learning Studio V11.3 (competency pilot)
+# COLORA Learning Studio V11.4 (competency pilot)
 
 **COLORA - COLOR YOUR AURA**
 
@@ -124,3 +124,13 @@ Mở `http://localhost:8080`. GitHub Actions chạy kiểm tra dữ liệu và J
 - Nếu nguồn bị `REJECTED` hoặc `NEEDS_REVISION`, câu tương ứng không được chọn vào đề thi thử; với câu bắt buộc mà không có thay thế hợp lệ, hệ thống dừng tạo đề thay vì chấm đạt sai.
 - Dữ liệu phiếu chấm lưu **trên trình duyệt** và ai có quyền truy cập trình duyệt đều có thể sửa. Không nhập tài liệu kỹ thuật mật hoặc thông tin cá nhân.
 - Quy trình kiểm duyệt và điều kiện duyệt chi tiết tại [V11.3 Review Protocol](docs/V11_3_ITEM_REVIEW_AND_REVIEWER_PROTOCOL.md).
+
+
+## V11.4: Chứng cứ P0 & pilot có kiểm soát quyền riêng tư
+
+- Tạo **10 hồ sơ đối chiếu chứng cứ** phủ 20 mã câu/tình huống có rủi ro cao; minh bạch nguồn GIA, RJC và chính sách COLORA, tách **nguyên tắc có nguồn** khỏi **claim SKU chưa có hồ sơ**. Xem `data/p0-evidence-dossiers.json` và [báo cáo đối chiếu V11.4](docs/V11_4_EVIDENCE_RECONCILIATION.md).
+- Tạo **mẫu hồ sơ bằng chứng theo SKU** `data/sku-evidence-template.json`, mặc định chưa có SKU được duyệt, không đưa hồ sơ nguồn nhạy cảm lên GitHub public.
+- Thêm trang **Bằng chứng** trong website thử nghiệm, hiển thị nội dung đã rà soát và danh mục chứng từ cần xác minh, không công bố như tiêu chuẩn QC chính thức.
+- Khi kết thúc thi, người học có thể chủ động xuất bản ghi **pilot không tên** từ Kết quả hoặc Cá nhân. JSON chỉ có phiên bản đề, vai trò, 48 mã câu, phương án đã chọn và trạng thái đúng/sai. Không có tự động upload, không lưu họ tên, email, thời điểm thi hoặc bài viết tự do. Bản ghi vẫn có nguy cơ bị suy ra danh tính trong nhóm nhỏ.
+- Script `node scripts/analyze-pilot.mjs export1.json export2.json` tổng hợp kết quả mô tả theo vai trò, sàng lọc câu dễ/khó và báo thiếu mẫu; bắt buộc cùng dấu vân tay ngân hàng, loại file chứa dữ liệu vượt schema.
+- Pilot chưa được tiến hành với nhân viên thật. [Xem hướng dẫn tổ chức pilot](docs/V11_4_PILOT_RUNBOOK.md). Dữ liệu tự báo từ GitHub Pages không được sử dụng làm chứng nhận hoặc đánh giá nhân sự chính thức.
