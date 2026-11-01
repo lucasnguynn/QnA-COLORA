@@ -98,3 +98,11 @@ textarea:focus-visible{outline:3px solid #b08a5b;outline-offset:3px}
 .review-sheet textarea{display:block;width:100%;min-height:96px;line-height:1.65}
 .review-status{font:600 11px/1.6 "Open Sans",sans-serif;color:#284760;margin:11px 0 0}
 @media(max-width:560px){.review-sheet{padding:12px}.review-sheet .actions{display:flex;flex-wrap:wrap}.review-sheet button{max-width:100%}}
+
+/* V11.5 - all seven navigation destinations reachable on narrow phones */
+@media (max-width:800px){
+ .mobile-nav{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));justify-content:normal;gap:0;padding-inline:4px}
+ .mobile-nav button{min-width:0;width:100%;max-width:100%;font-size:9px;line-height:1.25;padding:5px 1px;overflow-wrap:anywhere}
+ .mobile-nav b{font-size:17px;line-height:1.2;margin-bottom:4px}
+ .content{overflow-wrap:break-word}
+}
