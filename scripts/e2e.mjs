@@ -57,7 +57,11 @@ async function check(viewport,name){
   for(const field of ['name','email','phone','date','started','user_agent','free_text'])assert(!Object.hasOwn(data,field),'Private field '+field);
   await page.reload({waitUntil:'networkidle'});
   await goto('work');
-  assert((await page.locator('#review-status-WS-01').innerText()).includes('100/100'),'Local reviewer sheet not persisted through reload');
+  await page.locator('.review-sheet').first().locator('summary').click();
+  const storedReview=await page.evaluate(()=>JSON.parse(localStorage.getItem('colora-learning-v10-competency-v1')||'{}').reviewerScores?.['WS-01']);
+  const restoredLabel=await page.locator('#review-status-WS-01').textContent();
+  assert(storedReview&&storedReview.levels.every(n=>n===4),'Reviewer score did not persist in localStorage');
+  assert(restoredLabel.includes('100/100'),'Local reviewer sheet not restored after reload: '+restoredLabel);
   assert.deepEqual(errors,[],'Browser JavaScript errors');
   count++;
   console.log('Browser E2E OK: '+name+', home/work/evidence/exam/voluntary-export/reload');
