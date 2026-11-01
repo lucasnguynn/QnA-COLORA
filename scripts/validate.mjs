@@ -150,7 +150,14 @@ for(const r of reviewerRubrics.rubrics){
 assert.equal(itemQueue.version,'11.3');
 assert.equal(itemQueue.items.length,303,'Every question needs an explicit review task');
 assert.deepEqual(itemQueue.items.map(x=>x.id).sort(),questions.map(x=>x.id).sort(),'Missing or extraneous item review IDs');
-assert(itemQueue.items.every(x=>x.review_state==='PENDING_HUMAN_REVIEW'),'Review triage is not approval');
+const validQueueStates=new Set(['PENDING_HUMAN_REVIEW','APPROVED','REJECTED','NEEDS_REVISION']);
+assert(itemQueue.items.every(x=>validQueueStates.has(x.review_state)),'Unknown all-question review status');
+const essentialsById=new Map(reviewManifest.items.map(x=>[x.id,x]));
+for(const x of itemQueue.items){
+ if(x.review_state==='APPROVED')assert(x.reviewed_by&&x.reviewed_at&&x.verification_reference_id&&x.reference_version,'Queue approval requires real evidence '+x.id);
+ const e=essentialsById.get(x.id);
+ if(e)assert.equal(x.review_state,e.review_status,'Essential review status drift '+x.id);
+}
 for(const x of itemQueue.items){
  const q=questions.find(q=>q.id===x.id);
  assert(q.role===x.role&&q.chapter===x.chapter&&q.pillar===x.pillar,'Review metadata drift '+x.id);
@@ -409,3 +416,13 @@ itemQueue.items[0].reference_version='review-test-v2';audit.initializeAssessment
 assert.notEqual(audit.assessmentBankId(),previousQueueBank,'Source review change must invalidate assessment');
 itemQueue.items[0].reference_version=oldSourceReference;audit.initializeAssessmentBank();
 console.log('V11.3 QA: 303 traceable review records, 27 anchored criteria, 4 image assets pending rights, scoring negatives and safe CSV.');
+
+const reviewQueueOriginal=audit.state.reviewQueue;
+audit.state.role='BASIC';
+audit.state.reviewQueue={...reviewQueueOriginal,items:reviewQueueOriginal.items.map(x=>x.id==='ON-031'?{...x,review_state:'REJECTED'}:x)};
+assert.throws(()=>audit.examBase(),/Role gate unavailable/,'Rejected mandatory role question must block test generation');
+audit.state.reviewQueue={...reviewQueueOriginal,items:reviewQueueOriginal.items.map(x=>x.id==='AC-001'?{...x,review_state:'REJECTED'}:x)};
+for(let i=0;i<30;i++)assert(!audit.examBase().some(x=>x.id==='AC-001'),'Rejected applied case was selected');
+audit.state.reviewQueue=reviewQueueOriginal;
+audit.initializeAssessmentBank();
+console.log('V11.3 negative review policy cases: mandatory role fail-closed and rejected applied-case exclusion passed.');
