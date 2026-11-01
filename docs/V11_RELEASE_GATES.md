@@ -1,4 +1,4 @@
-# V11.1 competency pilot | Release gates
+# V11.3 competency pilot | Release gates
 
 **Status: Technical candidate, not an approved employee certification.**
 
@@ -31,3 +31,11 @@
 - Legacy rows without item revisions can be carried over only from recognized 10.1, 10.2 or 11.0 versions after established V10.1 exceptions are archived. Unrecognized and changed rows remain as local historical data, not current mastery.
 - Browser E2E, independent subject-matter review, item difficulty/pilot results and employee identity proof are not delivered by this update.
 - Release gates stay pending: founder, technical, policies/privacy, independent item review, and a real employee usability/assessment pilot.
+
+
+## V11.3 additions and release blockers
+- All 303 items now have review metadata, proposed owners, source status and risk-based priorities. None has received a new approval from this change.
+- 9 structured manager-review pilot worksheets allow 27 anchored criterion ratings, observable evidence notes and blocking critical-failure flags. The 75/100 pilot bar is provisional, not validated.
+- Reviews are editable in local browser data; CSV is self-entered and unverified. Never treat exports as employment certification.
+- Only four reference images are present and their public-use rights remain awaiting owner confirmation; none is proven to be an approved finished jewelry SKU.
+- Before release, review product/process claims and every Essential, obtain approved real visual assets and license checks, and test actual browsers with staff. Approval cannot be assumed from passing CI.
