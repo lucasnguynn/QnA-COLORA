@@ -159,9 +159,10 @@ const notAbsolute=/mọi|luôn|chắc chắn|tuyệt đối|vĩnh viễn|không 
 const eWrong=essential.flatMap(q=>q.a.filter((_,i)=>!q.key.includes(i)));
 assert(eWrong.filter(s=>notAbsolute.test(s)).length/eWrong.length<.25,'Essentials contain too many implausible absolute distractors');
 // Behavioral test: generate 40 complete exams for each role and validate quotas, chapter spread and critical inclusion.
-const suffix=`\nglobalThis.__audit={gemLabCards,labFeedback,trainingVisual,state,examBase,essentials,choiceHtml,modules,examRole,submitExam,practiceUpdate,reviewDue,markAssessmentVersion,initializeAssessmentBank,assessmentBankId,result,questionRevision,reconcilePracticeRevisions,saveObj,answered,practiceKey,latestCurrentAttempt,latestHistoricalAttempt,isCurrentAttempt};`;
+const suffix=`\nglobalThis.__audit={workView,gemLabCards,labFeedback,trainingVisual,state,examBase,essentials,choiceHtml,modules,examRole,submitExam,practiceUpdate,reviewDue,markAssessmentVersion,initializeAssessmentBank,assessmentBankId,result,questionRevision,reconcilePracticeRevisions,saveObj,answered,practiceKey,latestCurrentAttempt,latestHistoricalAttempt,isCurrentAttempt};`;
 const ctx={console,Math,Date,setInterval:()=>{},clearInterval:()=>{},scrollTo:()=>{},localStorage:{getItem:()=>null,setItem:()=>{}},document:{},window:{}};
 vm.createContext(ctx);
+vm.runInContext(assetScript,ctx,{timeout:5000});
 vm.runInContext(app.replace(/boot\(\);\s*$/,'')+suffix,ctx,{timeout:5000});
 vm.runInContext('render=function(){}',ctx);
 const audit=ctx.__audit;
@@ -342,3 +343,18 @@ assert(audit.gemLabCards().includes('GL-01'),'Visual labs unavailable in Work sc
 assert(audit.labFeedback(visualLabs.labs[0],visualLabs.labs[0].key).includes('Đúng với phạm vi dữ liệu'),'Visual feedback must explain correct decision');
 assert(audit.labFeedback(visualLabs.labs[0],0).includes('Lý do:'),'Visual feedback must explain incorrect option');
 console.log('V11.2 visual labs validated, four simulated cases and three role visuals.');
+
+ctx.document.querySelectorAll=()=>[];
+audit.state.role='BASIC';
+audit.state.gemLabs=visualLabs.labs;
+audit.workView();
+assert(ctx.__v111Markup.includes('GEMSTONE DECISION LAB'),'Work page lacks visual labs');
+assert(ctx.__v111Markup.includes('GL-04'),'Work page did not render four cases');
+assert(ctx.__v111Markup.includes('<svg'),'Work page diagrams missing');
+assert(ctx.__v111Markup.includes('image-balance-pair'),'Color comparison image treatment missing');
+for(const l of visualLabs.labs){
+ const graphic=audit.trainingVisual(l.visual);
+ assert(graphic.includes('KHÔNG PHẢI HỒ SƠ SKU'),'Visuals must clearly be synthetic');
+ assert(graphic.includes(l.visual==='image-balance'?'gemstones-blue-real.webp':'<svg'),'Visualization could not render '+l.visual);
+}
+console.log('V11.2 rendered work page and all four visual templates with synthetic-data labels.');
