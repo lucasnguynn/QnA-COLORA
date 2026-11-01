@@ -13,6 +13,9 @@ const matrix=read('competency-matrix.json');
 const workSamples=read('performance-tasks.json');
 const evidence=read('evidence-gates.json');
 const visualLabs=read('visual-labs.json');
+const reviewerRubrics=read('reviewer-rubrics.json');
+const itemQueue=read('item-review-queue.json');
+const assetApproval=read('asset-approval-queue.json');
 const reviewManifest=read('essentials-review.json');
 const facts=read('brand-facts.json');
 const questions=[...base,...gem,...care,...applied];
@@ -116,14 +119,14 @@ assert(app.includes('optionOrders')&&app.includes('order.map((i,shown)'),'Exam o
 assert(app.includes('LEGACY_KEY')&&app.includes('legacyAttempts'),'V9 migration missing');
 assert(app.includes('countRecheck')&&app.includes('reviewedAfterWeek'),'7-day review not implemented');
 assert(app.includes('countNeedReview')&&app.includes('firstCorrect'),'Progress states missing');
-assert(app.includes("ASSESSMENT_VERSION='11.2'")&&app.includes('ASSESSMENT_BANK_ID'),'Version-aware assessments missing');
+assert(app.includes("ASSESSMENT_VERSION='11.3'")&&app.includes('ASSESSMENT_BANK_ID'),'Version-aware assessments missing');
 assert(app.includes('latestCurrentAttempt')&&app.includes('latestHistoricalAttempt'),'Historical/current results mixed');
 assert(app.includes('practiceKey(q.id)')&&app.includes("CORE_PROGRESS_PREFIX='CORE:'"),'CORE progress not shared');
 assert(app.includes('TÌNH HUỐNG CUG MÔ PHỎNG'),'Simulated customer learning cases not visible');
 assert(app.includes('criticalMiss')&&app.includes('weakPillars'),'Mastery gates missing');
 assert(app.includes('applied-cases.json'),'Applied cases not loaded');
 assert(app.includes('assessmentFingerprint')&&app.includes('workView'),'V11 learning flow is incomplete');
-assert.equal(matrix.version,'11.2');assert.equal(workSamples.tasks.length,9);assert.equal(visualLabs.labs.length,4);assert.equal(evidence.checks.length,7);
+assert.equal(matrix.version,'11.3');assert.equal(reviewerRubrics.version,'11.3');assert.equal(workSamples.tasks.length,9);assert.equal(visualLabs.labs.length,4);assert.equal(evidence.checks.length,7);
 for(const [role,config] of Object.entries(matrix.roles)){
  const ids=config.competencies.flatMap(c=>c.question_ids),actual=questions.filter(q=>q.role===role).map(q=>q.id);
  assert.equal(new Set(ids).size,ids.length,'Duplicate competency assignment '+role);
@@ -134,6 +137,33 @@ for(const [role,config] of Object.entries(matrix.roles)){
 }
 assert.deepEqual(Object.fromEntries(Object.keys(matrix.roles).map(role=>[role,workSamples.tasks.filter(t=>t.role===role).length])),{BASIC:3,CARE:3,MKT:3});
 for(const t of workSamples.tasks){assert.equal(t.rubric.reduce((n,c)=>n+c.weight,0),100,'Rubric sum '+t.id);assert(t.critical_failures.length>=1);}
+assert.equal(reviewerRubrics.rubrics.length,9,'9 anchored work-sample rubrics');
+assert.deepEqual(reviewerRubrics.rubrics.map(x=>x.task_id).sort(),workSamples.tasks.map(x=>x.id).sort(),'Rubric/task crosswalk mismatch');
+for(const r of reviewerRubrics.rubrics){
+ const task=workSamples.tasks.find(t=>t.id===r.task_id);
+ assert(r.criteria.length===task.rubric.length&&r.role===task.role,'Rubric dimensions mismatch '+r.task_id);
+ assert.equal(r.criteria.reduce((n,c)=>n+c.weight,0),100,'Rubric weight '+r.task_id);
+ assert.deepEqual(r.criteria.map(c=>[c.name,c.weight]),task.rubric.map(c=>[c.criterion,c.weight]),'Rubric criterion crosswalk '+r.task_id);
+ assert.deepEqual(r.critical_failures,task.critical_failures,'Risk failure crosswalk '+r.task_id);
+ assert(r.criteria.every(c=>c.level_2_anchor.length>=35&&c.level_4_anchor.length>=35),'Behavior anchors insufficient '+r.task_id);
+}
+assert.equal(itemQueue.version,'11.3');
+assert.equal(itemQueue.items.length,303,'Every question needs an explicit review task');
+assert.deepEqual(itemQueue.items.map(x=>x.id).sort(),questions.map(x=>x.id).sort(),'Missing or extraneous item review IDs');
+assert(itemQueue.items.every(x=>x.review_state==='PENDING_HUMAN_REVIEW'),'Review triage is not approval');
+for(const x of itemQueue.items){
+ const q=questions.find(q=>q.id===x.id);
+ assert(q.role===x.role&&q.chapter===x.chapter&&q.pillar===x.pillar,'Review metadata drift '+x.id);
+ assert(['P0','P1','P2'].includes(x.priority)&&x.proposed_owner&&x.required_evidence,'Missing audit metadata '+x.id);
+ assert(x.reviewed_by===null&&x.reviewed_at===null&&x.verification_reference_id===null,'Do not fabricate review approvals '+x.id);
+ if(x.source_reference)assert(/^https:\/\/(www\.)?(gia\.edu|responsiblejewellery\.com)\//.test(x.source_reference.url),'Untrusted public reference '+x.id);
+}
+for(const id of [...config.critical_ids,...evidence.checks.flatMap(x=>x.question_ids)])assert.equal(itemQueue.items.find(x=>x.id===id).priority,'P0','Critical item must be P0: '+id);
+assert.equal(assetApproval.available_assets.length,4);
+assert(assetApproval.available_assets.every(a=>a.rights_status==='PENDING_OWNER_CONFIRMATION'&&!a.sku_verified&&!a.commercial_use_approved),'Unapproved asset must never be described as SKU evidence');
+for(const a of assetApproval.available_assets)assert(fs.existsSync(new URL('../'+a.path,import.meta.url)),'Asset register points to missing file '+a.path);
+assert.equal(assetApproval.missing_asset_requirements.length,5);
+
 const assetScript=fs.readFileSync(new URL('../visuals.js',import.meta.url),'utf8');
 execFileSync('node',['--check',new URL('../visuals.js',import.meta.url).pathname],{stdio:'pipe'});
 const html=fs.readFileSync(new URL('../index.html',import.meta.url),'utf8');
@@ -159,14 +189,14 @@ const notAbsolute=/mọi|luôn|chắc chắn|tuyệt đối|vĩnh viễn|không 
 const eWrong=essential.flatMap(q=>q.a.filter((_,i)=>!q.key.includes(i)));
 assert(eWrong.filter(s=>notAbsolute.test(s)).length/eWrong.length<.25,'Essentials contain too many implausible absolute distractors');
 // Behavioral test: generate 40 complete exams for each role and validate quotas, chapter spread and critical inclusion.
-const suffix=`\nglobalThis.__audit={workView,gemLabCards,labFeedback,trainingVisual,state,examBase,essentials,choiceHtml,modules,examRole,submitExam,practiceUpdate,reviewDue,markAssessmentVersion,initializeAssessmentBank,assessmentBankId,result,questionRevision,reconcilePracticeRevisions,saveObj,answered,practiceKey,latestCurrentAttempt,latestHistoricalAttempt,isCurrentAttempt};`;
+const suffix=`\nglobalThis.__audit={evaluateReviewerDraft,reviewCsvCell,renderReviewerWorksheet,reviewerRubric,workView,gemLabCards,labFeedback,trainingVisual,state,examBase,essentials,choiceHtml,modules,examRole,submitExam,practiceUpdate,reviewDue,markAssessmentVersion,initializeAssessmentBank,assessmentBankId,result,questionRevision,reconcilePracticeRevisions,saveObj,answered,practiceKey,latestCurrentAttempt,latestHistoricalAttempt,isCurrentAttempt};`;
 const ctx={console,Math,Date,setInterval:()=>{},clearInterval:()=>{},scrollTo:()=>{},localStorage:{getItem:()=>null,setItem:()=>{}},document:{},window:{}};
 vm.createContext(ctx);
 vm.runInContext(assetScript,ctx,{timeout:5000});
 vm.runInContext(app.replace(/boot\(\);\s*$/,'')+suffix,ctx,{timeout:5000});
 vm.runInContext('render=function(){}',ctx);
 const audit=ctx.__audit;
-audit.state.bank=questions; audit.state.lessons=lessons;audit.state.curriculum=config;audit.state.competencies=matrix;audit.state.tasks=workSamples.tasks;audit.state.reviewManifest=reviewManifest;audit.state.evidence=evidence;audit.initializeAssessmentBank();
+audit.state.bank=questions; audit.state.lessons=lessons;audit.state.curriculum=config;audit.state.competencies=matrix;audit.state.tasks=workSamples.tasks;audit.state.reviewManifest=reviewManifest;audit.state.evidence=evidence;audit.state.reviewQueue=itemQueue;audit.state.reviewerRubrics=reviewerRubrics;audit.initializeAssessmentBank();
 for(const role of ['BASIC','CARE','MKT']){
  audit.state.role=role;
  for(let k=0;k<40;k++){
@@ -210,7 +240,7 @@ audit.saveObj.practice={
 };
 audit.saveObj.contentVersion='10.1';
 audit.markAssessmentVersion();
-assert.equal(audit.saveObj.contentVersion,'11.2');
+assert.equal(audit.saveObj.contentVersion,'11.3');
 assert.equal(audit.saveObj.practice['CORE:FN-001'].correct,true,'Shared CORE result should come from latest prior response');
 assert.equal(audit.saveObj.practice['CORE:FN-001'].firstCorrect,false,'Known prior incorrect first attempt must remain');
 assert(!audit.saveObj.practice['BASIC:AC-001'],'Revised Applied Cases must not inherit old responses');
@@ -225,18 +255,18 @@ assert.equal(audit.latestHistoricalAttempt('BASIC').score,92,'Historical attempt
 // Behavioral regression: the exam records the role frozen at creation, not the profile role after navigation.
 audit.state.role='BASIC';
 const sample=audit.examBase();
-audit.state.exam={role:'BASIC',contentVersion:'11.2',bankId:audit.assessmentBankId(),ids:sample.map(q=>q.id),answers:Object.fromEntries(sample.map(q=>[q.id,q.key])),started:Date.now(),deadline:Date.now()+55000,optionOrders:{}};
+audit.state.exam={role:'BASIC',contentVersion:'11.3',bankId:audit.assessmentBankId(),ids:sample.map(q=>q.id),answers:Object.fromEntries(sample.map(q=>[q.id,q.key])),started:Date.now(),deadline:Date.now()+55000,optionOrders:{}};
 audit.state.role='MKT';
 audit.submitExam(false);
 assert.equal(audit.state.attempt.role,'BASIC','Exam must not be recorded for a switched profile');
 assert.equal(audit.state.attempt.score,100,'Fully correct exam scoring');
 assert.equal(audit.state.attempt.passed,true,'Fully correct exam passes');
-assert.equal(audit.state.attempt.assessmentVersion,'11.2');
+assert.equal(audit.state.attempt.assessmentVersion,'11.3');
 assert.equal(audit.state.attempt.roleCriticalMiss.length,0);
 assert.equal(audit.state.attempt.bankId,audit.assessmentBankId());
-assert.equal(audit.latestCurrentAttempt('BASIC').assessmentVersion,'11.2');
+assert.equal(audit.latestCurrentAttempt('BASIC').assessmentVersion,'11.3');
 assert.equal(audit.latestHistoricalAttempt('BASIC').score,92);
-assert.equal(audit.isCurrentAttempt({role:'BASIC',assessmentVersion:'11.2',bankId:'invalid'}),false);
+assert.equal(audit.isCurrentAttempt({role:'BASIC',assessmentVersion:'11.3',bankId:'invalid'}),false);
 assert.equal(audit.examRole({role:'CARE'}),'CARE');
 assert.equal(audit.examRole({role:'INVALID'}),null);
 // Behavioral regression: preserve the first attempt and schedule 7-day and 30-day retrieval.
@@ -256,7 +286,7 @@ assert.equal(row.reviewStage,2,'30-day review stage');
 assert.equal(audit.reviewDue(row,epoch+150*day),false,'Completed schedule stays complete');
 const migrated=audit.practiceUpdate({correct:true,at:epoch,firstCorrect:null,attempts:2},true,epoch+8*day);
 assert.equal(migrated.firstCorrect,null,'Do not claim first attempt for legacy data');
-console.log('V11.2 QA pass: 303 questions, 86 Essentials, 117 core learning points, 4 CUG labs, 17 objectives, 120 exams, shared CORE migration and versioned results.');
+console.log('V11.3 QA pass: 303 questions, 86 Essentials, 117 core learning points, 4 CUG labs, 17 objectives, 120 exams, shared CORE migration and versioned results.');
 
 assert.equal(audit.state.tasks.length,9,'Work sample data missing');
 audit.saveObj.contentVersion='10.2';
@@ -270,7 +300,7 @@ audit.initializeAssessmentBank();
 assert.notEqual(audit.assessmentBankId(),priorFingerprint,'Changed question should change fingerprint');
 audit.state.bank=before;audit.initializeAssessmentBank();
 assert.equal(audit.assessmentBankId(),priorFingerprint,'Fingerprint must be deterministic');
-console.log('V11.2 compatibility checks: role competencies, 9 rubrics, migration and bank fingerprint passed.');
+console.log('V11.3 compatibility checks: role competencies, 9 rubrics, migration and bank fingerprint passed.');
 
 for(const role of ['BASIC','CARE','MKT']){
  audit.state.role=role;
@@ -297,7 +327,7 @@ for(const role of ['BASIC','CARE','MKT']){
  const target=set.filter(q=>skill.question_ids.includes(q.id));
  const wrong=(role==='MKT'?target.slice(0,3):target);
  for(const q of wrong)answers[q.id]=[0,1,2,3].filter(i=>!q.key.includes(i)).slice(0,1);
- audit.state.exam={role,contentVersion:'11.2',bankId:audit.assessmentBankId(),ids:set.map(q=>q.id),answers,optionOrders:{},started:Date.now(),deadline:Date.now()+60000};
+ audit.state.exam={role,contentVersion:'11.3',bankId:audit.assessmentBankId(),ids:set.map(q=>q.id),answers,optionOrders:{},started:Date.now(),deadline:Date.now()+60000};
  audit.submitExam(false);
  assert(audit.state.attempt.score>=80,'This test must keep a passing total for '+role);
  assert.equal(audit.state.attempt.passed,false,'Weak competency must block pass for '+role);
@@ -308,7 +338,7 @@ audit.saveObj.practice[rowKey]={correct:true,at:epoch,firstCorrect:true,attempts
 const oldRow=audit.saveObj.practice[rowKey],itemIndex=audit.state.bank.findIndex(q=>q.id===refId);
 const orig=audit.state.bank[itemIndex];audit.state.bank[itemIndex]={...orig,why:orig.why+' altered to test stale practice'};
 assert.equal(audit.answered(refId),undefined,'Edited item must invalidate old current practice');
-audit.reconcilePracticeRevisions('11.2');
+audit.reconcilePracticeRevisions('11.3');
 assert(!audit.saveObj.practice[rowKey],'Outdated row must be removed from current practice');
 assert(Object.values(audit.saveObj.legacyPractice).includes(oldRow),'Old practice must be archived');
 audit.state.bank[itemIndex]=orig;
@@ -318,7 +348,7 @@ audit.state.reviewManifest.items[0]={...savedReviewItem,review_status:'APPROVED'
 audit.initializeAssessmentBank();
 assert.notEqual(audit.assessmentBankId(),beforeReview,'Review status change must invalidate stale exam result');
 audit.state.reviewManifest.items[0]=savedReviewItem;audit.initializeAssessmentBank();
-console.log('V11.2 negative cases: weak role skills blocked, practice revisions archived, and review-state changes invalidate results.');
+console.log('V11.3 negative cases: weak role skills blocked, practice revisions archived, and review-state changes invalidate results.');
 
 for(const role of ['BASIC','CARE','MKT']){
  audit.state.role=role;
@@ -331,18 +361,18 @@ ctx.document.querySelector=()=>({});
 vm.runInContext('chrome=function(html){globalThis.__v111Markup=html}',ctx);
 audit.state.role='CARE';
 const resultQuestions=audit.examBase();
-audit.state.exam={role:'CARE',contentVersion:'11.2',bankId:audit.assessmentBankId(),ids:resultQuestions.map(q=>q.id),answers:Object.fromEntries(resultQuestions.map(q=>[q.id,[...q.key]])),optionOrders:{},started:Date.now(),deadline:Date.now()+60000};
+audit.state.exam={role:'CARE',contentVersion:'11.3',bankId:audit.assessmentBankId(),ids:resultQuestions.map(q=>q.id),answers:Object.fromEntries(resultQuestions.map(q=>[q.id,[...q.key]])),optionOrders:{},started:Date.now(),deadline:Date.now()+60000};
 audit.submitExam(false);
 audit.result();
 assert(ctx.__v111Markup.includes('KẾT QUẢ TỪNG NĂNG LỰC'),'Competency panel failed to render');
 assert(ctx.__v111Markup.includes('Đủ ngưỡng'),'Skill panel failed to show passing status');
-console.log('V11.2 render smoke and rejected-item sampling passed.');
+console.log('V11.3 render smoke and rejected-item sampling passed.');
 
 audit.state.gemLabs=visualLabs.labs;
 assert(audit.gemLabCards().includes('GL-01'),'Visual labs unavailable in Work screen');
 assert(audit.labFeedback(visualLabs.labs[0],visualLabs.labs[0].key).includes('Đúng với phạm vi dữ liệu'),'Visual feedback must explain correct decision');
 assert(audit.labFeedback(visualLabs.labs[0],0).includes('Lý do:'),'Visual feedback must explain incorrect option');
-console.log('V11.2 visual labs validated, four simulated cases and three role visuals.');
+console.log('V11.3 visual labs validated, four simulated cases and three role visuals.');
 
 ctx.document.querySelectorAll=()=>[];
 audit.state.role='BASIC';
@@ -357,4 +387,25 @@ for(const l of visualLabs.labs){
  assert(graphic.includes('KHÔNG PHẢI HỒ SƠ SKU'),'Visuals must clearly be synthetic');
  assert(graphic.includes(l.visual==='image-balance'?'gemstones-blue-real.webp':'<svg'),'Visualization could not render '+l.visual);
 }
-console.log('V11.2 rendered work page and all four visual templates with synthetic-data labels.');
+console.log('V11.3 rendered work page and all four visual templates with synthetic-data labels.');
+
+const reviewTask=reviewerRubrics.rubrics[0];
+const draftGood={version:'11.3',levels:[4,4,4],critical:[],observation:'Đối chiếu mặt cắt, số đo và tính khả thi với mẫu trước duyệt.'};
+const draftPartial={...draftGood,levels:[4,null,4]};
+const draftCritical={...draftGood,critical:[0]};
+const draftWeak={...draftGood,levels:[2,2,2]};
+assert.equal(audit.evaluateReviewerDraft(reviewTask.task_id,draftGood).score,100,'Perfect rubric must score 100');
+assert.equal(audit.evaluateReviewerDraft(reviewTask.task_id,draftGood).qualified,true,'Perfect pilot rubric must qualify');
+assert.equal(audit.evaluateReviewerDraft(reviewTask.task_id,draftPartial).complete,false,'Unrated criterion must not be counted as 0');
+assert.equal(audit.evaluateReviewerDraft(reviewTask.task_id,draftCritical).qualified,false,'Critical failure must override 100 score');
+assert.equal(audit.evaluateReviewerDraft(reviewTask.task_id,draftWeak).qualified,false,'Poor work sample should not meet pilot criterion');
+assert(audit.renderReviewerWorksheet(workSamples.tasks[0]).includes('Phiếu chấm năng lực'),'Manager scoring UI missing');
+assert(audit.reviewCsvCell('=HYPERLINK("x")').startsWith('"\'='),'CSV formula injection not guarded');
+assert(ctx.__v111Markup.includes('Phiếu chấm năng lực'),'Work screen does not include manager rubric');
+assert(ctx.__v111Markup.includes('303 câu hỏi vẫn chờ kiểm duyệt'),'Review count not visible');
+const oldSourceReference=itemQueue.items[0].reference_version;
+const previousQueueBank=audit.assessmentBankId();
+itemQueue.items[0].reference_version='review-test-v2';audit.initializeAssessmentBank();
+assert.notEqual(audit.assessmentBankId(),previousQueueBank,'Source review change must invalidate assessment');
+itemQueue.items[0].reference_version=oldSourceReference;audit.initializeAssessmentBank();
+console.log('V11.3 QA: 303 traceable review records, 27 anchored criteria, 4 image assets pending rights, scoring negatives and safe CSV.');
