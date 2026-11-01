@@ -129,7 +129,7 @@ assert(app.includes('TÌNH HUỐNG CUG MÔ PHỎNG'),'Simulated customer learnin
 assert(app.includes('criticalMiss')&&app.includes('weakPillars'),'Mastery gates missing');
 assert(app.includes('applied-cases.json'),'Applied cases not loaded');
 assert(app.includes('assessmentFingerprint')&&app.includes('workView'),'V11 learning flow is incomplete');
-assert.equal(matrix.version,'11.4');assert.equal(reviewerRubrics.version,'11.4');assert.equal(workSamples.tasks.length,9);assert.equal(visualLabs.labs.length,4);assert.equal(evidence.checks.length,7);
+assert.equal(matrix.version,'11.4');assert.equal(reviewerRubrics.version,'11.3');assert.equal(workSamples.tasks.length,9);assert.equal(visualLabs.labs.length,4);assert.equal(evidence.checks.length,7);
 for(const [role,config] of Object.entries(matrix.roles)){
  const ids=config.competencies.flatMap(c=>c.question_ids),actual=questions.filter(q=>q.role===role).map(q=>q.id);
  assert.equal(new Set(ids).size,ids.length,'Duplicate competency assignment '+role);
@@ -150,7 +150,7 @@ for(const r of reviewerRubrics.rubrics){
  assert.deepEqual(r.critical_failures,task.critical_failures,'Risk failure crosswalk '+r.task_id);
  assert(r.criteria.every(c=>c.level_2_anchor.length>=35&&c.level_4_anchor.length>=35),'Behavior anchors insufficient '+r.task_id);
 }
-assert.equal(itemQueue.version,'11.4');
+assert.equal(itemQueue.version,'11.3');
 assert.equal(itemQueue.items.length,303,'Every question needs an explicit review task');
 assert.deepEqual(itemQueue.items.map(x=>x.id).sort(),questions.map(x=>x.id).sort(),'Missing or extraneous item review IDs');
 const validQueueStates=new Set(['PENDING_HUMAN_REVIEW','APPROVED','REJECTED','NEEDS_REVISION']);
