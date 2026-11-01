@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * COLORA V11.4: analysis for voluntary, privacy-minimized local pilot exports.
+ * COLORA V11.5: analysis for voluntary, privacy-minimized local pilot exports.
  * Usage: node scripts/analyze-pilot.mjs path/to/pilot1.json path/to/pilot2.json ...
  *        node scripts/analyze-pilot.mjs --self-test
  * Do not upload any private employee/student data or real pilot responses to GitHub.
@@ -20,7 +20,7 @@ export function validateRecord(record){
  const allowed=new Set(['schema','assessment_version','bank_id','role','assessment_type','items']);
  for(const key of Object.keys(record))assert(allowed.has(key),'Unexpected/possibly personal field '+key);
  assert.equal(record.schema,'colora-pilot-v1');
- assert.equal(record.assessment_version,'11.4','Only current pilot version may be analyzed');
+ assert.equal(record.assessment_version,'11.5','Only current pilot version may be analyzed');
  assert(typeof record.bank_id==='string'&&/^fnv1a32-[0-9a-f]{8}$/.test(record.bank_id),'Invalid bank ID');
  assert(roles.has(record.role),'Unknown role');
  assert.equal(record.assessment_type,'SELF_STUDY_PILOT_NOT_CERTIFICATION');
@@ -71,7 +71,7 @@ export function analyze(records){
 if(process.argv[1]&&fileURLToPath(import.meta.url)===process.argv[1]){
  const args=process.argv.slice(2);
  if(args.length===1&&args[0]==='--self-test'){
-  const make=(role)=>({schema:'colora-pilot-v1',assessment_version:'11.4',bank_id:'fnv1a32-1234abcd',role,assessment_type:'SELF_STUDY_PILOT_NOT_CERTIFICATION',items:[
+  const make=(role)=>({schema:'colora-pilot-v1',assessment_version:'11.5',bank_id:'fnv1a32-1234abcd',role,assessment_type:'SELF_STUDY_PILOT_NOT_CERTIFICATION',items:[
   ...bank.filter(q=>q.role==='CORE').slice(0,24),
   ...bank.filter(q=>q.role==='APPLIED').slice(0,8),
   ...bank.filter(q=>q.role===role).slice(0,16)
@@ -82,7 +82,7 @@ if(process.argv[1]&&fileURLToPath(import.meta.url)===process.argv[1]){
   assert.throws(()=>validateRecord({...x,name:'Employee'}),/Unexpected\/possibly personal/);
   assert.throws(()=>validateRecord({...x,items:x.items.map((t,i)=>i===0?{...t,correct:false}:t)}),/Inconsistent correctness/);
   assert.throws(()=>analyze([x,{...y,bank_id:'fnv1a32-abcd1234'}]),/different question-bank/);
-  console.log('V11.4 pilot analytics self-test passed: composition, privacy, bank isolation and correctness.');
+  console.log('V11.5 pilot analytics self-test passed: composition, privacy, bank isolation and correctness.');
  }else{
   if(args.length===0)throw Error('Usage: node scripts/analyze-pilot.mjs export1.json export2.json ...');
   const all=args.flatMap(path=>{const parsed=JSON.parse(fs.readFileSync(path,'utf8'));return Array.isArray(parsed)?parsed:[parsed]});
