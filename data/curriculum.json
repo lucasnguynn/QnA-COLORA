@@ -1,5 +1,5 @@
 {
-  "version": "V11.1",
+  "version": "V11.2",
   "framework": "Essentials > role competency assessment > applied practice > manager-reviewed work samples",
   "essential_ids": [
     "FN-092",
@@ -144,7 +144,7 @@
       "12"
     ]
   },
-  "description": "V11.1 draft: 303 questions unchanged. Four pillar and role competency thresholds plus mandatory safety gates; all are proposed self-study metrics only. 86 Essentials still pending independent approval.",
+  "description": "V11.2 self-study candidate: 303 questions, 9 revised high-reasoning items, four illustrated gemstone decision labs, nine written work samples, all existing competency/role safety gates. Not certified or fully independently reviewed.",
   "assessment_excluded_ids": [
     "FN-033",
     "FN-034",
