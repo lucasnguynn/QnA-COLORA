@@ -29,6 +29,7 @@ async function check(viewport,name){
   assert(await page.locator('.review-sheet').count()===3,'Three role work samples with management rubrics required');
   assert(await page.locator('.training-visual svg').count()>=3,'Technical training illustrations missing');
   assert((await page.locator('.training-visual-head').first().innerText()).includes('MÔ PHỎNG'),'Visuals need explicit mock labeling');
+  await page.locator('.review-sheet').first().locator('summary').click();
   const r=page.locator('select[data-review-rating="WS-01"]');
   assert.equal(await r.count(),3,'Reviewer rubric needs three criteria');
   for(const field of await r.all())await field.selectOption('4');
