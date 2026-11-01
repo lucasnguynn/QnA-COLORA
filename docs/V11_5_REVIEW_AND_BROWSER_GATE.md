@@ -63,3 +63,8 @@ Chưa có nhân viên nào được thu thập dữ liệu hoặc xác thực. B
 - Ảnh thành phẩm cần xác minh quyền sử dụng và tính chính xác, không thay thế bằng render/ảnh tham khảo.
 - Sổ điểm nhân sự thực cần xác thực danh tính, lưu trữ và phân quyền; localStorage và CSV không đáp ứng.
 - PR hiện là Draft, `main` chưa thay đổi. Chỉ được cân nhắc merge khi có quyết định phát hành rõ ràng.
+
+
+## Kết quả Chromium CI
+
+Đã xác minh hai job `quality-check` và `browser-smoke` chạy trên GitHub Actions của nhánh PR, thử hai kích thước màn hình. Đây là kết quả browser simulation có thể lặp lại, **không thay cho người dùng thử trên điện thoại thật**.
