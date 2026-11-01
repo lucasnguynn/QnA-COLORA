@@ -1,4 +1,4 @@
-# V11.3 competency pilot | Release gates
+# V11.4 competency pilot | Release gates
 
 **Status: Technical candidate, not an approved employee certification.**
 
@@ -39,3 +39,11 @@
 - Reviews are editable in local browser data; CSV is self-entered and unverified. Never treat exports as employment certification.
 - Only four reference images are present and their public-use rights remain awaiting owner confirmation; none is proven to be an approved finished jewelry SKU.
 - Before release, review product/process claims and every Essential, obtain approved real visual assets and license checks, and test actual browsers with staff. Approval cannot be assumed from passing CI.
+
+
+## V11.4: evidence review and data-collection gate
+- Public research confirms only limited general/policy scope for 10 P0 dossiers / 20 linked items. No additional 86 Essentials were human approved and no actual SKU was validated.
+- SKU claims need signed, scoped evidence; do not publish lab reports, supplier lots or confidential CAD into public GitHub.
+- Opt-in pilot JSON export excludes identifiers and free text but **not guaranteed anonymous**; only manually authorized offline collection and analysis, with small-cohort re-identification caution.
+- Offline analytics are descriptive and self-reported, reject mixed banks and unknown fields; employee scoring and psychometric validation require stronger supervised, permissioned infrastructure.
+- Required before release: real staff usability trial, real product/QC approval, independent question reviews, permissioned image releases, real mobile/desktop E2E QA, and explicit founder/technical/policy signoff.
