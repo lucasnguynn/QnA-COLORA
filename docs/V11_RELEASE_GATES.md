@@ -1,4 +1,4 @@
-# V11.4 competency pilot | Release gates
+# V11.5 competency pilot | Release gates
 
 **Status: Technical candidate, not an approved employee certification.**
 
@@ -47,3 +47,10 @@
 - Opt-in pilot JSON export excludes identifiers and free text but **not guaranteed anonymous**; only manually authorized offline collection and analysis, with small-cohort re-identification caution.
 - Offline analytics are descriptive and self-reported, reject mixed banks and unknown fields; employee scoring and psychometric validation require stronger supervised, permissioned infrastructure.
 - Required before release: real staff usability trial, real product/QC approval, independent question reviews, permissioned image releases, real mobile/desktop E2E QA, and explicit founder/technical/policy signoff.
+
+
+## V11.5: real Chromium and reviewer packet prerequisites
+- Two-viewport Chromium smoke suite in CI is implemented and passed in a branch run: navigation, nine work-sample infrastructure, four visual labs, manual rubric scoring, evidence board, 48-question exam, voluntary pilot export, reload persistence, mobile no-horizontal-overflow.
+- It is a simulated browser environment, not Safari iOS/Android physical-device QA, visual brand approval or real staff pilot evidence.
+- Review packet output remains local (never auto-approves or commits CSV), with 98 P0s by owner and content.
+- Nine P0 distractor drafts were changed. Seven remain flagged for extreme-word-answer cues. Every changed item and all 86 Essentials still requires human signoff.
