@@ -1,0 +1,267 @@
+{
+  "version": "11.3",
+  "status": "MANAGER_SCORING_PILOT_NOT_AUTHORIZED_CERTIFICATION",
+  "scale": {
+    "0": "Không có bằng chứng hoặc sai nguyên tắc",
+    "1": "Rất thiếu, có rủi ro",
+    "2": "Đạt một phần",
+    "3": "Đủ cơ bản, còn thiếu chi tiết",
+    "4": "Đầy đủ, có bằng chứng và giới hạn"
+  },
+  "scoring": "Score percent = sum(weight * level/4). Values are provisional. Any checked critical failure prevents a pilot pass, even at 100%. No identity verification and no official staff approval.",
+  "pilot_threshold": 75,
+  "rubrics": [
+    {
+      "task_id": "WS-01",
+      "role": "BASIC",
+      "criteria": [
+        {
+          "name": "Quan sát không suy đoán",
+          "weight": 35,
+          "level_2_anchor": "Nhận diện hình ảnh không đủ để kết luận sản phẩm hoàn thiện",
+          "level_4_anchor": "Chỉ ra vị trí cần so sánh giữa mockup, CAD và mẫu thử; ghi rõ kết luận chưa xác minh"
+        },
+        {
+          "name": "Đối chiếu nhiều góc và số đo",
+          "weight": 35,
+          "level_2_anchor": "Nêu vài góc nhìn nhưng thiếu số đo quan trọng",
+          "level_4_anchor": "Xác định top/side/back/under-gallery, L×W×D, chiều cao, khoảng hở và chấu cần xác minh"
+        },
+        {
+          "name": "Cân bằng DNA và khả năng đeo",
+          "weight": 30,
+          "level_2_anchor": "Nhắc DNA ở mức cảm tính, chưa có lý do kỹ thuật",
+          "level_4_anchor": "Lý giải ảnh hưởng độ nhô, độ mềm, kết cấu, an toàn chấu và khả năng đeo thực tế"
+        }
+      ],
+      "critical_failures": [
+        "Khẳng định hình CAD là thành phẩm thật"
+      ],
+      "required_observation": "Ghi bằng chứng quan sát hoặc trích đoạn câu trả lời mà người chấm đã xem; không ghi dữ liệu cá nhân khách hàng, thông số nhạy cảm hay giấy tờ bí mật."
+    },
+    {
+      "task_id": "WS-02",
+      "role": "BASIC",
+      "criteria": [
+        {
+          "name": "Trung thực màu sắc",
+          "weight": 40,
+          "level_2_anchor": "Nhận ra filter làm lệch màu, nhưng chưa có kiểm chuẩn",
+          "level_4_anchor": "Đề xuất cân bằng trắng, ánh sáng thống nhất và đối chiếu viên thật trước claim màu"
+        },
+        {
+          "name": "Ảnh tỷ lệ và chi tiết",
+          "weight": 35,
+          "level_2_anchor": "Có ảnh tham khảo nhưng chưa đủ tỷ lệ hoặc bối cảnh đeo",
+          "level_4_anchor": "Yêu cầu macro, ảnh đeo đúng tỷ lệ, ảnh nhiều góc và điều kiện chụp ghi nhận"
+        },
+        {
+          "name": "Ngôn ngữ COLORA",
+          "weight": 25,
+          "level_2_anchor": "Giữ ngôn ngữ gần thương hiệu nhưng thiếu nguyên tắc trung thực",
+          "level_4_anchor": "Viết mô tả giàu cảm xúc mà không gán một cảm xúc bắt buộc hoặc khẳng định màu xử lý là thật"
+        }
+      ],
+      "critical_failures": [
+        "Khẳng định màu từ bộ lọc là màu đá thật"
+      ],
+      "required_observation": "Ghi bằng chứng quan sát hoặc trích đoạn câu trả lời mà người chấm đã xem; không ghi dữ liệu cá nhân khách hàng, thông số nhạy cảm hay giấy tờ bí mật."
+    },
+    {
+      "task_id": "WS-03",
+      "role": "BASIC",
+      "criteria": [
+        {
+          "name": "Quyền hình ảnh",
+          "weight": 40,
+          "level_2_anchor": "Biết rủi ro bản quyền nhưng chưa có bước tra quyền",
+          "level_4_anchor": "Yêu cầu bằng chứng giấy phép phù hợp và dừng dùng ảnh chưa có quyền"
+        },
+        {
+          "name": "Không tự đoán thông số",
+          "weight": 35,
+          "level_2_anchor": "Không tự đoán thông số nhưng thiếu cách đối chiếu",
+          "level_4_anchor": "Phân biệt rõ thông số chưa xác minh, xác nhận SKU với người phụ trách trước xuất bản"
+        },
+        {
+          "name": "Hướng thay thế khả thi",
+          "weight": 25,
+          "level_2_anchor": "Đề xuất ảnh thay thế chung chung",
+          "level_4_anchor": "Đưa phương án dùng ảnh COLORA có quyền, shot list và quy trình kiểm duyệt trước đăng"
+        }
+      ],
+      "critical_failures": [
+        "Dùng ảnh không được cấp quyền như ảnh thương hiệu"
+      ],
+      "required_observation": "Ghi bằng chứng quan sát hoặc trích đoạn câu trả lời mà người chấm đã xem; không ghi dữ liệu cá nhân khách hàng, thông số nhạy cảm hay giấy tờ bí mật."
+    },
+    {
+      "task_id": "WS-04",
+      "role": "CARE",
+      "criteria": [
+        {
+          "name": "Tôn trọng người mua/người đeo",
+          "weight": 30,
+          "level_2_anchor": "Hỏi một phần nhu cầu nhưng chưa bảo đảm tôn trọng người nhận",
+          "level_4_anchor": "Tách người mua/người đeo, hỏi gu, phong cách và quyền lựa chọn có thể có của người nhận"
+        },
+        {
+          "name": "Xác minh gu, kích thước và vận chuyển",
+          "weight": 35,
+          "level_2_anchor": "Biết phải kiểm thời gian giao nhưng thiếu thông số/địa chỉ",
+          "level_4_anchor": "Kiểm chiều dài đeo, vùng nhận, tồn kho, thời gian xử lý và chính sách hỗ trợ đúng phiên bản"
+        },
+        {
+          "name": "Không hứa vượt dữ kiện",
+          "weight": 35,
+          "level_2_anchor": "Tránh hứa quá mức nhưng trả lời chưa có bước tiếp theo",
+          "level_4_anchor": "Nói rõ thông tin chưa chắc chắn, xin xác minh và đề xuất hai nhịp phản hồi ngắn tự nhiên"
+        }
+      ],
+      "critical_failures": [
+        "Cam kết giao khi chưa kiểm tra"
+      ],
+      "required_observation": "Ghi bằng chứng quan sát hoặc trích đoạn câu trả lời mà người chấm đã xem; không ghi dữ liệu cá nhân khách hàng, thông số nhạy cảm hay giấy tờ bí mật."
+    },
+    {
+      "task_id": "WS-05",
+      "role": "CARE",
+      "criteria": [
+        {
+          "name": "Ngừng đeo và cất an toàn",
+          "weight": 45,
+          "level_2_anchor": "Khuyên cẩn thận nhưng chưa yêu cầu ngừng đeo",
+          "level_4_anchor": "Dặn ngừng đeo ngay, cất an toàn và không tự nắn chấu/sửa tại nhà"
+        },
+        {
+          "name": "Giao tiếp bình tĩnh",
+          "weight": 20,
+          "level_2_anchor": "Có lời xin lỗi nhưng chưa giữ thông tin khách bình tĩnh",
+          "level_4_anchor": "Phản hồi rõ ràng, đồng cảm đúng mực, không đổ lỗi hoặc hứa bồi thường khi chưa kiểm"
+        },
+        {
+          "name": "Chuyển người có chuyên môn",
+          "weight": 35,
+          "level_2_anchor": "Có chuyển bộ phận nhưng không mô tả tiếp nhận",
+          "level_4_anchor": "Nêu ảnh/video mô tả không nhạy cảm, số đơn đã xác minh, chuyển thẩm định và thời điểm phản hồi"
+        }
+      ],
+      "critical_failures": [
+        "Hướng dẫn tiếp tục đeo hoặc tự sửa chấu"
+      ],
+      "required_observation": "Ghi bằng chứng quan sát hoặc trích đoạn câu trả lời mà người chấm đã xem; không ghi dữ liệu cá nhân khách hàng, thông số nhạy cảm hay giấy tờ bí mật."
+    },
+    {
+      "task_id": "WS-06",
+      "role": "CARE",
+      "criteria": [
+        {
+          "name": "Bảo vệ thông tin",
+          "weight": 45,
+          "level_2_anchor": "Nhắc bảo mật chung nhưng thiếu quy tắc dữ liệu đơn",
+          "level_4_anchor": "Không tiết lộ địa chỉ, số điện thoại hay chi tiết đơn trước khi có xác minh đủ quyền"
+        },
+        {
+          "name": "Quy trình xác minh",
+          "weight": 35,
+          "level_2_anchor": "Có xác minh nhưng chưa phân biệt nguồn xác thực",
+          "level_4_anchor": "Chỉ dùng kênh xác minh đã duyệt, thu tối thiểu dữ liệu và xử lý trường hợp không khớp"
+        },
+        {
+          "name": "Giao tiếp đúng mực",
+          "weight": 20,
+          "level_2_anchor": "Giữ thái độ lịch sự nhưng chưa giải thích phạm vi",
+          "level_4_anchor": "Viết phản hồi tôn trọng người hỏi, không tiết lộ thông tin, chỉ rõ bước hỗ trợ hợp lệ"
+        }
+      ],
+      "critical_failures": [
+        "Cung cấp địa chỉ trước khi xác minh"
+      ],
+      "required_observation": "Ghi bằng chứng quan sát hoặc trích đoạn câu trả lời mà người chấm đã xem; không ghi dữ liệu cá nhân khách hàng, thông số nhạy cảm hay giấy tờ bí mật."
+    },
+    {
+      "task_id": "WS-07",
+      "role": "MKT",
+      "criteria": [
+        {
+          "name": "Không suy rộng bình luận",
+          "weight": 30,
+          "level_2_anchor": "Nêu lý do giá đơn lẻ hoặc suy từ vài bình luận",
+          "level_4_anchor": "Phân biệt affordability, perceived value, trust; nêu giả thuyết cạnh tranh không định kiến"
+        },
+        {
+          "name": "Giả thuyết cạnh tranh",
+          "weight": 35,
+          "level_2_anchor": "Đưa một giả thuyết rồi lặp lại bằng từ khác",
+          "level_4_anchor": "Đề xuất ít nhất ba giả thuyết có cách bác bỏ/kiểm riêng từ dữ liệu thực tế"
+        },
+        {
+          "name": "Bằng chứng theo SKU",
+          "weight": 35,
+          "level_2_anchor": "Viết nội dung theo mô tả chung chưa có chứng cứ SKU",
+          "level_4_anchor": "Đề xuất nội dung giải thích theo Product Passport, nêu dữ kiện thiếu và cách xác minh"
+        }
+      ],
+      "critical_failures": [
+        "Tự tạo số liệu hoặc thông số SKU"
+      ],
+      "required_observation": "Ghi bằng chứng quan sát hoặc trích đoạn câu trả lời mà người chấm đã xem; không ghi dữ liệu cá nhân khách hàng, thông số nhạy cảm hay giấy tờ bí mật."
+    },
+    {
+      "task_id": "WS-08",
+      "role": "MKT",
+      "criteria": [
+        {
+          "name": "Nhận diện claim thiếu chứng cứ",
+          "weight": 45,
+          "level_2_anchor": "Nhận diện một lời hứa tuyệt đối nhưng bỏ sót claims khác",
+          "level_4_anchor": "Phát hiện toàn bộ claim không xỉn/không dị ứng/untreated và tạm dừng khi thiếu chứng cứ"
+        },
+        {
+          "name": "Phân biệt nguồn và phạm vi",
+          "weight": 35,
+          "level_2_anchor": "Có nói cần hồ sơ nhưng không phân biệt phạm vi",
+          "level_4_anchor": "Tách hợp kim, lớp phủ, nickel, natural/treatment, phạm vi supplier vs thành phẩm và từng SKU"
+        },
+        {
+          "name": "Giọng thương hiệu",
+          "weight": 20,
+          "level_2_anchor": "Chỉnh bớt từ tuyệt đối nhưng vẫn quảng cáo quá mức",
+          "level_4_anchor": "Viết lại tự nhiên theo COLORA, chỉ dùng thông tin đã duyệt và gắn các câu hỏi còn thiếu"
+        }
+      ],
+      "critical_failures": [
+        "Giữ lời hứa tuyệt đối không có bằng chứng"
+      ],
+      "required_observation": "Ghi bằng chứng quan sát hoặc trích đoạn câu trả lời mà người chấm đã xem; không ghi dữ liệu cá nhân khách hàng, thông số nhạy cảm hay giấy tờ bí mật."
+    },
+    {
+      "task_id": "WS-09",
+      "role": "MKT",
+      "criteria": [
+        {
+          "name": "Không vội kết luận",
+          "weight": 30,
+          "level_2_anchor": "Thấy tỷ lệ thoát cao và đưa một phỏng đoán",
+          "level_4_anchor": "Nêu ít nhất hai nguyên nhân cạnh tranh, phân biệt tương quan và nguyên nhân"
+        },
+        {
+          "name": "Thu thập nhiều nguồn",
+          "weight": 40,
+          "level_2_anchor": "Chỉ nhìn click rate mà chưa kiểm mobile và phản hồi",
+          "level_4_anchor": "Kết hợp QA tốc độ/mobile, funnel theo cohort, phản hồi khách và phương pháp định tính"
+        },
+        {
+          "name": "Thí nghiệm có thể đo",
+          "weight": 30,
+          "level_2_anchor": "Đề xuất đổi CTA nhưng không xác định thước đo",
+          "level_4_anchor": "Đưa thử nghiệm có giả thuyết, đơn vị phân tích, KPI, thời gian và yếu tố nhiễu"
+        }
+      ],
+      "critical_failures": [
+        "Quy kết nguyên nhân duy nhất từ tương quan"
+      ],
+      "required_observation": "Ghi bằng chứng quan sát hoặc trích đoạn câu trả lời mà người chấm đã xem; không ghi dữ liệu cá nhân khách hàng, thông số nhạy cảm hay giấy tờ bí mật."
+    }
+  ]
+}
