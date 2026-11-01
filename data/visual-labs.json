@@ -1,0 +1,75 @@
+{
+  "version": "11.2",
+  "status": "SIMULATED_EDUCATION_NOT_APPROVED_COLORA_QC",
+  "note": "Các hình minh họa mô phỏng, không phải ảnh CAD hoặc Product Passport của COLORA. Không có ngưỡng chấp nhận/loại bỏ đá chính thức.",
+  "labs": [
+    {
+      "id": "GL-01",
+      "title": "Pear 7×5 mm: có đủ căn cứ chốt ổ đá?",
+      "visual": "pear-section",
+      "scenario": "Hai viên giả định cùng dài 7 mm, rộng 5 mm. Viên A sâu 3,0 mm; viên B sâu 4,2 mm. Bản CAD chỉ ghi L×W, chưa có chiều cao ổ và ảnh kiểm tra mặt cắt.",
+      "question": "Bước quyết định đúng nhất trước khi đặt gia công là gì?",
+      "options": [
+        "Chọn A vì mỏng hơn nên chắc chắn hợp low-profile.",
+        "Chọn B vì sâu hơn nên chắc chắn sáng và đẹp hơn.",
+        "Kiểm độ sâu, girdle, hình học giác cắt của từng viên cùng mặt cắt CAD và độ nhô khi đeo.",
+        "Lắp thử theo chiều dài và rộng đã có, điều chỉnh chiều cao khi hoàn thiện."
+      ],
+      "key": 2,
+      "why": "Không có định mức chiều sâu lý tưởng áp dụng chung. L×W không đủ xác nhận khả năng lắp, độ nhô hoặc chất lượng ánh sáng. Tình huống không cung cấp mặt cắt CAD thật để chốt.",
+      "risk": "Dùng thông số giả định như dung sai kỹ thuật chính thức",
+      "source": "GIA colored stone cut quality; practice simulation"
+    },
+    {
+      "id": "GL-02",
+      "title": "Windowing và vùng tối khi quan sát đá",
+      "visual": "light-performance",
+      "scenario": "Hình A mô phỏng một vùng sáng thấy xuyên qua tâm viên đá. Hình B mô phỏng vùng tối lớn. Hai hiệu ứng có thể thay đổi theo ánh sáng, góc nhìn và tính chất từng loại đá.",
+      "question": "Kết luận nào có thể đưa ra chỉ từ hai hình trên?",
+      "options": [
+        "A chắc chắn bị lỗi nặng nên mọi viên A phải loại ngay.",
+        "B chắc chắn có màu đẹp hơn vì vùng tối tạo sắc độ đậm.",
+        "Không thể chốt viên nào tốt hơn; cần ảnh/video nhiều góc dưới nguồn sáng chuẩn, kiểm tra face-up và tiêu chí SKU.",
+        "Chọn viên có trọng lượng cao hơn; windowing và extinction không ảnh hưởng đến cảm nhận thẩm mỹ."
+      ],
+      "key": 2,
+      "why": "Cửa sổ và vùng tối là dấu hiệu cần phân tích, không phải nhãn phân loại đạt/trượt tuyệt đối khi chưa có quan sát chuẩn và mục tiêu thiết kế.",
+      "risk": "Đồng nhất minh họa sơ đồ với ảnh kỹ thuật thực",
+      "source": "GIA colored gemstone value factors and cut quality"
+    },
+    {
+      "id": "GL-03",
+      "title": "Natural khác untreated và nguồn gốc địa lý",
+      "visual": "report-scope",
+      "scenario": "Phiếu bên bán giả định ghi: 'Natural sapphire, oval 7×5 mm'. Không có dòng Treatment, báo cáo lab độc lập, hoặc ý kiến Geographic Origin.",
+      "question": "Thông tin nào có thể công bố một cách có trách nhiệm?",
+      "options": [
+        "Công bố unheated vì người bán ghi natural và không đề cập nung.",
+        "Tự công bố xuất xứ địa lý từ vùng nhà cung cấp gửi hàng.",
+        "Chỉ dùng thông tin đã được xác thực ở đúng phạm vi; giữ trạng thái xử lý và xuất xứ chưa xác minh, yêu cầu bổ sung bằng chứng.",
+        "Công bố có GIA report vì phiếu bên bán đã ghi tên loài đá."
+      ],
+      "key": 2,
+      "why": "Natural/synthetic, treatment và geographic origin là các kết luận khác nhau; phiếu cung cấp hàng chưa phải báo cáo lab độc lập. Mức công bố còn phụ thuộc mức độ xác thực thông tin về loài đá.",
+      "risk": "Tự nhận giấy lab hay tình trạng untreated không có hồ sơ",
+      "source": "GIA colored stone identification report scope"
+    },
+    {
+      "id": "GL-04",
+      "title": "Màu viên đá trong ảnh thương mại",
+      "visual": "image-balance",
+      "scenario": "Cùng một ảnh tham khảo được hiển thị với hai xử lý màu kỹ thuật số khác nhau. Đây không phải hai ảnh thực của cùng một viên đá đang bán.",
+      "question": "Đội nội dung nên dùng minh họa này thế nào để tư vấn màu đá?",
+      "options": [
+        "Lấy khung có màu rực rỡ nhất làm màu chuẩn của SKU.",
+        "Để cả hai khung mà không ghi chú, vì người xem tự hiểu mọi ảnh đều đã chỉnh.",
+        "Dùng làm ví dụ về ảnh hưởng hậu kỳ, yêu cầu ảnh SKU chụp dưới điều kiện nhất quán và đối chiếu viên thật.",
+        "Mặc định mọi viên đá cùng loài đều có màu thực giống nhau nếu chọn cùng nguồn sáng."
+      ],
+      "key": 2,
+      "why": "Ảnh sản phẩm cần cân bằng trắng, nguồn sáng nhất quán và kiểm tra thực tế. Đồ họa màu kỹ thuật số chỉ phục vụ đào tạo, không thể chứng minh màu bán hàng.",
+      "risk": "Đánh đồng ảnh mô phỏng với đặc tính màu SKU",
+      "source": "GIA How to Photograph Gems & Jewelry"
+    }
+  ]
+}
