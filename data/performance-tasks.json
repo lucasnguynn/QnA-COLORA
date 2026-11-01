@@ -1,7 +1,7 @@
 {
-  "version": "11.0",
+  "version": "11.2",
   "status": "SELF_PRACTICE_ONLY",
-  "notice": "Fictional situations; do not enter real customer or confidential SKU information.",
+  "notice": "Tất cả tình huống và sơ đồ minh họa đều là bài mô phỏng. Không nhập thông tin khách hàng thật hay hồ sơ nội bộ bí mật.",
   "tasks": [
     {
       "id": "WS-01",
@@ -26,7 +26,9 @@
       ],
       "critical_failures": [
         "Khẳng định hình CAD là thành phẩm thật"
-      ]
+      ],
+      "visual": "pear-section",
+      "visual_note": "Sơ đồ/ảnh giả lập dùng để nhận diện vấn đề, không phải mockup/CAD/đá của bất kỳ SKU thật nào. Muốn kết luận về sản phẩm phải có hồ sơ đã duyệt."
     },
     {
       "id": "WS-02",
@@ -51,7 +53,9 @@
       ],
       "critical_failures": [
         "Khẳng định màu từ bộ lọc là màu đá thật"
-      ]
+      ],
+      "visual": "image-balance",
+      "visual_note": "Sơ đồ/ảnh giả lập dùng để nhận diện vấn đề, không phải mockup/CAD/đá của bất kỳ SKU thật nào. Muốn kết luận về sản phẩm phải có hồ sơ đã duyệt."
     },
     {
       "id": "WS-03",
@@ -226,7 +230,9 @@
       ],
       "critical_failures": [
         "Quy kết nguyên nhân duy nhất từ tương quan"
-      ]
+      ],
+      "visual": "size-guide-funnel",
+      "visual_note": "Sơ đồ/ảnh giả lập dùng để nhận diện vấn đề, không phải mockup/CAD/đá của bất kỳ SKU thật nào. Muốn kết luận về sản phẩm phải có hồ sơ đã duyệt."
     }
   ]
 }
