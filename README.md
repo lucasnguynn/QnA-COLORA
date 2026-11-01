@@ -1,4 +1,4 @@
-# COLORA Learning Studio V11.1 (competency pilot)
+# COLORA Learning Studio V11.2 (competency pilot)
 
 **COLORA - COLOR YOUR AURA**
 
@@ -104,3 +104,12 @@ Mở `http://localhost:8080`. GitHub Actions chạy kiểm tra dữ liệu và J
 - Tiến độ theo từng câu gắn với dấu vân tay nội dung. Dữ liệu luyện tập V10.2/V11.0 được chuyển tiếp cho những câu được biết là không thay đổi; câu có nội dung/đáp án đổi hoặc không thể xác minh được được đưa vào lịch sử và không tính là đã nắm vững.
 - Vòng kiểm toán độc lập vẫn **0/86 câu Essentials được phê duyệt**. 81 câu đang được phép tham gia **bài thi thử tự học** về mặt kỹ thuật, không phải đã đủ chứng cứ để công bố như thông tin chính thức.
 - Fingerprint FNV-1a nhằm hạn chế điểm hết hạn, **không phải cơ chế chống sửa dữ liệu, bảo mật hay chống gian lận**.
+
+
+## V11.2: Kiến thức phải đi cùng quan sát và quyết định
+
+- Cải thiện **9 câu hỏi hiện có**, không tăng tổng số 303 câu: 4 Applied Cases và 5 câu về cut/QC đá màu.
+- Thêm **4 bài tập trực quan** trong mục **Thực hành** cho mọi vai trò: pear, windowing/extinction, phạm vi báo cáo natural/treatment/origin, và sai lệch màu ảnh.
+- Bổ sung **3 hình minh họa** cho work sample WS-01, WS-02 và WS-09. SVG là sơ đồ mô phỏng, ảnh với filter chỉ minh họa tác động hậu kỳ. Không phải ảnh CAD, viên đá thực tế hay dữ liệu thương mại của COLORA.
+- Giữ nguyên các ngưỡng tự học của V11.1 và cơ chế loại kết quả lỗi thời; bài Visual Labs không tự cấp điểm quản lý hoặc chứng nhận.
+- Xem [báo cáo kiểm toán nội dung & thực hành V11.2](docs/V11_2_CONTENT_AND_VISUAL_AUDIT.md) và [điều kiện phát hành](docs/V11_RELEASE_GATES.md).
