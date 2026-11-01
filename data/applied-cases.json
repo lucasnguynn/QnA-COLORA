@@ -113,25 +113,26 @@
     "pillar": "SẢN PHẨM",
     "topic": "Giác cắt & cách đeo",
     "chapter": "A",
-    "q": "Designer muốn dùng viên pear có màu đẹp cho nhẫn low-profile, nhưng viên thực tế sâu hơn bản CAD và có chip gần đầu nhọn. Bước nào hợp lý?",
+    "q": "Viên pear dự kiến 7×5 mm, mẫu thực có chiều sâu cao hơn CAD và dấu mẻ gần đầu nhọn. Trước hạn chốt CAD, quyết định nào bảo vệ cả thẩm mỹ lẫn khả năng đeo?",
     "a": [
-      "Đổi phần chấu theo CAD tham chiếu để ôm đá sâu hơn, giữ viên nếu phần chip được che khi đeo.",
-      "Giữ viên vì màu đã duyệt; yêu cầu kỹ thuật tăng chiều cao ổ đá trong dung sai sản xuất.",
-      "Đo lại L×W×D, vùng chip và ổ đá; thay viên hoặc sửa CAD có duyệt trước khi sản xuất.",
-      "Đề xuất dùng bezel bảo vệ đầu pear, không cần đo lại vì chiều dài/rộng đã khớp."
+      "Đưa viên vào gia công thử, rồi chọn cách giấu dấu mẻ bằng chấu nếu vị trí tiếp xúc cho phép.",
+      "Tạm giữ duyệt, đo L×W×D và vùng mẻ, đánh giá dưới phóng đại và đối chiếu mặt cắt ổ đá với kỹ thuật.",
+      "Đổi ngay sang viên pear khác cùng số đo 7×5 mm, giữ nguyên CAD để bảo đảm tiến độ bàn giao.",
+      "Chuyển sang ổ bọc toàn phần theo bản phác thảo, giữ viên nếu nhìn thẳng không thấy dấu mẻ."
     ],
     "key": [
-      2
+      1
     ],
-    "why": "Gemstone-first không có nghĩa chấp nhận khuyết tật và mất khả năng đeo; viên pear có đầu nhọn cần bảo vệ.",
-    "apply": "Kết hợp đá thật, mặt cắt CAD và kết quả QC trước khi duyệt.",
+    "why": "Một dấu mẻ gần mũi pear và chiều sâu khác CAD là hai nguy cơ riêng. Quyết định chấp nhận hay loại bỏ cần kiểm tra thực tế viên đá, vị trí tổn thương và thiết kế ổ, không thể dựa mặt nhìn hoặc số đo L×W.",
+    "apply": "Lưu kết quả đo và quan sát, chuyển kỹ thuật xác nhận trước khi sửa CAD hoặc chốt đá; không tự đặt mức dung sai.",
     "source": "INTERNAL_CASE",
     "status": "TÌNH HUỐNG MÔ PHỎNG - KHÔNG PHẢI CASE KHÁCH THỰC",
     "stage": 3,
     "skills": [
       "PRODUCT"
     ],
-    "rubric_status": "CHƯA ĐƯỢC HIỆU CHỈNH KHẢO THÍ"
+    "rubric_status": "CHƯA ĐƯỢC HIỆU CHỈNH KHẢO THÍ",
+    "revision_note": "V11.2: scenario and distractor audit"
   },
   {
     "id": "AC-006",
@@ -166,18 +167,18 @@
     "pillar": "KHÁCH HÀNG",
     "topic": "Mua quà online",
     "chapter": "A",
-    "q": "Khách mua dây chuyền tặng mẹ, chưa rõ màu đá và kích thước, sợ không hợp gu; cần quà giao trước 18h thứ Sáu. Khách muốn bạn hỏi thông tin cần thiết trước khi đề xuất sản phẩm. Nhóm câu hỏi nào xác minh đủ gu, độ vừa, hạn giao và phương án khi quà không phù hợp?",
+    "q": "Khách mua dây chuyền làm quà, chưa biết chiều dài dây hay gu người nhận và cần quà trước thứ Sáu. Hướng tiếp cận nào tạo đủ dữ liệu để tư vấn mà không hứa quá phạm vi kiểm soát?",
     "a": [
-      "Hỏi phong cách, chiều dài dây người nhận hay đeo, ngày cần hàng và cách xử lý nếu quà chưa phù hợp.",
-      "Hỏi tông màu đá đã thấy mẹ dùng, ngày nhận mong muốn và khả năng đổi mẫu sau khi tặng.",
-      "Đề nghị mẫu dây dễ phối trong ngân sách, rồi hỏi thêm về thiệp và cách gói quà.",
-      "Hỏi dịp tặng, thói quen đeo vòng cổ và độ tuổi người nhận; gửi ảnh hai phương án."
+      "Hỏi kiểu dáng thường đeo và chiều dài phù hợp; xác minh tồn kho, vùng giao và chính sách hỗ trợ quà tặng trước khi hứa ngày nhận.",
+      "Hỏi ngày tặng, màu đá và mẫu quà khách thích; đặt trước rồi mới xác minh giao kịp hay không.",
+      "Gửi ba hình đeo trên mẫu khác nhau để khách chọn, sau đó chốt loại dây và thời điểm vận chuyển.",
+      "Đề nghị mẫu dây dễ phối, xác nhận ngân sách và ghi chú thiệp; chiều dài có thể tư vấn sau khi nhận."
     ],
     "key": [
       0
     ],
-    "why": "Đáp án phải xét đồng thời bốn rủi ro đã nêu: gu, chiều dài khi đeo, hạn nhận trước thứ Sáu và quy trình đổi/hỗ trợ theo chính sách hiện hành. Các lựa chọn khác thiếu ít nhất một điều kiện quan trọng.",
-    "apply": "Không hứa chắc giao trước 18h cho tới khi xác minh khu vực, vận chuyển và tồn kho.",
+    "why": "Gu và kích thước ảnh hưởng lựa chọn món quà; hạn giao phụ thuộc tồn kho, khu vực và dịch vụ, còn hỗ trợ sau tặng phải đúng chính sách. Không được biến yêu cầu khách thành cam kết vận chuyển.",
+    "apply": "Bắt đầu với câu hỏi cần thiết, sau đó kiểm chứng SKU và logistics; không mặc định được đổi mọi sản phẩm.",
     "source": "INTERNAL_CASE",
     "status": "TÌNH HUỐNG MÔ PHỎNG - KHÔNG PHẢI CASE KHÁCH THỰC",
     "stage": 3,
@@ -185,7 +186,8 @@
       "CUSTOMER",
       "JOURNEY"
     ],
-    "rubric_status": "PHẢN BIỆN NỘI BỘ - CẦN THỬ NGHIỆM VỚI NHÂN VIÊN"
+    "rubric_status": "PHẢN BIỆN NỘI BỘ - CẦN THỬ NGHIỆM VỚI NHÂN VIÊN",
+    "revision_note": "V11.2: scenario and distractor audit"
   },
   {
     "id": "AC-008",
@@ -220,25 +222,26 @@
     "pillar": "KHÁCH HÀNG",
     "topic": "Phản đối về giá",
     "chapter": "A",
-    "q": "Khách nhắn 'đẹp nhưng hơi đắt' rồi im lặng. Nếu chỉ được hỏi một câu trước khi đề xuất phương án, câu hỏi nào ít áp đặt nguyên nhân nhất?",
+    "q": "Khách nhắn: 'Nhẫn đẹp nhưng hơi đắt', sau đó không giải thích thêm. Một câu hỏi nào giúp hiểu điều khách đang phân vân mà không tự suy ra lý do?",
     "a": [
-      "Gửi bảng so sánh hai mẫu có giá thấp hơn và hỏi khách muốn xem thêm mẫu hay tạm cân nhắc.",
-      "Giải thích vật liệu và đá của SKU trước rồi hỏi khách thấy điểm nào chưa tương xứng mức giá.",
-      "Hỏi khách điều đang cân nhắc là ngân sách, sự phù hợp hay thông tin sản phẩm chưa rõ.",
-      "Gửi thêm ảnh đeo và chính sách hậu mãi, đề nghị khách nói mức giá nào cảm thấy thoải mái."
+      "Anh/chị có muốn em giới thiệu trước một mẫu có mức giá thấp hơn để mình so sánh không ạ?",
+      "Anh/chị có cần em giải thích thêm về vật liệu và đá để thấy mức giá phù hợp hơn không ạ?",
+      "Có điều gì ở chiếc nhẫn này khiến anh/chị vẫn còn cân nhắc không ạ? Em sẵn lòng lắng nghe.",
+      "Anh/chị có khoảng ngân sách cụ thể để em chọn phương án phù hợp hơn với nhu cầu không ạ?"
     ],
     "key": [
       2
     ],
-    "why": "Phản đối giá có thể từ perceived value, affordability hoặc niềm tin, không thể suy ra từ một câu ngắn.",
-    "apply": "Tìm khoảng trống thông tin để giải đáp, không gây áp lực chốt.",
+    "why": "Đáp án mở không mặc định vấn đề nằm ở ngân sách, thông tin chưa rõ hay đánh giá giá trị. Các lựa chọn còn lại đều có ích khi khách đã cung cấp tín hiệu phù hợp, nhưng là bước dẫn dắt quá sớm trong tình huống này.",
+    "apply": "Đợi khách chia sẻ trước khi gửi bảng giá, lý giải vật liệu hoặc đề xuất mẫu thay thế; tránh nhắn dồn.",
     "source": "INTERNAL_CASE",
     "status": "TÌNH HUỐNG MÔ PHỎNG - KHÔNG PHẢI CASE KHÁCH THỰC",
     "stage": 3,
     "skills": [
       "CUSTOMER"
     ],
-    "rubric_status": "CHƯA ĐƯỢC HIỆU CHỈNH KHẢO THÍ"
+    "rubric_status": "CHƯA ĐƯỢC HIỆU CHỈNH KHẢO THÍ",
+    "revision_note": "V11.2: scenario and distractor audit"
   },
   {
     "id": "AC-010",
@@ -273,18 +276,18 @@
     "pillar": "HÀNH TRÌNH",
     "topic": "Bỏ giỏ hàng",
     "chapter": "A",
-    "q": "Trong tuần qua, người dùng rời trang nhiều sau khi mở Size Guide. Bạn chưa biết có lỗi tốc độ, khó hiểu về size hay lo độ vừa; không có dữ liệu nguyên nhân trực tiếp. Trước khi chạy A/B test, cách nào tạo bộ giả thuyết không thiên kiến và đủ chứng cứ nhất?",
+    "q": "Báo cáo giả định ghi nhận 800 lượt mở Size Guide, 520 phiên rời trang sau đó và 62% lượt mở đến từ mobile. Không có dữ liệu ghi lỗi hay nguyên nhân trực tiếp. Bước nghiên cứu đầu tiên nào hợp lý nhất?",
     "a": [
-      "Xem heatmap, số lần mở Size Guide, rồi hỏi khách đã mua xem bảng hướng dẫn có hữu ích không.",
-      "Kiểm tra dữ liệu hành vi, hướng dẫn size, ảnh tỷ lệ và phản hồi; chưa kết luận nguyên nhân từ giá.",
-      "Thử đổi CTA tư vấn size ngay, giữ các yếu tố khác, so tỷ lệ thoát giữa hai phiên bản.",
-      "Kiểm tốc độ tải, nội dung bảng size và số click tư vấn; dùng các chỉ số này để chọn ngay CTA mới."
+      "Lọc nhóm mobile, kiểm đường dẫn và tốc độ, rồi đối chiếu vài phiên tương ứng với khảo sát ngắn; chưa chốt nguyên nhân.",
+      "Cho chạy A/B test thay nút tư vấn size vì 520 lượt thoát là tín hiệu nút hiện tại chưa đủ hấp dẫn.",
+      "Ưu tiên sửa bảng size trên mobile ngay vì phần lớn người mở hướng dẫn đến từ điện thoại.",
+      "Xem heatmap và hỏi đội chăm sóc khách về size, sau đó kết luận nguyên nhân từ nội dung hướng dẫn."
     ],
     "key": [
-      1
+      0
     ],
-    "why": "Ở giai đoạn phát triển giả thuyết cần phối hợp chỉ số hành vi, chất lượng hướng dẫn, ảnh tỷ lệ và phản hồi định tính. Chỉ dùng một nhánh dữ liệu hay nhảy thẳng sang một CTA là chưa đủ để xác định nguyên nhân.",
-    "apply": "Phân biệt chẩn đoán trước thử nghiệm với thiết kế một thử nghiệm cụ thể; không suy từ page exit rằng giá là nguyên nhân.",
+    "why": "Ba con số chỉ mô tả tương quan, không xác nhận lý do thoát. Phối hợp phân khúc hành vi, vận hành và bằng chứng định tính trước khi phát biểu giả thuyết nhân quả hay thử thay CTA.",
+    "apply": "Tách rõ chỉ báo, giả thuyết, phương pháp kiểm và thước đo; các số liệu trong đề đều là mô phỏng.",
     "source": "INTERNAL_CASE",
     "status": "TÌNH HUỐNG MÔ PHỎNG - KHÔNG PHẢI CASE KHÁCH THỰC",
     "stage": 3,
@@ -292,7 +295,8 @@
       "JOURNEY",
       "CUSTOMER"
     ],
-    "rubric_status": "PHẢN BIỆN NỘI BỘ - CẦN THỬ NGHIỆM VỚI NHÂN VIÊN"
+    "rubric_status": "PHẢN BIỆN NỘI BỘ - CẦN THỬ NGHIỆM VỚI NHÂN VIÊN",
+    "revision_note": "V11.2: scenario and distractor audit"
   },
   {
     "id": "AC-012",
