@@ -1,5 +1,5 @@
 {
-  "version": "V11.4",
+  "version": "V11.5",
   "framework": "Essentials > role competency assessment > applied practice > manager-reviewed work samples",
   "essential_ids": [
     "FN-092",
@@ -144,7 +144,7 @@
       "12"
     ]
   },
-  "description": "V11.4 self-study and pilot QA: 303 original items, review gating, evidence dossiers, SKU proof schema, opt-in privacy-minimized pilot export. All human approval and HR certification gates remain pending.",
+  "description": "V11.5 adds real browser test gates, offline role-based reviewer packets and corrected mobile navigation to 303-item self-study candidate. No claim approvals or certified employee assessments.",
   "assessment_excluded_ids": [
     "FN-033",
     "FN-034",
