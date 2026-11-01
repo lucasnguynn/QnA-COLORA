@@ -1,0 +1,95 @@
+{
+  "version": "11.4",
+  "status": "SCHEMA_ONLY_ZERO_APPROVED_SKUS",
+  "disclaimer": "This is a schema template, not an actual SKU, authorized technical claim or supplier certificate. Never commit internal lot/certificate numbers, full supplier documents, or customer/employee data to a public repository.",
+  "data_classification": "PUBLIC_METADATA_ONLY",
+  "workflow": [
+    "Technical owner creates a restricted internal product record",
+    "Bind approved public-safe reference ID to exact SKU/revision/stone lot without copying confidential content",
+    "Check each claim against specific scope and current evidence",
+    "Run independent reviewer + founder/technical signoff",
+    "Only publish approved wording under valid SKU revision and effective date"
+  ],
+  "sku_record_schema": {
+    "sku_id": {
+      "type": "string",
+      "value": null,
+      "required": true,
+      "note": "Public-safe SKU ID only, never a purchase/order/customer id"
+    },
+    "sku_revision": {
+      "type": "string",
+      "value": null,
+      "required": true
+    },
+    "date_effective": {
+      "type": "YYYY-MM-DD",
+      "value": null,
+      "required": true
+    },
+    "product_type": {
+      "type": "RING|EARRINGS|NECKLACE|BRACELET",
+      "value": null
+    },
+    "approved_product_passport_id": {
+      "type": "public-safe-reference",
+      "value": null
+    },
+    "stone_identity": {
+      "gem_species": null,
+      "gem_variety": null,
+      "natural_or_lab": null,
+      "identification_status": "NOT_VERIFIED",
+      "treatment": "UNKNOWN",
+      "geo_origin": "NOT_CLAIMED",
+      "report_type": null,
+      "report_ref_public_safe": null,
+      "verified_by": null
+    },
+    "stone_dimensions_mm": {
+      "length": null,
+      "width": null,
+      "depth": null,
+      "tolerance_sop_id": null,
+      "record_status": "NOT_VERIFIED"
+    },
+    "manufacturing": {
+      "metal_system": null,
+      "alloy_fineness_permille": null,
+      "material_reference_id": null,
+      "lot_traceability_ref_public_safe": null,
+      "finish_layers": null,
+      "nickel_testing_scope_ref": null
+    },
+    "customer_claims": [
+      {
+        "claim_key": "MATERIAL|TREATMENT|RECYCLED|NICKEL|FINISH|GEM_ORIGIN|SIZE|WARRANTY|CARE",
+        "approved_text": null,
+        "source_document_ref_public_safe": null,
+        "source_version": null,
+        "scope": "EXACT_SKU_REVISION",
+        "review_status": "PENDING_HUMAN_REVIEW",
+        "owner": null,
+        "reviewed_by": null,
+        "reviewed_at": null
+      }
+    ],
+    "image_evidence": {
+      "macro_front": null,
+      "macro_side": null,
+      "macro_back": null,
+      "under_gallery": null,
+      "real_scale": null,
+      "rights_clearance_ref": null,
+      "lighting_notes": null,
+      "release_status": "NOT_APPROVED"
+    },
+    "final_release": {
+      "technical_signoff": null,
+      "brand_signoff": null,
+      "policy_signoff": null,
+      "status": "NOT_APPROVED"
+    }
+  },
+  "validation_policy": "Any required missing or stale proof blocks a SKU-specific customer claim. Generic GIA/RJC sources support scientific frameworks but cannot replace a supplier assay, stone report or signed COLORA SOP."
+}

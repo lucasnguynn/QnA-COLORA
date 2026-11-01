@@ -1,4 +1,4 @@
-# COLORA Learning Studio V10.2
+# COLORA Learning Studio V11.5 (competency pilot)
 
 **COLORA - COLOR YOUR AURA**
 
@@ -18,7 +18,7 @@ Website học và luyện tập nội bộ bằng tiếng Việt dành cho nhân
 
 ## Bài thi tổng kết
 
-48 câu trong 55 phút: 32 Essentials phủ đủ 17 chương, 8 Applied Cases và 8 câu theo vai trò.
+48 câu trong 55 phút: **24 Essentials** phủ đủ 17 chương, **8 Applied Cases**, và **16 câu theo ma trận năng lực của vai trò**. Các câu an toàn bắt buộc theo vị trí được đưa vào bài thi.
 
 Để **đạt mức tự học đề xuất**, người học phải đồng thời đúng >=80% tổng đề, >=70% ở từng trụ cột và không sai ba câu quan trọng: GENIA276 Ag 930‰, natural khác untreated, và khi đá/chấu lỏng phải ngừng đeo, chuyển kiểm tra. Đáp án A/B/C/D được xáo trộn theo lượt thi, không xáo trộn ý nghĩa/key chấm điểm.
 
@@ -27,7 +27,7 @@ Có 5 câu Essentials đang chờ phê duyệt nguyên văn/SOP chỉ được l
 ## Tiến độ và lưu dữ liệu
 
 - Tách **đã trả lời**, **đúng lần đầu (khi có dữ liệu)**, **hiện đúng**, **cần ôn**. Có mốc tự kiểm tra lại sau 7 ngày rồi 30 ngày; không xem đây là retention đã được chứng minh.
-- V10.1 sử dụng dữ liệu V10 trên cùng trình duyệt, giữ câu học CORE/Role và teach-back; không kế thừa đáp án 12 Applied Cases sau khi sửa nội dung. Bài thi V10 đang làm dở được đóng để tránh chấm dưới ngân hàng câu hỏi khác. Các lượt thi cũ chỉ là lịch sử tự học.
+- V10.1 sử dụng dữ liệu V10 trên cùng trình duyệt, giữ câu học CORE/Role và teach-back; không kế thừa đáp án 12 Applied Cases sau khi sửa nội dung. Bài thi V10/V10.2 đang làm dở được đóng để tránh chấm dưới ngân hàng câu hỏi khác. Các lượt thi cũ chỉ là lịch sử tự học.
 - Không đồng bộ giữa thiết bị và không thu thập điểm danh tính thực.
 
 ## Nguồn và quyền công bố
@@ -84,3 +84,62 @@ Mở `http://localhost:8080`. GitHub Actions chạy kiểm tra dữ liệu và J
 - [Báo cáo V10.2 Verified Knowledge & Applied Competency](docs/V10_2_IMPLEMENTATION.md).
 
 **Bản public vẫn là môi trường tự học, không xác nhận năng lực nhân sự chính thức.**
+
+
+## V11.1 | Technical pilot (31/10/2026)
+
+- [Ma trận năng lực theo vị trí](data/competency-matrix.json): toàn bộ 75 câu Role Mastery được phân vào nhóm năng lực, 16 câu được lấy theo hạn mức cố định.
+- [Chín bài thực hành theo vai trò](data/performance-tasks.json): nhân viên viết phương án và tự đối chiếu rubric, chưa có người chấm hoặc chứng nhận.
+- [Danh sách kiểm tra chứng cứ](data/evidence-gates.json): tất cả mục đang pending; không chứa chứng từ nhạy cảm.
+- [Điều kiện phát hành và trách nhiệm phê duyệt](docs/V11_RELEASE_GATES.md).
+- Kết quả V10.2 trở thành lịch sử; phiên bản V11 nhận biết thay đổi dữ liệu để tránh giữ dấu đạt cũ. Điểm và bài thực hành vẫn chỉ ở localStorage, không có xác thực hoặc sổ điểm máy chủ.
+- Không thay đổi 303 câu hỏi gốc; 86 Essentials vẫn chờ kiểm duyệt độc lập. V11 không phải là hệ thống cấp chứng chỉ nhân sự.
+
+
+### V11.1: Rào chắn năng lực và tính đúng hạn của kiến thức
+
+- Các mức tối thiểu riêng ở `data/competency-matrix.json` là **ngưỡng thực nghiệm dành cho tự học**, không phải chứng nhận và chưa được hiệu chỉnh bằng dữ liệu nhân viên. Ví dụ: BASIC Design DNA cần 2/3, CARE Product facts 3/4, MKT Customer Research 3/4.
+- Muốn được đánh dấu **đạt mức tự học** phải đồng thời qua mức tổng ≥80%, từng trụ cột ≥70%, từng nhóm năng lực đủ số câu đúng tối thiểu, và tất cả các câu an toàn bắt buộc theo CORE/vị trí.
+- Màn hình kết quả và CSV hiển thị số đúng, ngưỡng và những competency cần ôn.
+- Tiến độ theo từng câu gắn với dấu vân tay nội dung. Dữ liệu luyện tập V10.2/V11.0 được chuyển tiếp cho những câu được biết là không thay đổi; câu có nội dung/đáp án đổi hoặc không thể xác minh được được đưa vào lịch sử và không tính là đã nắm vững.
+- Vòng kiểm toán độc lập vẫn **0/86 câu Essentials được phê duyệt**. 81 câu đang được phép tham gia **bài thi thử tự học** về mặt kỹ thuật, không phải đã đủ chứng cứ để công bố như thông tin chính thức.
+- Fingerprint FNV-1a nhằm hạn chế điểm hết hạn, **không phải cơ chế chống sửa dữ liệu, bảo mật hay chống gian lận**.
+
+
+## V11.2: Kiến thức phải đi cùng quan sát và quyết định
+
+- Cải thiện **9 câu hỏi hiện có**, không tăng tổng số 303 câu: 4 Applied Cases và 5 câu về cut/QC đá màu.
+- Thêm **4 bài tập trực quan** trong mục **Thực hành** cho mọi vai trò: pear, windowing/extinction, phạm vi báo cáo natural/treatment/origin, và sai lệch màu ảnh.
+- Bổ sung **3 hình minh họa** cho work sample WS-01, WS-02 và WS-09. SVG là sơ đồ mô phỏng, ảnh với filter chỉ minh họa tác động hậu kỳ. Không phải ảnh CAD, viên đá thực tế hay dữ liệu thương mại của COLORA.
+- Giữ nguyên các ngưỡng tự học của V11.1 và cơ chế loại kết quả lỗi thời; bài Visual Labs không tự cấp điểm quản lý hoặc chứng nhận.
+- Xem [báo cáo kiểm toán nội dung & thực hành V11.2](docs/V11_2_CONTENT_AND_VISUAL_AUDIT.md) và [điều kiện phát hành](docs/V11_RELEASE_GATES.md).
+
+
+## V11.3: Kiểm duyệt kiến thức & phiếu chấm thực hành
+
+- Hàng đợi kiểm duyệt có **303/303 câu**, ưu tiên P0/P1/P2 theo rủi ro; **0 câu được tự động phê duyệt**. Xem `data/item-review-queue.json`. Những link GIA/RJC chỉ là nguồn bắt đầu rà soát, không thay phê duyệt từng câu.
+- **9 rubric chấm thử, 27 tiêu chí có mốc hành vi**, dành cho người hướng dẫn; mỗi bài có bảng điểm 0-4, ghi nhận lỗi nghiêm trọng, ghi chú quan sát và xuất CSV có bảo vệ công thức bảng tính. Xem `data/reviewer-rubrics.json`.
+- Khi chấm thử đạt mức 75/100 và không phạm lỗi nghiêm trọng, giao diện chỉ báo **đủ ngưỡng thử nghiệm**. Không xác thực danh tính, không có chứng nhận, không có gradebook tập trung.
+- 4 tài sản ảnh đang có trong repo được phân loại vào `data/asset-approval-queue.json`; **không có ảnh thành phẩm đã xác minh đúng SKU**. Danh sách nêu rõ tài sản thật cần bổ sung trước khi nâng cấp Product Mastery.
+- Nếu nguồn bị `REJECTED` hoặc `NEEDS_REVISION`, câu tương ứng không được chọn vào đề thi thử; với câu bắt buộc mà không có thay thế hợp lệ, hệ thống dừng tạo đề thay vì chấm đạt sai.
+- Dữ liệu phiếu chấm lưu **trên trình duyệt** và ai có quyền truy cập trình duyệt đều có thể sửa. Không nhập tài liệu kỹ thuật mật hoặc thông tin cá nhân.
+- Quy trình kiểm duyệt và điều kiện duyệt chi tiết tại [V11.3 Review Protocol](docs/V11_3_ITEM_REVIEW_AND_REVIEWER_PROTOCOL.md).
+
+
+## V11.4: Chứng cứ P0 & pilot có kiểm soát quyền riêng tư
+
+- Tạo **10 hồ sơ đối chiếu chứng cứ** phủ 20 mã câu/tình huống có rủi ro cao; minh bạch nguồn GIA, RJC và chính sách COLORA, tách **nguyên tắc có nguồn** khỏi **claim SKU chưa có hồ sơ**. Xem `data/p0-evidence-dossiers.json` và [báo cáo đối chiếu V11.4](docs/V11_4_EVIDENCE_RECONCILIATION.md).
+- Tạo **mẫu hồ sơ bằng chứng theo SKU** `data/sku-evidence-template.json`, mặc định chưa có SKU được duyệt, không đưa hồ sơ nguồn nhạy cảm lên GitHub public.
+- Thêm trang **Bằng chứng** trong website thử nghiệm, hiển thị nội dung đã rà soát và danh mục chứng từ cần xác minh, không công bố như tiêu chuẩn QC chính thức.
+- Khi kết thúc thi, người học có thể chủ động xuất bản ghi **pilot không tên** từ Kết quả hoặc Cá nhân. JSON chỉ có phiên bản đề, vai trò, 48 mã câu, phương án đã chọn và trạng thái đúng/sai. Không có tự động upload, không lưu họ tên, email, thời điểm thi hoặc bài viết tự do. Bản ghi vẫn có nguy cơ bị suy ra danh tính trong nhóm nhỏ.
+- Script `node scripts/analyze-pilot.mjs export1.json export2.json` tổng hợp kết quả mô tả theo vai trò, sàng lọc câu dễ/khó và báo thiếu mẫu; bắt buộc cùng dấu vân tay ngân hàng, loại file chứa dữ liệu vượt schema.
+- Pilot chưa được tiến hành với nhân viên thật. [Xem hướng dẫn tổ chức pilot](docs/V11_4_PILOT_RUNBOOK.md). Dữ liệu tự báo từ GitHub Pages không được sử dụng làm chứng nhận hoặc đánh giá nhân sự chính thức.
+
+
+## V11.5: Browser QA thật và quy trình review theo người phụ trách
+
+- Thêm job `browser-smoke` chạy **Chromium thật** trong GitHub Actions trên viewport desktop 1365×860 và mobile 375×812. Kiểm hành trình học, bài thực hành, chấm rubric, bảng Bằng chứng, thi 48 câu, xuất pilot và khôi phục sau reload. Test Chromium không tương đương thiết bị thực iOS/Android.
+- Sửa thanh điều hướng 7 mục trên mobile để tránh tràn ngang, và sửa nhãn trang **Bằng chứng** trước đây bị hiển thị nhầm thành **Luyện tập**.
+- Thêm script **xuất gói duyệt 98 câu P0** theo ưu tiên hoặc owner: `node scripts/review-packet.mjs --priority=P0 --format=csv`. Script chỉ đọc dữ liệu, không cập nhật trạng thái duyệt.
+- Rà soát phương án nhiễu P0: sửa 9 câu, đưa số câu có ít nhất 2 đáp án sai chứa từ tuyệt đối từ 16 xuống 7. Xem [báo cáo audit](docs/V11_5_P0_DISTRACTOR_AUDIT.md). Đây chỉ là heuristic, không chứng minh độ khó hay sự thật của câu hỏi.
+- Xem [quy trình review & browser QA](docs/V11_5_REVIEW_AND_BROWSER_GATE.md). Review độc lập toàn bộ 86 Essentials, kiểm quyền ảnh SKU, xác minh chứng cứ Product/SOP và pilot với nhân viên thật vẫn chưa hoàn tất.

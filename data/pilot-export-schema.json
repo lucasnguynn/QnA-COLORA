@@ -1,0 +1,29 @@
+{
+  "schema": "colora-pilot-v1",
+  "version": "11.5",
+  "collection": "MANUAL_LOCAL_EXPORT_ONLY",
+  "fields": {
+    "schema": "colora-pilot-v1",
+    "assessment_version": "11.5",
+    "bank_id": "fnv1a32-...",
+    "role": "BASIC|CARE|MKT",
+    "assessment_type": "SELF_STUDY_PILOT_NOT_CERTIFICATION",
+    "items": "Exactly 48 {id,selected:number[],correct:boolean}"
+  },
+  "prohibited_fields": [
+    "name",
+    "email",
+    "phone",
+    "address",
+    "birth_date",
+    "employee_id",
+    "started",
+    "finished",
+    "ip",
+    "user_agent",
+    "free_text",
+    "customer_records"
+  ],
+  "security": "Exports are not anonymous by guarantee; role plus being one of a few participants may still enable re-identification. Employees must explicitly choose export; nothing is uploaded by the site. The JSON is editable; do not use for payroll, performance or certification decisions.",
+  "quality_notes": "Pilot data is used to review user experience and draft item diagnostics, not to assert reliability, validity or employee competency."
+}

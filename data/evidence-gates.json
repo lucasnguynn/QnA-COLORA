@@ -1,0 +1,60 @@
+{
+  "version": "11.0",
+  "notice": "This is a public metadata checklist, not evidence approval. Confidential certificates, supplier files and customer information must never be stored here.",
+  "checks": [
+    {
+      "question_ids": [
+        "FN-037",
+        "FN-094"
+      ],
+      "required": "Founder-approved price-range decision with effective date",
+      "status": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "question_ids": [
+        "FN-062",
+        "FN-063"
+      ],
+      "required": "Material/finish evidence and SKU claim scope",
+      "status": "PENDING_TECHNICAL_REVIEW"
+    },
+    {
+      "question_ids": [
+        "FN-064"
+      ],
+      "required": "RJC certificate holder, document, scope and traceability",
+      "status": "PENDING_TECHNICAL_REVIEW"
+    },
+    {
+      "question_ids": [
+        "FN-065"
+      ],
+      "required": "Nickel-free production scope and supplier evidence",
+      "status": "PENDING_TECHNICAL_REVIEW"
+    },
+    {
+      "question_ids": [
+        "FN-067",
+        "GM-048",
+        "GM-053"
+      ],
+      "required": "Stone origin/treatment reports and founder-approved QC SOP",
+      "status": "PENDING_GEM_REVIEW"
+    },
+    {
+      "question_ids": [
+        "ON-055",
+        "PC-024"
+      ],
+      "required": "Live returns/warranty policy, applicability and revision",
+      "status": "PENDING_POLICY_REVIEW"
+    },
+    {
+      "question_ids": [
+        "ON-089"
+      ],
+      "required": "Marketing permission and unsubscribe SOP",
+      "status": "PENDING_PRIVACY_REVIEW"
+    }
+  ]
+}

@@ -137,21 +137,22 @@
     "pillar": "SẢN PHẨM",
     "topic": "Step Cut",
     "chapter": "15",
-    "q": "Ưu và nhược điểm thường gặp của step cut như emerald cut là gì?",
+    "q": "Với emerald-style step cut, điều nào mô tả trade-off phù hợp khi so với brilliant cut trên đá màu?",
     "a": [
-      "Luôn nhấp nháy mạnh hơn brilliant cut.",
-      "Nổi màu/độ trong, dễ lộ bao thể.",
-      "Che mọi bao thể tốt nhất, bất kể loài đá.",
-      "Chỉ áp dụng được cho emerald tự nhiên."
+      "Các facet rộng tạo nhịp ánh sáng lớn, cần xem clarity, độ đối xứng, cửa sổ và khả năng đọng tối theo từng viên.",
+      "Step cut thường che mọi bao thể hơn brilliant, nên đủ nhìn face-up là có thể xác nhận chất lượng.",
+      "Step cut luôn tăng độ sáng và độ bão hòa màu hơn brilliant khi hai viên có cùng kích thước.",
+      "Brilliant cut luôn có giá trị cao hơn step cut vì số mặt giác nhiều hơn và ít lộ bao thể."
     ],
     "key": [
-      1
+      0
     ],
-    "why": "Step cut nhấn vào mặt lớn song song, ít scintillation hơn brilliant.",
-    "apply": "Đánh giá clarity/polish dưới các góc khác nhau.",
+    "why": "Step cut thường tạo broad flashes và dễ bộc lộ các đặc điểm bên trong qua những mặt lớn; kết quả cụ thể thay đổi theo tỷ lệ, loài đá và ánh sáng. Không thể quy ưu/nhược cho mọi viên.",
+    "apply": "So ảnh face-up và ảnh xoay, độ sâu, windowing, extinction, polish; không đồng nhất số mặt giác với chất lượng.",
     "source": "GIA",
     "status": "KIẾN THỨC NGÀNH ĐÃ KIỂM CHỨNG",
-    "stage": 2
+    "stage": 2,
+    "revision_note": "V11.2: scenario and distractor audit"
   },
   {
     "id": "GM-033",
@@ -269,21 +270,22 @@
     "pillar": "SẢN PHẨM",
     "topic": "Cut Quality",
     "chapter": "15",
-    "q": "Khi kiểm tra chất lượng cut đá màu, ưu tiên đánh giá gì?",
+    "q": "Khi nhận hai viên đá màu cùng loại, đủ kích thước và cùng ngân sách, bộ quan sát cut nào giúp so sánh có căn cứ nhất?",
     "a": [
-      "Chỉ số facets càng nhiều càng tốt.",
-      "Kích thước carat càng cao càng tốt.",
-      "Tên cut càng hiếm càng chắc chắn chất lượng cao.",
-      "Màu, đối xứng, tỷ lệ, polish và window."
+      "Đếm số facet và ưu tiên viên có nhiều mặt hơn, sau đó xem ảnh màu tổng thể.",
+      "Đối chiếu face-up, đối xứng, tỷ lệ, polish, windowing, extinction và độ bền của các góc nhọn.",
+      "Ưu tiên viên nặng carat hơn nếu cỡ nhìn gần như nhau vì carat đại diện trực tiếp cho cut.",
+      "Chọn viên có hue đều nhất trong một nguồn sáng; tỷ lệ và chi tiết giác cắt sẽ xử lý sau."
     ],
     "key": [
-      3
+      1
     ],
-    "why": "Vẻ đẹp đá màu phụ thuộc cắt và màu cùng lúc.",
-    "apply": "Xoay viên đá, xem face-up và nghiêng dưới ánh sáng chuẩn.",
+    "why": "Chất lượng chế tác đá màu liên quan hình học, đối xứng, hoàn thiện, ánh sáng truyền qua hoặc bị tối và điểm dễ tổn thương; carat hay số facet không thay được quan sát nhiều góc.",
+    "apply": "Lập checklist hình ảnh trung tính, quay và nghiêng; nếu cần xem trực tiếp hoặc đo thêm trước khi duyệt.",
     "source": "GIA",
     "status": "KIẾN THỨC NGÀNH ĐÃ KIỂM CHỨNG",
-    "stage": 2
+    "stage": 2,
+    "revision_note": "V11.2: scenario and distractor audit"
   },
   {
     "id": "GM-039",

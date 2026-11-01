@@ -55,3 +55,54 @@
 .teachback-work textarea:focus-visible{outline:3px solid #b08a5b;outline-offset:2px}
 .teachback-work .actions{flex-wrap:wrap;align-items:center}
 @media(max-width:680px){.track-panel>summary{padding:15px}.track-panel>.grid2{padding:12px}.track-panel>summary strong{font-size:21px}}
+
+/* V11: six-item mobile navigation and textarea keyboard focus. */
+@media(max-width:800px){.mobile-nav{gap:0;justify-content:space-between}.mobile-nav button{flex:1 1 0;min-width:0;font-size:9px;padding:5px 2px;overflow-wrap:anywhere}}
+@media(max-width:360px){.mobile-nav button{font-size:8px}.mobile-nav b{font-size:15px}}
+textarea:focus-visible{outline:3px solid #b08a5b;outline-offset:3px}
+
+/* V11.2 - scenario visuals and accessible gemstone training lab */
+.training-visual{margin:16px 0;border:1px solid #e1d4c2;border-radius:8px;overflow:hidden;background:#f7f2e9}
+.training-visual-head{font:700 9px/1.5 "Open Sans",sans-serif;letter-spacing:.13em;color:#405c7a;padding:10px 14px 2px}
+.visual-lab-svg{width:100%;height:auto;display:block;max-height:295px}
+.image-balance-pair{display:grid;grid-template-columns:1fr 1fr;gap:13px;padding:12px}
+.image-balance-pair figure{margin:0;min-width:0}
+.image-balance-pair img{display:block;width:100%;height:165px;object-fit:cover;border-radius:4px}
+.image-balance-pair .image-balance-shifted{filter:hue-rotate(24deg) saturate(1.8) contrast(1.08)}
+.image-balance-pair figcaption{font:400 10px/1.5 "Open Sans",sans-serif;color:#52677d;padding-top:8px}
+.visual-labs-section{margin-top:38px;border-top:1px solid #d9cbb7;padding-top:18px}
+.lab-card{margin:18px 0;padding:clamp(18px,3vw,30px)}
+.lab-card .h3{margin:10px 0 12px}
+.lab-card p{max-width:750px}
+.lab-question{font-weight:700;color:#17365b!important;font-size:13px!important}
+.lab-options{display:grid;gap:9px;margin-top:12px}
+.lab-choice{width:100%;text-align:left;background:#fffefa;border:1px solid #d0c3b0;padding:12px 15px;color:#24425f;border-radius:4px;font:400 12px/1.7 "Open Sans",sans-serif}
+.lab-choice:hover{background:#f8f0e3;border-color:#17365b}
+.lab-choice.selected{background:#eaf1f3;border-color:#17365b;box-shadow:inset 3px 0 0 #17365b}
+.lab-choice:focus-visible{outline:3px solid #b08a5b;outline-offset:3px}
+.lab-feedback:empty{display:none}
+@media(max-width:480px){.image-balance-pair{gap:6px}.image-balance-pair img{height:110px}.image-balance-pair figcaption{font-size:9px}.training-visual-head{letter-spacing:.02em}.lab-card{padding:16px}}
+
+/* V11.3: reviewer rubric pilot. All evaluations are local and unauthenticated. */
+.review-sheet{margin-top:18px;padding:16px;border:1px solid #d4c4ac;background:#fdfbf7;border-radius:9px}
+.review-sheet summary{color:var(--navy);font-weight:700;cursor:pointer;padding:4px 0;line-height:1.6}
+.review-sheet summary:focus-visible,.review-sheet button:focus-visible{outline:3px solid #aa7d47;outline-offset:3px}
+.review-criterion{border-top:1px solid #e4dacb;padding:13px 0}
+.review-criterion label{font-size:12px;display:block;margin-bottom:7px;line-height:1.55;color:#1b3e60}
+.review-criterion select{display:block;max-width:100%;width:min(100%,560px);min-height:42px;background-color:#fff}
+.review-criterion p{margin:5px 0;line-height:1.65}
+.review-critical{border:1px solid #cfbdad;border-radius:5px;padding:12px;margin:8px 0 16px}
+.review-critical legend{font-weight:700;color:var(--navy);font-size:12px;padding:0 5px}
+.review-critical label{font-size:12px;display:block;line-height:1.7;padding:5px 0}
+.review-critical input{accent-color:#17365b;margin-right:7px;vertical-align:middle}
+.review-sheet textarea{display:block;width:100%;min-height:96px;line-height:1.65}
+.review-status{font:600 11px/1.6 "Open Sans",sans-serif;color:#284760;margin:11px 0 0}
+@media(max-width:560px){.review-sheet{padding:12px}.review-sheet .actions{display:flex;flex-wrap:wrap}.review-sheet button{max-width:100%}}
+
+/* V11.5 - all seven navigation destinations reachable on narrow phones */
+@media (max-width:800px){
+ .mobile-nav{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));justify-content:normal;gap:0;padding-inline:4px}
+ .mobile-nav button{min-width:0;width:100%;max-width:100%;font-size:9px;line-height:1.25;padding:5px 1px;overflow-wrap:anywhere}
+ .mobile-nav b{font-size:17px;line-height:1.2;margin-bottom:4px}
+ .content{overflow-wrap:break-word}
+}

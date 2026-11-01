@@ -161,10 +161,10 @@
     "chapter": "17",
     "q": "Khách thấy bề mặt nhẫn xỉn nhẹ sau thời gian sử dụng. Kết luận nào phù hợp nhất?",
     "a": [
-      "Chắc chắn hàng giả vì GENIA276 Ag 930‰ không thể đổi độ sáng.",
-      "Chắc chắn lỗi bảo hành và được thay mới tức thì.",
-      "Cần kiểm tra tình trạng; môi trường và lớp phủ có thể ảnh hưởng.",
-      "Chỉ cần dùng bột mài làm sáng, không cần xem lớp phủ."
+      "Nếu nhẫn xỉn nhẹ, nên coi là bạc oxy hóa rồi hướng dẫn dùng dung dịch làm sạch bạc tại nhà.",
+      "Có thể mặc định là lỗi lớp phủ trong phạm vi bảo hành, tiếp nhận đổi mới trước khi đánh giá.",
+      "Cần kiểm tra đúng SKU, lớp phủ và cách sử dụng trước khi kết luận nguyên nhân hoặc chỉ dẫn sâu.",
+      "Đề xuất khách đánh bóng bề mặt tại nhà trước, sau đó gửi xưởng khi lớp xỉn vẫn chưa biến mất."
     ],
     "key": [
       2
@@ -173,7 +173,8 @@
     "apply": "Xin mã SKU và ảnh trước khi hướng dẫn xử lý sâu.",
     "source": "GIA_CARE",
     "status": "HƯỚNG DẪN CHĂM SÓC - THEO SKU",
-    "stage": 2
+    "stage": 2,
+    "revision_note": "V11.5 distractor quality draft; human review pending"
   },
   {
     "id": "PC-009",
@@ -447,10 +448,10 @@
     "chapter": "17",
     "q": "Khách để nhẫn amethyst dưới ánh nắng gắt nhiều ngày. Điều gì cần lưu ý?",
     "a": [
-      "Amethyst sẽ tăng độ cứng do UV.",
-      "Màu có thể thay đổi bởi nắng, nhiệt kéo dài.",
-      "Amethyst không thể đổi màu trong bất cứ điều kiện nào.",
-      "Mọi viên amethyst sẽ chuyển thành sapphire."
+      "Ánh nắng giúp mặt đá bớt đọng dầu, chỉ cần giảm giờ phơi để bảo vệ bề mặt hoàn thiện.",
+      "Màu amethyst có thể thay đổi khi tiếp xúc với nắng hoặc nhiệt mạnh kéo dài; nên tránh phơi lâu.",
+      "Sau thời gian phơi nắng, bảo quản trong hộp kín tối sẽ giúp màu đá tự phục hồi về như ban đầu.",
+      "Tác động từ nắng chỉ liên quan lớp kim loại và mạ, sắc độ viên amethyst không cần kiểm tra."
     ],
     "key": [
       1
@@ -459,7 +460,8 @@
     "apply": "Khuyên bảo quản tránh nắng gắt và nguồn nhiệt.",
     "source": "GIA_CARE",
     "status": "HƯỚNG DẪN CHĂM SÓC - THEO SKU",
-    "stage": 2
+    "stage": 2,
+    "revision_note": "V11.5 distractor quality draft; human review pending"
   },
   {
     "id": "PC-022",
@@ -513,10 +515,10 @@
     "chapter": "17",
     "q": "Theo chính sách COLORA đang công bố, đâu là cách phân biệt vệ sinh cơ bản với phục hồi chuyên sâu?",
     "a": [
-      "Vệ sinh và mạ lại đều luôn miễn phí với mọi tình trạng.",
-      "Mọi vết trầy đều được đổi sản phẩm ngay.",
-      "Vệ sinh cơ bản miễn phí; mạ lại phải kiểm tra.",
-      "Đánh bóng sâu luôn được thực hiện tại nhà khách."
+      "Vệ sinh và mạ lại đều là quyền lợi miễn phí với sản phẩm có thể xác minh từ đơn hàng COLORA.",
+      "Vệ sinh cơ bản miễn phí chỉ trong 24 tháng đầu, sau đó mặc định chuyển sang dịch vụ có tính phí.",
+      "Vệ sinh cơ bản miễn phí; phục hồi hoặc mạ lại cần kiểm tra tình trạng và báo phạm vi, chi phí trước.",
+      "Mạ lại được hỗ trợ miễn phí nếu món trang sức còn trong kỳ bảo hành, không cần xét nguyên nhân."
     ],
     "key": [
       2
@@ -525,7 +527,8 @@
     "apply": "Đối chiếu chính sách mới trước khi hứa quyền lợi.",
     "source": "GIA_CARE",
     "status": "CHÍNH SÁCH WEB - KIỂM TRA HIỆU LỰC",
-    "stage": 2
+    "stage": 2,
+    "revision_note": "V11.5 distractor quality draft; human review pending"
   },
   {
     "id": "PC-025",

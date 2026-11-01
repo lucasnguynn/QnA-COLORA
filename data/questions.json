@@ -2938,10 +2938,10 @@
     "topic": "Giá trị cảm nhận",
     "q": "Vì sao hai người cùng có ngân sách 4 triệu có thể đánh giá khác nhau một sản phẩm 3 triệu?",
     "a": [
-      "Vì mọi khách hàng chỉ so trọng lượng bạc khi xem trang sức đá màu.",
-      "Vì cùng ngân sách nhưng khác nhu cầu, so sánh và mức độ tin vào thương hiệu",
-      "Vì một người chắc chắn mua để làm quà, còn người kia để đầu tư.",
-      "Vì giá trị trang sức luôn được cảm nhận như nhau trong cùng độ tuổi."
+      "Vì khác biệt chính trong đánh giá của khách thường chỉ do trọng lượng bạc mà họ quan tâm.",
+      "Vì cùng ngân sách nhưng khác nhu cầu, thông tin so sánh và mức độ tin tưởng vào thương hiệu.",
+      "Vì người mua làm quà thường thấy sản phẩm đáng tiền hơn người mua để sử dụng hằng ngày.",
+      "Vì mỗi người thích màu đá khác nhau, còn mức độ tin cậy và hoàn cảnh mua không tác động nhiều."
     ],
     "key": [
       1
@@ -2951,7 +2951,8 @@
     "source": "CUSTOMER",
     "status": "GIẢ THUYẾT MỤC TIÊU",
     "stage": 2,
-    "chapter": "09"
+    "chapter": "09",
+    "revision_note": "V11.5 distractor quality draft; human review pending"
   },
   {
     "id": "ON-018",
@@ -3247,10 +3248,10 @@
     "topic": "Hình từ CAD",
     "q": "Marketing muốn dùng render CAD làm ảnh chứng minh kết cấu sản phẩm hoàn thiện. Designer nên phản hồi thế nào?",
     "a": [
-      "Dùng render nhưng bỏ tên sản phẩm để tránh bị so sánh.",
-      "Đồng ý vì render CAD luôn thể hiện chính xác hoàn thiện sau đúc.",
-      "Từ chối mọi cách sử dụng render dù là giới thiệu quá trình thiết kế.",
-      "Phân biệt render minh họa với ảnh mẫu thật đã hoàn thiện"
+      "Render có thể làm ảnh chứng minh thành phẩm nếu vật liệu hiển thị trong CAD đã được chốt.",
+      "Khi file CAD đã khóa, có thể đưa render vào PDP như ảnh thật trước khi nhận mẫu vật lý.",
+      "Chỉ được dùng render trong quảng cáo cảm hứng, không thể dùng tại trang sản phẩm dù ghi concept.",
+      "Render có thể minh họa concept với nhãn rõ; bằng chứng thành phẩm cần ảnh mẫu thật đã kiểm tra."
     ],
     "key": [
       3
@@ -3260,7 +3261,8 @@
     "source": "DNA",
     "status": "NỘI BỘ DESIGN",
     "stage": 3,
-    "chapter": "05"
+    "chapter": "05",
+    "revision_note": "V11.5 distractor quality draft; human review pending"
   },
   {
     "id": "ON-032",
@@ -4224,10 +4226,10 @@
     "topic": "Bình luận social",
     "q": "30 bình luận trên TikTok hỏi độ bền đá chứng minh điều gì?",
     "a": [
-      "Bình luận là tín hiệu đáng nghiên cứu, không đại diện thị trường",
-      "Tất cả câu hỏi đều do đối thủ tạo ra để làm xấu thương hiệu.",
-      "Khách chắc chắn không hiểu gì về trang sức demi-fine.",
-      "Độ bền là động cơ mua số một của mọi khách Việt Nam."
+      "Đây là tín hiệu cần phân loại và nghiên cứu thêm, chưa thể suy ra tỷ lệ lo ngại trong thị trường.",
+      "Có thể kết luận mối quan tâm phổ biến nếu các câu hỏi xuất hiện rải rác trong nhiều video TikTok.",
+      "Có thể dùng ngay thành claim về đa số khách hàng vì bình luận đã thể hiện một vấn đề thực tế.",
+      "Đếm bình luận theo ý định mua sẽ đủ để ước tính tỷ lệ người tiêu dùng quan tâm độ bền của đá."
     ],
     "key": [
       0
@@ -4237,7 +4239,8 @@
     "source": "CUSTOMER",
     "status": "GIẢ THUYẾT MỤC TIÊU",
     "stage": 3,
-    "chapter": "09"
+    "chapter": "09",
+    "revision_note": "V11.5 distractor quality draft; human review pending"
   },
   {
     "id": "ON-076",
@@ -4468,10 +4471,10 @@
     "topic": "Tuyên bố vật liệu",
     "q": "Content muốn ghi “100% thân thiện môi trường” dựa trên việc bạc có nguồn tái chế. Cần phản biện gì?",
     "a": [
-      "Bạc tái chế không chứng minh mọi tác động đều tích cực",
-      "Có nguồn bạc tái chế là đủ để khẳng định mọi tác động môi trường của sản phẩm.",
-      "Mọi claim vật liệu đều không được đưa vào marketing dù có chứng từ.",
-      "Chỉ cần đổi chữ “100%” thành “rất” mà không cần nguồn đối chiếu."
+      "Bạc tái chế là thông tin về nguyên liệu, chưa chứng minh toàn bộ sản phẩm có tác động môi trường tích cực.",
+      "Có thể giữ lời hứa cho toàn sản phẩm nếu bổ sung ghi chú rằng phần bạc sử dụng là bạc tái chế.",
+      "Chứng từ nguyên liệu bạc có thể thay thế bằng chứng về bao bì, gia công và vận chuyển sản phẩm.",
+      "Chỉ cần bỏ con số 100% để biến khẳng định tác động môi trường thành một nhận định không cần kiểm chứng."
     ],
     "key": [
       0
@@ -4481,7 +4484,8 @@
     "source": "MATERIAL",
     "status": "CHỜ HỒ SƠ SKU",
     "stage": 3,
-    "chapter": "04"
+    "chapter": "04",
+    "revision_note": "V11.5 distractor quality draft; human review pending"
   },
   {
     "id": "ON-087",
@@ -4536,10 +4540,10 @@
     "topic": "Kênh nhận tin",
     "q": "Marketing muốn gửi email quảng cáo cho mọi khách đã đặt hàng. Điều gì cần kiểm tra?",
     "a": [
-      "Kiểm tra quyền gửi marketing và cơ chế hủy nhận đã công bố",
-      "Chỉ cần tiêu đề email có chữ “COLORA” là đủ thông báo mục đích.",
-      "Chỉ cần khách đã thanh toán thì mặc nhiên cho phép gửi mọi loại quảng cáo.",
-      "Mọi email giao nhận cũng phải dừng nếu khách không thích quảng cáo."
+      "Kiểm quyền sử dụng dữ liệu để quảng cáo, cách ghi nhận đồng ý và cơ chế từ chối nhận marketing.",
+      "Có thể gửi email giới thiệu sản phẩm nếu trong email đầu tiên có đường dẫn để khách hủy đăng ký.",
+      "Cho phép gửi chương trình khuyến mại dựa trên dữ liệu đơn hàng, trừ khi khách đã từng phản đối.",
+      "Chỉ cần khách chấp nhận điều khoản mua hàng để xem đó là quyền gửi tất cả chiến dịch truyền thông."
     ],
     "key": [
       0
@@ -4549,6 +4553,7 @@
     "source": "PRIVACY",
     "status": "WEB ĐANG CÔNG BỐ",
     "stage": 3,
-    "chapter": "09"
+    "chapter": "09",
+    "revision_note": "V11.5 distractor quality draft; human review pending"
   }
 ]

@@ -1,0 +1,225 @@
+{
+  "version": "11.4",
+  "state": "DESK_RESEARCH_NOT_HUMAN_APPROVAL",
+  "review_date": "2026-11-01",
+  "note": "These are research evidence findings only. Public source text can support a general principle without approving any item or COLORA SKU. No internal commercial certificate was accessed or published.",
+  "sources": {
+    "returns": {
+      "url": "https://colora.vn/pages/chinh-sach-doi-tra",
+      "authority": "COLORA_PUBLIC_POLICY",
+      "reviewed_on": "2026-11-01",
+      "scope": "Public web policy observed, owner approval/current live applicability still must be checked"
+    },
+    "warranty": {
+      "url": "https://colora.vn/pages/chinh-sach-bao-hanh",
+      "authority": "COLORA_PUBLIC_POLICY",
+      "reviewed_on": "2026-11-01",
+      "scope": "Public web policy observed, service scope and exceptions remain conditional"
+    },
+    "privacy": {
+      "url": "https://colora.vn/pages/chinh-sach-bao-mat",
+      "authority": "COLORA_PUBLIC_POLICY",
+      "reviewed_on": "2026-11-01",
+      "scope": "Public marketing permission wording, not independent legal compliance advice"
+    },
+    "shipping": {
+      "url": "https://colora.vn/pages/chinh-sach-giao-hang",
+      "authority": "COLORA_PUBLIC_POLICY",
+      "reviewed_on": "2026-11-01",
+      "scope": "Published preparation and delivery estimates, not per-order promise"
+    },
+    "gia": {
+      "url": "https://www.gia.edu/gem-education/colored-stone",
+      "authority": "GIA_OFFICIAL",
+      "reviewed_on": "2026-11-01",
+      "scope": "GIA report services and detectable treatments, not evidence for a COLORA stone"
+    },
+    "giagrade": {
+      "url": "https://www.gia.edu/FAQ/gia-faq-grade-sapphires",
+      "authority": "GIA_OFFICIAL",
+      "reviewed_on": "2026-11-01",
+      "scope": "GIA does not assign universal grading to colored stones"
+    },
+    "rjc": {
+      "url": "https://www.responsiblejewellery.com/standards/chain-of-custody/",
+      "authority": "RJC_OFFICIAL",
+      "reviewed_on": "2026-11-01",
+      "scope": "Scope of precious-metal supply-chain standard, not COLORA certification"
+    },
+    "rjcgloss": {
+      "url": "https://www.responsiblejewellery.com/glossary/",
+      "authority": "RJC_OFFICIAL",
+      "reviewed_on": "2026-11-01",
+      "scope": "COC transfer document does not imply product conformity certification"
+    }
+  },
+  "groups": [
+    {
+      "ids": [
+        "FN-037",
+        "FN-094"
+      ],
+      "status": "INTERNAL_OWNER_SOURCE_REQUIRED",
+      "support": [],
+      "finding": "2,3–8 triệu VND is written as planning range in existing question bank; not corroborated by dated founder-signed price decision or live SKU price list. Avoid equating a proposal with current prices.",
+      "needed": [
+        "Founder decision ID with approval/effective date",
+        "SKU price export snapshot and scope"
+      ],
+      "owner": "FOUNDER_BRAND",
+      "impact": "BLOCK_CUSTOMER_PRICE_CLAIM"
+    },
+    {
+      "ids": [
+        "FN-062",
+        "FN-063"
+      ],
+      "status": "INTERNAL_TECHNICAL_SOURCE_REQUIRED",
+      "support": [],
+      "finding": "Existing bank asserts GENIA276 Ag 930‰ substrate and proprietary finishing; technical supplier documents, finished-SKU coverage and meaning/ownership of proprietary finish not independently verified.",
+      "needed": [
+        "Supplier assay/alloy specification and lot linkage",
+        "Finish layers and approved technical claim scope per SKU",
+        "Owner signoff and effective claim version"
+      ],
+      "owner": "PRODUCT_TECHNICAL",
+      "impact": "BLOCK_PRODUCT_CLAIM"
+    },
+    {
+      "ids": [
+        "FN-064"
+      ],
+      "status": "GENERAL_STANDARD_ONLY_CONFIRMED",
+      "support": [
+        "rjc",
+        "rjcgloss"
+      ],
+      "finding": "RJC COC addresses traceability of precious metals; certification/transfer documents do not automatically mean all finished COLORA products are product-certified.",
+      "needed": [
+        "Supplier's valid CoC certificate and scope",
+        "Transfer documentation for specific material lots",
+        "Matching evidence to each applicable SKU"
+      ],
+      "owner": "PRODUCT_TECHNICAL",
+      "impact": "BLOCK_RJC_PRODUCT_CERTIFICATION_CLAIM"
+    },
+    {
+      "ids": [
+        "FN-065"
+      ],
+      "status": "INTERNAL_TECHNICAL_SOURCE_REQUIRED",
+      "support": [],
+      "finding": "Nickel-free process/supply declarations and a universal hypoallergenic claim are different; the first needs scope proof, the second must not be promised.",
+      "needed": [
+        "Nickel-free bill of materials, finish scope and production attestations",
+        "Applicable product compliance/test documentation"
+      ],
+      "owner": "PRODUCT_TECHNICAL",
+      "impact": "BLOCK_ALLERGY_FREE_CLAIM"
+    },
+    {
+      "ids": [
+        "FN-067",
+        "GM-048",
+        "ON-047"
+      ],
+      "status": "GENERAL_GEMOLOGY_PRINCIPLE_CONFIRMED",
+      "support": [
+        "gia"
+      ],
+      "finding": "Natural, laboratory-grown, detectable treatment and geographic origin are separate identification/report fields. No conclusion about treatment for a COLORA stone follows from a natural designation alone.",
+      "needed": [
+        "Stone-level identification and treatment disclosure evidence",
+        "Exact report type/number only in access-controlled source",
+        "SKU/stone provenance linkage"
+      ],
+      "owner": "PRODUCT_TECHNICAL",
+      "impact": "BLOCK_UNTREATED_OR_ORIGIN_CLAIM"
+    },
+    {
+      "ids": [
+        "GM-053",
+        "GM-040",
+        "GM-042",
+        "GM-044",
+        "GM-045"
+      ],
+      "status": "FRAMEWORK_ONLY_SOP_NOT_APPROVED",
+      "support": [],
+      "finding": "QC checklist concepts (cut, depth, chip, color, fit) may structure training but there is no authenticated COLORA-specific acceptance tolerance or signed technical SOP in public repo.",
+      "needed": [
+        "Versioned Gem QC SOP with role approvals",
+        "SKU-specific L×W×D, girdle and setting tolerances",
+        "Approved defect gates and escalation conditions"
+      ],
+      "owner": "PRODUCT_TECHNICAL",
+      "impact": "BLOCK_QC_ACCEPT_REJECT_CERTIFICATION"
+    },
+    {
+      "ids": [
+        "ON-055"
+      ],
+      "status": "PUBLIC_POLICY_TEXT_CHECKED",
+      "support": [
+        "returns"
+      ],
+      "finding": "48h is notification for specified receipt problems; 14d return window follows eligible request acceptance. No blanket change-of-mind return entitlement is stated.",
+      "needed": [
+        "Policy owner confirms published page version is current",
+        "Clarify legal consumer rights and applicable exceptions"
+      ],
+      "owner": "POLICY_AND_PRIVACY",
+      "impact": "POLICY_OWNER_SIGNOFF_REQUIRED"
+    },
+    {
+      "ids": [
+        "PC-024",
+        "ON-058"
+      ],
+      "status": "PUBLIC_POLICY_TEXT_CHECKED",
+      "support": [
+        "warranty"
+      ],
+      "finding": "Basic cleaning is described as free; specialized polishing, replating, repairs or stone replacement are subject to evaluation and quote.",
+      "needed": [
+        "Current care services availability and scope",
+        "Owner confirms costs and exception handling"
+      ],
+      "owner": "POLICY_AND_PRIVACY",
+      "impact": "POLICY_OWNER_SIGNOFF_REQUIRED"
+    },
+    {
+      "ids": [
+        "ON-089"
+      ],
+      "status": "PUBLIC_POLICY_TEXT_CHECKED",
+      "support": [
+        "privacy"
+      ],
+      "finding": "Ordering or account creation does not by itself grant marketing consent; customer can opt out under published policy.",
+      "needed": [
+        "Marketing/privacy owner confirms actual platform consent capture and unsubscribe",
+        "Applicable laws and retention review"
+      ],
+      "owner": "POLICY_AND_PRIVACY",
+      "impact": "PRIVACY_OWNER_SIGNOFF_REQUIRED"
+    },
+    {
+      "ids": [
+        "PC-022",
+        "WS-05"
+      ],
+      "status": "SAFETY_PROCEDURE_PENDING_TECH_REVIEW",
+      "support": [
+        "warranty"
+      ],
+      "finding": "A visibly loose mounted gem merits stop-wearing and contact for inspection; training advice is prudent but technical escalation SOP and channel must be signed off.",
+      "needed": [
+        "Approved Client Care triage and safe-storage script",
+        "Authorized workshop inspection route and escalation"
+      ],
+      "owner": "PRODUCT_TECHNICAL",
+      "impact": "SAFETY_OWNER_SIGNOFF_REQUIRED"
+    }
+  ]
+}

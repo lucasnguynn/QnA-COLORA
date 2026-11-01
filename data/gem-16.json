@@ -49,21 +49,22 @@
     "pillar": "SẢN PHẨM",
     "topic": "Calibrated",
     "chapter": "16",
-    "q": "Hai viên pear đều 7×5 mm nhưng khác chiều sâu; bước kiểm tra kỹ thuật đúng là gì?",
+    "q": "Hai viên pear cùng dài 7 mm và rộng 5 mm; A sâu 3,0 mm, B sâu 4,2 mm (số liệu mô phỏng). Ổ đá CAD đang thiết kế cho độ sâu chưa được xác nhận. Bạn cần kiểm gì trước khi chọn viên?",
     "a": [
-      "Đo L×W×D, girdle và dung sai so với CAD mẫu.",
-      "Chọn viên nặng carat hơn mà không cần đo sâu.",
-      "Chỉ xem ảnh chụp thẳng từ trên xuống.",
-      "Chọn viên màu đậm hơn và bỏ qua tỷ lệ."
+      "Tạm duyệt A vì nông hơn chắc chắn sẽ đạt low-profile dù chưa xem tỷ lệ và ánh sáng.",
+      "Tạm duyệt B vì độ sâu lớn có thể tăng vẻ rực rỡ, rồi đổi chiều cao ổ cho phù hợp.",
+      "Đo lại chiều sâu, vai và girdle của cả hai; kiểm cut/độ vướng với mặt cắt ổ đá trước quyết định.",
+      "Chỉ cần đối chiếu diện tích mặt nhìn 7×5 mm; chiều sâu ảnh hưởng trọng lượng hơn kết cấu."
     ],
     "key": [
-      0
+      2
     ],
-    "why": "Kích thước setting phụ thuộc hình học đầy đủ chứ không chỉ L×W.",
-    "apply": "Kiểm kết quả kích thước trước khi phê duyệt nguồn.",
+    "why": "Kích thước L×W không đủ chứng minh phù hợp setting. Cả đá quá sâu lẫn quá nông đều có thể tạo vấn đề riêng, phải so chi tiết vật lý/cut với yêu cầu đeo.",
+    "apply": "Thông số trong tình huống chỉ là giả định, không phải dung sai đã duyệt của COLORA.",
     "source": "INTERNAL_QC",
     "status": "ĐỀ XUẤT QC - CHỜ PHÊ DUYỆT",
-    "stage": 3
+    "stage": 3,
+    "revision_note": "V11.2: scenario and distractor audit"
   },
   {
     "id": "GM-043",
@@ -93,21 +94,22 @@
     "pillar": "SẢN PHẨM",
     "topic": "Cut Gate",
     "chapter": "16",
-    "q": "Một viên đủ kích thước nhưng có window lớn ở tâm. Điều nào hợp lý?",
+    "q": "Một viên có cửa sổ sáng rõ giữa mặt nhìn khi đặt trên nền trung tính. Viên kia có vùng tối sâu trong cùng điều kiện. Nếu chưa có chuẩn cut theo SKU, bước nào hợp lý nhất?",
     "a": [
-      "Tự động đạt vì kích thước đã chuẩn.",
-      "Có thể sửa bằng chỉnh ảnh mà không cần kiểm đá.",
-      "Cần so tiêu chí cut của SKU trước khi chọn.",
-      "Cứ chọn vì window chứng minh đá thật."
+      "Ưu tiên viên có cửa sổ vì ánh sáng xuyên qua nghĩa là đá trong hơn, không cần thêm quan sát.",
+      "Ưu tiên viên vùng tối vì sắc độ đậm sẽ luôn làm trang sức có giá trị cao hơn.",
+      "Dựa vào kích thước và carat để chốt, vì windowing và extinction chỉ là yếu tố nhiếp ảnh.",
+      "Ghi nhận cả windowing và vùng tối, quan sát thêm dưới điều kiện chuẩn rồi chuyển kỹ thuật đánh giá theo mục tiêu SKU."
     ],
     "key": [
-      2
+      3
     ],
-    "why": "Cut quality có ảnh hưởng trực tiếp mặt nhìn và màu.",
-    "apply": "Đánh giá face-up rồi ghi lỗi rõ vào checklist.",
+    "why": "Cửa sổ có thể gây thất thoát màu/ánh sáng; vùng tối có thể liên quan extinction hoặc điều kiện chiếu sáng. Không thể suy ra luôn có viên thắng chỉ từ một ảnh.",
+    "apply": "Dùng nhiều góc và nền/ánh sáng ghi rõ để tách hiện tượng quang học khỏi lỗi chụp ảnh.",
     "source": "INTERNAL_QC",
     "status": "ĐỀ XUẤT QC - CHỜ PHÊ DUYỆT",
-    "stage": 3
+    "stage": 3,
+    "revision_note": "V11.2: scenario and distractor audit"
   },
   {
     "id": "GM-045",
@@ -115,21 +117,22 @@
     "pillar": "SẢN PHẨM",
     "topic": "Defect Gate",
     "chapter": "16",
-    "q": "Một viên pear có chip sát đầu nhọn. Cách đánh giá tốt nhất?",
+    "q": "Một viên pear có vết nghi là chip gần mũi, nhưng ảnh nhà cung cấp không đủ độ nét. Hướng xử lý nào tránh kết luận quá sớm?",
     "a": [
-      "Chấp nhận ngay nếu chip được che khi chụp ảnh.",
-      "Chuyển kiểm tra kỹ thuật vì điểm yếu.",
-      "Gọi chip là bao thể tự nhiên có giá trị cao.",
-      "Tăng chấu tùy ý mà không cần đối chiếu đá."
+      "Giữ lại yêu cầu bổ sung ảnh macro và kiểm tra bề mặt, vị trí vết, hình học mũi cùng cấu tạo chấu dự kiến.",
+      "Cho gia công trước để kỹ thuật kiểm tra trong lúc gắn đá, tránh trì hoãn đơn đặt hàng.",
+      "Loại luôn cả lô vì một dấu bất thường chứng minh chất lượng những viên khác cũng thấp.",
+      "Yêu cầu nhà cung cấp xác nhận qua tin nhắn là trầy nhẹ rồi cho qua vì chưa thấy chip rõ."
     ],
     "key": [
-      1
+      0
     ],
-    "why": "Đầu nhọn là vùng dễ mẻ và chịu tác động prong.",
-    "apply": "Yêu cầu hình cận và đánh giá rủi ro trước khi chốt.",
+    "why": "Ảnh mờ không phân biệt được bao thể, phản xạ, dấu xước hay mẻ bề mặt. Mũi pear là khu vực cần kiểm kỹ; quyết định cần chứng cứ quan sát và kỹ thuật.",
+    "apply": "Dùng ảnh macro, xem cạnh viên, yêu cầu ghi nhận QC và xác nhận lại khi nhận mẫu; không tự chốt mức chấp nhận.",
     "source": "INTERNAL_QC",
     "status": "ĐỀ XUẤT QC - CHỜ PHÊ DUYỆT",
-    "stage": 3
+    "stage": 3,
+    "revision_note": "V11.2: scenario and distractor audit"
   },
   {
     "id": "GM-046",
@@ -249,10 +252,10 @@
     "chapter": "16",
     "q": "Tài liệu QC của COLORA từng đề xuất dung sai kích thước và mức bao thể. Nhân viên nên dùng chúng ra sao?",
     "a": [
-      "Áp ngay ngưỡng ±0,1 mm cho mọi loài và size.",
-      "Công bố trên website như cam kết sẵn có.",
-      "Bỏ mọi bước QC vì chưa có tiêu chuẩn chính thức.",
-      "Chỉ là đề xuất cho tới khi được duyệt."
+      "Thử áp dung sai ±0,1 mm cho mọi viên trước, chỉ chuyển kỹ thuật khi mẫu không khớp kích thước.",
+      "Có thể triển khai checklist đề xuất như chuẩn nội bộ ngay, miễn chưa công bố cho khách hàng.",
+      "Chỉ đánh giá cảm quan và bỏ kiểm tra hình học cho đến khi SOP đầy đủ được ban hành.",
+      "Chỉ là khung đề xuất; dung sai cụ thể cần người có thẩm quyền duyệt theo loài đá và SKU."
     ],
     "key": [
       3
@@ -261,7 +264,8 @@
     "apply": "Trình chủ sở hữu SOP xác nhận trước khi giao việc.",
     "source": "INTERNAL_QC",
     "status": "ĐỀ XUẤT QC - CHỜ PHÊ DUYỆT",
-    "stage": 3
+    "stage": 3,
+    "revision_note": "V11.5 distractor quality draft; human review pending"
   },
   {
     "id": "GM-052",

@@ -9,6 +9,16 @@ const care=read('care-17.json');
 const applied=read('applied-cases.json');
 const lessons=read('lessons.json');
 const config=read('curriculum.json');
+const matrix=read('competency-matrix.json');
+const workSamples=read('performance-tasks.json');
+const evidence=read('evidence-gates.json');
+const visualLabs=read('visual-labs.json');
+const reviewerRubrics=read('reviewer-rubrics.json');
+const itemQueue=read('item-review-queue.json');
+const assetApproval=read('asset-approval-queue.json');
+const p0Dossiers=read('p0-evidence-dossiers.json');
+const skuSchema=read('sku-evidence-template.json');
+const pilotExportSchema=read('pilot-export-schema.json');
 const reviewManifest=read('essentials-review.json');
 const facts=read('brand-facts.json');
 const questions=[...base,...gem,...care,...applied];
@@ -43,7 +53,12 @@ const core=questions.filter(q=>q.role==='CORE'),essential=core.filter(q=>config.
 assert.equal(essential.length,86);
 assert.equal(reviewManifest.items.length,86);
 assert.equal(new Set(reviewManifest.items.map(x=>x.id)).size,86);
-assert(reviewManifest.items.every(x=>x.review_status==='PENDING_HUMAN_REVIEW'),'No question is officially signed off without reviewer');
+const legalReviewStates=new Set(['PENDING_HUMAN_REVIEW','APPROVED','REJECTED','NEEDS_REVISION']);
+assert(reviewManifest.items.every(x=>legalReviewStates.has(x.review_status)),'Unknown review status');
+for(const x of reviewManifest.items){
+ if(x.review_status==='APPROVED')assert(x.reviewed_by&&x.reviewed_at&&x.source_document_id&&x.source_version,'Approval requires reviewer and evidence '+x.id);
+ if(['REJECTED','NEEDS_REVISION'].includes(x.review_status))assert.equal(x.assessment_eligible,false,'Rejected item must not be exam eligible '+x.id);
+}
 for(const x of reviewManifest.items)assert(config.essential_ids.includes(x.id),'Review item not Essential '+x.id);
 const exclusions=config.assessment_excluded_ids||[];
 assert.deepEqual(exclusions.slice().sort(),['FN-033','FN-034','FN-035','GM-048','GM-053'].sort());
@@ -57,8 +72,10 @@ for(const id of config.critical_ids)assert(config.essential_ids.includes(id),'Cr
 assert.equal(applied.filter(q=>q.role==='APPLIED').length,12);
 for(const p of pillars)assert.equal(applied.filter(q=>q.pillar===p).length,3);
 assert.equal(config.exam.total,48);
-assert.equal(Object.values(config.exam.pillar_quota).reduce((a,b)=>a+b,0),32);
+assert.equal(Object.values(config.exam.pillar_quota).reduce((a,b)=>a+b,0),24);
+assert.deepEqual([config.exam.total,config.exam.essential,config.exam.applied,config.exam.role],[48,24,8,16]);
 assert.equal(config.exam.minimum_total,80);
+assert.equal(config.exam.competency_gate,true);
 assert.equal(config.exam.minimum_pillar,70);
 assert.equal(facts.positioning.price_range_expected_vnd.min,2300000);
 assert.equal(facts.positioning.price_range_expected_vnd.max,8000000);
@@ -105,12 +122,112 @@ assert(app.includes('optionOrders')&&app.includes('order.map((i,shown)'),'Exam o
 assert(app.includes('LEGACY_KEY')&&app.includes('legacyAttempts'),'V9 migration missing');
 assert(app.includes('countRecheck')&&app.includes('reviewedAfterWeek'),'7-day review not implemented');
 assert(app.includes('countNeedReview')&&app.includes('firstCorrect'),'Progress states missing');
-assert(app.includes("ASSESSMENT_VERSION='10.2'")&&app.includes('ASSESSMENT_BANK_ID'),'Version-aware assessments missing');
+assert(app.includes("ASSESSMENT_VERSION='11.5'")&&app.includes('ASSESSMENT_BANK_ID'),'Version-aware assessments missing');
 assert(app.includes('latestCurrentAttempt')&&app.includes('latestHistoricalAttempt'),'Historical/current results mixed');
 assert(app.includes('practiceKey(q.id)')&&app.includes("CORE_PROGRESS_PREFIX='CORE:'"),'CORE progress not shared');
 assert(app.includes('TÌNH HUỐNG CUG MÔ PHỎNG'),'Simulated customer learning cases not visible');
 assert(app.includes('criticalMiss')&&app.includes('weakPillars'),'Mastery gates missing');
 assert(app.includes('applied-cases.json'),'Applied cases not loaded');
+assert(app.includes('assessmentFingerprint')&&app.includes('workView'),'V11 learning flow is incomplete');
+assert.equal(matrix.version,'11.5');assert.equal(reviewerRubrics.version,'11.3');assert.equal(workSamples.tasks.length,9);assert.equal(visualLabs.labs.length,4);assert.equal(evidence.checks.length,7);
+for(const [role,config] of Object.entries(matrix.roles)){
+ const ids=config.competencies.flatMap(c=>c.question_ids),actual=questions.filter(q=>q.role===role).map(q=>q.id);
+ assert.equal(new Set(ids).size,ids.length,'Duplicate competency assignment '+role);
+ assert.deepEqual(ids.slice().sort(),actual.slice().sort(),'Incomplete role item map '+role);
+ assert.equal(config.competencies.reduce((n,c)=>n+c.quota,0),16,'Role quota '+role);
+ for(const c of config.competencies){assert(c.quota>0&&c.quota<=c.question_ids.length,'Insufficient question pool '+c.id);assert(Number.isInteger(c.min_correct)&&c.min_correct>0&&c.min_correct<=c.quota,'Invalid mastery gate '+c.id);}
+ for(const id of config.must_pass_ids)assert(ids.includes(id),'Role-critical question unassigned '+id);
+}
+assert.deepEqual(Object.fromEntries(Object.keys(matrix.roles).map(role=>[role,workSamples.tasks.filter(t=>t.role===role).length])),{BASIC:3,CARE:3,MKT:3});
+for(const t of workSamples.tasks){assert.equal(t.rubric.reduce((n,c)=>n+c.weight,0),100,'Rubric sum '+t.id);assert(t.critical_failures.length>=1);}
+assert.equal(reviewerRubrics.rubrics.length,9,'9 anchored work-sample rubrics');
+assert.deepEqual(reviewerRubrics.rubrics.map(x=>x.task_id).sort(),workSamples.tasks.map(x=>x.id).sort(),'Rubric/task crosswalk mismatch');
+for(const r of reviewerRubrics.rubrics){
+ const task=workSamples.tasks.find(t=>t.id===r.task_id);
+ assert(r.criteria.length===task.rubric.length&&r.role===task.role,'Rubric dimensions mismatch '+r.task_id);
+ assert.equal(r.criteria.reduce((n,c)=>n+c.weight,0),100,'Rubric weight '+r.task_id);
+ assert.deepEqual(r.criteria.map(c=>[c.name,c.weight]),task.rubric.map(c=>[c.criterion,c.weight]),'Rubric criterion crosswalk '+r.task_id);
+ assert.deepEqual(r.critical_failures,task.critical_failures,'Risk failure crosswalk '+r.task_id);
+ assert(r.criteria.every(c=>c.level_2_anchor.length>=35&&c.level_4_anchor.length>=35),'Behavior anchors insufficient '+r.task_id);
+}
+assert.equal(itemQueue.version,'11.3');
+assert.equal(itemQueue.items.length,303,'Every question needs an explicit review task');
+assert.deepEqual(itemQueue.items.map(x=>x.id).sort(),questions.map(x=>x.id).sort(),'Missing or extraneous item review IDs');
+const validQueueStates=new Set(['PENDING_HUMAN_REVIEW','APPROVED','REJECTED','NEEDS_REVISION']);
+assert(itemQueue.items.every(x=>validQueueStates.has(x.review_state)),'Unknown all-question review status');
+const essentialsById=new Map(reviewManifest.items.map(x=>[x.id,x]));
+for(const x of itemQueue.items){
+ if(x.review_state==='APPROVED')assert(x.reviewed_by&&x.reviewed_at&&x.verification_reference_id&&x.reference_version,'Queue approval requires real evidence '+x.id);
+ const e=essentialsById.get(x.id);
+ if(e)assert.equal(x.review_state,e.review_status,'Essential review status drift '+x.id);
+}
+for(const x of itemQueue.items){
+ const q=questions.find(q=>q.id===x.id);
+ assert(q.role===x.role&&q.chapter===x.chapter&&q.pillar===x.pillar,'Review metadata drift '+x.id);
+ assert(['P0','P1','P2'].includes(x.priority)&&x.proposed_owner&&x.required_evidence,'Missing audit metadata '+x.id);
+ assert(x.reviewed_by===null&&x.reviewed_at===null&&x.verification_reference_id===null,'Do not fabricate review approvals '+x.id);
+ if(x.source_reference)assert(/^https:\/\/(www\.)?(gia\.edu|responsiblejewellery\.com)\//.test(x.source_reference.url),'Untrusted public reference '+x.id);
+}
+for(const id of [...config.critical_ids,...evidence.checks.flatMap(x=>x.question_ids)])assert.equal(itemQueue.items.find(x=>x.id===id).priority,'P0','Critical item must be P0: '+id);
+assert.equal(assetApproval.available_assets.length,4);
+assert(assetApproval.available_assets.every(a=>a.rights_status==='PENDING_OWNER_CONFIRMATION'&&!a.sku_verified&&!a.commercial_use_approved),'Unapproved asset must never be described as SKU evidence');
+for(const a of assetApproval.available_assets)assert(fs.existsSync(new URL('../'+a.path,import.meta.url)),'Asset register points to missing file '+a.path);
+assert.equal(assetApproval.missing_asset_requirements.length,5);
+assert.equal(p0Dossiers.groups.length,10,'Expected ten evidence dossiers');
+assert.equal(new Set(p0Dossiers.groups.flatMap(x=>x.ids)).size,20,'P0 dossiers must not duplicate references');
+assert.equal(Object.keys(p0Dossiers.sources).length,8,'Source register completeness');
+for(const g of p0Dossiers.groups){
+ assert(g.finding.length>65&&g.needed.length>=2&&g.owner,'P0 evidence dossier missing fields');
+ assert(!/APPROVED_BY_COLORA|CERTIFIED_SKU/.test(g.status),'Desk research must not falsely approve a SKU');
+ for(const k of g.support)assert(p0Dossiers.sources[k]?.url?.startsWith('https://'),'Unlinked evidence '+k);
+}
+assert.equal(skuSchema.status,'SCHEMA_ONLY_ZERO_APPROVED_SKUS');
+assert.equal(skuSchema.sku_record_schema.final_release.status,'NOT_APPROVED');
+assert.equal(skuSchema.sku_record_schema.stone_identity.treatment,'UNKNOWN');
+assert.equal(pilotExportSchema.schema,'colora-pilot-v1');
+
+const p0QuestionItems=itemQueue.items.filter(item=>item.priority==='P0');
+assert.equal(p0QuestionItems.length,98,'Unexpected P0 review queue size');
+const absoluteOptionCue=/luôn|100%|mọi|không bao giờ|chắc chắn|tuyệt đối|không thể|hoàn toàn/i;
+const p0WithMultipleAbsoluteWrongAnswers=p0QuestionItems.filter(meta=>{
+ const q=questions.find(x=>x.id===meta.id);
+ return q.a.filter((option,i)=>!q.key.includes(i)&&absoluteOptionCue.test(option)).length>=2;
+});
+assert(p0WithMultipleAbsoluteWrongAnswers.length<=7,'P0 distractor regression: too many obvious absolute-answer cues');
+assert.deepEqual(p0WithMultipleAbsoluteWrongAnswers.map(x=>x.id).sort(),['GM-046','GM-052','ON-008','ON-048','ON-058','ON-059','PC-015'].sort(),'Check revised P0 review backlog');
+console.log('V11.5 preliminary P0 language audit: '+p0WithMultipleAbsoluteWrongAnswers.length+'/98 flagged (manual expert review still required).');
+
+const packetFile=new URL('../scripts/review-packet.mjs',import.meta.url).pathname;
+execFileSync('node',['--check',packetFile],{stdio:'pipe'});
+const reviewerPacketTest=execFileSync('node',[packetFile,'--self-test'],{encoding:'utf8'});
+assert(reviewerPacketTest.includes('passed'),'Review packet self-test failed');
+const p0Packet=execFileSync('node',[packetFile,'--priority=P0','--format=csv'],{encoding:'utf8'});
+assert(p0Packet.split('\n').filter(x=>x.includes('P0')).length>=98,'P0 packet did not include all 98 triaged items');
+const readOnlyHtml=fs.readFileSync(new URL('../index.html',import.meta.url),'utf8');
+assert(readOnlyHtml.includes('src="./app.js"'),'Browser entrypoint missing');
+
+execFileSync('node',['--check',new URL('../scripts/analyze-pilot.mjs',import.meta.url).pathname],{stdio:'pipe'});
+const pilotSelfTest=execFileSync('node',[new URL('../scripts/analyze-pilot.mjs',import.meta.url).pathname,'--self-test'],{encoding:'utf8'});
+assert(pilotSelfTest.includes('passed'),'Pilot script regression failed');
+
+
+const assetScript=fs.readFileSync(new URL('../visuals.js',import.meta.url),'utf8');
+execFileSync('node',['--check',new URL('../visuals.js',import.meta.url).pathname],{stdio:'pipe'});
+const html=fs.readFileSync(new URL('../index.html',import.meta.url),'utf8');
+assert(html.includes('src="./visuals.js"'),'Missing visual script in HTML');
+assert(app.includes('trainingVisual(t.visual)')&&app.includes('gemLabCards()'),'Visuals not shown to learner');
+for(const l of visualLabs.labs){
+ assert(l.id&&l.visual&&l.options?.length===4,'Visual lab schema '+l.id);
+ assert(Number.isInteger(l.key)&&l.key>=0&&l.key<=3,'Visual key '+l.id);
+ assert(l.why.length>=25&&l.risk.length>=12,'Visual lab explanation '+l.id);
+ assert(!JSON.stringify(l).includes('color a real SKU'),'No real SKU inference');
+}
+assert(new Set(visualLabs.labs.map(x=>x.id)).size===4,'Duplicate visual training lab');
+assert.deepEqual(workSamples.tasks.filter(x=>x.visual).map(x=>x.id).sort(),['WS-01','WS-02','WS-09'],'Role visuals missing');
+for(const row of visualLabs.labs)assert(assetScript.includes("'"+row.visual+"'"),'Unsupported visual diagram '+row.visual);
+
+for(const check of evidence.checks){assert(check.status.startsWith('PENDING'));assert(check.question_ids.every(id=>questions.some(q=>q.id===id)));}
+
 const appliedLong=applied.filter(q=>q.a[q.key[0]].length===Math.max(...q.a.map(x=>x.length)));
 const appliedShort=applied.filter(q=>q.a[q.key[0]].length===Math.min(...q.a.map(x=>x.length)));
 assert(appliedLong.length<=3,'Applied cases leak the correct answer through length');
@@ -119,13 +236,14 @@ const notAbsolute=/mọi|luôn|chắc chắn|tuyệt đối|vĩnh viễn|không 
 const eWrong=essential.flatMap(q=>q.a.filter((_,i)=>!q.key.includes(i)));
 assert(eWrong.filter(s=>notAbsolute.test(s)).length/eWrong.length<.25,'Essentials contain too many implausible absolute distractors');
 // Behavioral test: generate 40 complete exams for each role and validate quotas, chapter spread and critical inclusion.
-const suffix=`\nglobalThis.__audit={state,examBase,essentials,choiceHtml,modules,examRole,submitExam,practiceUpdate,reviewDue,markAssessmentVersion,saveObj,answered,practiceKey,latestCurrentAttempt,latestHistoricalAttempt,isCurrentAttempt};`;
+const suffix=`\nglobalThis.__audit={pilotExportRecord,p0EvidenceView,evaluateReviewerDraft,reviewCsvCell,renderReviewerWorksheet,reviewerRubric,workView,gemLabCards,labFeedback,trainingVisual,state,examBase,essentials,choiceHtml,modules,examRole,submitExam,practiceUpdate,reviewDue,markAssessmentVersion,initializeAssessmentBank,assessmentBankId,result,questionRevision,reconcilePracticeRevisions,saveObj,answered,practiceKey,latestCurrentAttempt,latestHistoricalAttempt,isCurrentAttempt};`;
 const ctx={console,Math,Date,setInterval:()=>{},clearInterval:()=>{},scrollTo:()=>{},localStorage:{getItem:()=>null,setItem:()=>{}},document:{},window:{}};
 vm.createContext(ctx);
+vm.runInContext(assetScript,ctx,{timeout:5000});
 vm.runInContext(app.replace(/boot\(\);\s*$/,'')+suffix,ctx,{timeout:5000});
 vm.runInContext('render=function(){}',ctx);
 const audit=ctx.__audit;
-audit.state.bank=questions; audit.state.lessons=lessons;audit.state.curriculum=config;
+audit.state.bank=questions; audit.state.lessons=lessons;audit.state.curriculum=config;audit.state.competencies=matrix;audit.state.tasks=workSamples.tasks;audit.state.reviewManifest=reviewManifest;audit.state.evidence=evidence;audit.state.reviewQueue=itemQueue;audit.state.p0Dossiers=p0Dossiers;audit.state.reviewerRubrics=reviewerRubrics;audit.initializeAssessmentBank();
 for(const role of ['BASIC','CARE','MKT']){
  audit.state.role=role;
  for(let k=0;k<40;k++){
@@ -135,9 +253,12 @@ for(const role of ['BASIC','CARE','MKT']){
   for(const chapter of chapters)assert(selection.some(q=>q.chapter===chapter),'Exam missed chapter '+chapter);
   for(const id of config.critical_ids)assert(selection.some(q=>q.id===id),'Exam missed safety gate '+id);
   for(const id of exclusions)assert(!selection.some(q=>q.id===id),'Unapproved question in exam '+id);
-  assert.equal(selection.filter(q=>q.role==='CORE').length,32);
+  assert.equal(selection.filter(q=>q.role==='CORE').length,24);
   assert.equal(selection.filter(q=>q.role==='APPLIED').length,8);
-  assert.equal(selection.filter(q=>q.role===role).length,8);
+  assert.equal(selection.filter(q=>q.role===role).length,16);
+  for(const c of matrix.roles[role].competencies)assert.equal(selection.filter(q=>c.question_ids.includes(q.id)).length,c.quota,'Competency quota '+c.id);
+  for(const id of matrix.roles[role].must_pass_ids)assert(selection.some(q=>q.id===id),'Missing role critical question '+id);
+
   for(const p of pillars)assert.equal(selection.filter(q=>q.role==='APPLIED'&&q.pillar===p).length,2);
  }
 }
@@ -166,7 +287,7 @@ audit.saveObj.practice={
 };
 audit.saveObj.contentVersion='10.1';
 audit.markAssessmentVersion();
-assert.equal(audit.saveObj.contentVersion,'10.2');
+assert.equal(audit.saveObj.contentVersion,'11.5');
 assert.equal(audit.saveObj.practice['CORE:FN-001'].correct,true,'Shared CORE result should come from latest prior response');
 assert.equal(audit.saveObj.practice['CORE:FN-001'].firstCorrect,false,'Known prior incorrect first attempt must remain');
 assert(!audit.saveObj.practice['BASIC:AC-001'],'Revised Applied Cases must not inherit old responses');
@@ -181,17 +302,18 @@ assert.equal(audit.latestHistoricalAttempt('BASIC').score,92,'Historical attempt
 // Behavioral regression: the exam records the role frozen at creation, not the profile role after navigation.
 audit.state.role='BASIC';
 const sample=audit.examBase();
-audit.state.exam={role:'BASIC',contentVersion:'10.2',bankId:'colora-v10.2-20261031',ids:sample.map(q=>q.id),answers:Object.fromEntries(sample.map(q=>[q.id,q.key])),started:Date.now(),deadline:Date.now()+55000,optionOrders:{}};
+audit.state.exam={role:'BASIC',contentVersion:'11.5',bankId:audit.assessmentBankId(),ids:sample.map(q=>q.id),answers:Object.fromEntries(sample.map(q=>[q.id,q.key])),started:Date.now(),deadline:Date.now()+55000,optionOrders:{}};
 audit.state.role='MKT';
 audit.submitExam(false);
 assert.equal(audit.state.attempt.role,'BASIC','Exam must not be recorded for a switched profile');
 assert.equal(audit.state.attempt.score,100,'Fully correct exam scoring');
 assert.equal(audit.state.attempt.passed,true,'Fully correct exam passes');
-assert.equal(audit.state.attempt.assessmentVersion,'10.2');
-assert.equal(audit.state.attempt.bankId,'colora-v10.2-20261031');
-assert.equal(audit.latestCurrentAttempt('BASIC').assessmentVersion,'10.2');
+assert.equal(audit.state.attempt.assessmentVersion,'11.5');
+assert.equal(audit.state.attempt.roleCriticalMiss.length,0);
+assert.equal(audit.state.attempt.bankId,audit.assessmentBankId());
+assert.equal(audit.latestCurrentAttempt('BASIC').assessmentVersion,'11.5');
 assert.equal(audit.latestHistoricalAttempt('BASIC').score,92);
-assert.equal(audit.isCurrentAttempt({role:'BASIC',assessmentVersion:'10.2',bankId:'invalid'}),false);
+assert.equal(audit.isCurrentAttempt({role:'BASIC',assessmentVersion:'11.5',bankId:'invalid'}),false);
 assert.equal(audit.examRole({role:'CARE'}),'CARE');
 assert.equal(audit.examRole({role:'INVALID'}),null);
 // Behavioral regression: preserve the first attempt and schedule 7-day and 30-day retrieval.
@@ -211,4 +333,154 @@ assert.equal(row.reviewStage,2,'30-day review stage');
 assert.equal(audit.reviewDue(row,epoch+150*day),false,'Completed schedule stays complete');
 const migrated=audit.practiceUpdate({correct:true,at:epoch,firstCorrect:null,attempts:2},true,epoch+8*day);
 assert.equal(migrated.firstCorrect,null,'Do not claim first attempt for legacy data');
-console.log('V10.2 QA pass: 303 questions, 86 Essentials, 117 core learning points, 4 CUG labs, 17 objectives, 120 exams, shared CORE migration and versioned results.');
+console.log('V11.5 QA pass: 303 questions, 86 Essentials, 117 core learning points, 4 CUG labs, 17 objectives, 120 exams, shared CORE migration and versioned results.');
+
+assert.equal(audit.state.tasks.length,9,'Work sample data missing');
+audit.saveObj.contentVersion='10.2';
+audit.saveObj.practice['CARE:ON-045']={correct:true,at:epoch,firstCorrect:true,attempts:1};
+audit.saveObj.practice['BASIC:AC-001']={correct:true,at:epoch,firstCorrect:true,attempts:1};
+audit.markAssessmentVersion();
+assert(audit.saveObj.practice['CARE:ON-045']&&audit.saveObj.practice['BASIC:AC-001'],'Valid V10.2 practice should survive V11 migration');
+const priorFingerprint=audit.assessmentBankId(),before=JSON.parse(JSON.stringify(audit.state.bank));
+audit.state.bank[0]={...audit.state.bank[0],why:audit.state.bank[0].why+' changed for test'};
+audit.initializeAssessmentBank();
+assert.notEqual(audit.assessmentBankId(),priorFingerprint,'Changed question should change fingerprint');
+audit.state.bank=before;audit.initializeAssessmentBank();
+assert.equal(audit.assessmentBankId(),priorFingerprint,'Fingerprint must be deterministic');
+console.log('V11.5 compatibility checks: role competencies, 9 rubrics, migration and bank fingerprint passed.');
+
+for(const role of ['BASIC','CARE','MKT']){
+ audit.state.role=role;
+ const set=audit.examBase();
+ const fail=matrix.roles[role].must_pass_ids[0],target=set.find(q=>q.id===fail);
+ assert(target,'Missing mandatory test item '+fail);
+ const answers=Object.fromEntries(set.map(q=>[q.id,[...q.key]]));
+ answers[fail]=[([0,1,2,3].find(i=>!target.key.includes(i)))];
+ audit.state.exam={role,contentVersion:'11.0',bankId:audit.assessmentBankId(),ids:set.map(q=>q.id),answers,optionOrders:{},started:Date.now(),deadline:Date.now()+60000};
+ audit.submitExam(false);
+ assert(audit.state.attempt.score>=80,'High-scoring negative safety scenario');
+ assert.equal(audit.state.attempt.passed,false,'Critical role miss must block pass '+role);
+ assert(audit.state.attempt.roleCriticalMiss.includes(fail),'Expected mandatory miss '+fail);
+}
+console.log('V11 negative tests: wrong critical role response blocks passing for all 3 roles.');
+
+assert(app.includes('KẾT QUẢ TỪNG NĂNG LỰC'),'Missing mastery breakdown in UI');
+assert(app.includes('reviewManifest.items.filter'),'Missing human-review warning');
+assert(app.includes('itemRevision:questionRevision(q)'),'Practice revisions are not stored');
+assert(audit.saveObj.practice['CORE:FN-001'].itemRevision,'Legacy CORE answer was not stamped');
+for(const role of ['BASIC','CARE','MKT']){
+ const skill=matrix.roles[role].competencies.find(c=>c.id===({BASIC:'BASIC-3',CARE:'CARE-1',MKT:'MKT-3'}[role]));
+ audit.state.role=role;const set=audit.examBase(),answers=Object.fromEntries(set.map(q=>[q.id,[...q.key]]));
+ const target=set.filter(q=>skill.question_ids.includes(q.id));
+ const wrong=(role==='MKT'?target.slice(0,3):target);
+ for(const q of wrong)answers[q.id]=[0,1,2,3].filter(i=>!q.key.includes(i)).slice(0,1);
+ audit.state.exam={role,contentVersion:'11.5',bankId:audit.assessmentBankId(),ids:set.map(q=>q.id),answers,optionOrders:{},started:Date.now(),deadline:Date.now()+60000};
+ audit.submitExam(false);
+ assert(audit.state.attempt.score>=80,'This test must keep a passing total for '+role);
+ assert.equal(audit.state.attempt.passed,false,'Weak competency must block pass for '+role);
+ assert(audit.state.attempt.weakSkills.includes(skill.id),'Missing failed competency '+skill.id);
+}
+audit.state.role='CARE';const refId='ON-041';const rowKey='CARE:'+refId;
+audit.saveObj.practice[rowKey]={correct:true,at:epoch,firstCorrect:true,attempts:1,itemRevision:audit.questionRevision(audit.state.bank.find(q=>q.id===refId))};
+const oldRow=audit.saveObj.practice[rowKey],itemIndex=audit.state.bank.findIndex(q=>q.id===refId);
+const orig=audit.state.bank[itemIndex];audit.state.bank[itemIndex]={...orig,why:orig.why+' altered to test stale practice'};
+assert.equal(audit.answered(refId),undefined,'Edited item must invalidate old current practice');
+audit.reconcilePracticeRevisions('11.5');
+assert(!audit.saveObj.practice[rowKey],'Outdated row must be removed from current practice');
+assert(Object.values(audit.saveObj.legacyPractice).includes(oldRow),'Old practice must be archived');
+audit.state.bank[itemIndex]=orig;
+const beforeReview=audit.assessmentBankId();
+const savedReviewItem=audit.state.reviewManifest.items[0];
+audit.state.reviewManifest.items[0]={...savedReviewItem,review_status:'APPROVED'};
+audit.initializeAssessmentBank();
+assert.notEqual(audit.assessmentBankId(),beforeReview,'Review status change must invalidate stale exam result');
+audit.state.reviewManifest.items[0]=savedReviewItem;audit.initializeAssessmentBank();
+console.log('V11.5 negative cases: weak role skills blocked, practice revisions archived, and review-state changes invalidate results.');
+
+for(const role of ['BASIC','CARE','MKT']){
+ audit.state.role=role;
+ const held=audit.state.reviewManifest;
+ audit.state.reviewManifest={...held,items:held.items.map(x=>x.id==='FN-001'?{...x,review_status:'REJECTED',assessment_eligible:false}:x)};
+ for(let i=0;i<8;i++)assert(!audit.examBase().some(q=>q.id==='FN-001'),'Rejected question leaked into exam '+role);
+ audit.state.reviewManifest=held;
+}
+ctx.document.querySelector=()=>({});
+vm.runInContext('chrome=function(html){globalThis.__v111Markup=html}',ctx);
+audit.state.role='CARE';
+const resultQuestions=audit.examBase();
+audit.state.exam={role:'CARE',contentVersion:'11.5',bankId:audit.assessmentBankId(),ids:resultQuestions.map(q=>q.id),answers:Object.fromEntries(resultQuestions.map(q=>[q.id,[...q.key]])),optionOrders:{},started:Date.now(),deadline:Date.now()+60000};
+audit.submitExam(false);
+audit.result();
+assert(ctx.__v111Markup.includes('KẾT QUẢ TỪNG NĂNG LỰC'),'Competency panel failed to render');
+assert(ctx.__v111Markup.includes('Đủ ngưỡng'),'Skill panel failed to show passing status');
+console.log('V11.5 render smoke and rejected-item sampling passed.');
+
+audit.state.gemLabs=visualLabs.labs;
+assert(audit.gemLabCards().includes('GL-01'),'Visual labs unavailable in Work screen');
+assert(audit.labFeedback(visualLabs.labs[0],visualLabs.labs[0].key).includes('Đúng với phạm vi dữ liệu'),'Visual feedback must explain correct decision');
+assert(audit.labFeedback(visualLabs.labs[0],0).includes('Lý do:'),'Visual feedback must explain incorrect option');
+console.log('V11.5 visual labs validated, four simulated cases and three role visuals.');
+
+ctx.document.querySelectorAll=()=>[];
+audit.state.role='BASIC';
+audit.state.gemLabs=visualLabs.labs;
+audit.workView();
+assert(ctx.__v111Markup.includes('GEMSTONE DECISION LAB'),'Work page lacks visual labs');
+assert(ctx.__v111Markup.includes('GL-04'),'Work page did not render four cases');
+assert(ctx.__v111Markup.includes('<svg'),'Work page diagrams missing');
+assert(ctx.__v111Markup.includes('image-balance-pair'),'Color comparison image treatment missing');
+for(const l of visualLabs.labs){
+ const graphic=audit.trainingVisual(l.visual);
+ assert(graphic.includes('KHÔNG PHẢI HỒ SƠ SKU'),'Visuals must clearly be synthetic');
+ assert(graphic.includes(l.visual==='image-balance'?'gemstones-blue-real.webp':'<svg'),'Visualization could not render '+l.visual);
+}
+console.log('V11.5 rendered work page and all four visual templates with synthetic-data labels.');
+
+const reviewTask=reviewerRubrics.rubrics[0];
+const draftGood={version:'11.5',levels:[4,4,4],critical:[],observation:'Đối chiếu mặt cắt, số đo và tính khả thi với mẫu trước duyệt.'};
+const draftPartial={...draftGood,levels:[4,null,4]};
+const draftCritical={...draftGood,critical:[0]};
+const draftWeak={...draftGood,levels:[2,2,2]};
+assert.equal(audit.evaluateReviewerDraft(reviewTask.task_id,draftGood).score,100,'Perfect rubric must score 100');
+assert.equal(audit.evaluateReviewerDraft(reviewTask.task_id,draftGood).qualified,true,'Perfect pilot rubric must qualify');
+assert.equal(audit.evaluateReviewerDraft(reviewTask.task_id,draftPartial).complete,false,'Unrated criterion must not be counted as 0');
+assert.equal(audit.evaluateReviewerDraft(reviewTask.task_id,draftCritical).qualified,false,'Critical failure must override 100 score');
+assert.equal(audit.evaluateReviewerDraft(reviewTask.task_id,draftWeak).qualified,false,'Poor work sample should not meet pilot criterion');
+assert(audit.renderReviewerWorksheet(workSamples.tasks[0]).includes('Phiếu chấm năng lực'),'Manager scoring UI missing');
+assert(audit.reviewCsvCell('=HYPERLINK("x")').startsWith('"\'='),'CSV formula injection not guarded');
+assert(ctx.__v111Markup.includes('Phiếu chấm năng lực'),'Work screen does not include manager rubric');
+assert(ctx.__v111Markup.includes('303 câu hỏi vẫn chờ kiểm duyệt'),'Review count not visible');
+const oldSourceReference=itemQueue.items[0].reference_version;
+const previousQueueBank=audit.assessmentBankId();
+itemQueue.items[0].reference_version='review-test-v2';audit.initializeAssessmentBank();
+assert.notEqual(audit.assessmentBankId(),previousQueueBank,'Source review change must invalidate assessment');
+itemQueue.items[0].reference_version=oldSourceReference;audit.initializeAssessmentBank();
+console.log('V11.5 QA: 303 traceable review records, 27 anchored criteria, 4 image assets pending rights, scoring negatives and safe CSV.');
+
+const reviewQueueOriginal=audit.state.reviewQueue;
+audit.state.role='BASIC';
+audit.state.reviewQueue={...reviewQueueOriginal,items:reviewQueueOriginal.items.map(x=>x.id==='ON-031'?{...x,review_state:'REJECTED'}:x)};
+assert.throws(()=>audit.examBase(),/Role gate unavailable/,'Rejected mandatory role question must block test generation');
+audit.state.reviewQueue={...reviewQueueOriginal,items:reviewQueueOriginal.items.map(x=>x.id==='AC-001'?{...x,review_state:'REJECTED'}:x)};
+for(let i=0;i<30;i++)assert(!audit.examBase().some(x=>x.id==='AC-001'),'Rejected applied case was selected');
+audit.state.reviewQueue=reviewQueueOriginal;
+audit.initializeAssessmentBank();
+console.log('V11.5 negative review policy cases: mandatory role fail-closed and rejected applied-case exclusion passed.');
+
+const pilotSource=audit.state.attempt;
+const exportRecord=audit.pilotExportRecord(pilotSource);
+assert.equal(exportRecord.schema,'colora-pilot-v1');
+assert.equal(exportRecord.items.length,48);
+assert.equal(exportRecord.role,pilotSource.role);
+assert.equal(exportRecord.bank_id,audit.assessmentBankId());
+assert(!Object.hasOwn(exportRecord,'name')&&!Object.hasOwn(exportRecord,'date')&&!Object.hasOwn(exportRecord,'answers'),'Pilot export must not include identity, date or raw answer object');
+assert(exportRecord.items.every(x=>x.correct===true),'Current known answer test must export correct flags');
+assert.throws(()=>audit.pilotExportRecord({...pilotSource,bankId:'fnv1a32-deadbeef'}),/cùng phiên bản/);
+audit.p0EvidenceView();
+assert(ctx.__v111Markup.includes('Hồ sơ kiểm duyệt bằng chứng'),'P0 evidence UI missing');
+assert(ctx.__v111Markup.includes('FN-064'),'P0 evidence high-risk group missing');
+assert(ctx.__v111Markup.includes('https://www.gia.edu'),'External authoritative sources absent from evidence board');
+assert(app.includes('Xuất bản ghi pilot không tên')&&app.includes('function pilotExportDownload'),'Explicit user export flow missing');
+assert(app.includes("title==='Bằng chứng'?'Nguồn'"),'Mobile navigation evidence tab mislabeled');
+assert(app.includes("row.map(reviewCsvCell)"),'Existing CSV exporter missing spreadsheet injection guard');
+console.log('V11.5 QA: evidence provenance, SKU safe template, explicit pilot exports and offline analyzer verified.');
