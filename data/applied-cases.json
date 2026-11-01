@@ -115,7 +115,7 @@
     "chapter": "A",
     "q": "Viên pear dự kiến 7×5 mm, mẫu thực có chiều sâu cao hơn CAD và dấu mẻ gần đầu nhọn. Trước hạn chốt CAD, quyết định nào bảo vệ cả thẩm mỹ lẫn khả năng đeo?",
     "a": [
-      "Đưa viên vào gia công thử, rồi chọn cách giấu dấu mẻ bằng chấu nếu vị trí tiếp xúc cho phép.",
+      "Đưa viên vào gia công thử, sau đó thiết kế lại chấu để che vị trí chip nếu không ảnh hưởng đến bề mặt đeo và hình nhìn.",
       "Tạm giữ duyệt, đo L×W×D và vùng mẻ, đánh giá dưới phóng đại và đối chiếu mặt cắt ổ đá với kỹ thuật.",
       "Đổi ngay sang viên pear khác cùng số đo 7×5 mm, giữ nguyên CAD để bảo đảm tiến độ bàn giao.",
       "Chuyển sang ổ bọc toàn phần theo bản phác thảo, giữ viên nếu nhìn thẳng không thấy dấu mẻ."
@@ -170,7 +170,7 @@
     "q": "Khách mua dây chuyền làm quà, chưa biết chiều dài dây hay gu người nhận và cần quà trước thứ Sáu. Hướng tiếp cận nào tạo đủ dữ liệu để tư vấn mà không hứa quá phạm vi kiểm soát?",
     "a": [
       "Hỏi kiểu dáng thường đeo và chiều dài phù hợp; xác minh tồn kho, vùng giao và chính sách hỗ trợ quà tặng trước khi hứa ngày nhận.",
-      "Hỏi ngày tặng, màu đá và mẫu quà khách thích; đặt trước rồi mới xác minh giao kịp hay không.",
+      "Hỏi ngày tặng, màu đá và mẫu quà khách thích; đặt trước theo yêu cầu rồi mới xác minh khả năng giao kịp qua đơn vị vận chuyển.",
       "Gửi ba hình đeo trên mẫu khác nhau để khách chọn, sau đó chốt loại dây và thời điểm vận chuyển.",
       "Đề nghị mẫu dây dễ phối, xác nhận ngân sách và ghi chú thiệp; chiều dài có thể tư vấn sau khi nhận."
     ],
@@ -227,7 +227,7 @@
       "Anh/chị có muốn em giới thiệu trước một mẫu có mức giá thấp hơn để mình so sánh không ạ?",
       "Anh/chị có cần em giải thích thêm về vật liệu và đá để thấy mức giá phù hợp hơn không ạ?",
       "Có điều gì ở chiếc nhẫn này khiến anh/chị vẫn còn cân nhắc không ạ? Em sẵn lòng lắng nghe.",
-      "Anh/chị có khoảng ngân sách cụ thể để em chọn phương án phù hợp hơn với nhu cầu không ạ?"
+      "Anh/chị có khoảng ngân sách cụ thể mà mình đang thấy thoải mái không, để em ưu tiên giới thiệu một vài thiết kế phù hợp hơn ạ?"
     ],
     "key": [
       2
@@ -279,7 +279,7 @@
     "q": "Báo cáo giả định ghi nhận 800 lượt mở Size Guide, 520 phiên rời trang sau đó và 62% lượt mở đến từ mobile. Không có dữ liệu ghi lỗi hay nguyên nhân trực tiếp. Bước nghiên cứu đầu tiên nào hợp lý nhất?",
     "a": [
       "Lọc nhóm mobile, kiểm đường dẫn và tốc độ, rồi đối chiếu vài phiên tương ứng với khảo sát ngắn; chưa chốt nguyên nhân.",
-      "Cho chạy A/B test thay nút tư vấn size vì 520 lượt thoát là tín hiệu nút hiện tại chưa đủ hấp dẫn.",
+      "Thử nút tư vấn size mới cho mọi thiết bị, kết hợp một đợt khảo sát nhanh để xem tỷ lệ thoát có giảm đáng kể không.",
       "Ưu tiên sửa bảng size trên mobile ngay vì phần lớn người mở hướng dẫn đến từ điện thoại.",
       "Xem heatmap và hỏi đội chăm sóc khách về size, sau đó kết luận nguyên nhân từ nội dung hướng dẫn."
     ],
