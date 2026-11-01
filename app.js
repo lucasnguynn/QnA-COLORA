@@ -47,7 +47,7 @@ function markAssessmentVersion(){
 function fnv32(text){let h=2166136261;for(let i=0;i<text.length;i++)h=Math.imul(h^text.charCodeAt(i),16777619);return 'fnv1a32-'+(h>>>0).toString(16).padStart(8,'0')}
 function questionRevision(q){return fnv32(JSON.stringify([q.id,q.q,q.a,q.key,q.why,q.apply,q.status,q.source,q.role,q.pillar,q.chapter]))}
 function reconcilePracticeRevisions(previousVersion){const canMigrate=new Set(['10.1','10.2','11.0','11.1','11.2']);const old=saveObj.practice||{},revisions=saveObj.legacyPractice||{};for(const [key,row] of Object.entries(old)){const id=/^(?:CORE|BASIC|CARE|MKT):(.+)$/.exec(key)?.[1];const q=id&&state.bank.find(x=>x.id===id),current=q?questionRevision(q):null;if(current&&row&&row.itemRevision===current)continue;if(current&&row&&!row.itemRevision&&canMigrate.has(previousVersion)){row.itemRevision=current;continue}revisions[key+'@'+(row?.itemRevision||'unverified')+'@'+Date.now()]=row;delete old[key]}saveObj.legacyPractice=revisions;saveObj.practice=old}
-function assessmentFingerprint(){return fnv32(JSON.stringify({bank:state.bank.map(questionRevision),exam:state.curriculum.exam,essential_ids:state.curriculum.essential_ids,excluded:state.curriculum.assessment_excluded_ids,critical:state.curriculum.critical_ids,matrix:state.competencies,review:state.reviewManifest?.items?.map(x=>[x.id,x.review_status,x.assessment_eligible,x.source_document_id,x.source_version,x.reviewed_at]),evidence:state.evidence?.checks,lessons:state.lessons.map(l=>[l.id,l.title,l.points,l.learning_objective])}))}
+function assessmentFingerprint(){return fnv32(JSON.stringify({bank:state.bank.map(questionRevision),exam:state.curriculum.exam,essential_ids:state.curriculum.essential_ids,excluded:state.curriculum.assessment_excluded_ids,critical:state.curriculum.critical_ids,matrix:state.competencies,review:state.reviewManifest?.items?.map(x=>[x.id,x.review_status,x.assessment_eligible,x.source_document_id,x.source_version,x.reviewed_at]),reviewQueue:state.reviewQueue?.items?.map(x=>[x.id,x.review_state,x.verification_reference_id,x.reference_version,x.reviewed_at]),evidence:state.evidence?.checks,lessons:state.lessons.map(l=>[l.id,l.title,l.points,l.learning_objective])}))}
 function initializeAssessmentBank(){ASSESSMENT_BANK_ID=assessmentFingerprint()}
 function assessmentBankId(){return ASSESSMENT_BANK_ID}
 function isCurrentAttempt(a){return !!a&&a.assessmentVersion===ASSESSMENT_VERSION&&a.bankId===ASSESSMENT_BANK_ID}
@@ -159,7 +159,7 @@ function initGemLabInteractions(){
 function reviewerRubric(id){return state.reviewerRubrics?.rubrics?.find(x=>x.task_id===id)}
 function evaluateReviewerDraft(id,draft){
  const r=reviewerRubric(id);if(!r)return {complete:false,score:null,critical:false,qualified:false};
- const levels=(draft?.levels||[]).map(Number);
+ const levels=(draft?.levels||[]).map(value=>value===null||value===undefined||value===''?NaN:Number(value));
  const complete=levels.length===r.criteria.length&&levels.every(n=>Number.isInteger(n)&&n>=0&&n<=4);
  const score=complete?Math.round(r.criteria.reduce((s,c,i)=>s+c.weight*levels[i]/4,0)):null;
  const critical=(draft?.critical||[]).length>0;
