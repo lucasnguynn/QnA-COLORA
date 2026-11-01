@@ -1,0 +1,71 @@
+{
+  "version": "11.3",
+  "status": "ASSET_QA_NOT_RELEASE_APPROVAL",
+  "notice": "This public register only records file existence and intended training use. No image license, depicted gemstone type, COLORA SKU, exact color or product specification has been independently verified.",
+  "available_assets": [
+    {
+      "path": "assets/colora-identity-reference.png",
+      "kind": "BRAND_REFERENCE",
+      "depicts": "Brand identity reference artwork",
+      "rights_status": "PENDING_OWNER_CONFIRMATION",
+      "sku_verified": false,
+      "commercial_use_approved": false
+    },
+    {
+      "path": "assets/gemstones-blue-real.webp",
+      "kind": "GEMSTONE_TRAY_REFERENCE",
+      "depicts": "Gemstone tray reference, not verified finished COLORA jewelry",
+      "rights_status": "PENDING_OWNER_CONFIRMATION",
+      "sku_verified": false,
+      "commercial_use_approved": false
+    },
+    {
+      "path": "assets/gemstones-selection-real.webp",
+      "kind": "GEMSTONE_TRAY_REFERENCE",
+      "depicts": "Different gemstone shape tray reference, not verified finished COLORA jewelry",
+      "rights_status": "PENDING_OWNER_CONFIRMATION",
+      "sku_verified": false,
+      "commercial_use_approved": false
+    },
+    {
+      "path": "assets/gemstones-spectrum-real.webp",
+      "kind": "GEMSTONE_TRAY_REFERENCE",
+      "depicts": "Colored gemstone tray reference, not verified finished COLORA jewelry",
+      "rights_status": "PENDING_OWNER_CONFIRMATION",
+      "sku_verified": false,
+      "commercial_use_approved": false
+    }
+  ],
+  "missing_asset_requirements": [
+    {
+      "id": "ASSET-01",
+      "purpose": "Macro finished rings/earrings/necklaces/bracelets",
+      "required": "Approved true COLORA SKU, front/top/side/back/under-gallery images, capture date, creator license or consent, SKU and finishing version",
+      "status": "NOT_PRESENT"
+    },
+    {
+      "id": "ASSET-02",
+      "purpose": "Real on-hand/on-body scale comparison",
+      "required": "Photo permission/model release, SKU size and verified on-body scale metadata",
+      "status": "NOT_PRESENT"
+    },
+    {
+      "id": "ASSET-03",
+      "purpose": "One physical gemstone photographed in multiple recorded light conditions",
+      "required": "Photo of same stone, documented lighting/white balance and treatment/source status",
+      "status": "NOT_PRESENT"
+    },
+    {
+      "id": "ASSET-04",
+      "purpose": "Before/after CAD manufacturing comparison",
+      "required": "Approved CAD plus matching physical sample of same revision, with confidential dimensions removed before public export",
+      "status": "NOT_PRESENT"
+    },
+    {
+      "id": "ASSET-05",
+      "purpose": "Product Passport training sample",
+      "required": "Public-safe approved facsimile or authorized SKU passport redacted of private supplier/lot/customer data",
+      "status": "NOT_PRESENT"
+    }
+  ]
+}
