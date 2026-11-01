@@ -185,6 +185,18 @@ assert.equal(skuSchema.status,'SCHEMA_ONLY_ZERO_APPROVED_SKUS');
 assert.equal(skuSchema.sku_record_schema.final_release.status,'NOT_APPROVED');
 assert.equal(skuSchema.sku_record_schema.stone_identity.treatment,'UNKNOWN');
 assert.equal(pilotExportSchema.schema,'colora-pilot-v1');
+
+const p0QuestionItems=itemQueue.items.filter(item=>item.priority==='P0');
+assert.equal(p0QuestionItems.length,98,'Unexpected P0 review queue size');
+const absoluteOptionCue=/luôn|100%|mọi|không bao giờ|chắc chắn|tuyệt đối|không thể|hoàn toàn/i;
+const p0WithMultipleAbsoluteWrongAnswers=p0QuestionItems.filter(meta=>{
+ const q=questions.find(x=>x.id===meta.id);
+ return q.a.filter((option,i)=>!q.key.includes(i)&&absoluteOptionCue.test(option)).length>=2;
+});
+assert(p0WithMultipleAbsoluteWrongAnswers.length<=7,'P0 distractor regression: too many obvious absolute-answer cues');
+assert.deepEqual(p0WithMultipleAbsoluteWrongAnswers.map(x=>x.id).sort(),['GM-046','GM-052','ON-008','ON-048','ON-058','ON-059','PC-015'].sort(),'Check revised P0 review backlog');
+console.log('V11.5 preliminary P0 language audit: '+p0WithMultipleAbsoluteWrongAnswers.length+'/98 flagged (manual expert review still required).');
+
 const packetFile=new URL('../scripts/review-packet.mjs',import.meta.url).pathname;
 execFileSync('node',['--check',packetFile],{stdio:'pipe'});
 const reviewerPacketTest=execFileSync('node',[packetFile,'--self-test'],{encoding:'utf8'});
