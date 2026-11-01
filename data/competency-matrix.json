@@ -1,5 +1,5 @@
 {
-  "version": "11.2",
+  "version": "11.3",
   "status": "PILOT_PENDING_HUMAN_REVIEW",
   "note": "Each role competency has an explicit minimum score. All gates apply only to self-study level, not official staff certification.",
   "roles": {
