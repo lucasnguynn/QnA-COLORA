@@ -1,4 +1,4 @@
-# COLORA Learning Studio V11.2 (competency pilot)
+# COLORA Learning Studio V11.3 (competency pilot)
 
 **COLORA - COLOR YOUR AURA**
 
@@ -113,3 +113,14 @@ Mở `http://localhost:8080`. GitHub Actions chạy kiểm tra dữ liệu và J
 - Bổ sung **3 hình minh họa** cho work sample WS-01, WS-02 và WS-09. SVG là sơ đồ mô phỏng, ảnh với filter chỉ minh họa tác động hậu kỳ. Không phải ảnh CAD, viên đá thực tế hay dữ liệu thương mại của COLORA.
 - Giữ nguyên các ngưỡng tự học của V11.1 và cơ chế loại kết quả lỗi thời; bài Visual Labs không tự cấp điểm quản lý hoặc chứng nhận.
 - Xem [báo cáo kiểm toán nội dung & thực hành V11.2](docs/V11_2_CONTENT_AND_VISUAL_AUDIT.md) và [điều kiện phát hành](docs/V11_RELEASE_GATES.md).
+
+
+## V11.3: Kiểm duyệt kiến thức & phiếu chấm thực hành
+
+- Hàng đợi kiểm duyệt có **303/303 câu**, ưu tiên P0/P1/P2 theo rủi ro; **0 câu được tự động phê duyệt**. Xem `data/item-review-queue.json`. Những link GIA/RJC chỉ là nguồn bắt đầu rà soát, không thay phê duyệt từng câu.
+- **9 rubric chấm thử, 27 tiêu chí có mốc hành vi**, dành cho người hướng dẫn; mỗi bài có bảng điểm 0-4, ghi nhận lỗi nghiêm trọng, ghi chú quan sát và xuất CSV có bảo vệ công thức bảng tính. Xem `data/reviewer-rubrics.json`.
+- Khi chấm thử đạt mức 75/100 và không phạm lỗi nghiêm trọng, giao diện chỉ báo **đủ ngưỡng thử nghiệm**. Không xác thực danh tính, không có chứng nhận, không có gradebook tập trung.
+- 4 tài sản ảnh đang có trong repo được phân loại vào `data/asset-approval-queue.json`; **không có ảnh thành phẩm đã xác minh đúng SKU**. Danh sách nêu rõ tài sản thật cần bổ sung trước khi nâng cấp Product Mastery.
+- Nếu nguồn bị `REJECTED` hoặc `NEEDS_REVISION`, câu tương ứng không được chọn vào đề thi thử; với câu bắt buộc mà không có thay thế hợp lệ, hệ thống dừng tạo đề thay vì chấm đạt sai.
+- Dữ liệu phiếu chấm lưu **trên trình duyệt** và ai có quyền truy cập trình duyệt đều có thể sửa. Không nhập tài liệu kỹ thuật mật hoặc thông tin cá nhân.
+- Quy trình kiểm duyệt và điều kiện duyệt chi tiết tại [V11.3 Review Protocol](docs/V11_3_ITEM_REVIEW_AND_REVIEWER_PROTOCOL.md).
