@@ -252,10 +252,10 @@
     "chapter": "16",
     "q": "Tài liệu QC của COLORA từng đề xuất dung sai kích thước và mức bao thể. Nhân viên nên dùng chúng ra sao?",
     "a": [
-      "Áp ngay ngưỡng ±0,1 mm cho mọi loài và size.",
-      "Công bố trên website như cam kết sẵn có.",
-      "Bỏ mọi bước QC vì chưa có tiêu chuẩn chính thức.",
-      "Chỉ là đề xuất cho tới khi được duyệt."
+      "Thử áp dung sai ±0,1 mm cho mọi viên trước, chỉ chuyển kỹ thuật khi mẫu không khớp kích thước.",
+      "Có thể triển khai checklist đề xuất như chuẩn nội bộ ngay, miễn chưa công bố cho khách hàng.",
+      "Chỉ đánh giá cảm quan và bỏ kiểm tra hình học cho đến khi SOP đầy đủ được ban hành.",
+      "Chỉ là khung đề xuất; dung sai cụ thể cần người có thẩm quyền duyệt theo loài đá và SKU."
     ],
     "key": [
       3
@@ -264,7 +264,8 @@
     "apply": "Trình chủ sở hữu SOP xác nhận trước khi giao việc.",
     "source": "INTERNAL_QC",
     "status": "ĐỀ XUẤT QC - CHỜ PHÊ DUYỆT",
-    "stage": 3
+    "stage": 3,
+    "revision_note": "V11.5 distractor quality draft; human review pending"
   },
   {
     "id": "GM-052",
