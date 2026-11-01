@@ -137,7 +137,7 @@ function gemLabCards(){
  return '<section class="visual-labs-section"><div class="section-head"><div><div class="kicker">GEMSTONE DECISION LAB · V11.2</div><h2 class="h2">Quan sát trước khi kết luận</h2><p>Bốn bài tình huống tương tác. Hình và số liệu giả định, không phải viên đá/CAD của COLORA.</p></div></div>'+
  state.gemLabs.map(l=>{
   const answer=saveObj.labAnswers[l.id];
-  const selected=answer?.version===l.version||answer?.version==='11.2'?answer.selected:null;
+  const selected=answer&&answer.version==='11.2'?answer.selected:null;
   return '<article class="card lab-card"><div class="eyebrow">'+esc(l.id)+' · BÀI HỌC MINH HỌA</div><h3 class="h3">'+esc(l.title)+'</h3>'+
    trainingVisual(l.visual)+'<p>'+esc(l.scenario)+'</p><p class="lab-question">'+esc(l.question)+'</p>'+
    '<div class="lab-options">'+l.options.map((opt,i)=>'<button class="lab-choice '+(selected===i?'selected':'')+'" type="button" data-lab-choice="'+esc(l.id)+'" data-choice="'+i+'">'+String.fromCharCode(65+i)+'. '+esc(opt)+'</button>').join('')+'</div>'+
